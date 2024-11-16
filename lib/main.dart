@@ -4,11 +4,12 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruit_hub/core/routing/app_router.dart';
 import 'package:fruit_hub/core/routing/routes.dart';
+import 'package:fruit_hub/core/theming/light_theme.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 
 void main() {
   runApp(DevicePreview(
-    enabled: true,
+    enabled: false,
     builder: (context) => const MyApp()));
 }
 
@@ -32,6 +33,7 @@ class MyApp extends StatelessWidget {
       locale: DevicePreview.locale(context)??const Locale('ar'),
       builder: DevicePreview.appBuilder,
         debugShowCheckedModeBanner: false,
+        theme: lightTheme,
         onGenerateRoute: AppRouter().onGenerateRoute,
         initialRoute: Routes.splash,
         
