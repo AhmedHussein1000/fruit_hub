@@ -8,12 +8,12 @@ import 'package:fruit_hub/generated/l10n.dart';
 class OnboardingPageView extends StatelessWidget {
   const OnboardingPageView({super.key, required this.pageController});
 
-  final  PageController pageController ;
+  final PageController pageController;
 
   @override
   Widget build(BuildContext context) {
     return PageView(
-      controller:pageController ,
+      controller: pageController,
       children: [
         OnboardingPageViewItem(
             backgroundImage: Assets.imagesOnboardingItem1BackgroundImage,
@@ -24,6 +24,9 @@ class OnboardingPageView extends StatelessWidget {
                   text: S.of(context).welcome,
                   style: Styles.font23Bold
                       .copyWith(color: AppColors.charcoalBlack)),
+              const TextSpan(
+                text: ' ',
+              ),
               TextSpan(
                   text: 'Fruit',
                   style: Styles.font23Bold
@@ -36,7 +39,7 @@ class OnboardingPageView extends StatelessWidget {
             ])),
             description: S.of(context).onboardingDescription1),
         OnboardingPageViewItem(
-          isVisible: false,
+            isVisible: false,
             backgroundImage: Assets.imagesOnboardingItem2BackgroundImage,
             foregroundFruitImage: Assets.imagesOnboardingItem2Image,
             title: Text(

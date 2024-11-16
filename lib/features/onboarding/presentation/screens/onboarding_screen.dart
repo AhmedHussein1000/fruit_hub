@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:fruit_hub/core/helpers/cache_helper.dart';
+import 'package:fruit_hub/core/helpers/navigation_extension.dart';
+import 'package:fruit_hub/core/helpers/size_config.dart';
+import 'package:fruit_hub/core/routing/routes.dart';
 import 'package:fruit_hub/core/widgets/custom_button.dart';
 import 'package:fruit_hub/features/onboarding/presentation/screens/widgets/dots_indicator_widget.dart';
 import 'package:fruit_hub/features/onboarding/presentation/screens/widgets/onboarding_page_view.dart';
@@ -25,9 +29,16 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     });
     super.initState();
   }
+  @override
+  void dispose() {
+    pageController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig.init(context);
+
     return Scaffold(
       body: SafeArea(
         child: Column(
@@ -46,11 +57,20 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16),
                   child: CustomButton(
-                      onPressed: () {}, btnText: S.of(context).startNow),
+                      onPressed: () {
+                        CacheHelper.saveData(
+                            key: CacheHelper.onBoardingKey, value: true);
+                        context.pushReplacementNamed(Routes.login);   
+                      },
+                      btnText: S.of(context).startNow),
                 )),
-            SizedBox(
-              height: 43.h,
-            ),
+            SizeConfig.screenHeight > 730 && SizeConfig.screenWidth > 390
+                ? SizedBox(
+                    height: 43.h,
+                  )
+                : SizedBox(
+                    height: 25.h,
+                  ),
           ],
         ),
       ),
