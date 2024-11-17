@@ -2,13 +2,32 @@
 class Assets {
   Assets._();
   
- 
+  /// Assets for imagesFruitLogo
+  /// assets/images/fruit_logo.svg
   static const String imagesFruitLogo = "assets/images/fruit_logo.svg";
 
- 
+  /// Assets for imagesOnboardingItem1BackgroundImage
+  /// assets/images/onboarding_item1_background_image.svg
+  static const String imagesOnboardingItem1BackgroundImage = "assets/images/onboarding_item1_background_image.svg";
+
+  /// Assets for imagesOnboardingItem1Image
+  /// assets/images/onboarding_item1_image.svg
+  static const String imagesOnboardingItem1Image = "assets/images/onboarding_item1_image.svg";
+
+  /// Assets for imagesOnboardingItem2BackgroundImage
+  /// assets/images/onboarding_item2_background_image.svg
+  static const String imagesOnboardingItem2BackgroundImage = "assets/images/onboarding_item2_background_image.svg";
+
+  /// Assets for imagesOnboardingItem2Image
+  /// assets/images/onboarding_item2_image.svg
+  static const String imagesOnboardingItem2Image = "assets/images/onboarding_item2_image.svg";
+
+  /// Assets for imagesPlant
+  /// assets/images/plant.svg
   static const String imagesPlant = "assets/images/plant.svg";
 
-  
+  /// Assets for imagesSplashBottom
+  /// assets/images/splash_bottom.svg
   static const String imagesSplashBottom = "assets/images/splash_bottom.svg";
 }
 

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fruit_hub/core/helpers/assets.dart';
+import 'package:fruit_hub/core/helpers/cache_helper.dart';
 import 'package:fruit_hub/core/helpers/navigation_extension.dart';
 import 'package:fruit_hub/core/routing/routes.dart';
 
@@ -41,6 +42,7 @@ void executeNavigation({required BuildContext context}) {
     const Duration(seconds: 3),
     () {
       if (!context.mounted) return;
+      isSkippedOnBoarding==true?context.pushReplacementNamed(Routes.login): 
       context.pushReplacementNamed(Routes.onboarding);
     },
   );
