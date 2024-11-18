@@ -22,11 +22,28 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "dontHaveAnAccount":
+            MessageLookupByLibrary.simpleMessage(" لا تمتلك حساب؟"),
+        "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
+        "emailRequired":
+            MessageLookupByLibrary.simpleMessage("البريد الإلكتروني مطلوب."),
+        "forrgotPassword":
+            MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
+        "login": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
+        "loginWithFacebook":
+            MessageLookupByLibrary.simpleMessage("تسجيل بواسطة فيسبوك"),
+        "loginWithGoogle":
+            MessageLookupByLibrary.simpleMessage("تسجيل بواسطة جوجل"),
         "onboardingDescription1": MessageLookupByLibrary.simpleMessage(
             "اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية."),
         "onboardingDescription2": MessageLookupByLibrary.simpleMessage(
             "نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية"),
         "onboardingTitle2": MessageLookupByLibrary.simpleMessage("ابحث وتسوق"),
+        "or": MessageLookupByLibrary.simpleMessage("أو"),
+        "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+        "passwordRequired":
+            MessageLookupByLibrary.simpleMessage("كلمة المرور مطلوبة."),
+        "signup": MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب"),
         "skip": MessageLookupByLibrary.simpleMessage("تخط"),
         "startNow": MessageLookupByLibrary.simpleMessage("ابدأ الآن"),
         "welcome": MessageLookupByLibrary.simpleMessage("مرحباً بك في")

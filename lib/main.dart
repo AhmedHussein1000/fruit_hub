@@ -12,8 +12,9 @@ import 'package:intl/intl.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await CacheHelper.init();
- 
-Intl.defaultLocale = 'ar';
+  await ScreenUtil.ensureScreenSize();
+
+  Intl.defaultLocale = 'ar';
   isSkippedOnBoarding = CacheHelper.getData(CacheHelper.onBoardingKey) ?? false;
   runApp(DevicePreview(enabled: false, builder: (context) => const MyApp()));
 }
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
     return ScreenUtilInit(
       designSize: const Size(375, 812),
       minTextAdapt: true,
-      child: MaterialApp(
+      builder: (context, child) => MaterialApp(
         localizationsDelegates: const [
           S.delegate,
           GlobalMaterialLocalizations.delegate,

@@ -5,5 +5,16 @@
     "onboardingDescription1": "Discover a unique shopping experience with FruitHUB. Explore our wide range of premium fresh fruits and get the best deals and high quality.",
     "onboardingTitle2": "Search and Shop",
     "onboardingDescription2": "We bring you the best carefully selected fruits. View details, images, and reviews to make sure you choose the perfect fruit.",
-    "startNow": "Start Now"
+    "startNow": "Start Now",
+    "login": "Login",
+    "email": "Email Address",
+    "password": "Password",
+    "forrgotPassword": "Forgot Password?",
+    "dontHaveAnAccount": "Don't have an account?",
+    "signup": " Sign Up",
+    "or": "Or",
+    "loginWithGoogle": "Login with Google",
+    "loginWithFacebook": "Login with Facebook",
+    "emailRequired": "Email is required.",
+    "passwordRequired": "Password is required."
 }

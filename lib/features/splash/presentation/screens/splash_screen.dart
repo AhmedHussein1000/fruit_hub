@@ -42,8 +42,8 @@ void executeNavigation({required BuildContext context}) {
     const Duration(seconds: 3),
     () {
       if (!context.mounted) return;
-      isSkippedOnBoarding==true?context.pushReplacementNamed(Routes.login): 
-      context.pushReplacementNamed(Routes.onboarding);
+      isSkippedOnBoarding==true?context.pushNamedAndRemoveUntil(Routes.login,predicate: (route) => false,): 
+      context.pushNamedAndRemoveUntil(Routes.onboarding,predicate: (route) => false,);
     },
   );
 }

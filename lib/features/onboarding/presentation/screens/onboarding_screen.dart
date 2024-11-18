@@ -4,6 +4,7 @@ import 'package:fruit_hub/core/helpers/cache_helper.dart';
 import 'package:fruit_hub/core/helpers/navigation_extension.dart';
 import 'package:fruit_hub/core/helpers/size_config.dart';
 import 'package:fruit_hub/core/routing/routes.dart';
+import 'package:fruit_hub/core/utils/app_constants.dart';
 import 'package:fruit_hub/core/widgets/custom_button.dart';
 import 'package:fruit_hub/features/onboarding/presentation/screens/widgets/dots_indicator_widget.dart';
 import 'package:fruit_hub/features/onboarding/presentation/screens/widgets/onboarding_page_view.dart';
@@ -55,7 +56,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 maintainAnimation: true,
                 maintainState: true,
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  padding: const EdgeInsets.symmetric(horizontal: AppConstants.defaultPadding),
                   child: CustomButton(
                       onPressed: () {
                         CacheHelper.saveData(

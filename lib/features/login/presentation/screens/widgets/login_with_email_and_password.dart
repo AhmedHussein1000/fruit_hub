@@ -1,0 +1,111 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:fruit_hub/core/helpers/navigation_extension.dart';
+import 'package:fruit_hub/core/routing/routes.dart';
+import 'package:fruit_hub/core/theming/app_colors.dart';
+import 'package:fruit_hub/core/theming/styles.dart';
+import 'package:fruit_hub/core/utils/app_constants.dart';
+import 'package:fruit_hub/core/widgets/custom_button.dart';
+import 'package:fruit_hub/core/widgets/custom_text_form_field.dart';
+import 'package:fruit_hub/generated/l10n.dart';
+
+class LoginWithEmailAndPassword extends StatefulWidget {
+  const LoginWithEmailAndPassword({super.key});
+
+  @override
+  State<LoginWithEmailAndPassword> createState() =>
+      _LoginWithEmailAndPasswordState();
+}
+
+class _LoginWithEmailAndPasswordState extends State<LoginWithEmailAndPassword> {
+  final _formKey = GlobalKey<FormState>();
+  late final TextEditingController emailController;
+  late final TextEditingController passwordController;
+  ValueNotifier<bool> isObscure = ValueNotifier<bool>(true);
+  @override
+  void initState() {
+    emailController = TextEditingController();
+    passwordController = TextEditingController();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    emailController.dispose();
+    passwordController.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Form(
+      key: _formKey,
+      child: Column(
+        children: [
+          CustomTextFormField(
+            controller: emailController,
+            validator: (value) {
+              if (value == null || value.isEmpty) {
+                return S.of(context).emailRequired;
+              }
+              return null;
+            },
+            hintText: S.of(context).email,
+            keyboardType: TextInputType.emailAddress,
+          ),
+          SizedBox(
+            height: 16.h,
+          ),
+          ValueListenableBuilder(
+              valueListenable: isObscure,
+              builder: (context, value, child) => CustomTextFormField(
+                    controller: passwordController,
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return S.of(context).passwordRequired;
+                      }
+                      return null;
+                    },
+                    hintText: S.of(context).password,
+                    isObscureText: isObscure.value,
+                    suffixIcon: IconButton(
+                        onPressed: () {
+                          isObscure.value = !isObscure.value;
+                        },
+                        icon: value
+                            ? const Icon(
+                                Icons.remove_red_eye,
+                                color: AppColors.softGray,
+                              )
+                            : const Icon(
+                                Icons.visibility_off,
+                                color: AppColors.softGray,
+                              )),
+                  )),
+          SizedBox(
+            height: AppConstants.defaultPadding.h,
+          ),
+          Align(
+            alignment: AlignmentDirectional.centerEnd,
+            child: GestureDetector(
+              onTap: () => context.pushNamed(Routes.forgotPassword),
+              child: Text(
+                S.of(context).forrgotPassword,
+                style:
+                    Styles.font13SemiBold.copyWith(color: AppColors.seaGreen),
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 33.h,
+          ),
+          CustomButton(
+              onPressed: () {
+                //TODO login with email and password
+              },
+              btnText: S.of(context).login),
+        ],
+      ),
+    );
+  }
+}

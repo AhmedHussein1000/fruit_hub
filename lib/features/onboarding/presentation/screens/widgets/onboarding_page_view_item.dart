@@ -7,6 +7,7 @@ import 'package:fruit_hub/core/helpers/size_config.dart';
 import 'package:fruit_hub/core/routing/routes.dart';
 import 'package:fruit_hub/core/theming/app_colors.dart';
 import 'package:fruit_hub/core/theming/styles.dart';
+import 'package:fruit_hub/core/utils/app_constants.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 
 class OnboardingPageViewItem extends StatelessWidget {
@@ -45,7 +46,7 @@ class OnboardingPageViewItem extends StatelessWidget {
                     foregroundFruitImage,
                   )),
               Padding(
-                padding: const EdgeInsets.all(16),
+                padding: const EdgeInsets.all(AppConstants.defaultPadding),
                 child: Visibility(
                   visible: isVisible ?? true,
                   child: InkWell(
@@ -74,7 +75,7 @@ class OnboardingPageViewItem extends StatelessWidget {
         Padding(
           padding: SizeConfig.screenWidth > 400
               ? EdgeInsets.symmetric(horizontal: 37.w)
-              : EdgeInsets.symmetric(horizontal: 16.w),
+              : EdgeInsets.symmetric(horizontal: AppConstants.defaultPadding.w),
           child: Text(
             description,
             textAlign: TextAlign.center,
