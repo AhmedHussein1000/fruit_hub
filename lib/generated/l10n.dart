@@ -219,6 +219,96 @@ class S {
       args: [],
     );
   }
+
+  /// `No user found for that email.`
+  String get userNotFound {
+    return Intl.message(
+      'No user found for that email.',
+      name: 'userNotFound',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Wrong password provided for that user.`
+  String get wrongPassword {
+    return Intl.message(
+      'Wrong password provided for that user.',
+      name: 'wrongPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The email address is badly formatted.`
+  String get invalidEmail {
+    return Intl.message(
+      'The email address is badly formatted.',
+      name: 'invalidEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This user account has been disabled.`
+  String get userDisabled {
+    return Intl.message(
+      'This user account has been disabled.',
+      name: 'userDisabled',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Signing in with email and password is not enabled.`
+  String get operationNotAllowed {
+    return Intl.message(
+      'Signing in with email and password is not enabled.',
+      name: 'operationNotAllowed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Too many requests. Try again later.`
+  String get tooManyRequests {
+    return Intl.message(
+      'Too many requests. Try again later.',
+      name: 'tooManyRequests',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The email address or password is incorrect.`
+  String get invalidCredential {
+    return Intl.message(
+      'The email address or password is incorrect.',
+      name: 'invalidCredential',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Check your internet connection.`
+  String get networkRequestFailed {
+    return Intl.message(
+      'Check your internet connection.',
+      name: 'networkRequestFailed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `An unexpected error occurred, please try again.`
+  String get unexpectedError {
+    return Intl.message(
+      'An unexpected error occurred, please try again.',
+      name: 'unexpectedError',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

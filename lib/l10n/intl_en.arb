@@ -6,6 +6,7 @@
     "onboardingTitle2": "Search and Shop",
     "onboardingDescription2": "We bring you the best carefully selected fruits. View details, images, and reviews to make sure you choose the perfect fruit.",
     "startNow": "Start Now",
+
     "login": "Login",
     "email": "Email Address",
     "password": "Password",
@@ -16,5 +17,15 @@
     "loginWithGoogle": "Login with Google",
     "loginWithFacebook": "Login with Facebook",
     "emailRequired": "Email is required.",
-    "passwordRequired": "Password is required."
+    "passwordRequired": "Password is required.",
+
+    "userNotFound": "No user found for that email.",
+    "wrongPassword": "Wrong password provided for that user.",
+    "invalidEmail": "The email address is badly formatted.",
+    "userDisabled": "This user account has been disabled.",
+    "operationNotAllowed": "Signing in with email and password is not enabled.",
+    "tooManyRequests": "Too many requests. Try again later.",
+    "invalidCredential": "The email address or password is incorrect.",
+    "networkRequestFailed": "Check your internet connection.",
+    "unexpectedError": "An unexpected error occurred, please try again."
 }

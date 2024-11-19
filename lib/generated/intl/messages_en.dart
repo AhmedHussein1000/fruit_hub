@@ -29,17 +29,25 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Email is required."),
         "forrgotPassword":
             MessageLookupByLibrary.simpleMessage("Forgot Password?"),
+        "invalidCredential": MessageLookupByLibrary.simpleMessage(
+            "The email address or password is incorrect."),
+        "invalidEmail": MessageLookupByLibrary.simpleMessage(
+            "The email address is badly formatted."),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "loginWithFacebook":
             MessageLookupByLibrary.simpleMessage("Login with Facebook"),
         "loginWithGoogle":
             MessageLookupByLibrary.simpleMessage("Login with Google"),
+        "networkRequestFailed": MessageLookupByLibrary.simpleMessage(
+            "Check your internet connection."),
         "onboardingDescription1": MessageLookupByLibrary.simpleMessage(
             "Discover a unique shopping experience with FruitHUB. Explore our wide range of premium fresh fruits and get the best deals and high quality."),
         "onboardingDescription2": MessageLookupByLibrary.simpleMessage(
             "We bring you the best carefully selected fruits. View details, images, and reviews to make sure you choose the perfect fruit."),
         "onboardingTitle2":
             MessageLookupByLibrary.simpleMessage("Search and Shop"),
+        "operationNotAllowed": MessageLookupByLibrary.simpleMessage(
+            "Signing in with email and password is not enabled."),
         "or": MessageLookupByLibrary.simpleMessage("Or"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "passwordRequired":
@@ -47,6 +55,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "signup": MessageLookupByLibrary.simpleMessage(" Sign Up"),
         "skip": MessageLookupByLibrary.simpleMessage("Skip"),
         "startNow": MessageLookupByLibrary.simpleMessage("Start Now"),
-        "welcome": MessageLookupByLibrary.simpleMessage("Welcome to")
+        "tooManyRequests": MessageLookupByLibrary.simpleMessage(
+            "Too many requests. Try again later."),
+        "unexpectedError": MessageLookupByLibrary.simpleMessage(
+            "An unexpected error occurred, please try again."),
+        "userDisabled": MessageLookupByLibrary.simpleMessage(
+            "This user account has been disabled."),
+        "userNotFound": MessageLookupByLibrary.simpleMessage(
+            "No user found for that email."),
+        "welcome": MessageLookupByLibrary.simpleMessage("Welcome to"),
+        "wrongPassword": MessageLookupByLibrary.simpleMessage(
+            "Wrong password provided for that user.")
       };
 }

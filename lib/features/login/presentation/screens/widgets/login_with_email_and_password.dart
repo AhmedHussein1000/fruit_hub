@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruit_hub/core/helpers/navigation_extension.dart';
 import 'package:fruit_hub/core/routing/routes.dart';
@@ -7,6 +8,7 @@ import 'package:fruit_hub/core/theming/styles.dart';
 import 'package:fruit_hub/core/utils/app_constants.dart';
 import 'package:fruit_hub/core/widgets/custom_button.dart';
 import 'package:fruit_hub/core/widgets/custom_text_form_field.dart';
+import 'package:fruit_hub/features/login/presentation/controller/login_cubit/login_cubit.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 
 class LoginWithEmailAndPassword extends StatefulWidget {
@@ -19,31 +21,20 @@ class LoginWithEmailAndPassword extends StatefulWidget {
 
 class _LoginWithEmailAndPasswordState extends State<LoginWithEmailAndPassword> {
   final _formKey = GlobalKey<FormState>();
-  late final TextEditingController emailController;
-  late final TextEditingController passwordController;
+ 
   ValueNotifier<bool> isObscure = ValueNotifier<bool>(true);
-  @override
-  void initState() {
-    emailController = TextEditingController();
-    passwordController = TextEditingController();
-    super.initState();
-  }
-
-  @override
-  void dispose() {
-    emailController.dispose();
-    passwordController.dispose();
-    super.dispose();
-  }
+  
+ 
 
   @override
   Widget build(BuildContext context) {
+    final loginCubit = BlocProvider.of<LoginCubit>(context);
     return Form(
       key: _formKey,
       child: Column(
         children: [
           CustomTextFormField(
-            controller: emailController,
+            controller: loginCubit.emailController,
             validator: (value) {
               if (value == null || value.isEmpty) {
                 return S.of(context).emailRequired;
@@ -59,7 +50,7 @@ class _LoginWithEmailAndPasswordState extends State<LoginWithEmailAndPassword> {
           ValueListenableBuilder(
               valueListenable: isObscure,
               builder: (context, value, child) => CustomTextFormField(
-                    controller: passwordController,
+                    controller: loginCubit.passwordController,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
                         return S.of(context).passwordRequired;
@@ -101,7 +92,11 @@ class _LoginWithEmailAndPasswordState extends State<LoginWithEmailAndPassword> {
           ),
           CustomButton(
               onPressed: () {
-                //TODO login with email and password
+                if (_formKey.currentState!.validate()) {
+                  context.read<LoginCubit>().loginWithEmailAndPassword(
+                     
+                      localization: S.of(context));
+                }
               },
               btnText: S.of(context).login),
         ],
