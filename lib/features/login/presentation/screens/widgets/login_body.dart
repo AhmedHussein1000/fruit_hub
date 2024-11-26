@@ -54,7 +54,9 @@ class LoginBody extends StatelessWidget {
                 socialImage: Assets.imagesFacebookIcon,
                 socialTitle: S.of(context).loginWithFacebook,
                 onPressed: () {
-                  //TODO
+                  context
+                      .read<LoginCubit>()
+                      .signInWithFacebook(localization: S.of(context));
                 }),
           ],
         ),

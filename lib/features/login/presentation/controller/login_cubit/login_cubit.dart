@@ -31,5 +31,11 @@ class LoginCubit extends Cubit<LoginState> {
     result.fold((failure) => emit(LoginFailure(errorMessage:  failure.message)),
         (user) => emit(LoginSuccess(user:user)));
   }
+ Future<void> signInWithFacebook({required S localization}) async {
+    emit(LoginLoading());
+    final result = await baseLoginRepo.signInWithFacebook(localization: localization);
+    result.fold((failure) => emit(LoginFailure(errorMessage:  failure.message)),
+        (user) => emit(LoginSuccess(user:user)));
+ } 
 
 }

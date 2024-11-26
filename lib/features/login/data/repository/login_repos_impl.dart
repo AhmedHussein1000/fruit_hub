@@ -41,4 +41,16 @@ class LoginReposImpl extends BaseLoginRepo {
       return Left(ServerFailure(message: localization.unexpectedError));
     }
   }
+
+  @override
+  Future<Either<Failure, User>> signInWithFacebook(
+      {required S localization}) async {
+    try {
+      User user = await firebaseAuthService.signInWithFacebook();
+      return Right(user);
+    } on Exception catch (e) {
+      log('{Exception in LoginReposImpl.signInWithFacebook: ${e.toString()}');
+     return Left(ServerFailure(message: localization.unexpectedError));
+    }
+  }
 }
