@@ -20,12 +20,24 @@ class LoginReposImpl extends BaseLoginRepo {
     try {
       User user = await firebaseAuthService.loginWithEmailAndPassword(
           email: email, password: password, localization: localization);
-          
+
       return Right(user);
     } on CustomException catch (e) {
       return Left(ServerFailure(message: e.message));
     } catch (e) {
       log('{Exception in LoginReposImpl.loginWithEmailAndPassword: ${e.toString()}');
+      return Left(ServerFailure(message: localization.unexpectedError));
+    }
+  }
+
+  @override
+  Future<Either<Failure, User>> signInWithGoogle(
+      {required S localization}) async {
+    try {
+      User user = await firebaseAuthService.signInWithGoogle();
+      return Right(user);
+    } catch (e) {
+      log('{Exception in LoginReposImpl.signInWithGoogle: ${e.toString()}');
       return Left(ServerFailure(message: localization.unexpectedError));
     }
   }

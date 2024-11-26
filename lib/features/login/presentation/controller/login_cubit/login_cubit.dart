@@ -25,4 +25,11 @@ class LoginCubit extends Cubit<LoginState> {
     passwordController.dispose();
     return super.close();
   }
+ Future<void> signInWithGoogle({required S localization}) async {
+    emit(LoginLoading());
+    final result = await baseLoginRepo.signInWithGoogle(localization: localization);
+    result.fold((failure) => emit(LoginFailure(errorMessage:  failure.message)),
+        (user) => emit(LoginSuccess(user:user)));
+  }
+
 }
