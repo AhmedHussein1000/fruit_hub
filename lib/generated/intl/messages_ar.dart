@@ -22,13 +22,52 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "dontHaveAnAccount":
+            MessageLookupByLibrary.simpleMessage(" لا تمتلك حساب؟"),
+        "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
+        "emailRequired":
+            MessageLookupByLibrary.simpleMessage("البريد الإلكتروني مطلوب."),
+        "forrgotPassword":
+            MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
+        "invalidCredential": MessageLookupByLibrary.simpleMessage(
+            "البريد الإلكتروني أو كلمة المرور غير صحيحة."),
+        "invalidEmail": MessageLookupByLibrary.simpleMessage(
+            "تنسيق البريد الإلكتروني غير صحيح."),
+        "login": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
+        "loginWithFacebook":
+            MessageLookupByLibrary.simpleMessage("تسجيل بواسطة فيسبوك"),
+        "loginWithGoogle":
+            MessageLookupByLibrary.simpleMessage("تسجيل بواسطة جوجل"),
+        "networkRequestFailed":
+            MessageLookupByLibrary.simpleMessage("تحقق من اتصالك بالإنترنت."),
+        "noFacebookAccountSelected": MessageLookupByLibrary.simpleMessage(
+            "تم إلغاء تسجيل الدخول بواسطة فيسبوك من قبل المستخدم."),
+        "noGoogleAccountSelected": MessageLookupByLibrary.simpleMessage(
+            " تم إلغاء تسجيل الدخول بواسطة جوجل من قبل المستخدم."),
         "onboardingDescription1": MessageLookupByLibrary.simpleMessage(
             "اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية."),
         "onboardingDescription2": MessageLookupByLibrary.simpleMessage(
             "نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية"),
         "onboardingTitle2": MessageLookupByLibrary.simpleMessage("ابحث وتسوق"),
+        "operationNotAllowed": MessageLookupByLibrary.simpleMessage(
+            "تسجيل الدخول بالبريد وكلمة المرور غير مفعل."),
+        "or": MessageLookupByLibrary.simpleMessage("أو"),
+        "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+        "passwordRequired":
+            MessageLookupByLibrary.simpleMessage("كلمة المرور مطلوبة."),
+        "signup": MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب"),
         "skip": MessageLookupByLibrary.simpleMessage("تخط"),
         "startNow": MessageLookupByLibrary.simpleMessage("ابدأ الآن"),
-        "welcome": MessageLookupByLibrary.simpleMessage("مرحباً بك في")
+        "tooManyRequests": MessageLookupByLibrary.simpleMessage(
+            "لقد تجاوزت عدد المحاولات المسموح به. حاول لاحقًا."),
+        "unexpectedError": MessageLookupByLibrary.simpleMessage(
+            "حدث خطأ غير متوقع، يرجى المحاولة مرة أخرى."),
+        "userDisabled":
+            MessageLookupByLibrary.simpleMessage("تم تعطيل حساب المستخدم هذا."),
+        "userNotFound": MessageLookupByLibrary.simpleMessage(
+            "لا يوجد مستخدم مرتبط بهذا البريد الإلكتروني."),
+        "welcome": MessageLookupByLibrary.simpleMessage("مرحباً بك في"),
+        "wrongPassword": MessageLookupByLibrary.simpleMessage(
+            "كلمة المرور التي تم إدخالها غير صحيحة.")
       };
 }

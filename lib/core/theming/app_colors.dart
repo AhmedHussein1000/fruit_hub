@@ -21,15 +21,18 @@ abstract class AppColors {
   static const Color lightGrayishBlue = Color(0xFFD1D5DB);
   static const Color neutralColors400 = Color(0xFFD6DCE5);
   static const Color neutralLightGray = Color(0xFFD9D9D9);
-  static const Color mainBlack40 = Color(0xFFC9CECF);
+  static const Color ashGray = Color(0xFFDCDEDE);
+  static const Color softGray = Color(0xFFC9CECF);
 
   static const Color darkGreenPrimaryColor = Color(0xFF1B5E37);
   static const Color forestGreen = Color(0xFF217242);
+  static const Color deepForestGreen = Color(0xFF131E1F);
   static const Color vibrantGreen = Color(0xFF83E24F);
   static const Color lightGreen = Color(0xFF76DE4D);
   static const Color midToneGreen = Color(0xFF5DB957);
   static const Color coolGreen = Color(0xFF60D290);
   static const Color greenishTeal = Color(0xFF46AB60);
+  static const Color seaGreen = Color(0xFF2D9F5D);
 
   static const Color darkNavy = Color(0xFF092533);
   static const Color deepBlue = Color(0xFF0A2737);

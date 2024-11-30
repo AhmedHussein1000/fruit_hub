@@ -109,6 +109,226 @@ class S {
       args: [],
     );
   }
+
+  /// `Login`
+  String get login {
+    return Intl.message(
+      'Login',
+      name: 'login',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email Address`
+  String get email {
+    return Intl.message(
+      'Email Address',
+      name: 'email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password`
+  String get password {
+    return Intl.message(
+      'Password',
+      name: 'password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Forgot Password?`
+  String get forrgotPassword {
+    return Intl.message(
+      'Forgot Password?',
+      name: 'forrgotPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Don't have an account?`
+  String get dontHaveAnAccount {
+    return Intl.message(
+      'Don\'t have an account?',
+      name: 'dontHaveAnAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ` Sign Up`
+  String get signup {
+    return Intl.message(
+      ' Sign Up',
+      name: 'signup',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Or`
+  String get or {
+    return Intl.message(
+      'Or',
+      name: 'or',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login with Google`
+  String get loginWithGoogle {
+    return Intl.message(
+      'Login with Google',
+      name: 'loginWithGoogle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login with Facebook`
+  String get loginWithFacebook {
+    return Intl.message(
+      'Login with Facebook',
+      name: 'loginWithFacebook',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email is required.`
+  String get emailRequired {
+    return Intl.message(
+      'Email is required.',
+      name: 'emailRequired',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password is required.`
+  String get passwordRequired {
+    return Intl.message(
+      'Password is required.',
+      name: 'passwordRequired',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `User has cancelled login with google.`
+  String get noGoogleAccountSelected {
+    return Intl.message(
+      'User has cancelled login with google.',
+      name: 'noGoogleAccountSelected',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `User has cancelled login with facebook.`
+  String get noFacebookAccountSelected {
+    return Intl.message(
+      'User has cancelled login with facebook.',
+      name: 'noFacebookAccountSelected',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No user found for that email.`
+  String get userNotFound {
+    return Intl.message(
+      'No user found for that email.',
+      name: 'userNotFound',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Wrong password provided for that user.`
+  String get wrongPassword {
+    return Intl.message(
+      'Wrong password provided for that user.',
+      name: 'wrongPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The email address is badly formatted.`
+  String get invalidEmail {
+    return Intl.message(
+      'The email address is badly formatted.',
+      name: 'invalidEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This user account has been disabled.`
+  String get userDisabled {
+    return Intl.message(
+      'This user account has been disabled.',
+      name: 'userDisabled',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Signing in with email and password is not enabled.`
+  String get operationNotAllowed {
+    return Intl.message(
+      'Signing in with email and password is not enabled.',
+      name: 'operationNotAllowed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Too many requests. Try again later.`
+  String get tooManyRequests {
+    return Intl.message(
+      'Too many requests. Try again later.',
+      name: 'tooManyRequests',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The email address or password is incorrect.`
+  String get invalidCredential {
+    return Intl.message(
+      'The email address or password is incorrect.',
+      name: 'invalidCredential',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Check your internet connection.`
+  String get networkRequestFailed {
+    return Intl.message(
+      'Check your internet connection.',
+      name: 'networkRequestFailed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `An unexpected error occurred, please try again.`
+  String get unexpectedError {
+    return Intl.message(
+      'An unexpected error occurred, please try again.',
+      name: 'unexpectedError',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
