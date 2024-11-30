@@ -40,6 +40,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تسجيل بواسطة جوجل"),
         "networkRequestFailed":
             MessageLookupByLibrary.simpleMessage("تحقق من اتصالك بالإنترنت."),
+        "noFacebookAccountSelected": MessageLookupByLibrary.simpleMessage(
+            "تم إلغاء تسجيل الدخول بواسطة فيسبوك من قبل المستخدم."),
+        "noGoogleAccountSelected": MessageLookupByLibrary.simpleMessage(
+            " تم إلغاء تسجيل الدخول بواسطة جوجل من قبل المستخدم."),
         "onboardingDescription1": MessageLookupByLibrary.simpleMessage(
             "اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية."),
         "onboardingDescription2": MessageLookupByLibrary.simpleMessage(

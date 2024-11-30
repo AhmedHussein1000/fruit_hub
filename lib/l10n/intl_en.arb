@@ -18,6 +18,8 @@
     "loginWithFacebook": "Login with Facebook",
     "emailRequired": "Email is required.",
     "passwordRequired": "Password is required.",
+    "noGoogleAccountSelected" : "User has cancelled login with google.",
+    "noFacebookAccountSelected" : "User has cancelled login with facebook.",
 
     "userNotFound": "No user found for that email.",
     "wrongPassword": "Wrong password provided for that user.",

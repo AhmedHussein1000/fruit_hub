@@ -34,8 +34,11 @@ class LoginReposImpl extends BaseLoginRepo {
   Future<Either<Failure, User>> signInWithGoogle(
       {required S localization}) async {
     try {
-      User user = await firebaseAuthService.signInWithGoogle();
+      User user = await firebaseAuthService.signInWithGoogle(
+          localization: localization);
       return Right(user);
+    } on CustomException catch (e) {
+      return Left(ServerFailure(message: e.message));
     } catch (e) {
       log('{Exception in LoginReposImpl.signInWithGoogle: ${e.toString()}');
       return Left(ServerFailure(message: localization.unexpectedError));
@@ -46,11 +49,14 @@ class LoginReposImpl extends BaseLoginRepo {
   Future<Either<Failure, User>> signInWithFacebook(
       {required S localization}) async {
     try {
-      User user = await firebaseAuthService.signInWithFacebook();
+      User user = await firebaseAuthService.signInWithFacebook(
+          localization: localization);
       return Right(user);
+    } on CustomException catch (e) {
+      return Left(ServerFailure(message: e.message));
     } on Exception catch (e) {
       log('{Exception in LoginReposImpl.signInWithFacebook: ${e.toString()}');
-     return Left(ServerFailure(message: localization.unexpectedError));
+      return Left(ServerFailure(message: localization.unexpectedError));
     }
   }
 }

@@ -46,23 +46,29 @@ class FirebaseAuthService {
     }
   }
 
-  Future<User> signInWithGoogle() async {
+  Future<User> signInWithGoogle({required S localization}) async {
     final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
 
-    final GoogleSignInAuthentication? googleAuth =
-        await googleUser?.authentication;
+    if (googleUser == null) {
+      throw CustomException(message: localization.noGoogleAccountSelected);
+    }
+    final GoogleSignInAuthentication googleAuth =
+        await googleUser.authentication;
 
     final credential = GoogleAuthProvider.credential(
-      accessToken: googleAuth?.accessToken,
-      idToken: googleAuth?.idToken,
+      accessToken: googleAuth.accessToken,
+      idToken: googleAuth.idToken,
     );
 
     return (await FirebaseAuth.instance.signInWithCredential(credential)).user!;
   }
 
-  Future<User> signInWithFacebook() async {
+  Future<User> signInWithFacebook({required S localization}) async {
     final LoginResult loginResult = await FacebookAuth.instance.login();
-    
+    if (loginResult.status != LoginStatus.success) {
+      log("Exception in FirebaseAuthService.signInWithFacebook: ${loginResult.message}");
+      throw CustomException(message: localization.noFacebookAccountSelected);
+    }
     final OAuthCredential facebookAuthCredential =
         FacebookAuthProvider.credential(loginResult.accessToken!.tokenString);
 

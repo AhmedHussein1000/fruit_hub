@@ -220,6 +220,26 @@ class S {
     );
   }
 
+  /// `User has cancelled login with google.`
+  String get noGoogleAccountSelected {
+    return Intl.message(
+      'User has cancelled login with google.',
+      name: 'noGoogleAccountSelected',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `User has cancelled login with facebook.`
+  String get noFacebookAccountSelected {
+    return Intl.message(
+      'User has cancelled login with facebook.',
+      name: 'noFacebookAccountSelected',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `No user found for that email.`
   String get userNotFound {
     return Intl.message(

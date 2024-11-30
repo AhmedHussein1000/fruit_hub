@@ -40,6 +40,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Login with Google"),
         "networkRequestFailed": MessageLookupByLibrary.simpleMessage(
             "Check your internet connection."),
+        "noFacebookAccountSelected": MessageLookupByLibrary.simpleMessage(
+            "User has cancelled login with facebook."),
+        "noGoogleAccountSelected": MessageLookupByLibrary.simpleMessage(
+            "User has cancelled login with google."),
         "onboardingDescription1": MessageLookupByLibrary.simpleMessage(
             "Discover a unique shopping experience with FruitHUB. Explore our wide range of premium fresh fruits and get the best deals and high quality."),
         "onboardingDescription2": MessageLookupByLibrary.simpleMessage(

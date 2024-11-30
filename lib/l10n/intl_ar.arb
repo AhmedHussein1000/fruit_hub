@@ -18,6 +18,8 @@
     "loginWithFacebook":"تسجيل بواسطة فيسبوك",
     "emailRequired": "البريد الإلكتروني مطلوب.",
     "passwordRequired": "كلمة المرور مطلوبة.",
+    "noGoogleAccountSelected" : " تم إلغاء تسجيل الدخول بواسطة جوجل من قبل المستخدم." ,
+    "noFacebookAccountSelected" : "تم إلغاء تسجيل الدخول بواسطة فيسبوك من قبل المستخدم.",
 
     "userNotFound": "لا يوجد مستخدم مرتبط بهذا البريد الإلكتروني.",
     "wrongPassword": "كلمة المرور التي تم إدخالها غير صحيحة.",
