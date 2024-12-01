@@ -68,7 +68,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "passwordRequired":
             MessageLookupByLibrary.simpleMessage("Password is required."),
+        "pleaseAcceptTerms": MessageLookupByLibrary.simpleMessage(
+            "Please accept our terms and conditions."),
         "signup": MessageLookupByLibrary.simpleMessage(" Sign Up"),
+        "signupSuccessful": MessageLookupByLibrary.simpleMessage(
+            "Account created successfully."),
         "skip": MessageLookupByLibrary.simpleMessage("Skip"),
         "startNow": MessageLookupByLibrary.simpleMessage("Start Now"),
         "termsAgreement": MessageLookupByLibrary.simpleMessage(

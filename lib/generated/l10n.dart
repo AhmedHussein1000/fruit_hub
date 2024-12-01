@@ -310,6 +310,26 @@ class S {
     );
   }
 
+  /// `Please accept our terms and conditions.`
+  String get pleaseAcceptTerms {
+    return Intl.message(
+      'Please accept our terms and conditions.',
+      name: 'pleaseAcceptTerms',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Account created successfully.`
+  String get signupSuccessful {
+    return Intl.message(
+      'Account created successfully.',
+      name: 'signupSuccessful',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `No user found for that email.`
   String get userNotFound {
     return Intl.message(

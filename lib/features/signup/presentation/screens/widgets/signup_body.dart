@@ -1,6 +1,9 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:fruit_hub/core/functions/show_toast.dart';
 import 'package:fruit_hub/core/utils/app_constants.dart';
 import 'package:fruit_hub/core/widgets/custom_button.dart';
 import 'package:fruit_hub/features/signup/presentation/controller/signup_cubit/signup_cubit.dart';
@@ -38,6 +41,7 @@ class _SignupBodyState extends State<SignupBody> {
               ValueListenableBuilder(
                   valueListenable: isChecked,
                   builder: (context, value, child) {
+                    log('terms value: ${value.toString()}');
                     return TermsAndConditions(
                       isChecked: value,
                       onTap: () {
@@ -51,10 +55,13 @@ class _SignupBodyState extends State<SignupBody> {
               CustomButton(
                   onPressed: () {
                     if (signupCubit.formKey.currentState!.validate()) {
-                      if (isChecked.value) {
-                        //TODO create account
+                      if (isChecked.value == true) {
+                        signupCubit.signupWithEmailAndPassword(
+                            localization: S.of(context));
+                      } else {
+                        customToast(
+                            S.of(context).pleaseAcceptTerms, ToastStates.error);
                       }
-                      //TODO show toast to accept terms
                     }
                   },
                   btnText: S.of(context).createAccount),

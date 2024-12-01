@@ -28,6 +28,9 @@
     "ourTermsAndConditions" : "الشروط والأحكام الخاصة بنا", 
     "createAccount" : "إنشاء حساب جديد",
     "alreadyHaveAnAccount" : "تمتلك حساب بالفعل؟ ",
+    "pleaseAcceptTerms" : "يرجى قبول الشروط والأحكام لاستكمال التسجيل.",
+    "signupSuccessful" : "تم انشاء الحساب بنجاح.",
+
 
     "userNotFound": "لا يوجد مستخدم مرتبط بهذا البريد الإلكتروني.",
     "wrongPassword": "كلمة المرور التي تم إدخالها غير صحيحة.",
