@@ -29,6 +29,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "dontHaveAnAccount":
             MessageLookupByLibrary.simpleMessage(" لا تمتلك حساب؟"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
+        "emailAlreadyInUse": MessageLookupByLibrary.simpleMessage(
+            "هذا البريد الإلكتروني مسجل بالفعل."),
         "emailRequired":
             MessageLookupByLibrary.simpleMessage("البريد الإلكتروني مطلوب."),
         "forrgotPassword":
@@ -77,6 +79,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تم تعطيل حساب المستخدم هذا."),
         "userNotFound": MessageLookupByLibrary.simpleMessage(
             "لا يوجد مستخدم مرتبط بهذا البريد الإلكتروني."),
+        "weakPassword":
+            MessageLookupByLibrary.simpleMessage("كلمة المرور ضعيفة جدًا."),
         "welcome": MessageLookupByLibrary.simpleMessage("مرحباً بك في"),
         "wrongPassword": MessageLookupByLibrary.simpleMessage(
             "كلمة المرور التي تم إدخالها غير صحيحة.")

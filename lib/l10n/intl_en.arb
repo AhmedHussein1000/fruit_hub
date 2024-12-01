@@ -42,5 +42,11 @@
     "tooManyRequests": "Too many requests. Try again later.",
     "invalidCredential": "The email address or password is incorrect.",
     "networkRequestFailed": "Check your internet connection.",
-    "unexpectedError": "An unexpected error occurred, please try again."
+    "unexpectedError": "An unexpected error occurred, please try again.",
+
+    "weakPassword": "The password provided is too weak.",
+    "emailAlreadyInUse": "The account already exists for that email."
+    
+
+
 }

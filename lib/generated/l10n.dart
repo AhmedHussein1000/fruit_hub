@@ -399,6 +399,26 @@ class S {
       args: [],
     );
   }
+
+  /// `The password provided is too weak.`
+  String get weakPassword {
+    return Intl.message(
+      'The password provided is too weak.',
+      name: 'weakPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The account already exists for that email.`
+  String get emailAlreadyInUse {
+    return Intl.message(
+      'The account already exists for that email.',
+      name: 'emailAlreadyInUse',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:fruit_hub/features/login/domain/repository/login_repos.dart';
+import 'package:fruit_hub/features/login/domain/repository/base_login_repo.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 part 'login_state.dart';
 

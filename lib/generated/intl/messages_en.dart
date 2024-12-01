@@ -29,6 +29,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "dontHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
         "email": MessageLookupByLibrary.simpleMessage("Email Address"),
+        "emailAlreadyInUse": MessageLookupByLibrary.simpleMessage(
+            "The account already exists for that email."),
         "emailRequired":
             MessageLookupByLibrary.simpleMessage("Email is required."),
         "forrgotPassword":
@@ -79,6 +81,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "This user account has been disabled."),
         "userNotFound": MessageLookupByLibrary.simpleMessage(
             "No user found for that email."),
+        "weakPassword": MessageLookupByLibrary.simpleMessage(
+            "The password provided is too weak."),
         "welcome": MessageLookupByLibrary.simpleMessage("Welcome to"),
         "wrongPassword": MessageLookupByLibrary.simpleMessage(
             "Wrong password provided for that user.")

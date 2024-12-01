@@ -76,4 +76,36 @@ class FirebaseAuthService {
             .signInWithCredential(facebookAuthCredential))
         .user!;
   }
+
+  Future<User> signupWithEmailAndPassword(
+      {required String email,
+      required String password,
+      required S localization}) async {
+      try {
+  final credential = await FirebaseAuth.instance.createUserWithEmailAndPassword(
+    email: email,
+    password: password,
+  );
+  return credential.user!;
+} on FirebaseAuthException catch (e) {
+  if (e.code == 'weak-password') {
+    throw CustomException(message: localization.weakPassword );
+  } else if (e.code == 'email-already-in-use') {
+    throw CustomException(message: localization.emailAlreadyInUse);
+  } else if (e.code == 'invalid-email') {
+    throw CustomException(message: localization.invalidEmail);
+  } else if (e.code == 'network-request-failed') {
+    throw CustomException(message: localization.networkRequestFailed);
+  } else if (e.code == 'operation-not-allowed') {
+    throw CustomException(message: localization.operationNotAllowed);
+  } else {
+    log("Exception in FirebaseAuthService.signupWithEmailAndPassword: ${e.toString()}");
+    throw CustomException(message:  localization.unexpectedError);
+  }
+} catch (e) {
+  log("Exception in FirebaseAuthService.signupWithEmailAndPassword: ${e.toString()}");
+  throw CustomException(message: localization.unexpectedError );
+}
+  
+      }
 }
