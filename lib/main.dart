@@ -17,10 +17,12 @@ void main() async {
   await ScreenUtil.ensureScreenSize();
   await Firebase.initializeApp();
   setupServiceLocator();
-
   Intl.defaultLocale = 'ar';
   isSkippedOnBoarding = CacheHelper.getData(CacheHelper.onBoardingKey) ?? false;
-  runApp(DevicePreview(enabled: false, builder: (context) => const MyApp()));
+  runApp(DevicePreview(
+      enabled: false,
+      availableLocales: const [Locale('ar'), Locale('en')],
+      builder: (context) => const MyApp()));
 }
 
 class MyApp extends StatelessWidget {

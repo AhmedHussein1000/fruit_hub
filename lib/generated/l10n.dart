@@ -200,6 +200,16 @@ class S {
     );
   }
 
+  /// `Name is required.`
+  String get nameRequired {
+    return Intl.message(
+      'Name is required.',
+      name: 'nameRequired',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Email is required.`
   String get emailRequired {
     return Intl.message(
@@ -235,6 +245,86 @@ class S {
     return Intl.message(
       'User has cancelled login with facebook.',
       name: 'noFacebookAccountSelected',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `New Account`
+  String get newAccount {
+    return Intl.message(
+      'New Account',
+      name: 'newAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Full Name`
+  String get fullName {
+    return Intl.message(
+      'Full Name',
+      name: 'fullName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `By creating an account, you agree to`
+  String get termsAgreement {
+    return Intl.message(
+      'By creating an account, you agree to',
+      name: 'termsAgreement',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `our Terms and Conditions`
+  String get ourTermsAndConditions {
+    return Intl.message(
+      'our Terms and Conditions',
+      name: 'ourTermsAndConditions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create New Account`
+  String get createAccount {
+    return Intl.message(
+      'Create New Account',
+      name: 'createAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Already have an account?`
+  String get alreadyHaveAnAccount {
+    return Intl.message(
+      'Already have an account?',
+      name: 'alreadyHaveAnAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please accept our terms and conditions.`
+  String get pleaseAcceptTerms {
+    return Intl.message(
+      'Please accept our terms and conditions.',
+      name: 'pleaseAcceptTerms',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Account created successfully.`
+  String get signupSuccessful {
+    return Intl.message(
+      'Account created successfully.',
+      name: 'signupSuccessful',
       desc: '',
       args: [],
     );
@@ -325,6 +415,26 @@ class S {
     return Intl.message(
       'An unexpected error occurred, please try again.',
       name: 'unexpectedError',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The password provided is too weak.`
+  String get weakPassword {
+    return Intl.message(
+      'The password provided is too weak.',
+      name: 'weakPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The account already exists for that email.`
+  String get emailAlreadyInUse {
+    return Intl.message(
+      'The account already exists for that email.',
+      name: 'emailAlreadyInUse',
       desc: '',
       args: [],
     );

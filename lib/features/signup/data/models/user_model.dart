@@ -6,10 +6,10 @@ part 'user_model.g.dart';
 @JsonSerializable()
 class UserModel extends UserEntity {
   @JsonKey(name: 'user_id')
-  final String userId;
+  final String uId;
   const UserModel(
-      {required this.userId, required super.name, required super.email})
-      : super(userId: userId);
+      {required this.uId, required super.name, required super.email})
+      : super(userId: uId);
 
   factory UserModel.fromJson(Map<String, dynamic> json) =>
       _$UserModelFromJson(json);

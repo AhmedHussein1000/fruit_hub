@@ -16,10 +16,24 @@
     "or": "Or",
     "loginWithGoogle": "Login with Google",
     "loginWithFacebook": "Login with Facebook",
+    "nameRequired": "Name is required.",
     "emailRequired": "Email is required.",
     "passwordRequired": "Password is required.",
     "noGoogleAccountSelected" : "User has cancelled login with google.",
     "noFacebookAccountSelected" : "User has cancelled login with facebook.",
+
+
+    
+    "newAccount": "New Account",
+    "fullName": "Full Name",
+    "termsAgreement": "By creating an account, you agree to",
+    "ourTermsAndConditions": "our Terms and Conditions",
+    "createAccount": "Create New Account",
+    "alreadyHaveAnAccount": "Already have an account?",
+    "pleaseAcceptTerms": "Please accept our terms and conditions.",
+    "signupSuccessful": "Account created successfully.",
+      
+
 
     "userNotFound": "No user found for that email.",
     "wrongPassword": "Wrong password provided for that user.",
@@ -29,5 +43,11 @@
     "tooManyRequests": "Too many requests. Try again later.",
     "invalidCredential": "The email address or password is incorrect.",
     "networkRequestFailed": "Check your internet connection.",
-    "unexpectedError": "An unexpected error occurred, please try again."
+    "unexpectedError": "An unexpected error occurred, please try again.",
+
+    "weakPassword": "The password provided is too weak.",
+    "emailAlreadyInUse": "The account already exists for that email."
+    
+
+
 }

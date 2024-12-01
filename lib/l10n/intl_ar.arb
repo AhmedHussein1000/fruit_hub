@@ -18,8 +18,19 @@
     "loginWithFacebook":"تسجيل بواسطة فيسبوك",
     "emailRequired": "البريد الإلكتروني مطلوب.",
     "passwordRequired": "كلمة المرور مطلوبة.",
+    "nameRequired": "الاسم مطلوب.",
     "noGoogleAccountSelected" : " تم إلغاء تسجيل الدخول بواسطة جوجل من قبل المستخدم." ,
     "noFacebookAccountSelected" : "تم إلغاء تسجيل الدخول بواسطة فيسبوك من قبل المستخدم.",
+
+    "newAccount" : "حساب جديد",
+    "fullName" :"الاسم كامل",
+    "termsAgreement" : "من خلال إنشاء حساب ، فإنك توافق على",
+    "ourTermsAndConditions" : "الشروط والأحكام الخاصة بنا", 
+    "createAccount" : "إنشاء حساب جديد",
+    "alreadyHaveAnAccount" : "تمتلك حساب بالفعل؟ ",
+    "pleaseAcceptTerms" : "يرجى قبول الشروط والأحكام لاستكمال التسجيل.",
+    "signupSuccessful" : "تم انشاء الحساب بنجاح.",
+
 
     "userNotFound": "لا يوجد مستخدم مرتبط بهذا البريد الإلكتروني.",
     "wrongPassword": "كلمة المرور التي تم إدخالها غير صحيحة.",
@@ -29,8 +40,10 @@
     "tooManyRequests": "لقد تجاوزت عدد المحاولات المسموح به. حاول لاحقًا.",
     "invalidCredential": "البريد الإلكتروني أو كلمة المرور غير صحيحة.",
     "networkRequestFailed": "تحقق من اتصالك بالإنترنت.",
-    "unexpectedError": "حدث خطأ غير متوقع، يرجى المحاولة مرة أخرى."
-
+    "unexpectedError": "حدث خطأ غير متوقع، يرجى المحاولة مرة أخرى.",
+    
+    "weakPassword": "كلمة المرور ضعيفة جدًا.",
+    "emailAlreadyInUse": "هذا البريد الإلكتروني مسجل بالفعل."
 
    
 

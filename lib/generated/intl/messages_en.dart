@@ -22,13 +22,20 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "alreadyHaveAnAccount":
+            MessageLookupByLibrary.simpleMessage("Already have an account?"),
+        "createAccount":
+            MessageLookupByLibrary.simpleMessage("Create New Account"),
         "dontHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
         "email": MessageLookupByLibrary.simpleMessage("Email Address"),
+        "emailAlreadyInUse": MessageLookupByLibrary.simpleMessage(
+            "The account already exists for that email."),
         "emailRequired":
             MessageLookupByLibrary.simpleMessage("Email is required."),
         "forrgotPassword":
             MessageLookupByLibrary.simpleMessage("Forgot Password?"),
+        "fullName": MessageLookupByLibrary.simpleMessage("Full Name"),
         "invalidCredential": MessageLookupByLibrary.simpleMessage(
             "The email address or password is incorrect."),
         "invalidEmail": MessageLookupByLibrary.simpleMessage(
@@ -38,8 +45,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Login with Facebook"),
         "loginWithGoogle":
             MessageLookupByLibrary.simpleMessage("Login with Google"),
+        "nameRequired":
+            MessageLookupByLibrary.simpleMessage("Name is required."),
         "networkRequestFailed": MessageLookupByLibrary.simpleMessage(
             "Check your internet connection."),
+        "newAccount": MessageLookupByLibrary.simpleMessage("New Account"),
         "noFacebookAccountSelected": MessageLookupByLibrary.simpleMessage(
             "User has cancelled login with facebook."),
         "noGoogleAccountSelected": MessageLookupByLibrary.simpleMessage(
@@ -53,12 +63,20 @@ class MessageLookup extends MessageLookupByLibrary {
         "operationNotAllowed": MessageLookupByLibrary.simpleMessage(
             "Signing in with email and password is not enabled."),
         "or": MessageLookupByLibrary.simpleMessage("Or"),
+        "ourTermsAndConditions":
+            MessageLookupByLibrary.simpleMessage("our Terms and Conditions"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "passwordRequired":
             MessageLookupByLibrary.simpleMessage("Password is required."),
+        "pleaseAcceptTerms": MessageLookupByLibrary.simpleMessage(
+            "Please accept our terms and conditions."),
         "signup": MessageLookupByLibrary.simpleMessage(" Sign Up"),
+        "signupSuccessful": MessageLookupByLibrary.simpleMessage(
+            "Account created successfully."),
         "skip": MessageLookupByLibrary.simpleMessage("Skip"),
         "startNow": MessageLookupByLibrary.simpleMessage("Start Now"),
+        "termsAgreement": MessageLookupByLibrary.simpleMessage(
+            "By creating an account, you agree to"),
         "tooManyRequests": MessageLookupByLibrary.simpleMessage(
             "Too many requests. Try again later."),
         "unexpectedError": MessageLookupByLibrary.simpleMessage(
@@ -67,6 +85,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "This user account has been disabled."),
         "userNotFound": MessageLookupByLibrary.simpleMessage(
             "No user found for that email."),
+        "weakPassword": MessageLookupByLibrary.simpleMessage(
+            "The password provided is too weak."),
         "welcome": MessageLookupByLibrary.simpleMessage("Welcome to"),
         "wrongPassword": MessageLookupByLibrary.simpleMessage(
             "Wrong password provided for that user.")

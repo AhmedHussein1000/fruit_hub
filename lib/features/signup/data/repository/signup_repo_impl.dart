@@ -1,0 +1,28 @@
+import 'dart:developer';
+
+import 'package:dartz/dartz.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:fruit_hub/core/errors/exceptions.dart';
+import 'package:fruit_hub/core/errors/failures.dart';
+import 'package:fruit_hub/core/services/firebase_auth_service.dart';
+import 'package:fruit_hub/features/signup/domain/repository/base_signup_repo.dart';
+import 'package:fruit_hub/generated/l10n.dart';
+
+class SignupRepoImpl extends BaseSignupRepo{
+  final FirebaseAuthService firebaseAuthService;
+
+  SignupRepoImpl(this.firebaseAuthService);
+  @override
+  Future<Either<Failure, User>> signupWithEmailAndPassword({required String email, required String password, required S localization})async {
+  try {
+    User user = await firebaseAuthService.signupWithEmailAndPassword(email: email, password: password, localization: localization);
+    return Right(user);
+  } on CustomException catch (e) {
+    return Left(ServerFailure(message: e.message));
+  } catch (e) {
+    log('{Exception in SignupRepoImpl.signupWithEmailAndPassword: ${e.toString()}');
+    return Left(ServerFailure(message: localization.unexpectedError));
+  }
+  }
+
+}

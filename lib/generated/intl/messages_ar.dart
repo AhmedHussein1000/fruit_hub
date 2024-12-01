@@ -22,13 +22,20 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "alreadyHaveAnAccount":
+            MessageLookupByLibrary.simpleMessage("تمتلك حساب بالفعل؟ "),
+        "createAccount":
+            MessageLookupByLibrary.simpleMessage("إنشاء حساب جديد"),
         "dontHaveAnAccount":
             MessageLookupByLibrary.simpleMessage(" لا تمتلك حساب؟"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
+        "emailAlreadyInUse": MessageLookupByLibrary.simpleMessage(
+            "هذا البريد الإلكتروني مسجل بالفعل."),
         "emailRequired":
             MessageLookupByLibrary.simpleMessage("البريد الإلكتروني مطلوب."),
         "forrgotPassword":
             MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
+        "fullName": MessageLookupByLibrary.simpleMessage("الاسم كامل"),
         "invalidCredential": MessageLookupByLibrary.simpleMessage(
             "البريد الإلكتروني أو كلمة المرور غير صحيحة."),
         "invalidEmail": MessageLookupByLibrary.simpleMessage(
@@ -38,8 +45,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تسجيل بواسطة فيسبوك"),
         "loginWithGoogle":
             MessageLookupByLibrary.simpleMessage("تسجيل بواسطة جوجل"),
+        "nameRequired": MessageLookupByLibrary.simpleMessage("الاسم مطلوب."),
         "networkRequestFailed":
             MessageLookupByLibrary.simpleMessage("تحقق من اتصالك بالإنترنت."),
+        "newAccount": MessageLookupByLibrary.simpleMessage("حساب جديد"),
         "noFacebookAccountSelected": MessageLookupByLibrary.simpleMessage(
             "تم إلغاء تسجيل الدخول بواسطة فيسبوك من قبل المستخدم."),
         "noGoogleAccountSelected": MessageLookupByLibrary.simpleMessage(
@@ -52,12 +61,20 @@ class MessageLookup extends MessageLookupByLibrary {
         "operationNotAllowed": MessageLookupByLibrary.simpleMessage(
             "تسجيل الدخول بالبريد وكلمة المرور غير مفعل."),
         "or": MessageLookupByLibrary.simpleMessage("أو"),
+        "ourTermsAndConditions":
+            MessageLookupByLibrary.simpleMessage("الشروط والأحكام الخاصة بنا"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "passwordRequired":
             MessageLookupByLibrary.simpleMessage("كلمة المرور مطلوبة."),
+        "pleaseAcceptTerms": MessageLookupByLibrary.simpleMessage(
+            "يرجى قبول الشروط والأحكام لاستكمال التسجيل."),
         "signup": MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب"),
+        "signupSuccessful":
+            MessageLookupByLibrary.simpleMessage("تم انشاء الحساب بنجاح."),
         "skip": MessageLookupByLibrary.simpleMessage("تخط"),
         "startNow": MessageLookupByLibrary.simpleMessage("ابدأ الآن"),
+        "termsAgreement": MessageLookupByLibrary.simpleMessage(
+            "من خلال إنشاء حساب ، فإنك توافق على"),
         "tooManyRequests": MessageLookupByLibrary.simpleMessage(
             "لقد تجاوزت عدد المحاولات المسموح به. حاول لاحقًا."),
         "unexpectedError": MessageLookupByLibrary.simpleMessage(
@@ -66,6 +83,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تم تعطيل حساب المستخدم هذا."),
         "userNotFound": MessageLookupByLibrary.simpleMessage(
             "لا يوجد مستخدم مرتبط بهذا البريد الإلكتروني."),
+        "weakPassword":
+            MessageLookupByLibrary.simpleMessage("كلمة المرور ضعيفة جدًا."),
         "welcome": MessageLookupByLibrary.simpleMessage("مرحباً بك في"),
         "wrongPassword": MessageLookupByLibrary.simpleMessage(
             "كلمة المرور التي تم إدخالها غير صحيحة.")

@@ -5,7 +5,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fruit_hub/core/errors/exceptions.dart';
 import 'package:fruit_hub/core/errors/failures.dart';
 import 'package:fruit_hub/core/services/firebase_auth_service.dart';
-import 'package:fruit_hub/features/login/domain/repository/login_repos.dart';
+import 'package:fruit_hub/features/login/domain/repository/base_login_repo.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 
 class LoginReposImpl extends BaseLoginRepo {

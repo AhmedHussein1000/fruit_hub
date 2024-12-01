@@ -7,6 +7,7 @@ import 'package:fruit_hub/core/theming/app_colors.dart';
 import 'package:fruit_hub/core/theming/styles.dart';
 import 'package:fruit_hub/core/utils/app_constants.dart';
 import 'package:fruit_hub/core/widgets/custom_button.dart';
+import 'package:fruit_hub/core/widgets/custom_password_text_field.dart';
 import 'package:fruit_hub/core/widgets/custom_text_form_field.dart';
 import 'package:fruit_hub/features/login/presentation/controller/login_cubit/login_cubit.dart';
 import 'package:fruit_hub/generated/l10n.dart';
@@ -21,10 +22,8 @@ class LoginWithEmailAndPassword extends StatefulWidget {
 
 class _LoginWithEmailAndPasswordState extends State<LoginWithEmailAndPassword> {
   final _formKey = GlobalKey<FormState>();
- 
+
   ValueNotifier<bool> isObscure = ValueNotifier<bool>(true);
-  
- 
 
   @override
   Widget build(BuildContext context) {
@@ -47,32 +46,9 @@ class _LoginWithEmailAndPasswordState extends State<LoginWithEmailAndPassword> {
           SizedBox(
             height: 16.h,
           ),
-          ValueListenableBuilder(
-              valueListenable: isObscure,
-              builder: (context, value, child) => CustomTextFormField(
-                    controller: loginCubit.passwordController,
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return S.of(context).passwordRequired;
-                      }
-                      return null;
-                    },
-                    hintText: S.of(context).password,
-                    isObscureText: isObscure.value,
-                    suffixIcon: IconButton(
-                        onPressed: () {
-                          isObscure.value = !isObscure.value;
-                        },
-                        icon: value
-                            ? const Icon(
-                                Icons.remove_red_eye,
-                                color: AppColors.softGray,
-                              )
-                            : const Icon(
-                                Icons.visibility_off,
-                                color: AppColors.softGray,
-                              )),
-                  )),
+          CustomPasswordTextField(
+              valueNotifierIsObscure: isObscure,
+              controller: loginCubit.passwordController),
           SizedBox(
             height: AppConstants.defaultPadding.h,
           ),
@@ -93,9 +69,9 @@ class _LoginWithEmailAndPasswordState extends State<LoginWithEmailAndPassword> {
           CustomButton(
               onPressed: () {
                 if (_formKey.currentState!.validate()) {
-                  context.read<LoginCubit>().loginWithEmailAndPassword(
-                     
-                      localization: S.of(context));
+                  context
+                      .read<LoginCubit>()
+                      .loginWithEmailAndPassword(localization: S.of(context));
                 }
               },
               btnText: S.of(context).login),
