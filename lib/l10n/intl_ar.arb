@@ -18,8 +18,16 @@
     "loginWithFacebook":"تسجيل بواسطة فيسبوك",
     "emailRequired": "البريد الإلكتروني مطلوب.",
     "passwordRequired": "كلمة المرور مطلوبة.",
+    "nameRequired": "الاسم مطلوب.",
     "noGoogleAccountSelected" : " تم إلغاء تسجيل الدخول بواسطة جوجل من قبل المستخدم." ,
     "noFacebookAccountSelected" : "تم إلغاء تسجيل الدخول بواسطة فيسبوك من قبل المستخدم.",
+
+    "newAccount" : "حساب جديد",
+    "fullName" :"الاسم كامل",
+    "termsAgreement" : "من خلال إنشاء حساب ، فإنك توافق على",
+    "ourTermsAndConditions" : "الشروط والأحكام الخاصة بنا", 
+    "createAccount" : "إنشاء حساب جديد",
+    "alreadyHaveAnAccount" : "تمتلك حساب بالفعل؟ ",
 
     "userNotFound": "لا يوجد مستخدم مرتبط بهذا البريد الإلكتروني.",
     "wrongPassword": "كلمة المرور التي تم إدخالها غير صحيحة.",

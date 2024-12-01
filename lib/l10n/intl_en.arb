@@ -16,10 +16,23 @@
     "or": "Or",
     "loginWithGoogle": "Login with Google",
     "loginWithFacebook": "Login with Facebook",
+    "nameRequired": "Name is required.",
     "emailRequired": "Email is required.",
     "passwordRequired": "Password is required.",
     "noGoogleAccountSelected" : "User has cancelled login with google.",
     "noFacebookAccountSelected" : "User has cancelled login with facebook.",
+
+
+    
+    "newAccount": "New Account",
+    "fullName": "Full Name",
+    "termsAgreement": "By creating an account, you agree to",
+    "ourTermsAndConditions": "our Terms and Conditions",
+    "createAccount": "Create New Account",
+    "alreadyHaveAnAccount": "Already have an account?",
+      
+      
+
 
     "userNotFound": "No user found for that email.",
     "wrongPassword": "Wrong password provided for that user.",
