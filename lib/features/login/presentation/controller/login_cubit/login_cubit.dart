@@ -1,7 +1,7 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruit_hub/features/login/domain/repository/base_login_repo.dart';
+import 'package:fruit_hub/features/signup/domain/entities/user_entity.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 part 'login_state.dart';
 
@@ -17,7 +17,7 @@ class LoginCubit extends Cubit<LoginState> {
     final result = await baseLoginRepo.loginWithEmailAndPassword(
         email: emailController.text, password: passwordController.text, localization: localization);
     result.fold((failure) => emit(LoginFailure(errorMessage:  failure.message)),
-        (user) => emit(LoginSuccess(user:user)));
+        (userEntity) => emit(LoginSuccess(user:userEntity)));
   }
    @override
   Future<void> close() {
@@ -29,13 +29,13 @@ class LoginCubit extends Cubit<LoginState> {
     emit(LoginLoading());
     final result = await baseLoginRepo.signInWithGoogle(localization: localization);
     result.fold((failure) => emit(LoginFailure(errorMessage:  failure.message)),
-        (user) => emit(LoginSuccess(user:user)));
+        (userEntity) => emit(LoginSuccess(user:userEntity)));
   }
  Future<void> signInWithFacebook({required S localization}) async {
     emit(LoginLoading());
     final result = await baseLoginRepo.signInWithFacebook(localization: localization);
     result.fold((failure) => emit(LoginFailure(errorMessage:  failure.message)),
-        (user) => emit(LoginSuccess(user:user)));
+        (userEntity) => emit(LoginSuccess(user:userEntity)));
  } 
 
 }
