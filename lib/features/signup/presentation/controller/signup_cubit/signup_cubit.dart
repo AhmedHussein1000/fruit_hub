@@ -1,7 +1,7 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:equatable/equatable.dart';
+import 'package:fruit_hub/features/signup/domain/entities/user_entity.dart';
 import 'package:fruit_hub/features/signup/domain/repository/base_signup_repo.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 
@@ -22,8 +22,9 @@ class SignupCubit extends Cubit<SignupState> {
     final result = await baseSignupRepo.signupWithEmailAndPassword(
         email: emailController.text,
         password: passwordController.text,
+        name: nameController.text,
         localization: localization);
     result.fold((failure) => emit(SignupFailure(message: failure.message)),
-        (user) => emit(SignupSuccess(user: user)));
+        (userEntity) => emit(SignupSuccess(user: userEntity)));
   }
 }

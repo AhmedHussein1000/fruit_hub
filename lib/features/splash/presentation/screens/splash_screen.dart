@@ -4,6 +4,7 @@ import 'package:fruit_hub/core/helpers/assets.dart';
 import 'package:fruit_hub/core/helpers/cache_helper.dart';
 import 'package:fruit_hub/core/helpers/navigation_extension.dart';
 import 'package:fruit_hub/core/routing/routes.dart';
+import 'package:fruit_hub/core/services/firebase_auth_service.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -42,8 +43,20 @@ void executeNavigation({required BuildContext context}) {
     const Duration(seconds: 3),
     () {
       if (!context.mounted) return;
-      isSkippedOnBoarding==true?context.pushNamedAndRemoveUntil(Routes.login,predicate: (route) => false,): 
-      context.pushNamedAndRemoveUntil(Routes.onboarding,predicate: (route) => false,);
+      isSkippedOnBoarding == true
+          ? FirebaseAuthService().isLoggedIn()
+              ? context.pushNamedAndRemoveUntil(
+                  Routes.home,
+                  predicate: (route) => false,
+                )
+              : context.pushNamedAndRemoveUntil(
+                  Routes.login,
+                  predicate: (route) => false,
+                )
+          : context.pushNamedAndRemoveUntil(
+              Routes.onboarding,
+              predicate: (route) => false,
+            );
     },
   );
 }
