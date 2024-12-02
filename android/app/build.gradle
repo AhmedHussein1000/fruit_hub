@@ -30,6 +30,21 @@ android {
         versionName = flutter.versionName
         multiDexEnabled true
     }
+     flavorDimensions += "default"
+
+    productFlavors {
+        development {
+            dimension = "default"
+            resValue( "string",  "app_name",  "Fruit Hub development")
+            applicationIdSuffix = ".dev"
+        }
+        
+        production {
+            dimension = "default"
+            resValue( "string", "app_name",  "Fruit Hub")
+            
+        }
+    }
 
     buildTypes {
         release {
