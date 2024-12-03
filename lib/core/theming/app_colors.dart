@@ -25,6 +25,8 @@ abstract class AppColors {
   static const Color ashGray = Color(0xFFDCDEDE);
   static const Color softGray = Color(0xFFC9CECF);
 
+  static const Color backgroundGray =Color(0xFFEEEEEE);
+
   static const Color darkGreenPrimaryColor = Color(0xFF1B5E37);
   static const Color forestGreen = Color(0xFF217242);
   static const Color deepForestGreen = Color(0xFF131E1F);

@@ -49,6 +49,7 @@ dependencies:
   google_sign_in: ^6.2.2
   intl: ^0.19.0
   json_annotation: ^4.9.0
+  persistent_bottom_nav_bar: ^6.2.1
   shared_preferences: ^2.3.3
 
 dev_dependencies:
@@ -71,6 +72,8 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
+    - assets/images/svgs-bold-navbar-icons/
+    - assets/images/svgs-outlined-navbar-icons/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
   # For details regarding adding assets from package dependencies, see

@@ -5,6 +5,7 @@ import 'package:fruit_hub/core/routing/routes.dart';
 import 'package:fruit_hub/core/widgets/no_route_defined_screen.dart';
 import 'package:fruit_hub/features/forgot_password/presentation/screens/forgot_password_screen.dart';
 import 'package:fruit_hub/features/home/presentation/screens/home_screen.dart';
+import 'package:fruit_hub/features/main_layouts/presentation/screens/main_layouts.dart';
 import 'package:fruit_hub/features/login/presentation/controller/login_cubit/login_cubit.dart';
 import 'package:fruit_hub/features/login/presentation/screens/login_screen.dart';
 import 'package:fruit_hub/features/onboarding/presentation/screens/onboarding_screen.dart';
@@ -45,6 +46,10 @@ class AppRouter {
       case Routes.home:
         return MaterialPageRoute(
           builder: (_) => const HomeScreen(),
+        );
+         case Routes.mainLayout:
+        return MaterialPageRoute(
+          builder: (_) => const MainLayouts(),
         );
       default:
         return MaterialPageRoute(

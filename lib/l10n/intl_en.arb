@@ -46,8 +46,13 @@
     "unexpectedError": "An unexpected error occurred, please try again.",
 
     "weakPassword": "The password provided is too weak.",
-    "emailAlreadyInUse": "The account already exists for that email."
+    "emailAlreadyInUse": "The account already exists for that email.",
     
+
+    "home": "Home",
+    "products": "Products",
+    "cart": "Cart",
+    "profile": "Profile"
 
 
 }

@@ -19,7 +19,7 @@ class LoginBodyBlocConsumer extends StatelessWidget {
         }
         if (state is LoginSuccess) {
           context.pushNamedAndRemoveUntil(
-            Routes.home,
+            Routes.mainLayout,
             predicate: (route) => false,
           );
         }
