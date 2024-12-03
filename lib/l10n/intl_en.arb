@@ -52,7 +52,12 @@
     "home": "Home",
     "products": "Products",
     "cart": "Cart",
-    "profile": "Profile"
+    "profile": "Profile",
+
+    
+    "goodMorning": "Good Morning..!",
+    "ahmedHussein" : "Ahmed Hussein",
+    "searchFor" : "Search for......."
 
 
 }

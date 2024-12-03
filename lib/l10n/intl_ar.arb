@@ -48,6 +48,10 @@
     "home": "الرئيسية",
     "products": "المنتجات",
     "cart":"سلة التسوق",
-    "profile": "حسابي"
+    "profile": "حسابي",
+
+    "goodMorning": "صباح الخير !..",
+    "ahmedHussein" : "احمد حسين",
+    "searchFor" : "ابحث عن......."
 
 }
