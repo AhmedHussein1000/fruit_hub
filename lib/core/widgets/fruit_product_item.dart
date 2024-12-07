@@ -59,7 +59,6 @@ class FruitProductItem extends StatelessWidget {
                             style: Styles.font13Bold
                                 .copyWith(color: AppColors.deepGoldenYellow),
                           ),
-                          const TextSpan(text: " "),
                           TextSpan(
                             text: S.of(context).slash,
                             style: Styles.font13Bold

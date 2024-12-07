@@ -3,8 +3,8 @@ import 'package:fruit_hub/core/functions/is_arabic.dart';
 import 'package:fruit_hub/core/helpers/navigation_extension.dart';
 import 'package:fruit_hub/core/theming/app_colors.dart';
 
-class CustomLeadingButton extends StatelessWidget {
-  const CustomLeadingButton({super.key,  this.paddingValue});
+class CustomLeadingBackButton extends StatelessWidget {
+  const CustomLeadingBackButton({super.key, this.paddingValue});
   final double? paddingValue;
   @override
   Widget build(BuildContext context) {
@@ -12,8 +12,8 @@ class CustomLeadingButton extends StatelessWidget {
         onTap: () => context.pop(),
         child: Padding(
           padding: isArabic()
-              ?  EdgeInsets.only(right:paddingValue?? 15)
-              :  EdgeInsets.only(left:paddingValue?? 15),
+              ? EdgeInsets.only(right: paddingValue ?? 15)
+              : EdgeInsets.only(left: paddingValue ?? 15),
           child: Container(
               alignment: Alignment.center,
               height: 15,

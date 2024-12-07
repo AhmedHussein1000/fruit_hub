@@ -10,7 +10,7 @@ class SignupScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: const CustomLeadingButton(),
+        leading: const CustomLeadingBackButton(),
         title: Text(S.of(context).newAccount),
       ),
       body: const SignupBlocConsumer(),

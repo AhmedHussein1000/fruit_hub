@@ -15,42 +15,45 @@ class HomeBody extends StatelessWidget {
     return CustomScrollView(
       slivers: [
         SliverToBoxAdapter(
-            child: Column(
-          children: [
-            SizedBox(
-              height: 16.h,
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(
-                  horizontal: AppConstants.defaultPadding.w),
-              child: const HomeAppbar(),
-            ),
-            SizedBox(
-              height: 16.h,
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(
-                  horizontal: AppConstants.defaultPadding.w),
-              child: const SearchTextField(),
-            ),
-            SizedBox(
-              height: 12.h,
-            ),
-            const FeaturedList(),
-            SizedBox(
-              height: 12.h,
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(
-                  horizontal: AppConstants.defaultPadding.w),
-              child: const BestSellingHeader(),
-            ),
-            SizedBox(
-              height: 8.h,
-            ),
-          ],
-        ),),
-        const FruitProductsGridView(),
+          child: Column(
+            children: [
+              SizedBox(
+                height: 16.h,
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(
+                    horizontal: AppConstants.defaultPadding.w),
+                child: const HomeAppbar(),
+              ),
+              SizedBox(
+                height: 16.h,
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(
+                    horizontal: AppConstants.defaultPadding.w),
+                child: const SearchTextField(),
+              ),
+              SizedBox(
+                height: 12.h,
+              ),
+              const FeaturedList(),
+              SizedBox(
+                height: 12.h,
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(
+                    horizontal: AppConstants.defaultPadding.w),
+                child: const BestSellingHeader(),
+              ),
+              SizedBox(
+                height: 8.h,
+              ),
+            ],
+          ),
+        ),
+        SliverPadding(
+            padding: EdgeInsets.symmetric(horizontal: 16.w),
+            sliver: const FruitProductsGridView(isSliver: true,)),
       ],
     );
   }
