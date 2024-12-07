@@ -57,7 +57,9 @@
     
     "goodMorning": "Good Morning..!",
     "ahmedHussein" : "Ahmed Hussein",
-    "searchFor" : "Search for......."
+    "searchFor" : "Search for.......",
 
-
+    "eidOffers" : "Eid Offers",
+    "discount25" : "Discount 25%",
+    "shopNow" : "Shop Now"
 }

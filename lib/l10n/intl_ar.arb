@@ -52,6 +52,10 @@
 
     "goodMorning": "صباح الخير !..",
     "ahmedHussein" : "احمد حسين",
-    "searchFor" : "ابحث عن......."
+    "searchFor" : "ابحث عن.......",
+
+    "eidOffers" : "عروض العيد",
+    "discount25" : "خصم 25%",
+    "shopNow" : "تسوق الان"
 
 }

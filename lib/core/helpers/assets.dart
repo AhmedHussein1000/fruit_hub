@@ -10,6 +10,14 @@ class Assets {
   /// assets/images/facebook_icon.svg
   static const String imagesFacebookIcon = "assets/images/facebook_icon.svg";
 
+  /// Assets for imagesFeaturedItemBackgroundRotated
+  /// assets/images/featured_item_background_rotated.png
+  static const String imagesFeaturedItemBackgroundRotated = "assets/images/featured_item_background_rotated.png";
+
+  /// Assets for imagesFeaturedItemOfferBackground
+  /// assets/images/featured_item_offer_background.svg
+  static const String imagesFeaturedItemOfferBackground = "assets/images/featured_item_offer_background.svg";
+
   /// Assets for imagesFilter
   /// assets/images/filter.svg
   static const String imagesFilter = "assets/images/filter.svg";
