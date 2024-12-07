@@ -61,5 +61,8 @@
 
     "eidOffers" : "Eid Offers",
     "discount25" : "Discount 25%",
-    "shopNow" : "Shop Now"
+    "shopNow" : "Shop Now",
+    "bestSelling" : "Best Selling",
+    "more" : "More"
+
 }

@@ -56,6 +56,8 @@
 
     "eidOffers" : "عروض العيد",
     "discount25" : "خصم 25%",
-    "shopNow" : "تسوق الان"
+    "shopNow" : "تسوق الان",
+    "bestSelling" : "الأكثر مبيعًا",
+    "more" : "المزيد"
 
 }

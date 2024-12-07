@@ -25,6 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "ahmedHussein": MessageLookupByLibrary.simpleMessage("Ahmed Hussein"),
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Already have an account?"),
+        "bestSelling": MessageLookupByLibrary.simpleMessage("Best Selling"),
         "cart": MessageLookupByLibrary.simpleMessage("Cart"),
         "createAccount":
             MessageLookupByLibrary.simpleMessage("Create New Account"),
@@ -51,6 +52,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Login with Facebook"),
         "loginWithGoogle":
             MessageLookupByLibrary.simpleMessage("Login with Google"),
+        "more": MessageLookupByLibrary.simpleMessage("More"),
         "nameRequired":
             MessageLookupByLibrary.simpleMessage("Name is required."),
         "networkRequestFailed": MessageLookupByLibrary.simpleMessage(

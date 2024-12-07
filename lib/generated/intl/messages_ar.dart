@@ -25,6 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "ahmedHussein": MessageLookupByLibrary.simpleMessage("احمد حسين"),
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("تمتلك حساب بالفعل؟ "),
+        "bestSelling": MessageLookupByLibrary.simpleMessage("الأكثر مبيعًا"),
         "cart": MessageLookupByLibrary.simpleMessage("سلة التسوق"),
         "createAccount":
             MessageLookupByLibrary.simpleMessage("إنشاء حساب جديد"),
@@ -51,6 +52,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تسجيل بواسطة فيسبوك"),
         "loginWithGoogle":
             MessageLookupByLibrary.simpleMessage("تسجيل بواسطة جوجل"),
+        "more": MessageLookupByLibrary.simpleMessage("المزيد"),
         "nameRequired": MessageLookupByLibrary.simpleMessage("الاسم مطلوب."),
         "networkRequestFailed":
             MessageLookupByLibrary.simpleMessage("تحقق من اتصالك بالإنترنت."),
