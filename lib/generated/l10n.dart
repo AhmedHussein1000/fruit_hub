@@ -559,6 +559,46 @@ class S {
       args: [],
     );
   }
+
+  /// `Strawberry`
+  String get strawberry {
+    return Intl.message(
+      'Strawberry',
+      name: 'strawberry',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `{numberOfPounds} Pounds`
+  String numberOfPounds(num numberOfPounds) {
+    return Intl.message(
+      '$numberOfPounds Pounds',
+      name: 'numberOfPounds',
+      desc: '',
+      args: [numberOfPounds],
+    );
+  }
+
+  /// `/`
+  String get slash {
+    return Intl.message(
+      '/',
+      name: 'slash',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Kg`
+  String get killo {
+    return Intl.message(
+      'Kg',
+      name: 'killo',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

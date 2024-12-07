@@ -20,6 +20,8 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
+  static String m0(numberOfPounds) => "${numberOfPounds} Pounds";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "ahmedHussein": MessageLookupByLibrary.simpleMessage("Ahmed Hussein"),
@@ -47,6 +49,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "The email address or password is incorrect."),
         "invalidEmail": MessageLookupByLibrary.simpleMessage(
             "The email address is badly formatted."),
+        "killo": MessageLookupByLibrary.simpleMessage("Kg"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "loginWithFacebook":
             MessageLookupByLibrary.simpleMessage("Login with Facebook"),
@@ -62,6 +65,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "User has cancelled login with facebook."),
         "noGoogleAccountSelected": MessageLookupByLibrary.simpleMessage(
             "User has cancelled login with google."),
+        "numberOfPounds": m0,
         "onboardingDescription1": MessageLookupByLibrary.simpleMessage(
             "Discover a unique shopping experience with FruitHUB. Explore our wide range of premium fresh fruits and get the best deals and high quality."),
         "onboardingDescription2": MessageLookupByLibrary.simpleMessage(
@@ -86,7 +90,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "signupSuccessful": MessageLookupByLibrary.simpleMessage(
             "Account created successfully."),
         "skip": MessageLookupByLibrary.simpleMessage("Skip"),
+        "slash": MessageLookupByLibrary.simpleMessage("/"),
         "startNow": MessageLookupByLibrary.simpleMessage("Start Now"),
+        "strawberry": MessageLookupByLibrary.simpleMessage("Strawberry"),
         "termsAgreement": MessageLookupByLibrary.simpleMessage(
             "By creating an account, you agree to"),
         "tooManyRequests": MessageLookupByLibrary.simpleMessage(

@@ -20,6 +20,8 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ar';
 
+  static String m0(numberOfPounds) => "${numberOfPounds} جنيه ";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "ahmedHussein": MessageLookupByLibrary.simpleMessage("احمد حسين"),
@@ -47,6 +49,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "البريد الإلكتروني أو كلمة المرور غير صحيحة."),
         "invalidEmail": MessageLookupByLibrary.simpleMessage(
             "تنسيق البريد الإلكتروني غير صحيح."),
+        "killo": MessageLookupByLibrary.simpleMessage("كيلو"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
         "loginWithFacebook":
             MessageLookupByLibrary.simpleMessage("تسجيل بواسطة فيسبوك"),
@@ -61,6 +64,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "تم إلغاء تسجيل الدخول بواسطة فيسبوك من قبل المستخدم."),
         "noGoogleAccountSelected": MessageLookupByLibrary.simpleMessage(
             " تم إلغاء تسجيل الدخول بواسطة جوجل من قبل المستخدم."),
+        "numberOfPounds": m0,
         "onboardingDescription1": MessageLookupByLibrary.simpleMessage(
             "اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية."),
         "onboardingDescription2": MessageLookupByLibrary.simpleMessage(
@@ -84,7 +88,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "signupSuccessful":
             MessageLookupByLibrary.simpleMessage("تم انشاء الحساب بنجاح."),
         "skip": MessageLookupByLibrary.simpleMessage("تخط"),
+        "slash": MessageLookupByLibrary.simpleMessage("/"),
         "startNow": MessageLookupByLibrary.simpleMessage("ابدأ الآن"),
+        "strawberry": MessageLookupByLibrary.simpleMessage("فراولة"),
         "termsAgreement": MessageLookupByLibrary.simpleMessage(
             "من خلال إنشاء حساب ، فإنك توافق على"),
         "tooManyRequests": MessageLookupByLibrary.simpleMessage(

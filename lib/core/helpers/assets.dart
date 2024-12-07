@@ -66,6 +66,10 @@ class Assets {
   /// assets/images/splash_bottom.svg
   static const String imagesSplashBottom = "assets/images/splash_bottom.svg";
 
+  /// Assets for imagesStrawberry
+  /// assets/images/strawberry.png
+  static const String imagesStrawberry = "assets/images/strawberry.png";
+
   /// Assets for imagesSvgsBoldNavbarIconsHome
   /// assets/images/svgs-bold-navbar-icons/home.svg
   static const String imagesSvgsBoldNavbarIconsHome = "assets/images/svgs-bold-navbar-icons/home.svg";

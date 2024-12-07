@@ -63,6 +63,17 @@
     "discount25" : "Discount 25%",
     "shopNow" : "Shop Now",
     "bestSelling" : "Best Selling",
-    "more" : "More"
+    "more" : "More",
+    "strawberry" : "Strawberry",
+    "numberOfPounds" : "{numberOfPounds} Pounds",
+    "@numberOfPounds": {
+        "placeholders": {
+            "numberOfPounds": {
+                "type": "num"
+                }
+            }
+    },
+    "slash" : "/",
+    "killo" : "Kg"
 
 }

@@ -58,6 +58,17 @@
     "discount25" : "خصم 25%",
     "shopNow" : "تسوق الان",
     "bestSelling" : "الأكثر مبيعًا",
-    "more" : "المزيد"
+    "more" : "المزيد",
+    "strawberry" : "فراولة",
+    "numberOfPounds" : "{numberOfPounds} جنيه ",
+    "@numberOfPounds": {
+        "placeholders": {
+            "numberOfPounds": {
+                "type": "num"
+                }
+            }
+    },
+    "slash" : "/",
+    "killo" : "كيلو"
 
 }
