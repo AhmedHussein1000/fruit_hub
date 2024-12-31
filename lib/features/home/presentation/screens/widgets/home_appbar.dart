@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_hub/core/functions/get_user.dart';
 import 'package:fruit_hub/core/helpers/assets.dart';
 import 'package:fruit_hub/core/theming/app_colors.dart';
 import 'package:fruit_hub/core/theming/styles.dart';
@@ -19,7 +20,7 @@ class HomeAppbar extends StatelessWidget {
             Styles.font16Regular.copyWith(color: AppColors.mediumNeutralGray),
       ),
       subtitle: Text(
-        S.of(context).ahmedHussein,
+        getUser().name,
         style: Styles.font16Bold,
       ),
       trailing: const NotificationWidget(),

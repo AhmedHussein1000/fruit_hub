@@ -3,6 +3,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 class CacheHelper {
   static late SharedPreferences _preferences;
   static const String onBoardingKey = 'onBoarding';
+  static const String userDataKey = 'userData';
 
   static Future<void> init() async {
     _preferences = await SharedPreferences.getInstance();
@@ -22,7 +23,9 @@ class CacheHelper {
   static dynamic getData(String key) {
     return _preferences.get(key);
   }
-
+  static String getStringData(String key) {
+    return _preferences.getString(key) ?? 'unknown';
+  }
   // Remove data
   static Future<bool> removeData(String key) async {
     return await _preferences.remove(key);
