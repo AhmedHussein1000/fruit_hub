@@ -28,7 +28,7 @@ class LoginReposImpl extends BaseLoginRepo {
       User user = await firebaseAuthService.loginWithEmailAndPassword(
           email: email, password: password, localization: localization);
       UserEntity userEntity = await getUserData(uid: user.uid);
-      saveUserData(userEntity);
+     await saveUserData(userEntity);
       return Right(userEntity);
     } on CustomException catch (e) {
       return Left(ServerFailure(message: e.message));
@@ -91,7 +91,7 @@ class LoginReposImpl extends BaseLoginRepo {
         path: BackendEndpoints.isUserExist, docId: userEntity.userId);
     if (isDataExist) {
       await getUserData(uid: userEntity.userId);
-            saveUserData(userEntity);
+          await  saveUserData(userEntity);
 
     } else {
       await addUserData(userEntity: userEntity);

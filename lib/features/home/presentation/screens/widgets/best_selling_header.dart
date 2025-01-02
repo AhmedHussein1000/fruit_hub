@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fruit_hub/core/cubits/products_cubit/products_cubit.dart';
 import 'package:fruit_hub/core/theming/app_colors.dart';
 import 'package:fruit_hub/core/theming/styles.dart';
 import 'package:fruit_hub/features/best_selling_fruit/presentation/screens/best_selling_screen.dart';
@@ -17,7 +19,7 @@ class BestSellingHeader extends StatelessWidget {
     Text(S.of(context).bestSelling,style: Styles.font16Bold,),
     GestureDetector(onTap: () => PersistentNavBarNavigator.pushNewScreen(
         context,
-        screen: const BestSellingScreen(),
+        screen:   BestSellingScreen(products: BlocProvider.of<ProductsCubit>(context).bestSellingProducts,),
         withNavBar: true, 
         pageTransitionAnimation: PageTransitionAnimation.cupertino,
     ), child: Text(S.of(context).more,style: Styles.font13Regular.copyWith(color: AppColors.mediumNeutralGray),)), 

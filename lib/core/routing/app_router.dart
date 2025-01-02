@@ -10,6 +10,7 @@ import 'package:fruit_hub/features/main_layouts/presentation/screens/main_layout
 import 'package:fruit_hub/features/login/presentation/controller/login_cubit/login_cubit.dart';
 import 'package:fruit_hub/features/login/presentation/screens/login_screen.dart';
 import 'package:fruit_hub/features/onboarding/presentation/screens/onboarding_screen.dart';
+import 'package:fruit_hub/features/products/presentation/screens/products_screen.dart';
 import 'package:fruit_hub/features/signup/presentation/controller/signup_cubit/signup_cubit.dart';
 import 'package:fruit_hub/features/signup/presentation/screens/signup_screen.dart';
 import 'package:fruit_hub/features/splash/presentation/screens/splash_screen.dart';
@@ -44,18 +45,22 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => const ForgotPasswordScreen(),
         );
-     
-         case Routes.mainLayout:
+
+      case Routes.mainLayout:
         return MaterialPageRoute(
           builder: (_) => const MainLayouts(),
         );
-         case Routes.home:
+      case Routes.home:
         return MaterialPageRoute(
           builder: (_) => const HomeScreen(),
         );
-        case Routes.bestSelling:
+      case Routes.bestSelling:
         return MaterialPageRoute(
           builder: (_) => const BestSellingScreen(),
+        );
+         case Routes.products:
+        return MaterialPageRoute(
+          builder: (_) => const ProductsScreen(),
         );
       default:
         return MaterialPageRoute(

@@ -26,8 +26,17 @@ class FirestoreService extends DatabaseService {
           await firestore.collection(path).doc(docId).get();
       return documentSnapshot.data();
     }
-    QuerySnapshot querySnapshot = await firestore.collection(path).get();
-    return querySnapshot.docs.map((e) => e.data()).toList();
+    Query<Map<String, dynamic>> data =  firestore.collection(path);
+    if(query != null){
+    if (query['orderBy'] != null) {
+        data  = data.orderBy(query['orderBy'], descending: query['descending']); 
+    } 
+    if(query['limit'] != null){
+      data = data.limit(query['limit']);
+    }
+    }
+  var result = await data.get();
+    return result.docs.map((e) => e.data()).toList();
   }
 
   Future<bool> checkIfDataExist(

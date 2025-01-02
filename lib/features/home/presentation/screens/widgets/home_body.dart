@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruit_hub/core/utils/app_constants.dart';
+import 'package:fruit_hub/core/widgets/fruit_products_grid_view_bloc_builder.dart';
 import 'package:fruit_hub/core/widgets/search_text_field.dart';
 import 'package:fruit_hub/features/home/presentation/screens/widgets/best_selling_header.dart';
 import 'package:fruit_hub/features/home/presentation/screens/widgets/featured_list.dart';
-import 'package:fruit_hub/features/home/presentation/screens/widgets/fruit_products_grid_view.dart';
 import 'package:fruit_hub/features/home/presentation/screens/widgets/home_appbar.dart';
 
 class HomeBody extends StatelessWidget {
@@ -43,7 +43,7 @@ class HomeBody extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(
                     horizontal: AppConstants.defaultPadding.w),
-                child: const BestSellingHeader(),
+                child:  const BestSellingHeader(),
               ),
               SizedBox(
                 height: 8.h,
@@ -53,7 +53,7 @@ class HomeBody extends StatelessWidget {
         ),
         SliverPadding(
             padding: EdgeInsets.symmetric(horizontal: 16.w),
-            sliver: const FruitProductsGridView(isSliver: true,)),
+            sliver:  const FruitProductsGridViewBlocBuilder()),
       ],
     );
   }

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:fruit_hub/core/theming/styles.dart';
+import 'package:fruit_hub/core/entities/product_entity.dart';
+
 import 'package:fruit_hub/core/widgets/custom_leading_button.dart';
 import 'package:fruit_hub/core/widgets/notification_widget.dart';
-import 'package:fruit_hub/features/home/presentation/screens/widgets/fruit_products_grid_view.dart';
+import 'package:fruit_hub/features/best_selling_fruit/presentation/screens/widgets/best_selling_body.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 
 class BestSellingScreen extends StatelessWidget {
-  const BestSellingScreen({super.key});
-
+  const BestSellingScreen({super.key, this.products});
+final List<ProductEntity>? products;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,32 +22,7 @@ class BestSellingScreen extends StatelessWidget {
           )
         ],
       ),
-      body: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 16.w),
-          child: CustomScrollView(
-            slivers: [
-              SliverToBoxAdapter(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    SizedBox(
-                      height: 24.h,
-                    ),
-                    Text(
-                      S.of(context).bestSelling,
-                      style: Styles.font16Bold,
-                    ),
-                    SizedBox(
-                      height: 8.h,
-                    ),
-                  ],
-                ),
-              ),
-              const FruitProductsGridView(
-                isSliver: true,
-              ),
-            ],
-          )),
+      body: BestSellingBody(products: products??[],),
     );
   }
 }

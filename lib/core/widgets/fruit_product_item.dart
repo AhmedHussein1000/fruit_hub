@@ -1,13 +1,15 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:fruit_hub/core/helpers/assets.dart';
+import 'package:fruit_hub/core/entities/product_entity.dart';
 import 'package:fruit_hub/core/theming/app_colors.dart';
 import 'package:fruit_hub/core/theming/styles.dart';
+import 'package:fruit_hub/core/utils/app_constants.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 
 class FruitProductItem extends StatelessWidget {
-  const FruitProductItem({super.key});
-
+  const FruitProductItem({super.key, required this.productEntity});
+  final ProductEntity productEntity;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -38,8 +40,9 @@ class FruitProductItem extends StatelessWidget {
                   height: 20.h,
                 ),
                 Flexible(
-                  child: Image.asset(
-                    Assets.imagesStrawberry,
+                  child: CachedNetworkImage(
+                    imageUrl:
+                        productEntity.imageUrl ?? AppConstants.defultFruitImage,
                   ),
                 ),
                 SizedBox(
@@ -48,14 +51,16 @@ class FruitProductItem extends StatelessWidget {
                 ListTile(
                     contentPadding: EdgeInsets.zero,
                     title: Text(
-                      S.of(context).strawberry,
+                      productEntity.name,
                       style: Styles.font13SemiBold,
                     ),
                     subtitle: RichText(
                       text: TextSpan(
                         children: [
                           TextSpan(
-                            text: S.of(context).numberOfPounds(30),
+                            text: S
+                                .of(context)
+                                .numberOfPounds(productEntity.price),
                             style: Styles.font13Bold
                                 .copyWith(color: AppColors.deepGoldenYellow),
                           ),

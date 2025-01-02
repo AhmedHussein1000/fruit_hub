@@ -24,7 +24,7 @@ class CacheHelper {
     return _preferences.get(key);
   }
   static String getStringData(String key) {
-    return _preferences.getString(key) ?? 'unknown';
+    return _preferences.getString(key) ?? '';
   }
   // Remove data
   static Future<bool> removeData(String key) async {
