@@ -46,7 +46,7 @@ void executeNavigation({required BuildContext context}) {
       isSkippedOnBoarding == true
           ? FirebaseAuthService().isLoggedIn()
               ? context.pushNamedAndRemoveUntil(
-                  Routes.home,
+                  Routes.mainLayout,
                   predicate: (route) => false,
                 )
               : context.pushNamedAndRemoveUntil(

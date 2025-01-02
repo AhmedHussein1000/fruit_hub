@@ -20,14 +20,21 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ar';
 
+  static String m0(numberOfPounds) => "${numberOfPounds} جنيه ";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "ahmedHussein": MessageLookupByLibrary.simpleMessage("احمد حسين"),
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("تمتلك حساب بالفعل؟ "),
+        "bestSelling": MessageLookupByLibrary.simpleMessage("الأكثر مبيعًا"),
+        "cart": MessageLookupByLibrary.simpleMessage("سلة التسوق"),
         "createAccount":
             MessageLookupByLibrary.simpleMessage("إنشاء حساب جديد"),
+        "discount25": MessageLookupByLibrary.simpleMessage("خصم 25%"),
         "dontHaveAnAccount":
             MessageLookupByLibrary.simpleMessage(" لا تمتلك حساب؟"),
+        "eidOffers": MessageLookupByLibrary.simpleMessage("عروض العيد"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
         "emailAlreadyInUse": MessageLookupByLibrary.simpleMessage(
             "هذا البريد الإلكتروني مسجل بالفعل."),
@@ -36,15 +43,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "forrgotPassword":
             MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
         "fullName": MessageLookupByLibrary.simpleMessage("الاسم كامل"),
+        "goodMorning": MessageLookupByLibrary.simpleMessage("صباح الخير !.."),
+        "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
         "invalidCredential": MessageLookupByLibrary.simpleMessage(
             "البريد الإلكتروني أو كلمة المرور غير صحيحة."),
         "invalidEmail": MessageLookupByLibrary.simpleMessage(
             "تنسيق البريد الإلكتروني غير صحيح."),
+        "killo": MessageLookupByLibrary.simpleMessage("كيلو"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
         "loginWithFacebook":
             MessageLookupByLibrary.simpleMessage("تسجيل بواسطة فيسبوك"),
         "loginWithGoogle":
             MessageLookupByLibrary.simpleMessage("تسجيل بواسطة جوجل"),
+        "more": MessageLookupByLibrary.simpleMessage("المزيد"),
         "nameRequired": MessageLookupByLibrary.simpleMessage("الاسم مطلوب."),
         "networkRequestFailed":
             MessageLookupByLibrary.simpleMessage("تحقق من اتصالك بالإنترنت."),
@@ -53,6 +64,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "تم إلغاء تسجيل الدخول بواسطة فيسبوك من قبل المستخدم."),
         "noGoogleAccountSelected": MessageLookupByLibrary.simpleMessage(
             " تم إلغاء تسجيل الدخول بواسطة جوجل من قبل المستخدم."),
+        "numberOfPounds": m0,
         "onboardingDescription1": MessageLookupByLibrary.simpleMessage(
             "اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية."),
         "onboardingDescription2": MessageLookupByLibrary.simpleMessage(
@@ -68,11 +80,17 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("كلمة المرور مطلوبة."),
         "pleaseAcceptTerms": MessageLookupByLibrary.simpleMessage(
             "يرجى قبول الشروط والأحكام لاستكمال التسجيل."),
+        "products": MessageLookupByLibrary.simpleMessage("المنتجات"),
+        "profile": MessageLookupByLibrary.simpleMessage("حسابي"),
+        "searchFor": MessageLookupByLibrary.simpleMessage("ابحث عن......."),
+        "shopNow": MessageLookupByLibrary.simpleMessage("تسوق الان"),
         "signup": MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب"),
         "signupSuccessful":
             MessageLookupByLibrary.simpleMessage("تم انشاء الحساب بنجاح."),
         "skip": MessageLookupByLibrary.simpleMessage("تخط"),
+        "slash": MessageLookupByLibrary.simpleMessage("/"),
         "startNow": MessageLookupByLibrary.simpleMessage("ابدأ الآن"),
+        "strawberry": MessageLookupByLibrary.simpleMessage("فراولة"),
         "termsAgreement": MessageLookupByLibrary.simpleMessage(
             "من خلال إنشاء حساب ، فإنك توافق على"),
         "tooManyRequests": MessageLookupByLibrary.simpleMessage(

@@ -20,14 +20,21 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
+  static String m0(numberOfPounds) => "${numberOfPounds} Pounds";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "ahmedHussein": MessageLookupByLibrary.simpleMessage("Ahmed Hussein"),
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Already have an account?"),
+        "bestSelling": MessageLookupByLibrary.simpleMessage("Best Selling"),
+        "cart": MessageLookupByLibrary.simpleMessage("Cart"),
         "createAccount":
             MessageLookupByLibrary.simpleMessage("Create New Account"),
+        "discount25": MessageLookupByLibrary.simpleMessage("Discount 25%"),
         "dontHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
+        "eidOffers": MessageLookupByLibrary.simpleMessage("Eid Offers"),
         "email": MessageLookupByLibrary.simpleMessage("Email Address"),
         "emailAlreadyInUse": MessageLookupByLibrary.simpleMessage(
             "The account already exists for that email."),
@@ -36,15 +43,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "forrgotPassword":
             MessageLookupByLibrary.simpleMessage("Forgot Password?"),
         "fullName": MessageLookupByLibrary.simpleMessage("Full Name"),
+        "goodMorning": MessageLookupByLibrary.simpleMessage("Good Morning..!"),
+        "home": MessageLookupByLibrary.simpleMessage("Home"),
         "invalidCredential": MessageLookupByLibrary.simpleMessage(
             "The email address or password is incorrect."),
         "invalidEmail": MessageLookupByLibrary.simpleMessage(
             "The email address is badly formatted."),
+        "killo": MessageLookupByLibrary.simpleMessage("Kg"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "loginWithFacebook":
             MessageLookupByLibrary.simpleMessage("Login with Facebook"),
         "loginWithGoogle":
             MessageLookupByLibrary.simpleMessage("Login with Google"),
+        "more": MessageLookupByLibrary.simpleMessage("More"),
         "nameRequired":
             MessageLookupByLibrary.simpleMessage("Name is required."),
         "networkRequestFailed": MessageLookupByLibrary.simpleMessage(
@@ -54,6 +65,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "User has cancelled login with facebook."),
         "noGoogleAccountSelected": MessageLookupByLibrary.simpleMessage(
             "User has cancelled login with google."),
+        "numberOfPounds": m0,
         "onboardingDescription1": MessageLookupByLibrary.simpleMessage(
             "Discover a unique shopping experience with FruitHUB. Explore our wide range of premium fresh fruits and get the best deals and high quality."),
         "onboardingDescription2": MessageLookupByLibrary.simpleMessage(
@@ -70,11 +82,17 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Password is required."),
         "pleaseAcceptTerms": MessageLookupByLibrary.simpleMessage(
             "Please accept our terms and conditions."),
+        "products": MessageLookupByLibrary.simpleMessage("Products"),
+        "profile": MessageLookupByLibrary.simpleMessage("Profile"),
+        "searchFor": MessageLookupByLibrary.simpleMessage("Search for......."),
+        "shopNow": MessageLookupByLibrary.simpleMessage("Shop Now"),
         "signup": MessageLookupByLibrary.simpleMessage(" Sign Up"),
         "signupSuccessful": MessageLookupByLibrary.simpleMessage(
             "Account created successfully."),
         "skip": MessageLookupByLibrary.simpleMessage("Skip"),
+        "slash": MessageLookupByLibrary.simpleMessage("/"),
         "startNow": MessageLookupByLibrary.simpleMessage("Start Now"),
+        "strawberry": MessageLookupByLibrary.simpleMessage("Strawberry"),
         "termsAgreement": MessageLookupByLibrary.simpleMessage(
             "By creating an account, you agree to"),
         "tooManyRequests": MessageLookupByLibrary.simpleMessage(

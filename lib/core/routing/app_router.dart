@@ -3,11 +3,14 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruit_hub/core/di/service_locator.dart';
 import 'package:fruit_hub/core/routing/routes.dart';
 import 'package:fruit_hub/core/widgets/no_route_defined_screen.dart';
+import 'package:fruit_hub/features/best_selling_fruit/presentation/screens/best_selling_screen.dart';
 import 'package:fruit_hub/features/forgot_password/presentation/screens/forgot_password_screen.dart';
 import 'package:fruit_hub/features/home/presentation/screens/home_screen.dart';
+import 'package:fruit_hub/features/main_layouts/presentation/screens/main_layouts.dart';
 import 'package:fruit_hub/features/login/presentation/controller/login_cubit/login_cubit.dart';
 import 'package:fruit_hub/features/login/presentation/screens/login_screen.dart';
 import 'package:fruit_hub/features/onboarding/presentation/screens/onboarding_screen.dart';
+import 'package:fruit_hub/features/products/presentation/screens/products_screen.dart';
 import 'package:fruit_hub/features/signup/presentation/controller/signup_cubit/signup_cubit.dart';
 import 'package:fruit_hub/features/signup/presentation/screens/signup_screen.dart';
 import 'package:fruit_hub/features/splash/presentation/screens/splash_screen.dart';
@@ -42,9 +45,22 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => const ForgotPasswordScreen(),
         );
+
+      case Routes.mainLayout:
+        return MaterialPageRoute(
+          builder: (_) => const MainLayouts(),
+        );
       case Routes.home:
         return MaterialPageRoute(
           builder: (_) => const HomeScreen(),
+        );
+      case Routes.bestSelling:
+        return MaterialPageRoute(
+          builder: (_) => const BestSellingScreen(),
+        );
+         case Routes.products:
+        return MaterialPageRoute(
+          builder: (_) => const ProductsScreen(),
         );
       default:
         return MaterialPageRoute(

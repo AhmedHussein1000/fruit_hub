@@ -439,6 +439,166 @@ class S {
       args: [],
     );
   }
+
+  /// `Home`
+  String get home {
+    return Intl.message(
+      'Home',
+      name: 'home',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Products`
+  String get products {
+    return Intl.message(
+      'Products',
+      name: 'products',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cart`
+  String get cart {
+    return Intl.message(
+      'Cart',
+      name: 'cart',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Profile`
+  String get profile {
+    return Intl.message(
+      'Profile',
+      name: 'profile',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Good Morning..!`
+  String get goodMorning {
+    return Intl.message(
+      'Good Morning..!',
+      name: 'goodMorning',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ahmed Hussein`
+  String get ahmedHussein {
+    return Intl.message(
+      'Ahmed Hussein',
+      name: 'ahmedHussein',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search for.......`
+  String get searchFor {
+    return Intl.message(
+      'Search for.......',
+      name: 'searchFor',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Eid Offers`
+  String get eidOffers {
+    return Intl.message(
+      'Eid Offers',
+      name: 'eidOffers',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Discount 25%`
+  String get discount25 {
+    return Intl.message(
+      'Discount 25%',
+      name: 'discount25',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Shop Now`
+  String get shopNow {
+    return Intl.message(
+      'Shop Now',
+      name: 'shopNow',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Best Selling`
+  String get bestSelling {
+    return Intl.message(
+      'Best Selling',
+      name: 'bestSelling',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `More`
+  String get more {
+    return Intl.message(
+      'More',
+      name: 'more',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Strawberry`
+  String get strawberry {
+    return Intl.message(
+      'Strawberry',
+      name: 'strawberry',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `{numberOfPounds} Pounds`
+  String numberOfPounds(num numberOfPounds) {
+    return Intl.message(
+      '$numberOfPounds Pounds',
+      name: 'numberOfPounds',
+      desc: '',
+      args: [numberOfPounds],
+    );
+  }
+
+  /// `/`
+  String get slash {
+    return Intl.message(
+      '/',
+      name: 'slash',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Kg`
+  String get killo {
+    return Intl.message(
+      'Kg',
+      name: 'killo',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

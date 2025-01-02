@@ -43,8 +43,32 @@
     "unexpectedError": "حدث خطأ غير متوقع، يرجى المحاولة مرة أخرى.",
     
     "weakPassword": "كلمة المرور ضعيفة جدًا.",
-    "emailAlreadyInUse": "هذا البريد الإلكتروني مسجل بالفعل."
+    "emailAlreadyInUse": "هذا البريد الإلكتروني مسجل بالفعل.",
 
-   
+    "home": "الرئيسية",
+    "products": "المنتجات",
+    "cart":"سلة التسوق",
+    "profile": "حسابي",
+
+    "goodMorning": "صباح الخير !..",
+    "ahmedHussein" : "احمد حسين",
+    "searchFor" : "ابحث عن.......",
+
+    "eidOffers" : "عروض العيد",
+    "discount25" : "خصم 25%",
+    "shopNow" : "تسوق الان",
+    "bestSelling" : "الأكثر مبيعًا",
+    "more" : "المزيد",
+    "strawberry" : "فراولة",
+    "numberOfPounds" : "{numberOfPounds} جنيه ",
+    "@numberOfPounds": {
+        "placeholders": {
+            "numberOfPounds": {
+                "type": "num"
+                }
+            }
+    },
+    "slash" : "/",
+    "killo" : "كيلو"
 
 }

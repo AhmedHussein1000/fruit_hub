@@ -46,8 +46,34 @@
     "unexpectedError": "An unexpected error occurred, please try again.",
 
     "weakPassword": "The password provided is too weak.",
-    "emailAlreadyInUse": "The account already exists for that email."
+    "emailAlreadyInUse": "The account already exists for that email.",
     
 
+    "home": "Home",
+    "products": "Products",
+    "cart": "Cart",
+    "profile": "Profile",
+
+    
+    "goodMorning": "Good Morning..!",
+    "ahmedHussein" : "Ahmed Hussein",
+    "searchFor" : "Search for.......",
+
+    "eidOffers" : "Eid Offers",
+    "discount25" : "Discount 25%",
+    "shopNow" : "Shop Now",
+    "bestSelling" : "Best Selling",
+    "more" : "More",
+    "strawberry" : "Strawberry",
+    "numberOfPounds" : "{numberOfPounds} Pounds",
+    "@numberOfPounds": {
+        "placeholders": {
+            "numberOfPounds": {
+                "type": "num"
+                }
+            }
+    },
+    "slash" : "/",
+    "killo" : "Kg"
 
 }

@@ -1,3 +1,6 @@
+import 'package:fruit_hub/core/repos/base_products_repo.dart';
+import 'package:fruit_hub/core/repos/products_repo_impl.dart';
+import 'package:fruit_hub/core/services/database_service.dart';
 import 'package:fruit_hub/core/services/firebase_auth_service.dart';
 import 'package:fruit_hub/core/services/firebase_firestore_service.dart';
 import 'package:fruit_hub/features/login/data/repository/login_repos_impl.dart';
@@ -20,16 +23,22 @@ void setupServiceLocator() {
   );
   //repos
   getIt.registerLazySingleton<BaseLoginRepo>(
-    () => LoginReposImpl(getIt(),getIt()),
+    () => LoginReposImpl(getIt(), getIt()),
   );
   getIt.registerLazySingleton<BaseSignupRepo>(
-    () => SignupRepoImpl(getIt(),getIt()),
+    () => SignupRepoImpl(getIt(), getIt()),
+  );
+  getIt.registerLazySingleton<BaseProductsRepo>(
+    () => ProductsRepoImpl(getIt()),
   );
   //services
   getIt.registerLazySingleton(
     () => FirebaseAuthService(),
   );
-    getIt.registerLazySingleton(
+  getIt.registerLazySingleton(
+    () => FirestoreService(),
+  );
+  getIt.registerLazySingleton<DatabaseService>(
     () => FirestoreService(),
   );
 }
