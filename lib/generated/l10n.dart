@@ -599,6 +599,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Results`
+  String get results {
+    return Intl.message(
+      'Results',
+      name: 'results',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ahmed`
+  String get ahmed {
+    return Intl.message(
+      'Ahmed',
+      name: 'ahmed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `{resultsCount} results`
+  String resultsCount(int resultsCount) {
+    return Intl.message(
+      '$resultsCount results',
+      name: 'resultsCount',
+      desc: '',
+      args: [resultsCount],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -69,6 +69,19 @@
             }
     },
     "slash" : "/",
-    "killo" : "كيلو"
+    "killo" : "كيلو",
+    "results" : "نتائج",
+    "ahmed" : "احمد",
+    "resultsCount" : "{resultsCount} نتائج",
+    "@resultsCount": {
+
+        "placeholders": {
+            "resultsCount": {
+                "type": "int"
+                }
+            }
+
+    }
+    
 
 }

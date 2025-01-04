@@ -22,8 +22,11 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m0(numberOfPounds) => "${numberOfPounds} Pounds";
 
+  static String m1(resultsCount) => "${resultsCount} results";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "ahmed": MessageLookupByLibrary.simpleMessage("Ahmed"),
         "ahmedHussein": MessageLookupByLibrary.simpleMessage("Ahmed Hussein"),
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Already have an account?"),
@@ -84,6 +87,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Please accept our terms and conditions."),
         "products": MessageLookupByLibrary.simpleMessage("Products"),
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
+        "results": MessageLookupByLibrary.simpleMessage("Results"),
+        "resultsCount": m1,
         "searchFor": MessageLookupByLibrary.simpleMessage("Search for......."),
         "shopNow": MessageLookupByLibrary.simpleMessage("Shop Now"),
         "signup": MessageLookupByLibrary.simpleMessage(" Sign Up"),
