@@ -74,6 +74,16 @@
             }
     },
     "slash" : "/",
-    "killo" : "Kg"
+    "killo" : "Kg",
+    "results" : "Results",
+    "ahmed" : "Ahmed",
+    "resultsCount" : "{resultsCount} results",
+    "@resultsCount": {
+        "placeholders": {
+            "resultsCount": {
+                "type": "int"
+                }
+            }
+    }
 
 }

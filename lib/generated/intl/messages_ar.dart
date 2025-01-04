@@ -22,8 +22,11 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m0(numberOfPounds) => "${numberOfPounds} جنيه ";
 
+  static String m1(resultsCount) => "${resultsCount} نتائج";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "ahmed": MessageLookupByLibrary.simpleMessage("احمد"),
         "ahmedHussein": MessageLookupByLibrary.simpleMessage("احمد حسين"),
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("تمتلك حساب بالفعل؟ "),
@@ -82,6 +85,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "يرجى قبول الشروط والأحكام لاستكمال التسجيل."),
         "products": MessageLookupByLibrary.simpleMessage("المنتجات"),
         "profile": MessageLookupByLibrary.simpleMessage("حسابي"),
+        "results": MessageLookupByLibrary.simpleMessage("نتائج"),
+        "resultsCount": m1,
         "searchFor": MessageLookupByLibrary.simpleMessage("ابحث عن......."),
         "shopNow": MessageLookupByLibrary.simpleMessage("تسوق الان"),
         "signup": MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب"),

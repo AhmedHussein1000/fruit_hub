@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_hub/core/theming/app_colors.dart';
 import 'package:fruit_hub/features/cart/presentation/screens/cart_screen.dart';
 import 'package:fruit_hub/features/home/presentation/screens/home_screen.dart';
 import 'package:fruit_hub/features/main_layouts/domain/entities/bottom_nav_bar_item_entity.dart';
@@ -39,7 +40,16 @@ class _MainLayoutsState extends State<MainLayouts> {
       navBarStyle: NavBarStyle.style1,
       navBarHeight: 70,
       decoration: const NavBarDecoration(
+     
         colorBehindNavBar: Colors.white,
+         boxShadow: [
+                      BoxShadow(
+                        color: AppColors.faintShadowBlack,
+                        blurRadius: 7,
+                        offset: Offset(0, -2),
+                        spreadRadius: 0,
+                      )
+                    ],
         borderRadius: BorderRadius.vertical(top: Radius.circular(30)),
       ),
     );
