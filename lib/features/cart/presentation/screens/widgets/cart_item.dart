@@ -44,7 +44,7 @@ class CartItem extends StatelessWidget {
                 height: 2.h,
               ),
               Text(
-                '3 كم',
+                '3 كيلو',
                 style: Styles.font13Regular
                     .copyWith(color: AppColors.deepGoldenYellow),
               ),
