@@ -20,7 +20,7 @@ class BottomNavBarItemEntity {
      activeImageSvg: Assets.imagesSvgsBoldNavbarIconsProducts,
    ),
    BottomNavBarItemEntity(
-     title: localization.cart,
+     title: localization.shoppingCart,
      inActiveImageSvg: Assets.imagesSvgsOutlinedNavbarIconsShoppingCart,
      activeImageSvg: Assets.imagesSvgsBoldNavbarIconsShoppingCart,
    ),

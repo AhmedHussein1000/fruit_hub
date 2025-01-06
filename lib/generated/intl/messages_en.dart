@@ -20,12 +20,16 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
-  static String m0(numberOfPounds) => "${numberOfPounds} Pounds";
+  static String m0(numberOfCartProducts) =>
+      "You have ${numberOfCartProducts} products in your cart";
 
-  static String m1(resultsCount) => "${resultsCount} results";
+  static String m1(numberOfPounds) => "${numberOfPounds} Pounds";
+
+  static String m2(resultsCount) => "${resultsCount} results";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "CartProductsCount": m0,
         "ahmed": MessageLookupByLibrary.simpleMessage("Ahmed"),
         "ahmedHussein": MessageLookupByLibrary.simpleMessage("Ahmed Hussein"),
         "alreadyHaveAnAccount":
@@ -68,7 +72,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "User has cancelled login with facebook."),
         "noGoogleAccountSelected": MessageLookupByLibrary.simpleMessage(
             "User has cancelled login with google."),
-        "numberOfPounds": m0,
+        "numberOfPounds": m1,
         "onboardingDescription1": MessageLookupByLibrary.simpleMessage(
             "Discover a unique shopping experience with FruitHUB. Explore our wide range of premium fresh fruits and get the best deals and high quality."),
         "onboardingDescription2": MessageLookupByLibrary.simpleMessage(
@@ -83,14 +87,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "passwordRequired":
             MessageLookupByLibrary.simpleMessage("Password is required."),
+        "payment": MessageLookupByLibrary.simpleMessage("Payment"),
         "pleaseAcceptTerms": MessageLookupByLibrary.simpleMessage(
             "Please accept our terms and conditions."),
         "products": MessageLookupByLibrary.simpleMessage("Products"),
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
         "results": MessageLookupByLibrary.simpleMessage("Results"),
-        "resultsCount": m1,
+        "resultsCount": m2,
         "searchFor": MessageLookupByLibrary.simpleMessage("Search for......."),
         "shopNow": MessageLookupByLibrary.simpleMessage("Shop Now"),
+        "shoppingCart": MessageLookupByLibrary.simpleMessage("Cart"),
         "signup": MessageLookupByLibrary.simpleMessage(" Sign Up"),
         "signupSuccessful": MessageLookupByLibrary.simpleMessage(
             "Account created successfully."),

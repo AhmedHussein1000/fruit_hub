@@ -105,5 +105,9 @@ class Assets {
   /// Assets for imagesSvgsOutlinedNavbarIconsUser
   /// assets/images/svgs-outlined-navbar-icons/user.svg
   static const String imagesSvgsOutlinedNavbarIconsUser = "assets/images/svgs-outlined-navbar-icons/user.svg";
+
+  /// Assets for imagesTrash
+  /// assets/images/trash.svg
+  static const String imagesTrash = "assets/images/trash.svg";
 }
 

@@ -20,18 +20,22 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ar';
 
-  static String m0(numberOfPounds) => "${numberOfPounds} جنيه ";
+  static String m0(numberOfCartProducts) =>
+      "لديك ${numberOfCartProducts} منتجات في سله التسوق";
 
-  static String m1(resultsCount) => "${resultsCount} نتائج";
+  static String m1(numberOfPounds) => "${numberOfPounds} جنيه ";
+
+  static String m2(resultsCount) => "${resultsCount} نتائج";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "CartProductsCount": m0,
         "ahmed": MessageLookupByLibrary.simpleMessage("احمد"),
         "ahmedHussein": MessageLookupByLibrary.simpleMessage("احمد حسين"),
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("تمتلك حساب بالفعل؟ "),
         "bestSelling": MessageLookupByLibrary.simpleMessage("الأكثر مبيعًا"),
-        "cart": MessageLookupByLibrary.simpleMessage("سلة التسوق"),
+        "cart": MessageLookupByLibrary.simpleMessage("السلة"),
         "createAccount":
             MessageLookupByLibrary.simpleMessage("إنشاء حساب جديد"),
         "discount25": MessageLookupByLibrary.simpleMessage("خصم 25%"),
@@ -67,7 +71,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "تم إلغاء تسجيل الدخول بواسطة فيسبوك من قبل المستخدم."),
         "noGoogleAccountSelected": MessageLookupByLibrary.simpleMessage(
             " تم إلغاء تسجيل الدخول بواسطة جوجل من قبل المستخدم."),
-        "numberOfPounds": m0,
+        "numberOfPounds": m1,
         "onboardingDescription1": MessageLookupByLibrary.simpleMessage(
             "اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية."),
         "onboardingDescription2": MessageLookupByLibrary.simpleMessage(
@@ -81,14 +85,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "passwordRequired":
             MessageLookupByLibrary.simpleMessage("كلمة المرور مطلوبة."),
+        "payment": MessageLookupByLibrary.simpleMessage("الدفع"),
         "pleaseAcceptTerms": MessageLookupByLibrary.simpleMessage(
             "يرجى قبول الشروط والأحكام لاستكمال التسجيل."),
         "products": MessageLookupByLibrary.simpleMessage("المنتجات"),
         "profile": MessageLookupByLibrary.simpleMessage("حسابي"),
         "results": MessageLookupByLibrary.simpleMessage("نتائج"),
-        "resultsCount": m1,
+        "resultsCount": m2,
         "searchFor": MessageLookupByLibrary.simpleMessage("ابحث عن......."),
         "shopNow": MessageLookupByLibrary.simpleMessage("تسوق الان"),
+        "shoppingCart": MessageLookupByLibrary.simpleMessage("سلة التسوق"),
         "signup": MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب"),
         "signupSuccessful":
             MessageLookupByLibrary.simpleMessage("تم انشاء الحساب بنجاح."),
