@@ -6,16 +6,22 @@ part 'cart_state.dart';
 
 class CartCubit extends Cubit<CartState> {
   CartCubit() : super(CartInitial());
-  CartEntity cartEntity = const CartEntity(cartItems: []);
+  CartEntity cartEntity = CartEntity(cartItems: []);
   void addProductToCart({required ProductEntity productEntity}) {
+    bool isItemExist =
+        cartEntity.checkIfItemExistInCart(productEntity: productEntity);
     CartItemEntity cartItem =
         cartEntity.getCartItem(productEntity: productEntity);
-    cartEntity.addCartItem(cartItemEntity: cartItem);
+    if (isItemExist) {
+      cartItem.icreaseQuantity();
+    } else {
+      cartEntity.addCartItem(cartItem);
+    }
     emit(CartItemAdded());
   }
 
   void removeCartItem({required CartItemEntity cartItemEntity}) {
     cartEntity.removeItemFromCart(cartItemEntity: cartItemEntity);
-  emit(CartItemRemoved());
+    emit(CartItemRemoved());
   }
 }

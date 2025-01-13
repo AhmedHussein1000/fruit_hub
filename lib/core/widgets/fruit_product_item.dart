@@ -1,10 +1,14 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:fruit_hub/core/entities/product_entity.dart';
+import 'package:fruit_hub/core/functions/show_toast.dart';
 import 'package:fruit_hub/core/theming/app_colors.dart';
 import 'package:fruit_hub/core/theming/styles.dart';
 import 'package:fruit_hub/core/utils/app_constants.dart';
+import 'package:fruit_hub/features/cart/presentation/controller/cart_cubit/cart_cubit.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 
 class FruitProductItem extends StatelessWidget {
@@ -80,7 +84,10 @@ class FruitProductItem extends StatelessWidget {
                     ),
                     trailing: GestureDetector(
                       onTap: () {
-                        //TODO later
+                        context
+                            .read<CartCubit>()
+                            .addProductToCart(productEntity: productEntity);
+                        customToast(message:  S.of(context).addedToCart,state:ToastStates.success,toastLength: Toast.LENGTH_SHORT);    
                       },
                       child: Container(
                         padding: const EdgeInsets.all(2),

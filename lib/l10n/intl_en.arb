@@ -94,6 +94,7 @@
                 }
             }
     },
-    "payment" : "Payment"
+    "payment" : "Payment",
+    "addedToCart" : "Added to Cart Successfully"
 
 }

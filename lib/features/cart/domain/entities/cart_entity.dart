@@ -4,24 +4,33 @@ import 'package:fruit_hub/features/cart/domain/entities/cart_item_entity.dart';
 class CartEntity {
   final List<CartItemEntity> cartItems;
 
-  const CartEntity({required this.cartItems});
+  CartEntity({required this.cartItems});
 
+  addCartItem(CartItemEntity cartItemEntity) {
+    cartItems.add(cartItemEntity);
+  }
   removeItemFromCart({required CartItemEntity cartItemEntity}) {
     cartItems.remove(cartItemEntity);
   }
 
+  bool checkIfItemExistInCart({required ProductEntity productEntity}) {
+    for (var cartItem in cartItems) {
+      if (cartItem.productEntity.code == productEntity.code) {
+        return true;
+      }
+    }
+    return false;
+  }
+
   CartItemEntity getCartItem({required ProductEntity productEntity}) {
     for (var cartItem in cartItems) {
-      if (cartItem.productEntity == productEntity) {
-        cartItem.icreaseQuantity();
+      if (cartItem.productEntity.code == productEntity.code) {
         return cartItem;
       }
     }
-    return CartItemEntity(productEntity: productEntity, quantity: 1);
+    return CartItemEntity(productEntity: productEntity,quantity: 1);
   }
-   addCartItem({required CartItemEntity cartItemEntity}) {
-    cartItems.add(cartItemEntity);
-  }
+
   num calculateTotalPrice() {
     num totalPrice = 0;
     for (var cartItem in cartItems) {

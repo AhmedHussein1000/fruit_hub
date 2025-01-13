@@ -60,7 +60,8 @@ class _SignupBodyState extends State<SignupBody> {
                             localization: S.of(context));
                       } else {
                         customToast(
-                            S.of(context).pleaseAcceptTerms, ToastStates.error);
+                            message: S.of(context).pleaseAcceptTerms,
+                            state: ToastStates.error);
                       }
                     }
                   },
