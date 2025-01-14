@@ -15,11 +15,11 @@ class SignupBlocConsumer extends StatelessWidget {
     return BlocConsumer<SignupCubit, SignupState>(
       listener: (context, state) {
         if (state is SignupSuccess) {
-          customToast(S.of(context).signupSuccessful, ToastStates.success);
+          customToast(message:  S.of(context).signupSuccessful,state:  ToastStates.success);
           context.pop();
         }
         if (state is SignupFailure) {
-          customToast(state.message, ToastStates.error);
+          customToast(message:  state.message,state:  ToastStates.error);
         }
       },
       builder: (context, state) {

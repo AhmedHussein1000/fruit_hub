@@ -51,7 +51,7 @@
 
     "home": "Home",
     "products": "Products",
-    "cart": "Cart",
+    "shoppingCart": "Cart",
     "profile": "Profile",
 
     
@@ -84,6 +84,17 @@
                 "type": "int"
                 }
             }
-    }
+    },
+    "cart" : "Cart",
+    "CartProductsCount" :"You have {numberOfCartProducts} products in your cart",
+    "@CartProductsCount": {
+        "placeholders": {
+            "numberOfCartProducts": {
+                "type": "int"
+                }
+            }
+    },
+    "payment" : "Payment",
+    "addedToCart" : "Added to Cart Successfully"
 
 }

@@ -47,7 +47,7 @@
 
     "home": "الرئيسية",
     "products": "المنتجات",
-    "cart":"سلة التسوق",
+    "shoppingCart":"سلة التسوق",
     "profile": "حسابي",
 
     "goodMorning": "صباح الخير !..",
@@ -81,7 +81,18 @@
                 }
             }
 
-    }
+    },
+    "cart" : "السلة",
+    "CartProductsCount" :"لديك {numberOfCartProducts} منتجات في سله التسوق",
+    "@CartProductsCount": {
+        "placeholders": {
+            "numberOfCartProducts": {
+                "type": "int"
+                }
+            }
+    },
+    "payment" : "الدفع",
+    "addedToCart" : "تمت الإضافة الي سله التسوق بنجاح"
     
 
 }

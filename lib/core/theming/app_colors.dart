@@ -38,7 +38,7 @@ abstract class AppColors {
   static const Color coolGreen = Color(0xFF60D290);
   static const Color greenishTeal = Color(0xFF46AB60);
   static const Color seaGreen = Color(0xFF2D9F5D);
-
+  static const Color softMintGreen = Color(0xFFEBF9F1);
   static const Color darkNavy = Color(0xFF092533);
   static const Color deepBlue = Color(0xFF0A2737);
   static const Color neutralDarkBlue = Color(0xFF042333);

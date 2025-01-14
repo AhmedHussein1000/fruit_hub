@@ -461,10 +461,10 @@ class S {
   }
 
   /// `Cart`
-  String get cart {
+  String get shoppingCart {
     return Intl.message(
       'Cart',
-      name: 'cart',
+      name: 'shoppingCart',
       desc: '',
       args: [],
     );
@@ -627,6 +627,46 @@ class S {
       name: 'resultsCount',
       desc: '',
       args: [resultsCount],
+    );
+  }
+
+  /// `Cart`
+  String get cart {
+    return Intl.message(
+      'Cart',
+      name: 'cart',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You have {numberOfCartProducts} products in your cart`
+  String CartProductsCount(int numberOfCartProducts) {
+    return Intl.message(
+      'You have $numberOfCartProducts products in your cart',
+      name: 'CartProductsCount',
+      desc: '',
+      args: [numberOfCartProducts],
+    );
+  }
+
+  /// `Payment`
+  String get payment {
+    return Intl.message(
+      'Payment',
+      name: 'payment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Added to Cart Successfully`
+  String get addedToCart {
+    return Intl.message(
+      'Added to Cart Successfully',
+      name: 'addedToCart',
+      desc: '',
+      args: [],
     );
   }
 }
