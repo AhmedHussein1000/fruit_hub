@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -58,10 +60,11 @@ class CartPaymentButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<CartItemCubit, CartItemState>(
       builder: (context, state) {
+        log('build CartPaymentButton');
         return CustomButton(
             onPressed: () {},
             btnText:
-                '${S.of(context).payment} ${S.of(context).numberOfPounds(context.watch<CartCubit>().cartEntity.calculateTotalPrice())}');
+                '${S.of(context).payment} ${S.of(context).numberOfPounds(context.watch<CartCubit>().calculateTotalPrice())}');
       },
     );
   }

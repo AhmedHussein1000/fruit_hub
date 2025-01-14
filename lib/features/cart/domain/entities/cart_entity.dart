@@ -1,6 +1,5 @@
 import 'package:fruit_hub/core/entities/product_entity.dart';
 import 'package:fruit_hub/features/cart/domain/entities/cart_item_entity.dart';
-
 class CartEntity {
   final List<CartItemEntity> cartItems;
 
@@ -30,12 +29,12 @@ class CartEntity {
     }
     return CartItemEntity(productEntity: productEntity,quantity: 1);
   }
-
-  num calculateTotalPrice() {
+ num calculateTotalPriceOfCart({required List<CartItemEntity> cartItems}) {
     num totalPrice = 0;
     for (var cartItem in cartItems) {
       totalPrice += cartItem.calculateTotalPriceforItem();
     }
     return totalPrice;
   }
+
 }

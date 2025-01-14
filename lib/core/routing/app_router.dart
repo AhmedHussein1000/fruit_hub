@@ -50,7 +50,7 @@ class AppRouter {
       case Routes.mainLayout:
         return MaterialPageRoute(
           builder: (_) => BlocProvider(
-            create: (context) => CartCubit(),
+            create: (context) => CartCubit()..getCachedCartItems(),
             child: const MainLayouts(),
           ),
         );

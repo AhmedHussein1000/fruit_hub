@@ -6,6 +6,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruit_hub/core/di/service_locator.dart';
 import 'package:fruit_hub/core/helpers/cache_helper.dart';
+import 'package:fruit_hub/core/helpers/hive_helper.dart';
 import 'package:fruit_hub/core/routing/app_router.dart';
 import 'package:fruit_hub/core/routing/routes.dart';
 import 'package:fruit_hub/core/theming/light_theme.dart';
@@ -18,8 +19,10 @@ void main() async {
   await CacheHelper.init();
   await ScreenUtil.ensureScreenSize();
   await Firebase.initializeApp();
+  await HiveHelper.initializeHive();
   setupServiceLocator();
   Bloc.observer = CustomBlocObserver();
+
   Intl.defaultLocale = 'ar';
   isSkippedOnBoarding = CacheHelper.getData(CacheHelper.onBoardingKey) ?? false;
   runApp(DevicePreview(

@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruit_hub/core/theming/app_colors.dart';
@@ -12,6 +14,7 @@ class CartHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    log('build CartHeader');
     return Container(
       width: double.infinity,
       alignment: Alignment.center,
@@ -19,7 +22,7 @@ class CartHeader extends StatelessWidget {
       color: AppColors.softMintGreen,
       child: Text(
         S.of(context).CartProductsCount(
-            context.watch<CartCubit>().cartEntity.cartItems.length),
+            context.watch<CartCubit>().getCachedCartItems().length),
         style: Styles.font13Regular
             .copyWith(color: AppColors.darkGreenPrimaryColor),
       ),
