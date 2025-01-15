@@ -97,7 +97,12 @@
     "address" : "العنوان",
     "cartIsEmpty" : "سلة التسوق فارغة",
     "next" : "التالي",
-    "paypalPayment" : "دفع بواسطة Paypal"
+    "paypalPayment" : "دفع بواسطة Paypal",
+    "cash_on_delivery" : "الدفع عند الاستلام",
+    "pickup_delivery_option" : "التسليم من المكان",
+    "online_payment" : "الدفع اونلاين",
+   "payment_method" :"يرجي تحديد طريقه الدفع",
+   "free" : "مجاني"
     
 
 }

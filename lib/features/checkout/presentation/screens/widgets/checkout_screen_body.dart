@@ -25,6 +25,7 @@ class _CheckoutScreenBodyState extends State<CheckoutScreenBody> {
       });
     });
   }
+
   @override
   void dispose() {
     pageController.dispose();
@@ -48,13 +49,19 @@ class _CheckoutScreenBodyState extends State<CheckoutScreenBody> {
               child: CheckoutStepsPageview(
             pageController: pageController,
           )),
-          CustomButton(onPressed: () {
-            //TODO later
-          }, btnText:_getBtnText(currentIndex: currentIndex ) )
+          CustomButton(
+              onPressed: () {
+                //TODO later
+              },
+              btnText: _getBtnText(currentIndex: currentIndex)),
+          SizedBox(
+            height: 32.h,
+          ),
         ],
       ),
     );
   }
+
   String _getBtnText({required int currentIndex}) {
     switch (currentIndex) {
       case 0:
@@ -66,6 +73,5 @@ class _CheckoutScreenBodyState extends State<CheckoutScreenBody> {
       default:
         return S.of(context).next;
     }
-
   }
 }

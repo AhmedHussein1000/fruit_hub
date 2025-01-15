@@ -40,6 +40,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "bestSelling": MessageLookupByLibrary.simpleMessage("الأكثر مبيعًا"),
         "cart": MessageLookupByLibrary.simpleMessage("السلة"),
         "cartIsEmpty": MessageLookupByLibrary.simpleMessage("سلة التسوق فارغة"),
+        "cash_on_delivery":
+            MessageLookupByLibrary.simpleMessage("الدفع عند الاستلام"),
         "createAccount":
             MessageLookupByLibrary.simpleMessage("إنشاء حساب جديد"),
         "discount25": MessageLookupByLibrary.simpleMessage("خصم 25%"),
@@ -53,6 +55,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("البريد الإلكتروني مطلوب."),
         "forrgotPassword":
             MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
+        "free": MessageLookupByLibrary.simpleMessage("مجاني"),
         "fullName": MessageLookupByLibrary.simpleMessage("الاسم كامل"),
         "goodMorning": MessageLookupByLibrary.simpleMessage("صباح الخير !.."),
         "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
@@ -82,6 +85,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "onboardingDescription2": MessageLookupByLibrary.simpleMessage(
             "نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية"),
         "onboardingTitle2": MessageLookupByLibrary.simpleMessage("ابحث وتسوق"),
+        "online_payment": MessageLookupByLibrary.simpleMessage("الدفع اونلاين"),
         "operationNotAllowed": MessageLookupByLibrary.simpleMessage(
             "تسجيل الدخول بالبريد وكلمة المرور غير مفعل."),
         "or": MessageLookupByLibrary.simpleMessage("أو"),
@@ -91,8 +95,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "passwordRequired":
             MessageLookupByLibrary.simpleMessage("كلمة المرور مطلوبة."),
         "payment": MessageLookupByLibrary.simpleMessage("الدفع"),
+        "payment_method":
+            MessageLookupByLibrary.simpleMessage("يرجي تحديد طريقه الدفع"),
         "paypalPayment":
             MessageLookupByLibrary.simpleMessage("دفع بواسطة Paypal"),
+        "pickup_delivery_option":
+            MessageLookupByLibrary.simpleMessage("التسليم من المكان"),
         "pleaseAcceptTerms": MessageLookupByLibrary.simpleMessage(
             "يرجى قبول الشروط والأحكام لاستكمال التسجيل."),
         "products": MessageLookupByLibrary.simpleMessage("المنتجات"),

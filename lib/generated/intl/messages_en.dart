@@ -41,6 +41,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "cart": MessageLookupByLibrary.simpleMessage("Cart"),
         "cartIsEmpty":
             MessageLookupByLibrary.simpleMessage("Your Cart is Empty"),
+        "cash_on_delivery":
+            MessageLookupByLibrary.simpleMessage("Cash on Delivery"),
         "createAccount":
             MessageLookupByLibrary.simpleMessage("Create New Account"),
         "discount25": MessageLookupByLibrary.simpleMessage("Discount 25%"),
@@ -54,6 +56,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Email is required."),
         "forrgotPassword":
             MessageLookupByLibrary.simpleMessage("Forgot Password?"),
+        "free": MessageLookupByLibrary.simpleMessage("Free"),
         "fullName": MessageLookupByLibrary.simpleMessage("Full Name"),
         "goodMorning": MessageLookupByLibrary.simpleMessage("Good Morning..!"),
         "home": MessageLookupByLibrary.simpleMessage("Home"),
@@ -85,6 +88,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "We bring you the best carefully selected fruits. View details, images, and reviews to make sure you choose the perfect fruit."),
         "onboardingTitle2":
             MessageLookupByLibrary.simpleMessage("Search and Shop"),
+        "online_payment":
+            MessageLookupByLibrary.simpleMessage("Online Payment"),
         "operationNotAllowed": MessageLookupByLibrary.simpleMessage(
             "Signing in with email and password is not enabled."),
         "or": MessageLookupByLibrary.simpleMessage("Or"),
@@ -94,8 +99,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "passwordRequired":
             MessageLookupByLibrary.simpleMessage("Password is required."),
         "payment": MessageLookupByLibrary.simpleMessage("Payment"),
+        "payment_method": MessageLookupByLibrary.simpleMessage(
+            "Please select a payment method"),
         "paypalPayment":
             MessageLookupByLibrary.simpleMessage("Pay with Paypal"),
+        "pickup_delivery_option":
+            MessageLookupByLibrary.simpleMessage("Pickup from Location"),
         "pleaseAcceptTerms": MessageLookupByLibrary.simpleMessage(
             "Please accept our terms and conditions."),
         "products": MessageLookupByLibrary.simpleMessage("Products"),

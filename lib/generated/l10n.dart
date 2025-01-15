@@ -719,6 +719,56 @@ class S {
       args: [],
     );
   }
+
+  /// `Cash on Delivery`
+  String get cash_on_delivery {
+    return Intl.message(
+      'Cash on Delivery',
+      name: 'cash_on_delivery',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pickup from Location`
+  String get pickup_delivery_option {
+    return Intl.message(
+      'Pickup from Location',
+      name: 'pickup_delivery_option',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Online Payment`
+  String get online_payment {
+    return Intl.message(
+      'Online Payment',
+      name: 'online_payment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please select a payment method`
+  String get payment_method {
+    return Intl.message(
+      'Please select a payment method',
+      name: 'payment_method',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Free`
+  String get free {
+    return Intl.message(
+      'Free',
+      name: 'free',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

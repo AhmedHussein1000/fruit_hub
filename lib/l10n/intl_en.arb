@@ -100,6 +100,11 @@
     "address" : "Address",
     "cartIsEmpty" : "Your Cart is Empty",
     "next" : "Next",
-    "paypalPayment" : "Pay with Paypal"
+    "paypalPayment" : "Pay with Paypal",
+    "cash_on_delivery": "Cash on Delivery",
+    "pickup_delivery_option": "Pickup from Location",
+    "online_payment": "Online Payment",
+    "payment_method": "Please select a payment method",
+    "free" : "Free"
 
 }
