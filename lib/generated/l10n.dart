@@ -669,6 +669,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Shipping`
+  String get shipping {
+    return Intl.message(
+      'Shipping',
+      name: 'shipping',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Address`
+  String get address {
+    return Intl.message(
+      'Address',
+      name: 'address',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your Cart is Empty`
+  String get cartIsEmpty {
+    return Intl.message(
+      'Your Cart is Empty',
+      name: 'cartIsEmpty',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

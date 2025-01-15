@@ -32,12 +32,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "CartProductsCount": m0,
         "addedToCart":
             MessageLookupByLibrary.simpleMessage("Added to Cart Successfully"),
+        "address": MessageLookupByLibrary.simpleMessage("Address"),
         "ahmed": MessageLookupByLibrary.simpleMessage("Ahmed"),
         "ahmedHussein": MessageLookupByLibrary.simpleMessage("Ahmed Hussein"),
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Already have an account?"),
         "bestSelling": MessageLookupByLibrary.simpleMessage("Best Selling"),
         "cart": MessageLookupByLibrary.simpleMessage("Cart"),
+        "cartIsEmpty":
+            MessageLookupByLibrary.simpleMessage("Your Cart is Empty"),
         "createAccount":
             MessageLookupByLibrary.simpleMessage("Create New Account"),
         "discount25": MessageLookupByLibrary.simpleMessage("Discount 25%"),
@@ -97,6 +100,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "results": MessageLookupByLibrary.simpleMessage("Results"),
         "resultsCount": m2,
         "searchFor": MessageLookupByLibrary.simpleMessage("Search for......."),
+        "shipping": MessageLookupByLibrary.simpleMessage("Shipping"),
         "shopNow": MessageLookupByLibrary.simpleMessage("Shop Now"),
         "shoppingCart": MessageLookupByLibrary.simpleMessage("Cart"),
         "signup": MessageLookupByLibrary.simpleMessage(" Sign Up"),

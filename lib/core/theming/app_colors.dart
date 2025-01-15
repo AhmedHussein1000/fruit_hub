@@ -26,8 +26,8 @@ abstract class AppColors {
   static const Color ashGray = Color(0xFFDCDEDE);
   static const Color softGray = Color(0xFFC9CECF);
   static const Color paleGray = Color(0x66CACECE);
-
   static const Color backgroundGray = Color(0xFFEEEEEE);
+  static const Color lightSlateGray =  Color(0xFFAAAAAA);
 
   static const Color darkGreenPrimaryColor = Color(0xFF1B5E37);
   static const Color forestGreen = Color(0xFF217242);
@@ -54,6 +54,7 @@ abstract class AppColors {
   static const Color vibrantRed = Color(0xFFEB5757);
 
   static const Color almostWhite = Color(0xFFFCFCFE);
+  static const Color offWhite = Color(0xFFF2F3F3);
   static const Color softSnow = Color(0xFFF9FAFA);
   static const Color mintWhisper = Color(0xFFEEF8ED);
 }

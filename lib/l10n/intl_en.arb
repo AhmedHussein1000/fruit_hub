@@ -95,6 +95,9 @@
             }
     },
     "payment" : "Payment",
-    "addedToCart" : "Added to Cart Successfully"
+    "addedToCart" : "Added to Cart Successfully",
+    "shipping" : "Shipping",
+    "address" : "Address",
+    "cartIsEmpty" : "Your Cart is Empty"
 
 }

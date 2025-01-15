@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -13,10 +11,8 @@ class CartItemsList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    log('build CartItemsList');
     List<CartItemEntity> cartItems =
         context.watch<CartCubit>().getCachedCartItems();
-        log('cachedCartItems: $cartItems');
     return SliverList.separated(
         separatorBuilder: (context, index) => const CustomDivider(),
         itemBuilder: (context, index) => Padding(

@@ -32,12 +32,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "CartProductsCount": m0,
         "addedToCart": MessageLookupByLibrary.simpleMessage(
             "تمت الإضافة الي سله التسوق بنجاح"),
+        "address": MessageLookupByLibrary.simpleMessage("العنوان"),
         "ahmed": MessageLookupByLibrary.simpleMessage("احمد"),
         "ahmedHussein": MessageLookupByLibrary.simpleMessage("احمد حسين"),
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("تمتلك حساب بالفعل؟ "),
         "bestSelling": MessageLookupByLibrary.simpleMessage("الأكثر مبيعًا"),
         "cart": MessageLookupByLibrary.simpleMessage("السلة"),
+        "cartIsEmpty": MessageLookupByLibrary.simpleMessage("سلة التسوق فارغة"),
         "createAccount":
             MessageLookupByLibrary.simpleMessage("إنشاء حساب جديد"),
         "discount25": MessageLookupByLibrary.simpleMessage("خصم 25%"),
@@ -95,6 +97,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "results": MessageLookupByLibrary.simpleMessage("نتائج"),
         "resultsCount": m2,
         "searchFor": MessageLookupByLibrary.simpleMessage("ابحث عن......."),
+        "shipping": MessageLookupByLibrary.simpleMessage("الشحن"),
         "shopNow": MessageLookupByLibrary.simpleMessage("تسوق الان"),
         "shoppingCart": MessageLookupByLibrary.simpleMessage("سلة التسوق"),
         "signup": MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب"),
