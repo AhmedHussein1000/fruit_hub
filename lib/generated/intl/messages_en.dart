@@ -43,6 +43,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Your Cart is Empty"),
         "cash_on_delivery":
             MessageLookupByLibrary.simpleMessage("Cash on Delivery"),
+        "city": MessageLookupByLibrary.simpleMessage("City"),
         "createAccount":
             MessageLookupByLibrary.simpleMessage("Create New Account"),
         "discount25": MessageLookupByLibrary.simpleMessage("Discount 25%"),
@@ -54,6 +55,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "The account already exists for that email."),
         "emailRequired":
             MessageLookupByLibrary.simpleMessage("Email is required."),
+        "field_required":
+            MessageLookupByLibrary.simpleMessage("This field is required."),
+        "floor_and_apartment":
+            MessageLookupByLibrary.simpleMessage("Floor and Apartment"),
         "forrgotPassword":
             MessageLookupByLibrary.simpleMessage("Forgot Password?"),
         "free": MessageLookupByLibrary.simpleMessage("Free"),
@@ -103,6 +108,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Please select a payment method"),
         "paypalPayment":
             MessageLookupByLibrary.simpleMessage("Pay with Paypal"),
+        "phone": MessageLookupByLibrary.simpleMessage("Phone"),
         "pickup_delivery_option":
             MessageLookupByLibrary.simpleMessage("Pickup from Location"),
         "pleaseAcceptTerms": MessageLookupByLibrary.simpleMessage(

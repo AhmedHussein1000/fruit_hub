@@ -19,6 +19,7 @@
     "emailRequired": "البريد الإلكتروني مطلوب.",
     "passwordRequired": "كلمة المرور مطلوبة.",
     "nameRequired": "الاسم مطلوب.",
+    "field_required" :"هذا الحقل مطلوب.",
     "noGoogleAccountSelected" : " تم إلغاء تسجيل الدخول بواسطة جوجل من قبل المستخدم." ,
     "noFacebookAccountSelected" : "تم إلغاء تسجيل الدخول بواسطة فيسبوك من قبل المستخدم.",
 
@@ -102,7 +103,11 @@
     "pickup_delivery_option" : "التسليم من المكان",
     "online_payment" : "الدفع اونلاين",
    "payment_method" :"يرجي تحديد طريقه الدفع",
-   "free" : "مجاني"
+   "free" : "مجاني",
+   "city" : "المدينة",
+   "floor_and_apartment" : "رقم الطابق والشقة",
+   "phone" : "رقم الهاتف"
+   
     
 
 }

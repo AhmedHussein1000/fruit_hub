@@ -230,6 +230,16 @@ class S {
     );
   }
 
+  /// `This field is required.`
+  String get field_required {
+    return Intl.message(
+      'This field is required.',
+      name: 'field_required',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `User has cancelled login with google.`
   String get noGoogleAccountSelected {
     return Intl.message(
@@ -765,6 +775,36 @@ class S {
     return Intl.message(
       'Free',
       name: 'free',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `City`
+  String get city {
+    return Intl.message(
+      'City',
+      name: 'city',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Floor and Apartment`
+  String get floor_and_apartment {
+    return Intl.message(
+      'Floor and Apartment',
+      name: 'floor_and_apartment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phone`
+  String get phone {
+    return Intl.message(
+      'Phone',
+      name: 'phone',
       desc: '',
       args: [],
     );

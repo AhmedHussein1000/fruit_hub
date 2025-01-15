@@ -42,6 +42,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "cartIsEmpty": MessageLookupByLibrary.simpleMessage("سلة التسوق فارغة"),
         "cash_on_delivery":
             MessageLookupByLibrary.simpleMessage("الدفع عند الاستلام"),
+        "city": MessageLookupByLibrary.simpleMessage("المدينة"),
         "createAccount":
             MessageLookupByLibrary.simpleMessage("إنشاء حساب جديد"),
         "discount25": MessageLookupByLibrary.simpleMessage("خصم 25%"),
@@ -53,6 +54,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "هذا البريد الإلكتروني مسجل بالفعل."),
         "emailRequired":
             MessageLookupByLibrary.simpleMessage("البريد الإلكتروني مطلوب."),
+        "field_required":
+            MessageLookupByLibrary.simpleMessage("هذا الحقل مطلوب."),
+        "floor_and_apartment":
+            MessageLookupByLibrary.simpleMessage("رقم الطابق والشقة"),
         "forrgotPassword":
             MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
         "free": MessageLookupByLibrary.simpleMessage("مجاني"),
@@ -99,6 +104,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("يرجي تحديد طريقه الدفع"),
         "paypalPayment":
             MessageLookupByLibrary.simpleMessage("دفع بواسطة Paypal"),
+        "phone": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
         "pickup_delivery_option":
             MessageLookupByLibrary.simpleMessage("التسليم من المكان"),
         "pleaseAcceptTerms": MessageLookupByLibrary.simpleMessage(

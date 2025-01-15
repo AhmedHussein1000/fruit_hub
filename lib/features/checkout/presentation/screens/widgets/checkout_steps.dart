@@ -3,7 +3,8 @@ import 'package:fruit_hub/features/checkout/presentation/screens/widgets/step_it
 import 'package:fruit_hub/generated/l10n.dart';
 
 class CheckoutSteps extends StatelessWidget {
-  const CheckoutSteps({super.key});
+  const CheckoutSteps({super.key, required this.currentIndex});
+  final int currentIndex;
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +14,9 @@ class CheckoutSteps extends StatelessWidget {
           steps.length,
           (index) => Expanded(
               child: StepItem(
-                  isActive: index == 0, stepNumber: index + 1, text: steps[index]))),
+                  isActive: index <= currentIndex,
+                  stepNumber: index + 1,
+                  text: steps[index]))),
     );
   }
 
