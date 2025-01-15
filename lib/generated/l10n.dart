@@ -699,6 +699,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Next`
+  String get next {
+    return Intl.message(
+      'Next',
+      name: 'next',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pay with Paypal`
+  String get paypalPayment {
+    return Intl.message(
+      'Pay with Paypal',
+      name: 'paypalPayment',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

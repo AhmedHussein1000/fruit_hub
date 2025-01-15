@@ -98,6 +98,8 @@
     "addedToCart" : "Added to Cart Successfully",
     "shipping" : "Shipping",
     "address" : "Address",
-    "cartIsEmpty" : "Your Cart is Empty"
+    "cartIsEmpty" : "Your Cart is Empty",
+    "next" : "Next",
+    "paypalPayment" : "Pay with Paypal"
 
 }

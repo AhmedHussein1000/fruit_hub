@@ -95,7 +95,9 @@
     "addedToCart" : "تمت الإضافة الي سله التسوق بنجاح",
     "shipping" : "الشحن",
     "address" : "العنوان",
-    "cartIsEmpty" : "سلة التسوق فارغة"
+    "cartIsEmpty" : "سلة التسوق فارغة",
+    "next" : "التالي",
+    "paypalPayment" : "دفع بواسطة Paypal"
     
 
 }

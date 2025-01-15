@@ -71,6 +71,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "networkRequestFailed":
             MessageLookupByLibrary.simpleMessage("تحقق من اتصالك بالإنترنت."),
         "newAccount": MessageLookupByLibrary.simpleMessage("حساب جديد"),
+        "next": MessageLookupByLibrary.simpleMessage("التالي"),
         "noFacebookAccountSelected": MessageLookupByLibrary.simpleMessage(
             "تم إلغاء تسجيل الدخول بواسطة فيسبوك من قبل المستخدم."),
         "noGoogleAccountSelected": MessageLookupByLibrary.simpleMessage(
@@ -90,6 +91,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "passwordRequired":
             MessageLookupByLibrary.simpleMessage("كلمة المرور مطلوبة."),
         "payment": MessageLookupByLibrary.simpleMessage("الدفع"),
+        "paypalPayment":
+            MessageLookupByLibrary.simpleMessage("دفع بواسطة Paypal"),
         "pleaseAcceptTerms": MessageLookupByLibrary.simpleMessage(
             "يرجى قبول الشروط والأحكام لاستكمال التسجيل."),
         "products": MessageLookupByLibrary.simpleMessage("المنتجات"),

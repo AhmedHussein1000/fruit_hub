@@ -73,6 +73,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "networkRequestFailed": MessageLookupByLibrary.simpleMessage(
             "Check your internet connection."),
         "newAccount": MessageLookupByLibrary.simpleMessage("New Account"),
+        "next": MessageLookupByLibrary.simpleMessage("Next"),
         "noFacebookAccountSelected": MessageLookupByLibrary.simpleMessage(
             "User has cancelled login with facebook."),
         "noGoogleAccountSelected": MessageLookupByLibrary.simpleMessage(
@@ -93,6 +94,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "passwordRequired":
             MessageLookupByLibrary.simpleMessage("Password is required."),
         "payment": MessageLookupByLibrary.simpleMessage("Payment"),
+        "paypalPayment":
+            MessageLookupByLibrary.simpleMessage("Pay with Paypal"),
         "pleaseAcceptTerms": MessageLookupByLibrary.simpleMessage(
             "Please accept our terms and conditions."),
         "products": MessageLookupByLibrary.simpleMessage("Products"),
