@@ -869,6 +869,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Please select a payment method`
+  String get select_payment_method {
+    return Intl.message(
+      'Please select a payment method',
+      name: 'select_payment_method',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

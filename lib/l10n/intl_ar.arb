@@ -112,6 +112,7 @@
    "delivery" : "التوصيل",
    "total" : "الكلي",
    "delivery_address" : "عنوان التوصيل",
-   "edit" : "تعديل"
+   "edit" : "تعديل",
+   "select_payment_method" : "يرجي تحديد طريقه الدفع"
 
 }

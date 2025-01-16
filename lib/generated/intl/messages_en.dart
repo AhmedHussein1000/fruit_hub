@@ -123,6 +123,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "results": MessageLookupByLibrary.simpleMessage("Results"),
         "resultsCount": m2,
         "searchFor": MessageLookupByLibrary.simpleMessage("Search for......."),
+        "select_payment_method": MessageLookupByLibrary.simpleMessage(
+            "Please select a payment method"),
         "shipping": MessageLookupByLibrary.simpleMessage("Shipping"),
         "shopNow": MessageLookupByLibrary.simpleMessage("Shop Now"),
         "shoppingCart": MessageLookupByLibrary.simpleMessage("Cart"),

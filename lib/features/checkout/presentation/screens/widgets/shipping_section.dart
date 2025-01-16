@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:fruit_hub/features/checkout/domain/entities/order_entity.dart';
 import 'package:fruit_hub/features/checkout/presentation/screens/widgets/shipping_section_widgets/shipping_item.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 
@@ -14,11 +16,12 @@ class _ShippingSectionState extends State<ShippingSection> {
   int selectedIndex = -1;
   @override
   Widget build(BuildContext context) {
+    var orderEntity = context.read<OrderEntity>();
     return Column(
       children: [
-         SizedBox(
-            height: 32.h,
-          ),
+        SizedBox(
+          height: 32.h,
+        ),
         ShippingItem(
             isSelected: selectedIndex == 0,
             title: S.of(context).cash_on_delivery,
@@ -28,6 +31,7 @@ class _ShippingSectionState extends State<ShippingSection> {
               setState(() {
                 selectedIndex = 0;
               });
+              orderEntity.payWithCash = true;
             }),
         SizedBox(
           height: 16.h,
@@ -41,6 +45,7 @@ class _ShippingSectionState extends State<ShippingSection> {
               setState(() {
                 selectedIndex = 1;
               });
+              orderEntity.payWithCash = false;
             })
       ],
     );

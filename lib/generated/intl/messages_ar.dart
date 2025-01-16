@@ -119,6 +119,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "results": MessageLookupByLibrary.simpleMessage("نتائج"),
         "resultsCount": m2,
         "searchFor": MessageLookupByLibrary.simpleMessage("ابحث عن......."),
+        "select_payment_method":
+            MessageLookupByLibrary.simpleMessage("يرجي تحديد طريقه الدفع"),
         "shipping": MessageLookupByLibrary.simpleMessage("الشحن"),
         "shopNow": MessageLookupByLibrary.simpleMessage("تسوق الان"),
         "shoppingCart": MessageLookupByLibrary.simpleMessage("سلة التسوق"),

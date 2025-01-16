@@ -115,7 +115,8 @@
     "delivery" : "Delivery",
     "total" : "Total",
     "delivery_address" : "Delivery Address",
-    "edit" : "Edit"
+    "edit" : "Edit",
+    "select_payment_method" : "Please select a payment method"
     
 
 }

@@ -70,7 +70,7 @@ class CartPaymentButton extends StatelessWidget {
               if (box.values.toList().isNotEmpty) {
                 PersistentNavBarNavigator.pushNewScreen(
                   context,
-                  screen: const CheckoutScreen(),
+                  screen:  CheckoutScreen(cartEntity: context.watch<CartCubit>().cartEntity,),
                   withNavBar: false,
                   pageTransitionAnimation: PageTransitionAnimation.cupertino,
                 );
