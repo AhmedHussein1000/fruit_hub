@@ -106,8 +106,12 @@
    "free" : "مجاني",
    "city" : "المدينة",
    "floor_and_apartment" : "رقم الطابق والشقة",
-   "phone" : "رقم الهاتف"
-   
-    
+   "phone" : "رقم الهاتف",
+   "order_summary": "ملخص الطلب",
+   "sub_total" : "المجموع الفرعي",
+   "delivery" : "التوصيل",
+   "total" : "الكلي",
+   "delivery_address" : "عنوان التوصيل",
+   "edit" : "تعديل"
 
 }

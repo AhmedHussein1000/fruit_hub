@@ -45,9 +45,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "city": MessageLookupByLibrary.simpleMessage("المدينة"),
         "createAccount":
             MessageLookupByLibrary.simpleMessage("إنشاء حساب جديد"),
+        "delivery": MessageLookupByLibrary.simpleMessage("التوصيل"),
+        "delivery_address":
+            MessageLookupByLibrary.simpleMessage("عنوان التوصيل"),
         "discount25": MessageLookupByLibrary.simpleMessage("خصم 25%"),
         "dontHaveAnAccount":
             MessageLookupByLibrary.simpleMessage(" لا تمتلك حساب؟"),
+        "edit": MessageLookupByLibrary.simpleMessage("تعديل"),
         "eidOffers": MessageLookupByLibrary.simpleMessage("عروض العيد"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
         "emailAlreadyInUse": MessageLookupByLibrary.simpleMessage(
@@ -94,6 +98,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "operationNotAllowed": MessageLookupByLibrary.simpleMessage(
             "تسجيل الدخول بالبريد وكلمة المرور غير مفعل."),
         "or": MessageLookupByLibrary.simpleMessage("أو"),
+        "order_summary": MessageLookupByLibrary.simpleMessage("ملخص الطلب"),
         "ourTermsAndConditions":
             MessageLookupByLibrary.simpleMessage("الشروط والأحكام الخاصة بنا"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
@@ -124,10 +129,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "slash": MessageLookupByLibrary.simpleMessage("/"),
         "startNow": MessageLookupByLibrary.simpleMessage("ابدأ الآن"),
         "strawberry": MessageLookupByLibrary.simpleMessage("فراولة"),
+        "sub_total": MessageLookupByLibrary.simpleMessage("المجموع الفرعي"),
         "termsAgreement": MessageLookupByLibrary.simpleMessage(
             "من خلال إنشاء حساب ، فإنك توافق على"),
         "tooManyRequests": MessageLookupByLibrary.simpleMessage(
             "لقد تجاوزت عدد المحاولات المسموح به. حاول لاحقًا."),
+        "total": MessageLookupByLibrary.simpleMessage("الكلي"),
         "unexpectedError": MessageLookupByLibrary.simpleMessage(
             "حدث خطأ غير متوقع، يرجى المحاولة مرة أخرى."),
         "userDisabled":

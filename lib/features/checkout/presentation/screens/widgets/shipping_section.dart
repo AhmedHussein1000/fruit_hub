@@ -16,6 +16,9 @@ class _ShippingSectionState extends State<ShippingSection> {
   Widget build(BuildContext context) {
     return Column(
       children: [
+         SizedBox(
+            height: 32.h,
+          ),
         ShippingItem(
             isSelected: selectedIndex == 0,
             title: S.of(context).cash_on_delivery,

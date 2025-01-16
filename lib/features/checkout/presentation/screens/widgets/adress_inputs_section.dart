@@ -45,6 +45,9 @@ class _AdressInputsSectionState extends State<AdressInputsSection> {
       child: Column(
         spacing: 8.h,
         children: [
+           SizedBox(
+            height: 16.h,
+          ),
           CustomTextFormField(
             controller: nameController,
             hintText: S.of(context).fullName,

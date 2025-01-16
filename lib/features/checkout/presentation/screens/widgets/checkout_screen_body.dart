@@ -42,9 +42,6 @@ class _CheckoutScreenBodyState extends State<CheckoutScreenBody> {
             height: 16.h,
           ),
           CheckoutSteps(currentIndex: currentIndex),
-          SizedBox(
-            height: 32.h,
-          ),
           Expanded(
               child: CheckoutStepsPageview(
             pageController: pageController,
@@ -52,6 +49,11 @@ class _CheckoutScreenBodyState extends State<CheckoutScreenBody> {
           CustomButton(
               onPressed: () {
                 if (currentIndex == 0) {
+                  pageController.nextPage(
+                      duration: const Duration(milliseconds: 400),
+                      curve: Curves.easeIn);
+                }
+                if (currentIndex == 1) {
                   pageController.nextPage(
                       duration: const Duration(milliseconds: 400),
                       curve: Curves.easeIn);

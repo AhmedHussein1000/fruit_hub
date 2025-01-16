@@ -109,7 +109,13 @@
     "free" : "Free",
     "city" : "City",
     "floor_and_apartment" : "Floor and Apartment",
-    "phone" : "Phone"
+    "phone" : "Phone",
+     "order_summary": "Order Summary",
+    "sub_total" : "Sub Total",
+    "delivery" : "Delivery",
+    "total" : "Total",
+    "delivery_address" : "Delivery Address",
+    "edit" : "Edit"
     
 
 }
