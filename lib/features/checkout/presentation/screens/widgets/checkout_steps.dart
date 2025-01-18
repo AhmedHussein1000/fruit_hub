@@ -11,12 +11,14 @@ class CheckoutSteps extends StatelessWidget {
     List<String> steps = getSteps(context: context);
     return Row(
       children: List.generate(
-          steps.length,
-          (index) => Expanded(
-              child: StepItem(
-                  isActive: index <= currentIndex,
-                  stepNumber: index + 1,
-                  text: steps[index]))),
+        steps.length,
+        (index) => Expanded(
+          child: StepItem(
+              isActive: index <= currentIndex,
+              stepNumber: index + 1,
+              text: steps[index]),
+        ),
+      ),
     );
   }
 

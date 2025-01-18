@@ -26,7 +26,7 @@ class _ShippingSectionState extends State<ShippingSection> {
             isSelected: selectedIndex == 0,
             title: S.of(context).cash_on_delivery,
             subTitle: S.of(context).pickup_delivery_option,
-            price: S.of(context).numberOfPounds(30),
+            price: S.of(context).numberOfPounds(orderEntity.shippingCost),
             onTap: () {
               setState(() {
                 selectedIndex = 0;

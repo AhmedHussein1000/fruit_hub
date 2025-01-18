@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fruit_hub/core/helpers/assets.dart';
 import 'package:fruit_hub/core/theming/app_colors.dart';
 import 'package:fruit_hub/core/theming/styles.dart';
+import 'package:fruit_hub/features/checkout/domain/entities/order_entity.dart';
 import 'package:fruit_hub/features/checkout/presentation/screens/widgets/payment_section_widgets/payment_item.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 
@@ -22,13 +24,20 @@ class DeliveryAddressWidget extends StatelessWidget {
           SizedBox(
             width: 8.w,
           ),
-          Text(
-            'شارع النيل مبنى 3 شقه 12',
-            style: Styles.font13Regular.copyWith(
-              color: AppColors.darkGray,
+          Expanded(
+            child: Text(
+              context
+                  .read<OrderEntity>()
+                  .shippingAddressEntity
+                  .addressToString(),
+              style: Styles.font13Regular.copyWith(
+                color: AppColors.darkGray,
+              ),
             ),
           ),
-          const Spacer(),
+          SizedBox(
+            width: 8.w,
+          ),
           Row(
             children: [
               SvgPicture.asset(
