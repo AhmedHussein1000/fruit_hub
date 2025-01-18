@@ -1,84 +1,82 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruit_hub/core/widgets/custom_text_form_field.dart';
+import 'package:fruit_hub/features/checkout/domain/entities/order_entity.dart';
 import 'package:fruit_hub/generated/l10n.dart';
+import 'package:provider/provider.dart';
 
-class AdressInputsSection extends StatefulWidget {
-  const AdressInputsSection({super.key});
-
-  @override
-  State<AdressInputsSection> createState() => _AdressInputsSectionState();
-}
-
-class _AdressInputsSectionState extends State<AdressInputsSection> {
-  late final TextEditingController nameController,
-      emailController,
-      addressController,
-      cityController,
-      floorAndApartmentController,
-      phoneController;
-  @override
-  void initState() {
-    nameController = TextEditingController();
-    emailController = TextEditingController();
-    addressController = TextEditingController();
-    cityController = TextEditingController();
-    floorAndApartmentController = TextEditingController();
-    phoneController = TextEditingController();
-    super.initState();
-  }
-
-  @override
-  void dispose() {
-    nameController.dispose();
-    emailController.dispose();
-    addressController.dispose();
-    cityController.dispose();
-    floorAndApartmentController.dispose();
-    phoneController.dispose();
-    super.dispose();
-  }
-
+class AdressInputsSection extends StatelessWidget {
+  const AdressInputsSection(
+      {super.key,
+      required this.formKey,
+      required this.valueNotifierAutovalidateMode});
+  final GlobalKey<FormState> formKey;
+  final ValueListenable<AutovalidateMode> valueNotifierAutovalidateMode;
   @override
   Widget build(BuildContext context) {
+  var shippingAddressEntity  =  context.read<OrderEntity>().shippingAddressEntity;
     return SingleChildScrollView(
-      child: Column(
-        spacing: 8.h,
-        children: [
-           SizedBox(
-            height: 16.h,
+      child: ValueListenableBuilder<AutovalidateMode>(
+        valueListenable: valueNotifierAutovalidateMode,
+        builder: (context, value, child) => Form(
+          key: formKey,
+          autovalidateMode: value,
+          child: Column(
+            spacing: 8.h,
+            children: [
+              SizedBox(
+                height: 16.h,
+              ),
+              CustomTextFormField(
+
+                hintText: S.of(context).fullName,
+                keyboardType: TextInputType.name,
+                onSaved: (value){
+                 shippingAddressEntity.name = value;
+                },
+              ),
+              CustomTextFormField(
+                hintText: S.of(context).email,
+                keyboardType: TextInputType.emailAddress, onSaved: (value){
+                 shippingAddressEntity.email = value;
+                },
+              ),
+              CustomTextFormField(
+                  hintText: S.of(context).address,
+                  keyboardType: TextInputType.text,
+                   onSaved: (value){
+                 shippingAddressEntity.address = value;
+                },
+                  ),
+                  
+              CustomTextFormField(
+                  hintText: S.of(context).city,
+                  keyboardType: TextInputType.text,
+                   onSaved: (value){
+                 shippingAddressEntity.city = value;
+                },
+                  ),
+              CustomTextFormField(
+                  hintText: S.of(context).floor_and_apartment,
+                  keyboardType: TextInputType.text,
+                   onSaved: (value){
+                 shippingAddressEntity.floorAndApartment = value;
+                },
+                  ),
+              CustomTextFormField(
+                hintText: S.of(context).phone,
+                keyboardType: TextInputType.phone,
+                 onSaved: (value){
+                 shippingAddressEntity.phone = value;
+                },
+              ),
+              SizedBox(
+                height: 16.h,
+              ),
+            ],
           ),
-          CustomTextFormField(
-            controller: nameController,
-            hintText: S.of(context).fullName,
-            keyboardType: TextInputType.name,
-          ),
-          CustomTextFormField(
-            controller: emailController,
-            hintText: S.of(context).email,
-            keyboardType: TextInputType.emailAddress,
-          ),
-          CustomTextFormField(
-              controller: addressController,
-              hintText: S.of(context).address,
-              keyboardType: TextInputType.text),
-          CustomTextFormField(
-              controller: cityController,
-              hintText: S.of(context).city,
-              keyboardType: TextInputType.text),
-          CustomTextFormField(
-              controller: floorAndApartmentController,
-              hintText: S.of(context).floor_and_apartment,
-              keyboardType: TextInputType.text),
-          CustomTextFormField(
-            controller: phoneController,
-            hintText: S.of(context).phone,
-            keyboardType: TextInputType.phone,
-          ),
-          SizedBox(
-            height: 16.h,
-          ),
-        ],
+        ),
       ),
     );
   }

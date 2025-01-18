@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruit_hub/core/functions/show_toast.dart';
 import 'package:fruit_hub/core/widgets/custom_button.dart';
@@ -7,6 +6,7 @@ import 'package:fruit_hub/features/checkout/domain/entities/order_entity.dart';
 import 'package:fruit_hub/features/checkout/presentation/screens/widgets/checkout_steps.dart';
 import 'package:fruit_hub/features/checkout/presentation/screens/widgets/checkout_steps_pageview.dart';
 import 'package:fruit_hub/generated/l10n.dart';
+import 'package:provider/provider.dart';
 
 class CheckoutScreenBody extends StatefulWidget {
   const CheckoutScreenBody({super.key});
@@ -18,7 +18,9 @@ class CheckoutScreenBody extends StatefulWidget {
 class _CheckoutScreenBodyState extends State<CheckoutScreenBody> {
   late PageController pageController;
   int currentIndex = 0;
-  
+  final _formKey = GlobalKey<FormState>();
+  ValueNotifier<AutovalidateMode> valueNotifierAutovalidateMode =
+      ValueNotifier(AutovalidateMode.disabled);
   @override
   void initState() {
     pageController = PageController();
@@ -45,19 +47,19 @@ class _CheckoutScreenBodyState extends State<CheckoutScreenBody> {
           SizedBox(
             height: 16.h,
           ),
-          CheckoutSteps(currentIndex: currentIndex),
+          CheckoutSteps(currentIndex: currentIndex,
+          
+          ),
           Expanded(
               child: CheckoutStepsPageview(
             pageController: pageController,
+            formKey: _formKey,
+            valueListenableAutovalidateMode: valueNotifierAutovalidateMode,
           )),
           CustomButton(
               onPressed: () {
                 _handleShippingSectionValidation(context);
-                if (currentIndex == 1) {
-                  pageController.nextPage(
-                      duration: const Duration(milliseconds: 400),
-                      curve: Curves.easeIn);
-                }
+                _handleAddressInputsValidation();
               },
               btnText: _getBtnText(currentIndex: currentIndex)),
           SizedBox(
@@ -69,15 +71,27 @@ class _CheckoutScreenBodyState extends State<CheckoutScreenBody> {
   }
 
   void _handleShippingSectionValidation(BuildContext context) {
-       if (currentIndex == 0) {
-    if(context.read<OrderEntity>().payWithCash!=null){
-    pageController.nextPage(
-          duration: const Duration(milliseconds: 400),
-          curve: Curves.easeIn);
-    }else{
-      customToast(message: S.of(context).select_payment_method, state: ToastStates.warning);
+    if (currentIndex == 0) {
+      if (context.read<OrderEntity>().payWithCash != null) {
+        pageController.nextPage(
+            duration: const Duration(milliseconds: 300), curve: Curves.easeIn);
+      } else {
+        customToast(
+            message: S.of(context).select_payment_method,
+            state: ToastStates.warning);
+      }
     }
-      
+  }
+
+  void _handleAddressInputsValidation() {
+    if (currentIndex == 1) {
+      if (_formKey.currentState!.validate()) {
+        _formKey.currentState!.save();
+        pageController.nextPage(
+            duration: const Duration(milliseconds: 300), curve: Curves.easeIn);
+      } else {
+        valueNotifierAutovalidateMode.value = AutovalidateMode.always;
+      }
     }
   }
 

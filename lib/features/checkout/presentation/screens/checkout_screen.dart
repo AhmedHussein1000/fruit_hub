@@ -9,7 +9,7 @@ import 'package:fruit_hub/generated/l10n.dart';
 import 'package:provider/provider.dart';
 
 class CheckoutScreen extends StatefulWidget {
-  const CheckoutScreen({super.key, required this.cartEntity});
+  const CheckoutScreen({super.key,required  this.cartEntity});
   final CartEntity cartEntity;
   @override
   State<CheckoutScreen> createState() => _CheckoutScreenState();
