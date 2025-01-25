@@ -39,6 +39,6 @@ class CartCubit extends Cubit<CartState> {
   }
 
   num calculateTotalPrice() {
-    return cartEntity.calculateTotalPriceOfCart(cartItems: getCachedCartItems());
+    return cartEntity.calculateTotalPriceOfCart();
   }
 }

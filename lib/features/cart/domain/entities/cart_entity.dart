@@ -1,5 +1,7 @@
 import 'package:fruit_hub/core/entities/product_entity.dart';
+import 'package:fruit_hub/core/helpers/hive_helper.dart';
 import 'package:fruit_hub/features/cart/domain/entities/cart_item_entity.dart';
+import 'package:hive/hive.dart';
 class CartEntity {
   final List<CartItemEntity> cartItems;
 
@@ -29,9 +31,10 @@ class CartEntity {
     }
     return CartItemEntity(productEntity: productEntity,quantity: 1);
   }
- num calculateTotalPriceOfCart({required List<CartItemEntity> cartItems}) {
+ num calculateTotalPriceOfCart() {
+  var box = Hive.box<CartItemEntity>(HiveHelper.cartBox);
     num totalPrice = 0;
-    for (var cartItem in cartItems) {
+    for (var cartItem in box.values.toList()) {
       totalPrice += cartItem.calculateTotalPriceforItem();
     }
     return totalPrice;

@@ -35,7 +35,7 @@ class OrderSummary extends StatelessWidget {
                   S.of(context).numberOfPounds(context
                       .read<OrderEntity>()
                       .cartEntity
-                      .calculateTotalPriceOfCart(cartItems: cartItems)),
+                      .calculateTotalPriceOfCart()),
                   textAlign: TextAlign.right,
                   style: Styles.font16SemiBold
                       .copyWith(color: AppColors.charcoalBlack),

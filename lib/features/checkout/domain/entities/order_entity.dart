@@ -1,5 +1,4 @@
 import 'package:fruit_hub/features/cart/domain/entities/cart_entity.dart';
-import 'package:fruit_hub/features/cart/domain/entities/cart_item_entity.dart';
 import 'package:fruit_hub/features/checkout/domain/entities/shipping_address_entity.dart';
 
 class OrderEntity {
@@ -15,22 +14,23 @@ class OrderEntity {
       required this.shippingAddressEntity,
       this.payWithCash});
 
-      num shippingCostCalculator(){
-        if (payWithCash == true) {
-          return shippingCost;
-        }else{
-          return 0;
-        }
-      }
-  num calculateTotalPrice({required List<CartItemEntity> cartItems}) {
+  num shippingCostCalculator() {
     if (payWithCash == true) {
-      return cartEntity.calculateTotalPriceOfCart(
-              cartItems: cartItems) +
-          shippingCost;
-    }else{
- return cartEntity.calculateTotalPriceOfCart(
-        cartItems: cartItems);
+      return shippingCost;
+    } else {
+      return 0;
     }
-   
+  }
+
+  num calculateTotalPrice() {
+    if (payWithCash == true) {
+      return cartEntity.calculateTotalPriceOfCart() + shippingCost - calculateShippingDiscount();
+    } else {
+      return cartEntity.calculateTotalPriceOfCart() - calculateShippingDiscount();
+    }
+  }
+
+  double calculateShippingDiscount() {
+    return 0;
   }
 }
