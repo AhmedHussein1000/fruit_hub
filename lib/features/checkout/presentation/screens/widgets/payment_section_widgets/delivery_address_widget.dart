@@ -10,8 +10,8 @@ import 'package:fruit_hub/features/checkout/presentation/screens/widgets/payment
 import 'package:fruit_hub/generated/l10n.dart';
 
 class DeliveryAddressWidget extends StatelessWidget {
-  const DeliveryAddressWidget({super.key});
-
+  const DeliveryAddressWidget({super.key, required this.pageController});
+  final PageController pageController;
   @override
   Widget build(BuildContext context) {
     return PaymentItem(
@@ -46,10 +46,17 @@ class DeliveryAddressWidget extends StatelessWidget {
               const SizedBox(
                 width: 4,
               ),
-              Text(
-                S.of(context).edit,
-                style: Styles.font13SemiBold.copyWith(
-                  color: AppColors.mediumNeutralGray,
+              GestureDetector(
+                onTap: () {
+                  pageController.previousPage(
+                      duration: const Duration(milliseconds: 300),
+                      curve: Curves.easeIn);
+                },
+                child: Text(
+                  S.of(context).edit,
+                  style: Styles.font13SemiBold.copyWith(
+                    color: AppColors.mediumNeutralGray,
+                  ),
                 ),
               )
             ],

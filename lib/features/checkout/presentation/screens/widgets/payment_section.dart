@@ -4,8 +4,8 @@ import 'package:fruit_hub/features/checkout/presentation/screens/widgets/payment
 import 'package:fruit_hub/features/checkout/presentation/screens/widgets/payment_section_widgets/order_summary.dart';
 
 class PaymentSection extends StatelessWidget {
-  const PaymentSection({super.key});
-
+  const PaymentSection({super.key, required this.pageController});
+final PageController pageController;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -17,7 +17,9 @@ class PaymentSection extends StatelessWidget {
         SizedBox(
           height: 24.h,
         ),
-        const DeliveryAddressWidget(),
+         DeliveryAddressWidget(
+          pageController: pageController ,
+        ),
       ],
     );
   }

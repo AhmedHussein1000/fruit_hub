@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruit_hub/core/functions/show_toast.dart';
 import 'package:fruit_hub/core/widgets/custom_button.dart';
 import 'package:fruit_hub/features/checkout/domain/entities/order_entity.dart';
-import 'package:fruit_hub/features/checkout/presentation/screens/widgets/checkout_steps.dart';
+import 'package:fruit_hub/features/checkout/presentation/screens/widgets/checkout_steps_widgets/checkout_steps.dart';
 import 'package:fruit_hub/features/checkout/presentation/screens/widgets/checkout_steps_pageview.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 import 'package:provider/provider.dart';
@@ -47,8 +47,26 @@ class _CheckoutScreenBodyState extends State<CheckoutScreenBody> {
           SizedBox(
             height: 16.h,
           ),
-          CheckoutSteps(currentIndex: currentIndex,
-          
+          CheckoutSteps(
+            currentIndex: currentIndex,
+            onStepTapped: (index) {
+              if (index == currentIndex) {
+                return;
+              } else if (index < currentIndex) {
+                pageController.animateToPage(index,
+                    duration: const Duration(milliseconds: 300),
+                    curve: Curves.easeIn);
+              } else {
+                if (index == 1) {
+                  _handleShippingSectionValidation(context);
+                }
+                if (index == 2) {
+                  _handleShippingSectionValidation(context);
+
+                  _handleAddressInputsValidation();
+                }
+              }
+            },
           ),
           Expanded(
               child: CheckoutStepsPageview(
