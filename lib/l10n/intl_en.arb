@@ -116,7 +116,10 @@
     "total" : "Total",
     "delivery_address" : "Delivery Address",
     "edit" : "Edit",
-    "select_payment_method" : "Please select a payment method"
+    "select_payment_method" : "Please select a payment method",
+    "payment_error" : "Payment error, please try again",
+    "payment_success" : "Payment successful",
+    "payment_cancelled" : "Payment cancelled"
     
 
 }

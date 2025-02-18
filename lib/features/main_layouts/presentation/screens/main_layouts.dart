@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/core/theming/app_colors.dart';
+import 'package:fruit_hub/core/themes/app_colors.dart';
 import 'package:fruit_hub/features/cart/presentation/screens/cart_screen.dart';
 import 'package:fruit_hub/features/home/presentation/screens/home_screen.dart';
 import 'package:fruit_hub/features/main_layouts/domain/entities/bottom_nav_bar_item_entity.dart';

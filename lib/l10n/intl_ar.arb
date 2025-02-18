@@ -113,6 +113,8 @@
    "total" : "الكلي",
    "delivery_address" : "عنوان التوصيل",
    "edit" : "تعديل",
-   "select_payment_method" : "يرجي تحديد طريقه الدفع"
-
+   "select_payment_method" : "يرجي تحديد طريقه الدفع",
+   "payment_error" : "حدث خطاء في الدفع، يرجى المحاولة مرة اخرى",
+   "payment_success" : "تم الدفع بنجاح",
+   "payment_cancelled" : "تم الغاء الدفع"
 }

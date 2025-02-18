@@ -1,9 +1,14 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_paypal_payment/flutter_paypal_payment.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruit_hub/core/functions/show_toast.dart';
+import 'package:fruit_hub/core/helpers/extensions.dart';
 import 'package:fruit_hub/core/utils/app_keys.dart';
 import 'package:fruit_hub/core/widgets/custom_button.dart';
+import 'package:fruit_hub/features/cart/presentation/controller/cart_cubit/cart_cubit.dart';
+import 'package:fruit_hub/features/checkout/data/models/paypal_payment_model/paypal_payment_model.dart';
 import 'package:fruit_hub/features/checkout/domain/entities/order_entity.dart';
 import 'package:fruit_hub/features/checkout/presentation/screens/widgets/checkout_steps_widgets/checkout_steps.dart';
 import 'package:fruit_hub/features/checkout/presentation/screens/widgets/checkout_steps_pageview.dart';
@@ -78,60 +83,12 @@ class _CheckoutScreenBodyState extends State<CheckoutScreenBody> {
           )),
           CustomButton(
               onPressed: () {
-                _handleShippingSectionValidation(context);
-                _handleAddressInputsValidation();
-                if(currentIndex == 2){
-                  Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) => PaypalCheckoutView(
-                    sandboxMode: true,
-                    clientId:AppKeys.paypalClientId,
-                    secretKey: AppKeys.paypalSecretKey,
-                    transactions: const [
-                      {
-                        "amount": {
-                          "total": '70',
-                          "currency": "USD",
-                          "details": {
-                            "subtotal": '70',
-                            "shipping": '0',
-                            "shipping_discount": 0
-                          }
-                        },
-                        "description": "The payment transaction description.",
-                      
-                        "item_list": {
-                          "items": [
-                            {
-                              "name": "Apple",
-                              "quantity": 4,
-                              "price": '5',
-                              "currency": "USD"
-                            },
-                            {
-                              "name": "Pineapple",
-                              "quantity": 5,
-                              "price": '10',
-                              "currency": "USD"
-                            }
-                          ],
-
-                         
-                        }
-                      }
-                    ],
-                    note: "Contact us for any questions on your order.",
-                    onSuccess: (Map params) async {
-                      print("onSuccess: $params");
-                    },
-                    onError: (error) {
-                      print("onError: $error");
-                      Navigator.pop(context);
-                    },
-                    onCancel: () {
-                      print('cancelled:');
-                    },
-                  ),
-                ));
+                if (currentIndex == 0) {
+                  _handleShippingSectionValidation(context);
+                } else if (currentIndex == 1) {
+                  _handleAddressInputsValidation();
+                } else {
+                  _processPaypalPayment(context);
                 }
               },
               btnText: _getBtnText(currentIndex: currentIndex)),
@@ -144,28 +101,58 @@ class _CheckoutScreenBodyState extends State<CheckoutScreenBody> {
   }
 
   void _handleShippingSectionValidation(BuildContext context) {
-    if (currentIndex == 0) {
-      if (context.read<OrderEntity>().payWithCash != null) {
-        pageController.nextPage(
-            duration: const Duration(milliseconds: 300), curve: Curves.easeIn);
-      } else {
-        customToast(
-            message: S.of(context).select_payment_method,
-            state: ToastStates.warning);
-      }
+    if (context.read<OrderEntity>().payWithCash != null) {
+      pageController.nextPage(
+          duration: const Duration(milliseconds: 300), curve: Curves.easeIn);
+    } else {
+      customToast(
+          message: S.of(context).select_payment_method,
+          state: ToastStates.warning);
     }
   }
 
   void _handleAddressInputsValidation() {
-    if (currentIndex == 1) {
-      if (_formKey.currentState!.validate()) {
-        _formKey.currentState!.save();
-        pageController.nextPage(
-            duration: const Duration(milliseconds: 300), curve: Curves.easeIn);
-      } else {
-        valueNotifierAutovalidateMode.value = AutovalidateMode.always;
-      }
+    if (_formKey.currentState!.validate()) {
+      _formKey.currentState!.save();
+      pageController.nextPage(
+          duration: const Duration(milliseconds: 300), curve: Curves.easeIn);
+    } else {
+      valueNotifierAutovalidateMode.value = AutovalidateMode.always;
     }
+  }
+
+  void _processPaypalPayment(BuildContext context) {
+    PaypalPaymentModel paypalPaymentModel =
+        PaypalPaymentModel.fromEntity(context.read<OrderEntity>());
+    final cartCubit = context.read<CartCubit>();
+    log('${paypalPaymentModel.toJson()}');
+    Navigator.of(context).push(MaterialPageRoute(
+      builder: (BuildContext context) => PaypalCheckoutView(
+        sandboxMode: true,
+        clientId: AppKeys.paypalClientId,
+        secretKey: AppKeys.paypalSecretKey,
+        transactions: [paypalPaymentModel.toJson()],
+        note: "Contact us for any questions on your order.",
+        onSuccess: (Map params) async {
+          log("onSuccess: $params");
+          cartCubit.deleteCartItems();
+          context.pop();
+          customToast(
+              message: S.of(context).payment_success,
+              state: ToastStates.success);
+        },
+        onError: (error) {
+          log("onError: $error");
+          context.pop();
+
+          customToast(
+              message: S.of(context).payment_error, state: ToastStates.error);
+        },
+        onCancel: () {
+          log('cancelled:');
+        },
+      ),
+    ));
   }
 
   String _getBtnText({required int currentIndex}) {

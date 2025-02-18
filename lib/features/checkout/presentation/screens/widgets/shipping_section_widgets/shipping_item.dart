@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:fruit_hub/core/theming/app_colors.dart';
-import 'package:fruit_hub/core/theming/styles.dart';
+import 'package:fruit_hub/core/themes/app_colors.dart';
+import 'package:fruit_hub/core/themes/styles.dart';
 import 'package:fruit_hub/features/checkout/presentation/screens/widgets/shipping_section_widgets/active_dot.dart';
 import 'package:fruit_hub/features/checkout/presentation/screens/widgets/shipping_section_widgets/in_active_dot.dart';
 

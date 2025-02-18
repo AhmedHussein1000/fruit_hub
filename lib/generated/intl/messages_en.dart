@@ -109,8 +109,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "passwordRequired":
             MessageLookupByLibrary.simpleMessage("Password is required."),
         "payment": MessageLookupByLibrary.simpleMessage("Payment"),
+        "payment_cancelled":
+            MessageLookupByLibrary.simpleMessage("Payment cancelled"),
+        "payment_error": MessageLookupByLibrary.simpleMessage(
+            "Payment error, please try again"),
         "payment_method": MessageLookupByLibrary.simpleMessage(
             "Please select a payment method"),
+        "payment_success":
+            MessageLookupByLibrary.simpleMessage("Payment successful"),
         "paypalPayment":
             MessageLookupByLibrary.simpleMessage("Pay with Paypal"),
         "phone": MessageLookupByLibrary.simpleMessage("Phone"),

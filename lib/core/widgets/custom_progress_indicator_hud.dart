@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/core/theming/app_colors.dart';
+import 'package:fruit_hub/core/themes/app_colors.dart';
 
 class CustomProgressIndicatorHud extends StatelessWidget {
   const CustomProgressIndicatorHud({super.key, required this.child, required this.isLoading, this.indicatorColor});

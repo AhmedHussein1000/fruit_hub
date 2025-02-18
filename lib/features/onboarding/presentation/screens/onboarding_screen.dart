@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruit_hub/core/helpers/cache_helper.dart';
-import 'package:fruit_hub/core/helpers/navigation_extension.dart';
+import 'package:fruit_hub/core/helpers/extensions.dart';
 import 'package:fruit_hub/core/helpers/size_config.dart';
-import 'package:fruit_hub/core/routing/routes.dart';
+import 'package:fruit_hub/core/routes/routes.dart';
 import 'package:fruit_hub/core/utils/app_constants.dart';
 import 'package:fruit_hub/core/widgets/custom_button.dart';
 import 'package:fruit_hub/features/onboarding/presentation/screens/widgets/dots_indicator_widget.dart';

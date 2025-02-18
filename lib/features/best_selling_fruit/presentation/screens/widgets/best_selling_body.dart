@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruit_hub/core/entities/product_entity.dart';
-import 'package:fruit_hub/core/theming/styles.dart';
+import 'package:fruit_hub/core/themes/styles.dart';
 import 'package:fruit_hub/core/widgets/fruit_products_grid_view.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 

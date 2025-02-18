@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fruit_hub/core/helpers/assets.dart';
 import 'package:fruit_hub/core/helpers/cache_helper.dart';
-import 'package:fruit_hub/core/helpers/navigation_extension.dart';
-import 'package:fruit_hub/core/routing/routes.dart';
+import 'package:fruit_hub/core/helpers/extensions.dart';
+import 'package:fruit_hub/core/routes/routes.dart';
 import 'package:fruit_hub/core/services/firebase_auth_service.dart';
 
 class SplashScreen extends StatefulWidget {

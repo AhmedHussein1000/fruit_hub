@@ -5,7 +5,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:fruit_hub/core/functions/is_arabic.dart';
 import 'package:fruit_hub/core/helpers/assets.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart' as svg_provider;
-import 'package:fruit_hub/core/theming/styles.dart';
+import 'package:fruit_hub/core/themes/styles.dart';
 import 'package:fruit_hub/features/home/presentation/screens/widgets/shop_now_button.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 

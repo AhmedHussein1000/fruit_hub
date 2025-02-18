@@ -1,7 +1,7 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/core/theming/app_colors.dart';
+import 'package:fruit_hub/core/themes/app_colors.dart';
 import 'package:fruit_hub/core/widgets/custom_text_form_field.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 

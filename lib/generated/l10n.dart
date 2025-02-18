@@ -879,6 +879,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Payment error, please try again`
+  String get payment_error {
+    return Intl.message(
+      'Payment error, please try again',
+      name: 'payment_error',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Payment successful`
+  String get payment_success {
+    return Intl.message(
+      'Payment successful',
+      name: 'payment_success',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Payment cancelled`
+  String get payment_cancelled {
+    return Intl.message(
+      'Payment cancelled',
+      name: 'payment_cancelled',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/core/functions/is_arabic.dart';
-import 'package:fruit_hub/core/helpers/navigation_extension.dart';
-import 'package:fruit_hub/core/theming/app_colors.dart';
+import 'package:fruit_hub/core/helpers/extensions.dart';
+import 'package:fruit_hub/core/themes/app_colors.dart';
 
 class CustomLeadingBackButton extends StatelessWidget {
   const CustomLeadingBackButton({super.key, this.paddingValue});
