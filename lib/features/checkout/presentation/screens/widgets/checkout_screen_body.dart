@@ -5,11 +5,13 @@ import 'package:flutter_paypal_payment/flutter_paypal_payment.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruit_hub/core/functions/show_toast.dart';
 import 'package:fruit_hub/core/helpers/extensions.dart';
+import 'package:fruit_hub/core/routes/routes.dart';
 import 'package:fruit_hub/core/utils/app_keys.dart';
 import 'package:fruit_hub/core/widgets/custom_button.dart';
-import 'package:fruit_hub/features/cart/presentation/controller/cart_cubit/cart_cubit.dart';
+import 'package:fruit_hub/features/cart/presentation/controllers/cart_cubit/cart_cubit.dart';
 import 'package:fruit_hub/features/checkout/data/models/paypal_payment_model/paypal_payment_model.dart';
 import 'package:fruit_hub/features/checkout/domain/entities/order_entity.dart';
+import 'package:fruit_hub/features/checkout/presentation/controllers/add_order_cubit/add_order_cubit.dart';
 import 'package:fruit_hub/features/checkout/presentation/screens/widgets/checkout_steps_widgets/checkout_steps.dart';
 import 'package:fruit_hub/features/checkout/presentation/screens/widgets/checkout_steps_pageview.dart';
 import 'package:fruit_hub/generated/l10n.dart';
@@ -122,9 +124,19 @@ class _CheckoutScreenBodyState extends State<CheckoutScreenBody> {
   }
 
   void _processPaypalPayment(BuildContext context) {
+    void backToHomeScreen() {
+      context.pushNamedAndRemoveUntil(
+        Routes.mainLayout,
+        predicate: (route) => false,
+      );
+    }
+
+    S localization = S.of(context);
+    OrderEntity orderEntity = context.read<OrderEntity>();
     PaypalPaymentModel paypalPaymentModel =
-        PaypalPaymentModel.fromEntity(context.read<OrderEntity>());
+        PaypalPaymentModel.fromEntity(orderEntity);
     final cartCubit = context.read<CartCubit>();
+    final addOrderCubit = context.read<AddOrderCubit>();
     log('${paypalPaymentModel.toJson()}');
     Navigator.of(context).push(MaterialPageRoute(
       builder: (BuildContext context) => PaypalCheckoutView(
@@ -135,11 +147,13 @@ class _CheckoutScreenBodyState extends State<CheckoutScreenBody> {
         note: "Contact us for any questions on your order.",
         onSuccess: (Map params) async {
           log("onSuccess: $params");
+          addOrderCubit.addOrder(
+              order: orderEntity, localization: localization);
           cartCubit.deleteCartItems();
-          context.pop();
           customToast(
               message: S.of(context).payment_success,
               state: ToastStates.success);
+          backToHomeScreen();
         },
         onError: (error) {
           log("onError: $error");

@@ -8,7 +8,7 @@ import 'package:fruit_hub/core/functions/show_toast.dart';
 import 'package:fruit_hub/core/themes/app_colors.dart';
 import 'package:fruit_hub/core/themes/styles.dart';
 import 'package:fruit_hub/core/utils/app_constants.dart';
-import 'package:fruit_hub/features/cart/presentation/controller/cart_cubit/cart_cubit.dart';
+import 'package:fruit_hub/features/cart/presentation/controllers/cart_cubit/cart_cubit.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 
 class FruitProductItem extends StatelessWidget {

@@ -11,7 +11,7 @@ import 'package:fruit_hub/core/routes/app_router.dart';
 import 'package:fruit_hub/core/routes/routes.dart';
 import 'package:fruit_hub/core/themes/light_theme.dart';
 import 'package:fruit_hub/custom_bloc_observer.dart';
-import 'package:fruit_hub/features/cart/presentation/controller/cart_cubit/cart_cubit.dart';
+import 'package:fruit_hub/features/cart/presentation/controllers/cart_cubit/cart_cubit.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 import 'package:intl/intl.dart';
 

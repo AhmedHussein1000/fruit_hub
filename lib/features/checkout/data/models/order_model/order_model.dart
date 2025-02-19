@@ -1,10 +1,11 @@
-import 'package:fruit_hub/core/helpers/hive_helper.dart';
 import 'package:fruit_hub/features/checkout/data/models/order_model/order_product_model.dart';
 import 'package:fruit_hub/features/checkout/data/models/order_model/shipping_address_model.dart';
 import 'package:fruit_hub/features/checkout/domain/entities/order_entity.dart';
+import 'package:uuid/uuid.dart';
 
 class OrderModel {
   final String uId;
+  final String orderId;
   final List<OrderProductModel> orderProducts;
   final ShippingAddressModel shippingAddressModel;
   final String paymentMethod;
@@ -12,6 +13,7 @@ class OrderModel {
 
   OrderModel(
       {required this.uId,
+      required this.orderId,
       required this.orderProducts,
       required this.shippingAddressModel,
       required this.paymentMethod,
@@ -19,7 +21,8 @@ class OrderModel {
   factory OrderModel.fromEntity({required OrderEntity order}) {
     return OrderModel(
         uId: order.uId,
-        orderProducts: HiveHelper.getCachedCartItems()
+        orderId: const Uuid().v4(),
+        orderProducts: order.cartEntity.getCartItems()
             .map(
               (cartItem) => OrderProductModel.fromEntity(cartItem: cartItem),
             )
@@ -32,13 +35,13 @@ class OrderModel {
   toJson() {
     return {
       'uId': uId,
+      'orderId': orderId,
       'orderProducts': orderProducts.map((e) => e.toJson()).toList(),
       'shippingAddressModel': shippingAddressModel.toJson(),
       'totalPrice': totalPrice,
       'paymentMethod': paymentMethod,
       'status': 'pending',
       'date': DateTime.now().toString(),
-      
     };
   }
 }

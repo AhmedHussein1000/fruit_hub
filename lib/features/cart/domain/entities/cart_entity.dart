@@ -4,7 +4,6 @@ import 'package:fruit_hub/features/cart/domain/entities/cart_item_entity.dart';
 
 class CartEntity {
   CartEntity();
-
   bool checkIfItemExistInCart({required ProductEntity productEntity}) {
     return HiveHelper.isProductInCart(key: productEntity.code);
   }
@@ -12,6 +11,10 @@ class CartEntity {
   CartItemEntity getCartItem({required ProductEntity productEntity}) {
     return HiveHelper.getCachedCartItem(key: productEntity.code) ??
         CartItemEntity(productEntity: productEntity, quantity: 1);
+  }
+
+  List<CartItemEntity> getCartItems() {
+   return HiveHelper.getCachedCartItems();
   }
 
   num calculateTotalPriceOfCart() {

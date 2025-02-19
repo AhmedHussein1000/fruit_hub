@@ -10,8 +10,8 @@ import 'package:fruit_hub/core/themes/app_colors.dart';
 import 'package:fruit_hub/core/themes/styles.dart';
 import 'package:fruit_hub/core/utils/app_constants.dart';
 import 'package:fruit_hub/features/cart/domain/entities/cart_item_entity.dart';
-import 'package:fruit_hub/features/cart/presentation/controller/cart_cubit/cart_cubit.dart';
-import 'package:fruit_hub/features/cart/presentation/controller/cart_item_cubit/cart_item_cubit.dart';
+import 'package:fruit_hub/features/cart/presentation/controllers/cart_cubit/cart_cubit.dart';
+import 'package:fruit_hub/features/cart/presentation/controllers/cart_item_cubit/cart_item_cubit.dart';
 import 'package:fruit_hub/features/cart/presentation/screens/widgets/cart_item_action_buttons.dart';
 
 class CartItem extends StatelessWidget {

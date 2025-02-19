@@ -1,5 +1,7 @@
-import 'package:fruit_hub/core/repos/base_products_repo.dart';
-import 'package:fruit_hub/core/repos/products_repo_impl.dart';
+import 'package:fruit_hub/core/repos/orders_repo/base_orders_repo.dart';
+import 'package:fruit_hub/core/repos/orders_repo/orders_repo_impl.dart';
+import 'package:fruit_hub/core/repos/products_repo/base_products_repo.dart';
+import 'package:fruit_hub/core/repos/products_repo/products_repo_impl.dart';
 import 'package:fruit_hub/core/services/database_service.dart';
 import 'package:fruit_hub/core/services/firebase_auth_service.dart';
 import 'package:fruit_hub/core/services/firebase_firestore_service.dart';
@@ -30,6 +32,9 @@ void setupServiceLocator() {
   );
   getIt.registerLazySingleton<BaseProductsRepo>(
     () => ProductsRepoImpl(getIt()),
+  );
+  getIt.registerLazySingleton<BaseOrdersRepo>(
+    () => OrdersRepoImpl(getIt()),
   );
   //services
   getIt.registerLazySingleton(

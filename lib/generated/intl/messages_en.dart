@@ -30,6 +30,8 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "CartProductsCount": m0,
+        "add_order_failure":
+            MessageLookupByLibrary.simpleMessage("Failed to add order"),
         "addedToCart":
             MessageLookupByLibrary.simpleMessage("Added to Cart Successfully"),
         "address": MessageLookupByLibrary.simpleMessage("Address"),

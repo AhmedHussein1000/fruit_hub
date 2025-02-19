@@ -909,6 +909,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Failed to add order`
+  String get add_order_failure {
+    return Intl.message(
+      'Failed to add order',
+      name: 'add_order_failure',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

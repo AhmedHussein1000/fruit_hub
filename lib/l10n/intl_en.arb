@@ -119,7 +119,8 @@
     "select_payment_method" : "Please select a payment method",
     "payment_error" : "Payment error, please try again",
     "payment_success" : "Payment successful",
-    "payment_cancelled" : "Payment cancelled"
+    "payment_cancelled" : "Payment cancelled",
+    "add_order_failure" : "Failed to add order"
     
 
 }
