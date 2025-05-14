@@ -1,40 +1,27 @@
 import 'package:fruit_hub/core/entities/product_entity.dart';
+import 'package:fruit_hub/core/helpers/hive_helper.dart';
 import 'package:fruit_hub/features/cart/domain/entities/cart_item_entity.dart';
+
 class CartEntity {
-  final List<CartItemEntity> cartItems;
-
-  CartEntity({required this.cartItems});
-
-  addCartItem(CartItemEntity cartItemEntity) {
-    cartItems.add(cartItemEntity);
-  }
-  removeItemFromCart({required CartItemEntity cartItemEntity}) {
-    cartItems.remove(cartItemEntity);
-  }
-
+  CartEntity();
   bool checkIfItemExistInCart({required ProductEntity productEntity}) {
-    for (var cartItem in cartItems) {
-      if (cartItem.productEntity.code == productEntity.code) {
-        return true;
-      }
-    }
-    return false;
+    return HiveHelper.isProductInCart(key: productEntity.code);
   }
 
   CartItemEntity getCartItem({required ProductEntity productEntity}) {
-    for (var cartItem in cartItems) {
-      if (cartItem.productEntity.code == productEntity.code) {
-        return cartItem;
-      }
-    }
-    return CartItemEntity(productEntity: productEntity,quantity: 1);
+    return HiveHelper.getCachedCartItem(key: productEntity.code) ??
+        CartItemEntity(productEntity: productEntity, quantity: 1);
   }
- num calculateTotalPriceOfCart({required List<CartItemEntity> cartItems}) {
+
+  List<CartItemEntity> getCartItems() {
+   return HiveHelper.getCachedCartItems();
+  }
+
+  num calculateTotalPriceOfCart() {
     num totalPrice = 0;
-    for (var cartItem in cartItems) {
+    for (var cartItem in HiveHelper.getCachedCartItems()) {
       totalPrice += cartItem.calculateTotalPriceforItem();
     }
     return totalPrice;
   }
-
 }

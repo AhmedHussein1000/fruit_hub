@@ -19,6 +19,7 @@
     "nameRequired": "Name is required.",
     "emailRequired": "Email is required.",
     "passwordRequired": "Password is required.",
+    "field_required" :"This field is required.",
     "noGoogleAccountSelected" : "User has cancelled login with google.",
     "noFacebookAccountSelected" : "User has cancelled login with facebook.",
 
@@ -95,6 +96,31 @@
             }
     },
     "payment" : "Payment",
-    "addedToCart" : "Added to Cart Successfully"
+    "addedToCart" : "Added to Cart Successfully",
+    "shipping" : "Shipping",
+    "address" : "Address",
+    "cartIsEmpty" : "Your Cart is Empty",
+    "next" : "Next",
+    "paypalPayment" : "Pay with Paypal",
+    "cash_on_delivery": "Cash on Delivery",
+    "pickup_delivery_option": "Pickup from Location",
+    "online_payment": "Online Payment",
+    "payment_method": "Please select a payment method",
+    "free" : "Free",
+    "city" : "City",
+    "floor_and_apartment" : "Floor and Apartment",
+    "phone" : "Phone",
+     "order_summary": "Order Summary",
+    "sub_total" : "Sub Total",
+    "delivery" : "Delivery",
+    "total" : "Total",
+    "delivery_address" : "Delivery Address",
+    "edit" : "Edit",
+    "select_payment_method" : "Please select a payment method",
+    "payment_error" : "Payment error, please try again",
+    "payment_success" : "Payment successful",
+    "payment_cancelled" : "Payment cancelled",
+    "add_order_failure" : "Failed to add order"
+    
 
 }

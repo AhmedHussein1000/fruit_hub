@@ -3,8 +3,10 @@ import 'package:fruit_hub/core/entities/review_entity.dart';
 import 'package:fruit_hub/features/cart/domain/entities/cart_item_entity.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
-abstract class HiveHelper {
+class HiveHelper {
   static const String cartBox = 'cartBox';
+  static var box = Hive.box<CartItemEntity>(HiveHelper.cartBox);
+
   static Future<void> initializeHive() async {
     await Hive.initFlutter();
     Hive.registerAdapter(ReviewEntityAdapter());
@@ -13,13 +15,19 @@ abstract class HiveHelper {
     await Hive.openBox<CartItemEntity>(cartBox);
   }
 
-  static void saveCartItems(
-      {required List<CartItemEntity> cartItems, required String boxName}) {
-    var box = Hive.box<CartItemEntity>(boxName);
-    for (var cartItem in cartItems) {
-      if (!box.values.contains(cartItem)) {
-        box.put(cartItem.productEntity.code, cartItem);
-      }
-    }
+  static CartItemEntity? getCachedCartItem({required String key}) {
+    return box.get(key);
+  }
+
+  static bool isProductInCart({required String key}) {
+    return box.containsKey(key);
+  }
+
+  static List<CartItemEntity> getCachedCartItems() {
+    return box.values.toList();
+  }
+
+  static void clearCartItems() async {
+    await box.clear();
   }
 }

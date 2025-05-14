@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fruit_hub/core/helpers/assets.dart';
-import 'package:fruit_hub/core/theming/app_colors.dart';
+import 'package:fruit_hub/core/themes/app_colors.dart';
 
 class NotificationWidget extends StatelessWidget {
   const NotificationWidget({

@@ -19,6 +19,7 @@
     "emailRequired": "البريد الإلكتروني مطلوب.",
     "passwordRequired": "كلمة المرور مطلوبة.",
     "nameRequired": "الاسم مطلوب.",
+    "field_required" :"هذا الحقل مطلوب.",
     "noGoogleAccountSelected" : " تم إلغاء تسجيل الدخول بواسطة جوجل من قبل المستخدم." ,
     "noFacebookAccountSelected" : "تم إلغاء تسجيل الدخول بواسطة فيسبوك من قبل المستخدم.",
 
@@ -92,7 +93,29 @@
             }
     },
     "payment" : "الدفع",
-    "addedToCart" : "تمت الإضافة الي سله التسوق بنجاح"
-    
-
+    "addedToCart" : "تمت الإضافة الي سله التسوق بنجاح",
+    "shipping" : "الشحن",
+    "address" : "العنوان",
+    "cartIsEmpty" : "سلة التسوق فارغة",
+    "next" : "التالي",
+    "paypalPayment" : "دفع بواسطة Paypal",
+    "cash_on_delivery" : "الدفع عند الاستلام",
+    "pickup_delivery_option" : "التسليم من المكان",
+    "online_payment" : "الدفع اونلاين",
+   "payment_method" :"يرجي تحديد طريقه الدفع",
+   "free" : "مجاني",
+   "city" : "المدينة",
+   "floor_and_apartment" : "رقم الطابق والشقة",
+   "phone" : "رقم الهاتف",
+   "order_summary": "ملخص الطلب",
+   "sub_total" : "المجموع الفرعي",
+   "delivery" : "التوصيل",
+   "total" : "الكلي",
+   "delivery_address" : "عنوان التوصيل",
+   "edit" : "تعديل",
+   "select_payment_method" : "يرجي تحديد طريقه الدفع",
+   "payment_error" : "حدث خطاء في الدفع، يرجى المحاولة مرة اخرى",
+   "payment_success" : "تم الدفع بنجاح",
+   "payment_cancelled" : "تم الغاء الدفع",
+   "add_order_failure" : "فشل في اضافه الطلب"
 }

@@ -7,10 +7,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruit_hub/core/di/service_locator.dart';
 import 'package:fruit_hub/core/helpers/cache_helper.dart';
 import 'package:fruit_hub/core/helpers/hive_helper.dart';
-import 'package:fruit_hub/core/routing/app_router.dart';
-import 'package:fruit_hub/core/routing/routes.dart';
-import 'package:fruit_hub/core/theming/light_theme.dart';
+import 'package:fruit_hub/core/routes/app_router.dart';
+import 'package:fruit_hub/core/routes/routes.dart';
+import 'package:fruit_hub/core/themes/light_theme.dart';
 import 'package:fruit_hub/custom_bloc_observer.dart';
+import 'package:fruit_hub/features/cart/presentation/controllers/cart_cubit/cart_cubit.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 import 'package:intl/intl.dart';
 
@@ -39,21 +40,24 @@ class MyApp extends StatelessWidget {
     return ScreenUtilInit(
       designSize: const Size(375, 812),
       minTextAdapt: true,
-      builder: (context, child) => MaterialApp(
-        localizationsDelegates: const [
-          S.delegate,
-          GlobalMaterialLocalizations.delegate,
-          GlobalWidgetsLocalizations.delegate,
-          GlobalCupertinoLocalizations.delegate,
-        ],
-        supportedLocales: S.delegate.supportedLocales,
-        useInheritedMediaQuery: true,
-        locale: DevicePreview.locale(context) ?? const Locale('ar'),
-        builder: DevicePreview.appBuilder,
-        debugShowCheckedModeBanner: false,
-        theme: lightTheme,
-        onGenerateRoute: AppRouter().onGenerateRoute,
-        initialRoute: Routes.splash,
+      builder: (context, child) => BlocProvider(
+          create: (context) => CartCubit()..getCachedCartItems(),
+        child: MaterialApp(
+          localizationsDelegates: const [
+            S.delegate,
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
+          supportedLocales: S.delegate.supportedLocales,
+          useInheritedMediaQuery: true,
+          locale: DevicePreview.locale(context) ?? const Locale('ar'),
+          builder: DevicePreview.appBuilder,
+          debugShowCheckedModeBanner: false,
+          theme: lightTheme,
+          onGenerateRoute: AppRouter().onGenerateRoute,
+          initialRoute: Routes.splash,
+        ),
       ),
     );
   }

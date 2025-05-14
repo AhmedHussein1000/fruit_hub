@@ -1,6 +1,6 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/core/theming/app_colors.dart';
+import 'package:fruit_hub/core/themes/app_colors.dart';
 
 class DotsIndicatorWidget extends StatelessWidget {
   const DotsIndicatorWidget({super.key, required this.currentIndex});

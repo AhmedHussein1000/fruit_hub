@@ -1,10 +1,8 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:fruit_hub/core/theming/app_colors.dart';
-import 'package:fruit_hub/core/theming/styles.dart';
-import 'package:fruit_hub/features/cart/presentation/controller/cart_cubit/cart_cubit.dart';
+import 'package:fruit_hub/core/themes/app_colors.dart';
+import 'package:fruit_hub/core/themes/styles.dart';
+import 'package:fruit_hub/features/cart/presentation/controllers/cart_cubit/cart_cubit.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 
 class CartHeader extends StatelessWidget {
@@ -14,7 +12,6 @@ class CartHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    log('build CartHeader');
     return Container(
       width: double.infinity,
       alignment: Alignment.center,

@@ -30,27 +30,43 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "CartProductsCount": m0,
+        "add_order_failure":
+            MessageLookupByLibrary.simpleMessage("فشل في اضافه الطلب"),
         "addedToCart": MessageLookupByLibrary.simpleMessage(
             "تمت الإضافة الي سله التسوق بنجاح"),
+        "address": MessageLookupByLibrary.simpleMessage("العنوان"),
         "ahmed": MessageLookupByLibrary.simpleMessage("احمد"),
         "ahmedHussein": MessageLookupByLibrary.simpleMessage("احمد حسين"),
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("تمتلك حساب بالفعل؟ "),
         "bestSelling": MessageLookupByLibrary.simpleMessage("الأكثر مبيعًا"),
         "cart": MessageLookupByLibrary.simpleMessage("السلة"),
+        "cartIsEmpty": MessageLookupByLibrary.simpleMessage("سلة التسوق فارغة"),
+        "cash_on_delivery":
+            MessageLookupByLibrary.simpleMessage("الدفع عند الاستلام"),
+        "city": MessageLookupByLibrary.simpleMessage("المدينة"),
         "createAccount":
             MessageLookupByLibrary.simpleMessage("إنشاء حساب جديد"),
+        "delivery": MessageLookupByLibrary.simpleMessage("التوصيل"),
+        "delivery_address":
+            MessageLookupByLibrary.simpleMessage("عنوان التوصيل"),
         "discount25": MessageLookupByLibrary.simpleMessage("خصم 25%"),
         "dontHaveAnAccount":
             MessageLookupByLibrary.simpleMessage(" لا تمتلك حساب؟"),
+        "edit": MessageLookupByLibrary.simpleMessage("تعديل"),
         "eidOffers": MessageLookupByLibrary.simpleMessage("عروض العيد"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
         "emailAlreadyInUse": MessageLookupByLibrary.simpleMessage(
             "هذا البريد الإلكتروني مسجل بالفعل."),
         "emailRequired":
             MessageLookupByLibrary.simpleMessage("البريد الإلكتروني مطلوب."),
+        "field_required":
+            MessageLookupByLibrary.simpleMessage("هذا الحقل مطلوب."),
+        "floor_and_apartment":
+            MessageLookupByLibrary.simpleMessage("رقم الطابق والشقة"),
         "forrgotPassword":
             MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
+        "free": MessageLookupByLibrary.simpleMessage("مجاني"),
         "fullName": MessageLookupByLibrary.simpleMessage("الاسم كامل"),
         "goodMorning": MessageLookupByLibrary.simpleMessage("صباح الخير !.."),
         "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
@@ -69,6 +85,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "networkRequestFailed":
             MessageLookupByLibrary.simpleMessage("تحقق من اتصالك بالإنترنت."),
         "newAccount": MessageLookupByLibrary.simpleMessage("حساب جديد"),
+        "next": MessageLookupByLibrary.simpleMessage("التالي"),
         "noFacebookAccountSelected": MessageLookupByLibrary.simpleMessage(
             "تم إلغاء تسجيل الدخول بواسطة فيسبوك من قبل المستخدم."),
         "noGoogleAccountSelected": MessageLookupByLibrary.simpleMessage(
@@ -79,15 +96,30 @@ class MessageLookup extends MessageLookupByLibrary {
         "onboardingDescription2": MessageLookupByLibrary.simpleMessage(
             "نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية"),
         "onboardingTitle2": MessageLookupByLibrary.simpleMessage("ابحث وتسوق"),
+        "online_payment": MessageLookupByLibrary.simpleMessage("الدفع اونلاين"),
         "operationNotAllowed": MessageLookupByLibrary.simpleMessage(
             "تسجيل الدخول بالبريد وكلمة المرور غير مفعل."),
         "or": MessageLookupByLibrary.simpleMessage("أو"),
+        "order_summary": MessageLookupByLibrary.simpleMessage("ملخص الطلب"),
         "ourTermsAndConditions":
             MessageLookupByLibrary.simpleMessage("الشروط والأحكام الخاصة بنا"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "passwordRequired":
             MessageLookupByLibrary.simpleMessage("كلمة المرور مطلوبة."),
         "payment": MessageLookupByLibrary.simpleMessage("الدفع"),
+        "payment_cancelled":
+            MessageLookupByLibrary.simpleMessage("تم الغاء الدفع"),
+        "payment_error": MessageLookupByLibrary.simpleMessage(
+            "حدث خطاء في الدفع، يرجى المحاولة مرة اخرى"),
+        "payment_method":
+            MessageLookupByLibrary.simpleMessage("يرجي تحديد طريقه الدفع"),
+        "payment_success":
+            MessageLookupByLibrary.simpleMessage("تم الدفع بنجاح"),
+        "paypalPayment":
+            MessageLookupByLibrary.simpleMessage("دفع بواسطة Paypal"),
+        "phone": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
+        "pickup_delivery_option":
+            MessageLookupByLibrary.simpleMessage("التسليم من المكان"),
         "pleaseAcceptTerms": MessageLookupByLibrary.simpleMessage(
             "يرجى قبول الشروط والأحكام لاستكمال التسجيل."),
         "products": MessageLookupByLibrary.simpleMessage("المنتجات"),
@@ -95,6 +127,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "results": MessageLookupByLibrary.simpleMessage("نتائج"),
         "resultsCount": m2,
         "searchFor": MessageLookupByLibrary.simpleMessage("ابحث عن......."),
+        "select_payment_method":
+            MessageLookupByLibrary.simpleMessage("يرجي تحديد طريقه الدفع"),
+        "shipping": MessageLookupByLibrary.simpleMessage("الشحن"),
         "shopNow": MessageLookupByLibrary.simpleMessage("تسوق الان"),
         "shoppingCart": MessageLookupByLibrary.simpleMessage("سلة التسوق"),
         "signup": MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب"),
@@ -104,10 +139,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "slash": MessageLookupByLibrary.simpleMessage("/"),
         "startNow": MessageLookupByLibrary.simpleMessage("ابدأ الآن"),
         "strawberry": MessageLookupByLibrary.simpleMessage("فراولة"),
+        "sub_total": MessageLookupByLibrary.simpleMessage("المجموع الفرعي"),
         "termsAgreement": MessageLookupByLibrary.simpleMessage(
             "من خلال إنشاء حساب ، فإنك توافق على"),
         "tooManyRequests": MessageLookupByLibrary.simpleMessage(
             "لقد تجاوزت عدد المحاولات المسموح به. حاول لاحقًا."),
+        "total": MessageLookupByLibrary.simpleMessage("الكلي"),
         "unexpectedError": MessageLookupByLibrary.simpleMessage(
             "حدث خطأ غير متوقع، يرجى المحاولة مرة أخرى."),
         "userDisabled":

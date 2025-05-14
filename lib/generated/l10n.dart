@@ -230,6 +230,16 @@ class S {
     );
   }
 
+  /// `This field is required.`
+  String get field_required {
+    return Intl.message(
+      'This field is required.',
+      name: 'field_required',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `User has cancelled login with google.`
   String get noGoogleAccountSelected {
     return Intl.message(
@@ -665,6 +675,246 @@ class S {
     return Intl.message(
       'Added to Cart Successfully',
       name: 'addedToCart',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Shipping`
+  String get shipping {
+    return Intl.message(
+      'Shipping',
+      name: 'shipping',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Address`
+  String get address {
+    return Intl.message(
+      'Address',
+      name: 'address',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your Cart is Empty`
+  String get cartIsEmpty {
+    return Intl.message(
+      'Your Cart is Empty',
+      name: 'cartIsEmpty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Next`
+  String get next {
+    return Intl.message(
+      'Next',
+      name: 'next',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pay with Paypal`
+  String get paypalPayment {
+    return Intl.message(
+      'Pay with Paypal',
+      name: 'paypalPayment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cash on Delivery`
+  String get cash_on_delivery {
+    return Intl.message(
+      'Cash on Delivery',
+      name: 'cash_on_delivery',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pickup from Location`
+  String get pickup_delivery_option {
+    return Intl.message(
+      'Pickup from Location',
+      name: 'pickup_delivery_option',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Online Payment`
+  String get online_payment {
+    return Intl.message(
+      'Online Payment',
+      name: 'online_payment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please select a payment method`
+  String get payment_method {
+    return Intl.message(
+      'Please select a payment method',
+      name: 'payment_method',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Free`
+  String get free {
+    return Intl.message(
+      'Free',
+      name: 'free',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `City`
+  String get city {
+    return Intl.message(
+      'City',
+      name: 'city',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Floor and Apartment`
+  String get floor_and_apartment {
+    return Intl.message(
+      'Floor and Apartment',
+      name: 'floor_and_apartment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phone`
+  String get phone {
+    return Intl.message(
+      'Phone',
+      name: 'phone',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Order Summary`
+  String get order_summary {
+    return Intl.message(
+      'Order Summary',
+      name: 'order_summary',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sub Total`
+  String get sub_total {
+    return Intl.message(
+      'Sub Total',
+      name: 'sub_total',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delivery`
+  String get delivery {
+    return Intl.message(
+      'Delivery',
+      name: 'delivery',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Total`
+  String get total {
+    return Intl.message(
+      'Total',
+      name: 'total',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delivery Address`
+  String get delivery_address {
+    return Intl.message(
+      'Delivery Address',
+      name: 'delivery_address',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Edit`
+  String get edit {
+    return Intl.message(
+      'Edit',
+      name: 'edit',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please select a payment method`
+  String get select_payment_method {
+    return Intl.message(
+      'Please select a payment method',
+      name: 'select_payment_method',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Payment error, please try again`
+  String get payment_error {
+    return Intl.message(
+      'Payment error, please try again',
+      name: 'payment_error',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Payment successful`
+  String get payment_success {
+    return Intl.message(
+      'Payment successful',
+      name: 'payment_success',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Payment cancelled`
+  String get payment_cancelled {
+    return Intl.message(
+      'Payment cancelled',
+      name: 'payment_cancelled',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Failed to add order`
+  String get add_order_failure {
+    return Intl.message(
+      'Failed to add order',
+      name: 'add_order_failure',
       desc: '',
       args: [],
     );

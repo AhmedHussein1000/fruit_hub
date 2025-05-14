@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/core/theming/app_colors.dart';
+import 'package:fruit_hub/core/themes/app_colors.dart';
 
 class CustomDivider extends StatelessWidget {
   const CustomDivider({super.key, this.height, this.color, this.thickness, this.indent, this.endIndent});

@@ -1,11 +1,9 @@
-import 'dart:developer';
-
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruit_hub/core/widgets/custom_divider.dart';
 import 'package:fruit_hub/features/cart/domain/entities/cart_item_entity.dart';
-import 'package:fruit_hub/features/cart/presentation/controller/cart_cubit/cart_cubit.dart';
+import 'package:fruit_hub/features/cart/presentation/controllers/cart_cubit/cart_cubit.dart';
 import 'package:fruit_hub/features/cart/presentation/screens/widgets/cart_item.dart';
 
 class CartItemsList extends StatelessWidget {
@@ -13,10 +11,8 @@ class CartItemsList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    log('build CartItemsList');
     List<CartItemEntity> cartItems =
         context.watch<CartCubit>().getCachedCartItems();
-        log('cachedCartItems: $cartItems');
     return SliverList.separated(
         separatorBuilder: (context, index) => const CustomDivider(),
         itemBuilder: (context, index) => Padding(

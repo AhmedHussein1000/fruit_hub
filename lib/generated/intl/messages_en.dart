@@ -30,27 +30,44 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "CartProductsCount": m0,
+        "add_order_failure":
+            MessageLookupByLibrary.simpleMessage("Failed to add order"),
         "addedToCart":
             MessageLookupByLibrary.simpleMessage("Added to Cart Successfully"),
+        "address": MessageLookupByLibrary.simpleMessage("Address"),
         "ahmed": MessageLookupByLibrary.simpleMessage("Ahmed"),
         "ahmedHussein": MessageLookupByLibrary.simpleMessage("Ahmed Hussein"),
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Already have an account?"),
         "bestSelling": MessageLookupByLibrary.simpleMessage("Best Selling"),
         "cart": MessageLookupByLibrary.simpleMessage("Cart"),
+        "cartIsEmpty":
+            MessageLookupByLibrary.simpleMessage("Your Cart is Empty"),
+        "cash_on_delivery":
+            MessageLookupByLibrary.simpleMessage("Cash on Delivery"),
+        "city": MessageLookupByLibrary.simpleMessage("City"),
         "createAccount":
             MessageLookupByLibrary.simpleMessage("Create New Account"),
+        "delivery": MessageLookupByLibrary.simpleMessage("Delivery"),
+        "delivery_address":
+            MessageLookupByLibrary.simpleMessage("Delivery Address"),
         "discount25": MessageLookupByLibrary.simpleMessage("Discount 25%"),
         "dontHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
+        "edit": MessageLookupByLibrary.simpleMessage("Edit"),
         "eidOffers": MessageLookupByLibrary.simpleMessage("Eid Offers"),
         "email": MessageLookupByLibrary.simpleMessage("Email Address"),
         "emailAlreadyInUse": MessageLookupByLibrary.simpleMessage(
             "The account already exists for that email."),
         "emailRequired":
             MessageLookupByLibrary.simpleMessage("Email is required."),
+        "field_required":
+            MessageLookupByLibrary.simpleMessage("This field is required."),
+        "floor_and_apartment":
+            MessageLookupByLibrary.simpleMessage("Floor and Apartment"),
         "forrgotPassword":
             MessageLookupByLibrary.simpleMessage("Forgot Password?"),
+        "free": MessageLookupByLibrary.simpleMessage("Free"),
         "fullName": MessageLookupByLibrary.simpleMessage("Full Name"),
         "goodMorning": MessageLookupByLibrary.simpleMessage("Good Morning..!"),
         "home": MessageLookupByLibrary.simpleMessage("Home"),
@@ -70,6 +87,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "networkRequestFailed": MessageLookupByLibrary.simpleMessage(
             "Check your internet connection."),
         "newAccount": MessageLookupByLibrary.simpleMessage("New Account"),
+        "next": MessageLookupByLibrary.simpleMessage("Next"),
         "noFacebookAccountSelected": MessageLookupByLibrary.simpleMessage(
             "User has cancelled login with facebook."),
         "noGoogleAccountSelected": MessageLookupByLibrary.simpleMessage(
@@ -81,15 +99,31 @@ class MessageLookup extends MessageLookupByLibrary {
             "We bring you the best carefully selected fruits. View details, images, and reviews to make sure you choose the perfect fruit."),
         "onboardingTitle2":
             MessageLookupByLibrary.simpleMessage("Search and Shop"),
+        "online_payment":
+            MessageLookupByLibrary.simpleMessage("Online Payment"),
         "operationNotAllowed": MessageLookupByLibrary.simpleMessage(
             "Signing in with email and password is not enabled."),
         "or": MessageLookupByLibrary.simpleMessage("Or"),
+        "order_summary": MessageLookupByLibrary.simpleMessage("Order Summary"),
         "ourTermsAndConditions":
             MessageLookupByLibrary.simpleMessage("our Terms and Conditions"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "passwordRequired":
             MessageLookupByLibrary.simpleMessage("Password is required."),
         "payment": MessageLookupByLibrary.simpleMessage("Payment"),
+        "payment_cancelled":
+            MessageLookupByLibrary.simpleMessage("Payment cancelled"),
+        "payment_error": MessageLookupByLibrary.simpleMessage(
+            "Payment error, please try again"),
+        "payment_method": MessageLookupByLibrary.simpleMessage(
+            "Please select a payment method"),
+        "payment_success":
+            MessageLookupByLibrary.simpleMessage("Payment successful"),
+        "paypalPayment":
+            MessageLookupByLibrary.simpleMessage("Pay with Paypal"),
+        "phone": MessageLookupByLibrary.simpleMessage("Phone"),
+        "pickup_delivery_option":
+            MessageLookupByLibrary.simpleMessage("Pickup from Location"),
         "pleaseAcceptTerms": MessageLookupByLibrary.simpleMessage(
             "Please accept our terms and conditions."),
         "products": MessageLookupByLibrary.simpleMessage("Products"),
@@ -97,6 +131,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "results": MessageLookupByLibrary.simpleMessage("Results"),
         "resultsCount": m2,
         "searchFor": MessageLookupByLibrary.simpleMessage("Search for......."),
+        "select_payment_method": MessageLookupByLibrary.simpleMessage(
+            "Please select a payment method"),
+        "shipping": MessageLookupByLibrary.simpleMessage("Shipping"),
         "shopNow": MessageLookupByLibrary.simpleMessage("Shop Now"),
         "shoppingCart": MessageLookupByLibrary.simpleMessage("Cart"),
         "signup": MessageLookupByLibrary.simpleMessage(" Sign Up"),
@@ -106,10 +143,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "slash": MessageLookupByLibrary.simpleMessage("/"),
         "startNow": MessageLookupByLibrary.simpleMessage("Start Now"),
         "strawberry": MessageLookupByLibrary.simpleMessage("Strawberry"),
+        "sub_total": MessageLookupByLibrary.simpleMessage("Sub Total"),
         "termsAgreement": MessageLookupByLibrary.simpleMessage(
             "By creating an account, you agree to"),
         "tooManyRequests": MessageLookupByLibrary.simpleMessage(
             "Too many requests. Try again later."),
+        "total": MessageLookupByLibrary.simpleMessage("Total"),
         "unexpectedError": MessageLookupByLibrary.simpleMessage(
             "An unexpected error occurred, please try again."),
         "userDisabled": MessageLookupByLibrary.simpleMessage(

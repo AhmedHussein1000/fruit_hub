@@ -4,4 +4,5 @@ abstract class BackendEndpoints {
   static const String isUserExist = 'users';
   static const String getBestSellingProducts = 'products';
   static const String getProducts = 'products';
+  static const String addOrder = 'orders';
 }

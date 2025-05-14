@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:fruit_hub/features/cart/presentation/controller/cart_item_cubit/cart_item_cubit.dart';
+import 'package:fruit_hub/features/cart/presentation/controllers/cart_item_cubit/cart_item_cubit.dart';
 import 'package:fruit_hub/features/cart/presentation/screens/widgets/cart_screen_body.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 

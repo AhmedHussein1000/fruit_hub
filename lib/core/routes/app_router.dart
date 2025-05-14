@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruit_hub/core/di/service_locator.dart';
-import 'package:fruit_hub/core/routing/routes.dart';
+import 'package:fruit_hub/core/routes/routes.dart';
 import 'package:fruit_hub/core/widgets/no_route_defined_screen.dart';
 import 'package:fruit_hub/features/best_selling_fruit/presentation/screens/best_selling_screen.dart';
-import 'package:fruit_hub/features/cart/presentation/controller/cart_cubit/cart_cubit.dart';
 import 'package:fruit_hub/features/forgot_password/presentation/screens/forgot_password_screen.dart';
 import 'package:fruit_hub/features/home/presentation/screens/home_screen.dart';
 import 'package:fruit_hub/features/main_layouts/presentation/screens/main_layouts.dart';
@@ -49,10 +48,7 @@ class AppRouter {
 
       case Routes.mainLayout:
         return MaterialPageRoute(
-          builder: (_) => BlocProvider(
-            create: (context) => CartCubit()..getCachedCartItems(),
-            child: const MainLayouts(),
-          ),
+          builder: (_) => const MainLayouts(),
         );
       case Routes.home:
         return MaterialPageRoute(
@@ -66,6 +62,7 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => const ProductsScreen(),
         );
+
       default:
         return MaterialPageRoute(
           builder: (_) => const NoRouteDefinedScreen(),

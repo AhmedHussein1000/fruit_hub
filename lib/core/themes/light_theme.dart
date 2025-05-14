@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/core/functions/is_arabic.dart';
-import 'package:fruit_hub/core/theming/app_colors.dart';
-import 'package:fruit_hub/core/theming/styles.dart';
+import 'package:fruit_hub/core/themes/app_colors.dart';
+import 'package:fruit_hub/core/themes/styles.dart';
 
 ThemeData lightTheme = ThemeData(
     fontFamily: isArabic() ? 'Cairo' : 'Montserrat',
