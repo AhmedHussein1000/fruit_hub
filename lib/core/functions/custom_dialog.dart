@@ -10,7 +10,7 @@ Future<void> customDialog(
     required String title}) {
   return showDialog(
     context: context,
-    barrierDismissible: true,
+    barrierDismissible: false,
     builder: (context) {
       return Dialog(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
@@ -19,12 +19,7 @@ Future<void> customDialog(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
           child: Column(
             mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              IconButton(
-                  onPressed: () => context.pop(),
-                  icon: const Icon(Icons.close, size: 20),
-                  color: AppColors.charcoalBlack),
               const SizedBox(height: 12),
               Text(
                 title,
@@ -38,7 +33,7 @@ Future<void> customDialog(
                     child: ElevatedButton(
                       onPressed: () => context.pop(),
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.grey[300],
+                        backgroundColor: Colors.white,
                         foregroundColor: Colors.black,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(12),

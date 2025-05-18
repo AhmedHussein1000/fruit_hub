@@ -169,6 +169,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("كلمة المرور ضعيفة جدًا."),
         "welcome": MessageLookupByLibrary.simpleMessage("مرحباً بك في"),
         "who_are_we": MessageLookupByLibrary.simpleMessage("من نحن"),
+        "who_are_we_content": MessageLookupByLibrary.simpleMessage(
+            "فروت هب هي خدمة توصيل فواكه متميزة مخصصة لتوصيل أطيب وأجود الفواكه الطازجة مباشرة إلى باب منزلك. نحن نعمل مع المزارعين المحليين لضمان حصولك على أفضل المنتجات مع دعم الزراعة المستدامة."),
         "wrongPassword": MessageLookupByLibrary.simpleMessage(
             "كلمة المرور التي تم إدخالها غير صحيحة.")
       };

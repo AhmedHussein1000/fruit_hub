@@ -1,3 +1,5 @@
+import 'package:fruit_hub/core/helpers/extensions.dart';
+import 'package:fruit_hub/features/profile/presentation/screens/who_are_we_screen.dart';
 import 'package:fruit_hub/features/profile/presentation/screens/widgets/profile_header.dart';
 import 'package:fruit_hub/features/profile/presentation/screens/widgets/settings_item.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -47,7 +49,9 @@ class ProfileBody extends StatelessWidget {
                 settingsItemModel: SettingsItemModel(
                     svgPath: Assets.imagesInfoCircle,
                     title: S.of(context).who_are_we,
-                    onTap: () {})),
+                    onTap: () {
+                      context.pushPersistentScreen(const WhoAreWeScreen());
+                    })),
             SizedBox(height: 20.h),
             const LogoutButton(),
             SizedBox(height: 33.h),

@@ -174,6 +174,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "The password provided is too weak."),
         "welcome": MessageLookupByLibrary.simpleMessage("Welcome to"),
         "who_are_we": MessageLookupByLibrary.simpleMessage("Who are we?"),
+        "who_are_we_content": MessageLookupByLibrary.simpleMessage(
+            "FruitHub is a premium fruit delivery service dedicated to bringing the freshest, highest quality fruits directly to your doorstep. We work with local farmers to ensure you receive the best produce while supporting sustainable agriculture."),
         "wrongPassword": MessageLookupByLibrary.simpleMessage(
             "Wrong password provided for that user.")
       };

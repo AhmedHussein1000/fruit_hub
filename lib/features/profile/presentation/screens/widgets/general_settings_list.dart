@@ -60,7 +60,7 @@ class GeneralSettingsList extends StatelessWidget {
           svgPath: Assets.imagesMagicpen,
           title: S.of(context).theme,
           trailing: SizedBox(
-            width: 60, // Constrain the width
+            width: 60,
             child: Switch(
               value: false,
               onChanged: (value) {},

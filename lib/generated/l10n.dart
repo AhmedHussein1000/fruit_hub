@@ -1059,6 +1059,16 @@ class S {
       args: [],
     );
   }
+
+  /// `FruitHub is a premium fruit delivery service dedicated to bringing the freshest, highest quality fruits directly to your doorstep. We work with local farmers to ensure you receive the best produce while supporting sustainable agriculture.`
+  String get who_are_we_content {
+    return Intl.message(
+      'FruitHub is a premium fruit delivery service dedicated to bringing the freshest, highest quality fruits directly to your doorstep. We work with local farmers to ensure you receive the best produce while supporting sustainable agriculture.',
+      name: 'who_are_we_content',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

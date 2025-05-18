@@ -47,8 +47,7 @@
     "unexpectedError": "An unexpected error occurred, please try again.",
 
     "weakPassword": "The password provided is too weak.",
-    "emailAlreadyInUse": "The account already exists for that email.",
-    
+    "emailAlreadyInUse": "The account already exists for that email.",    
 
     "home": "Home",
     "products": "Products",
@@ -134,7 +133,9 @@
    "confirm" : "Confirm",
    "signout_message" : "Are you want to logout?",
    "arabic" : "Arabic",
-   "english" : "English"
+   "english" : "English",
+   "who_are_we_content": "FruitHub is a premium fruit delivery service dedicated to bringing the freshest, highest quality fruits directly to your doorstep. We work with local farmers to ensure you receive the best produce while supporting sustainable agriculture."
+
     
 
 }

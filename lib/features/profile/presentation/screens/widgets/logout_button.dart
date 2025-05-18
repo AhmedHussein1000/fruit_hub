@@ -22,8 +22,10 @@ class LogoutButton extends StatelessWidget {
             onConfirm: () {
               context.pop();
               getIt<FirebaseAuthService>().signOut();
-              Navigator.pushNamedAndRemoveUntil(
-                  context, Routes.login, (route) => false);
+              Navigator.of(context, rootNavigator: true).pushNamedAndRemoveUntil(
+          Routes.login,
+          (route) => false,
+        );
             },
             title: S.of(context).signout_message);
       },
