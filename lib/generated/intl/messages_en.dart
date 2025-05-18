@@ -39,13 +39,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "ahmedHussein": MessageLookupByLibrary.simpleMessage("Ahmed Hussein"),
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Already have an account?"),
+        "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
         "bestSelling": MessageLookupByLibrary.simpleMessage("Best Selling"),
+        "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "cart": MessageLookupByLibrary.simpleMessage("Cart"),
         "cartIsEmpty":
             MessageLookupByLibrary.simpleMessage("Your Cart is Empty"),
         "cash_on_delivery":
             MessageLookupByLibrary.simpleMessage("Cash on Delivery"),
         "city": MessageLookupByLibrary.simpleMessage("City"),
+        "confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
         "createAccount":
             MessageLookupByLibrary.simpleMessage("Create New Account"),
         "delivery": MessageLookupByLibrary.simpleMessage("Delivery"),
@@ -61,6 +64,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "The account already exists for that email."),
         "emailRequired":
             MessageLookupByLibrary.simpleMessage("Email is required."),
+        "english": MessageLookupByLibrary.simpleMessage("English"),
+        "favorites": MessageLookupByLibrary.simpleMessage("Favorites"),
         "field_required":
             MessageLookupByLibrary.simpleMessage("This field is required."),
         "floor_and_apartment":
@@ -69,18 +74,22 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Forgot Password?"),
         "free": MessageLookupByLibrary.simpleMessage("Free"),
         "fullName": MessageLookupByLibrary.simpleMessage("Full Name"),
+        "general": MessageLookupByLibrary.simpleMessage("General"),
         "goodMorning": MessageLookupByLibrary.simpleMessage("Good Morning..!"),
+        "help": MessageLookupByLibrary.simpleMessage("Help"),
         "home": MessageLookupByLibrary.simpleMessage("Home"),
         "invalidCredential": MessageLookupByLibrary.simpleMessage(
             "The email address or password is incorrect."),
         "invalidEmail": MessageLookupByLibrary.simpleMessage(
             "The email address is badly formatted."),
         "killo": MessageLookupByLibrary.simpleMessage("Kg"),
+        "language": MessageLookupByLibrary.simpleMessage("Language"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "loginWithFacebook":
             MessageLookupByLibrary.simpleMessage("Login with Facebook"),
         "loginWithGoogle":
             MessageLookupByLibrary.simpleMessage("Login with Google"),
+        "logout": MessageLookupByLibrary.simpleMessage("Logout"),
         "more": MessageLookupByLibrary.simpleMessage("More"),
         "nameRequired":
             MessageLookupByLibrary.simpleMessage("Name is required."),
@@ -121,6 +130,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Payment successful"),
         "paypalPayment":
             MessageLookupByLibrary.simpleMessage("Pay with Paypal"),
+        "personal_file":
+            MessageLookupByLibrary.simpleMessage("User Information"),
         "phone": MessageLookupByLibrary.simpleMessage("Phone"),
         "pickup_delivery_option":
             MessageLookupByLibrary.simpleMessage("Pickup from Location"),
@@ -136,6 +147,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "shipping": MessageLookupByLibrary.simpleMessage("Shipping"),
         "shopNow": MessageLookupByLibrary.simpleMessage("Shop Now"),
         "shoppingCart": MessageLookupByLibrary.simpleMessage("Cart"),
+        "signout_message":
+            MessageLookupByLibrary.simpleMessage("Are you want to logout?"),
         "signup": MessageLookupByLibrary.simpleMessage(" Sign Up"),
         "signupSuccessful": MessageLookupByLibrary.simpleMessage(
             "Account created successfully."),
@@ -146,11 +159,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "sub_total": MessageLookupByLibrary.simpleMessage("Sub Total"),
         "termsAgreement": MessageLookupByLibrary.simpleMessage(
             "By creating an account, you agree to"),
+        "theme": MessageLookupByLibrary.simpleMessage("Theme"),
         "tooManyRequests": MessageLookupByLibrary.simpleMessage(
             "Too many requests. Try again later."),
         "total": MessageLookupByLibrary.simpleMessage("Total"),
         "unexpectedError": MessageLookupByLibrary.simpleMessage(
             "An unexpected error occurred, please try again."),
+        "unknown": MessageLookupByLibrary.simpleMessage("Unknown"),
         "userDisabled": MessageLookupByLibrary.simpleMessage(
             "This user account has been disabled."),
         "userNotFound": MessageLookupByLibrary.simpleMessage(
@@ -158,6 +173,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "weakPassword": MessageLookupByLibrary.simpleMessage(
             "The password provided is too weak."),
         "welcome": MessageLookupByLibrary.simpleMessage("Welcome to"),
+        "who_are_we": MessageLookupByLibrary.simpleMessage("Who are we?"),
         "wrongPassword": MessageLookupByLibrary.simpleMessage(
             "Wrong password provided for that user.")
       };

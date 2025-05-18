@@ -117,5 +117,19 @@
    "payment_error" : "حدث خطاء في الدفع، يرجى المحاولة مرة اخرى",
    "payment_success" : "تم الدفع بنجاح",
    "payment_cancelled" : "تم الغاء الدفع",
-   "add_order_failure" : "فشل في اضافه الطلب"
+   "add_order_failure" : "فشل في اضافه الطلب",
+   "unknown" : "غير معروف",
+   "general" : "عام",
+   "personal_file": "الملف الشخصي",
+   "favorites" : "المفضلة",
+   "theme" : "الوضع",
+   "language" : "اللغة",
+   "help" : "المساعدة",
+   "who_are_we" : "من نحن",
+   "logout" : "تسجيل خروج",
+   "cancel" :"إلغاء",
+   "confirm" : "تأكيد",
+    "signout_message" : "هل ترغب في تسجيل الخروج؟",
+    "arabic" : "العربية",
+    "english" : "الانجليزية"
 }

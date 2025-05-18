@@ -20,7 +20,7 @@ class HomeAppbar extends StatelessWidget {
             Styles.font16Regular.copyWith(color: AppColors.mediumNeutralGray),
       ),
       subtitle: Text(
-        getUser()?.name ?? 'unknown',
+        getUser()?.name ?? S.of(context).unknown,
         style: Styles.font16Bold,
       ),
       trailing: const NotificationWidget(),

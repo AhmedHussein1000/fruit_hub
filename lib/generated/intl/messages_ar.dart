@@ -39,12 +39,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "ahmedHussein": MessageLookupByLibrary.simpleMessage("احمد حسين"),
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("تمتلك حساب بالفعل؟ "),
+        "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
         "bestSelling": MessageLookupByLibrary.simpleMessage("الأكثر مبيعًا"),
+        "cancel": MessageLookupByLibrary.simpleMessage("إلغاء"),
         "cart": MessageLookupByLibrary.simpleMessage("السلة"),
         "cartIsEmpty": MessageLookupByLibrary.simpleMessage("سلة التسوق فارغة"),
         "cash_on_delivery":
             MessageLookupByLibrary.simpleMessage("الدفع عند الاستلام"),
         "city": MessageLookupByLibrary.simpleMessage("المدينة"),
+        "confirm": MessageLookupByLibrary.simpleMessage("تأكيد"),
         "createAccount":
             MessageLookupByLibrary.simpleMessage("إنشاء حساب جديد"),
         "delivery": MessageLookupByLibrary.simpleMessage("التوصيل"),
@@ -60,6 +63,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "هذا البريد الإلكتروني مسجل بالفعل."),
         "emailRequired":
             MessageLookupByLibrary.simpleMessage("البريد الإلكتروني مطلوب."),
+        "english": MessageLookupByLibrary.simpleMessage("الانجليزية"),
+        "favorites": MessageLookupByLibrary.simpleMessage("المفضلة"),
         "field_required":
             MessageLookupByLibrary.simpleMessage("هذا الحقل مطلوب."),
         "floor_and_apartment":
@@ -68,18 +73,22 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
         "free": MessageLookupByLibrary.simpleMessage("مجاني"),
         "fullName": MessageLookupByLibrary.simpleMessage("الاسم كامل"),
+        "general": MessageLookupByLibrary.simpleMessage("عام"),
         "goodMorning": MessageLookupByLibrary.simpleMessage("صباح الخير !.."),
+        "help": MessageLookupByLibrary.simpleMessage("المساعدة"),
         "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
         "invalidCredential": MessageLookupByLibrary.simpleMessage(
             "البريد الإلكتروني أو كلمة المرور غير صحيحة."),
         "invalidEmail": MessageLookupByLibrary.simpleMessage(
             "تنسيق البريد الإلكتروني غير صحيح."),
         "killo": MessageLookupByLibrary.simpleMessage("كيلو"),
+        "language": MessageLookupByLibrary.simpleMessage("اللغة"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
         "loginWithFacebook":
             MessageLookupByLibrary.simpleMessage("تسجيل بواسطة فيسبوك"),
         "loginWithGoogle":
             MessageLookupByLibrary.simpleMessage("تسجيل بواسطة جوجل"),
+        "logout": MessageLookupByLibrary.simpleMessage("تسجيل خروج"),
         "more": MessageLookupByLibrary.simpleMessage("المزيد"),
         "nameRequired": MessageLookupByLibrary.simpleMessage("الاسم مطلوب."),
         "networkRequestFailed":
@@ -117,6 +126,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تم الدفع بنجاح"),
         "paypalPayment":
             MessageLookupByLibrary.simpleMessage("دفع بواسطة Paypal"),
+        "personal_file": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
         "phone": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
         "pickup_delivery_option":
             MessageLookupByLibrary.simpleMessage("التسليم من المكان"),
@@ -132,6 +142,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "shipping": MessageLookupByLibrary.simpleMessage("الشحن"),
         "shopNow": MessageLookupByLibrary.simpleMessage("تسوق الان"),
         "shoppingCart": MessageLookupByLibrary.simpleMessage("سلة التسوق"),
+        "signout_message":
+            MessageLookupByLibrary.simpleMessage("هل ترغب في تسجيل الخروج؟"),
         "signup": MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب"),
         "signupSuccessful":
             MessageLookupByLibrary.simpleMessage("تم انشاء الحساب بنجاح."),
@@ -142,11 +154,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "sub_total": MessageLookupByLibrary.simpleMessage("المجموع الفرعي"),
         "termsAgreement": MessageLookupByLibrary.simpleMessage(
             "من خلال إنشاء حساب ، فإنك توافق على"),
+        "theme": MessageLookupByLibrary.simpleMessage("الوضع"),
         "tooManyRequests": MessageLookupByLibrary.simpleMessage(
             "لقد تجاوزت عدد المحاولات المسموح به. حاول لاحقًا."),
         "total": MessageLookupByLibrary.simpleMessage("الكلي"),
         "unexpectedError": MessageLookupByLibrary.simpleMessage(
             "حدث خطأ غير متوقع، يرجى المحاولة مرة أخرى."),
+        "unknown": MessageLookupByLibrary.simpleMessage("غير معروف"),
         "userDisabled":
             MessageLookupByLibrary.simpleMessage("تم تعطيل حساب المستخدم هذا."),
         "userNotFound": MessageLookupByLibrary.simpleMessage(
@@ -154,6 +168,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "weakPassword":
             MessageLookupByLibrary.simpleMessage("كلمة المرور ضعيفة جدًا."),
         "welcome": MessageLookupByLibrary.simpleMessage("مرحباً بك في"),
+        "who_are_we": MessageLookupByLibrary.simpleMessage("من نحن"),
         "wrongPassword": MessageLookupByLibrary.simpleMessage(
             "كلمة المرور التي تم إدخالها غير صحيحة.")
       };
