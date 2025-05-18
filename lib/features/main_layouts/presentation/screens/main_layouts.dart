@@ -32,6 +32,7 @@ class _MainLayoutsState extends State<MainLayouts> {
       CartScreen(),
       ProfileScreen(),
     ];
+    Color _backgroundColor = Theme.of(context).scaffoldBackgroundColor;
     return PersistentTabView(
       context,
       controller: _controller,
@@ -39,18 +40,19 @@ class _MainLayoutsState extends State<MainLayouts> {
       items: _navBarItems(localization: S.of(context)),
       navBarStyle: NavBarStyle.style1,
       navBarHeight: 70,
-      decoration: const NavBarDecoration(
-     
-        colorBehindNavBar: Colors.white,
+      backgroundColor:_backgroundColor ,
+      decoration: NavBarDecoration(
+       
+        colorBehindNavBar:_backgroundColor ,
          boxShadow: [
-                      BoxShadow(
+                      const BoxShadow(
                         color: AppColors.faintShadowBlack,
                         blurRadius: 7,
                         offset: Offset(0, -2),
                         spreadRadius: 0,
                       )
                     ],
-        borderRadius: BorderRadius.vertical(top: Radius.circular(30)),
+        borderRadius: const BorderRadius.vertical(top: Radius.circular(30)),
       ),
     );
   }

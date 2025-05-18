@@ -15,7 +15,7 @@ class ProfileHeader extends StatelessWidget {
       leading: Image.asset(Assets.imagesProfileImage, height: 73, width: 73),
       title: Text(
         user?.name ?? S.of(context).unknown,
-        style: Styles.font13Bold,
+        style: Styles.font16SemiBold,
       ),
       subtitle: Text(
         user?.email ?? '',

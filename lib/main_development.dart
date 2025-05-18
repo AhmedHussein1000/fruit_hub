@@ -4,33 +4,27 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:fruit_hub/core/di/service_locator.dart';
-import 'package:fruit_hub/core/helpers/cache_helper.dart';
-import 'package:fruit_hub/core/helpers/hive_helper.dart';
+import 'package:fruit_hub/core/cubits/theme_cubit/theme_cubit.dart';
+import 'package:fruit_hub/core/functions/initialize_app.dart';
+
 import 'package:fruit_hub/core/routes/app_router.dart';
 import 'package:fruit_hub/core/routes/routes.dart';
+import 'package:fruit_hub/core/themes/dark_theme.dart';
 import 'package:fruit_hub/core/themes/light_theme.dart';
-import 'package:fruit_hub/custom_bloc_observer.dart';
 import 'package:fruit_hub/features/cart/presentation/controllers/cart_cubit/cart_cubit.dart';
 import 'package:fruit_hub/generated/l10n.dart';
-import 'package:intl/intl.dart';
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await CacheHelper.init();
-  await ScreenUtil.ensureScreenSize();
-  await Firebase.initializeApp();
-  await HiveHelper.initializeHive();
-  setupServiceLocator();
-  Bloc.observer = CustomBlocObserver();
-
-  Intl.defaultLocale = 'ar';
-  isSkippedOnBoarding = CacheHelper.getData(CacheHelper.onBoardingKey) ?? false;
+  await initializeApp();
   runApp(DevicePreview(
       enabled: false,
       availableLocales: const [Locale('ar'), Locale('en')],
-      builder: (context) => const MyApp()));
+      builder: (context) => BlocProvider(
+            create: (context) => ThemeCubit(),
+            child: const MyApp(),
+          )));
 }
+
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -41,7 +35,7 @@ class MyApp extends StatelessWidget {
       designSize: const Size(375, 812),
       minTextAdapt: true,
       builder: (context, child) => BlocProvider(
-          create: (context) => CartCubit()..getCachedCartItems(),
+        create: (context) => CartCubit()..getCachedCartItems(),
         child: MaterialApp(
           localizationsDelegates: const [
             S.delegate,
@@ -55,6 +49,8 @@ class MyApp extends StatelessWidget {
           builder: DevicePreview.appBuilder,
           debugShowCheckedModeBanner: false,
           theme: lightTheme,
+          darkTheme: darkTheme,
+          themeMode: context.watch<ThemeCubit>().state,
           onGenerateRoute: AppRouter().onGenerateRoute,
           initialRoute: Routes.splash,
         ),

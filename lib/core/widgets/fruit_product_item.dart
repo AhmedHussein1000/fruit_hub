@@ -18,7 +18,9 @@ class FruitProductItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: AppColors.lightBackground,
+        color: Theme.of(context).brightness == Brightness.light
+            ? AppColors.lightBackground
+            : Colors.black12,
         borderRadius: BorderRadius.circular(4),
       ),
       child: Stack(
@@ -87,7 +89,10 @@ class FruitProductItem extends StatelessWidget {
                         context
                             .read<CartCubit>()
                             .addProductToCart(productEntity: productEntity);
-                        customToast(message:  S.of(context).addedToCart,state:ToastStates.success,toastLength: Toast.LENGTH_SHORT);    
+                        customToast(
+                            message: S.of(context).addedToCart,
+                            state: ToastStates.success,
+                            toastLength: Toast.LENGTH_SHORT);
                       },
                       child: Container(
                         padding: const EdgeInsets.all(2),

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fruit_hub/core/cubits/theme_cubit/theme_cubit.dart';
 import 'package:fruit_hub/core/helpers/assets.dart';
 import 'package:fruit_hub/core/themes/app_colors.dart';
 import 'package:fruit_hub/core/themes/styles.dart';
@@ -59,13 +61,19 @@ class GeneralSettingsList extends StatelessWidget {
         SettingsItemModel(
           svgPath: Assets.imagesMagicpen,
           title: S.of(context).theme,
-          trailing: SizedBox(
-            width: 60,
-            child: Switch(
-              value: false,
-              onChanged: (value) {},
-              activeColor: AppColors.darkGreenPrimaryColor,
-            ),
+          trailing: BlocBuilder<ThemeCubit, ThemeMode>(
+            builder: (context, state) {
+              return SizedBox(
+                width: 60,
+                child: Switch(
+                  value: state == ThemeMode.dark,
+                  onChanged: (value) {
+                    context.read<ThemeCubit>().changeTheme();
+                  },
+                  
+                ),
+              );
+            },
           ),
         ),
       ];
