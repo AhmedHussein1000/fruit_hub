@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruit_hub/core/functions/show_toast.dart';
+import 'package:fruit_hub/core/helpers/extensions.dart';
 import 'package:fruit_hub/core/widgets/custom_button.dart';
 import 'package:fruit_hub/features/cart/presentation/controllers/cart_cubit/cart_cubit.dart';
 import 'package:fruit_hub/features/cart/presentation/controllers/cart_item_cubit/cart_item_cubit.dart';
@@ -62,17 +63,14 @@ class CartPaymentButton extends StatelessWidget {
     var cartCubit = context.read<CartCubit>();
     return BlocBuilder<CartItemCubit, CartItemState>(
       builder: (context, state) {
-
         return CustomButton(
             onPressed: () {
               if (cartCubit.getCachedCartItems().isNotEmpty) {
-                PersistentNavBarNavigator.pushNewScreen(
-                  context,
-                  screen: CheckoutScreen(
+                context.pushPersistentScreen(
+                  CheckoutScreen(
                     cartEntity: cartCubit.cartEntity,
                   ),
                   withNavBar: false,
-                  pageTransitionAnimation: PageTransitionAnimation.cupertino,
                 );
               } else {
                 customToast(

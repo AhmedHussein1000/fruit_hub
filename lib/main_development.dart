@@ -1,12 +1,11 @@
 import 'package:device_preview/device_preview.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:fruit_hub/core/cubits/language_cubit/language_cubit.dart';
 import 'package:fruit_hub/core/cubits/theme_cubit/theme_cubit.dart';
 import 'package:fruit_hub/core/functions/initialize_app.dart';
-
 import 'package:fruit_hub/core/routes/app_router.dart';
 import 'package:fruit_hub/core/routes/routes.dart';
 import 'package:fruit_hub/core/themes/dark_theme.dart';
@@ -19,8 +18,11 @@ void main() async {
   runApp(DevicePreview(
       enabled: false,
       availableLocales: const [Locale('ar'), Locale('en')],
-      builder: (context) => BlocProvider(
-            create: (context) => ThemeCubit(),
+      builder: (context) => MultiBlocProvider(
+            providers: [
+              BlocProvider(create: (context) => ThemeCubit()),
+              BlocProvider(create: (context) => LanguageCubit()),
+            ],
             child: const MyApp(),
           )));
 }
@@ -45,7 +47,7 @@ class MyApp extends StatelessWidget {
           ],
           supportedLocales: S.delegate.supportedLocales,
           useInheritedMediaQuery: true,
-          locale: DevicePreview.locale(context) ?? const Locale('ar'),
+          locale: context.watch<LanguageCubit>().state,
           builder: DevicePreview.appBuilder,
           debugShowCheckedModeBanner: false,
           theme: lightTheme,

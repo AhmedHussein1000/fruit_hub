@@ -1,33 +1,32 @@
 import 'package:device_preview/device_preview.dart';
-import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:fruit_hub/core/di/service_locator.dart';
-import 'package:fruit_hub/core/helpers/cache_helper.dart';
-import 'package:fruit_hub/core/helpers/hive_helper.dart';
+import 'package:fruit_hub/core/cubits/language_cubit/language_cubit.dart';
+import 'package:fruit_hub/core/cubits/theme_cubit/theme_cubit.dart';
+import 'package:fruit_hub/core/functions/initialize_app.dart';
 import 'package:fruit_hub/core/routes/app_router.dart';
 import 'package:fruit_hub/core/routes/routes.dart';
+import 'package:fruit_hub/core/themes/dark_theme.dart';
 import 'package:fruit_hub/core/themes/light_theme.dart';
 import 'package:fruit_hub/features/cart/presentation/controllers/cart_cubit/cart_cubit.dart';
 import 'package:fruit_hub/generated/l10n.dart';
-import 'package:intl/intl.dart';
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await CacheHelper.init();
-  await ScreenUtil.ensureScreenSize();
-  await Firebase.initializeApp();
-  await HiveHelper.initializeHive();
-
-  setupServiceLocator();
-  Intl.defaultLocale = 'en';
-  isSkippedOnBoarding = CacheHelper.getData(CacheHelper.onBoardingKey) ?? false;
+  await initializeApp();
   runApp(DevicePreview(
-      enabled: false,
+      enabled: kDebugMode,
       availableLocales: const [Locale('ar'), Locale('en')],
-      builder: (context) => const MyApp()));
+      builder: (context) => MultiBlocProvider(
+            providers: [
+              BlocProvider(create: (context) => ThemeCubit()),
+              BlocProvider(
+                  create: (context) => LanguageCubit()),
+            ],
+            child: const MyApp(),
+          )));
 }
 
 class MyApp extends StatelessWidget {
@@ -39,7 +38,7 @@ class MyApp extends StatelessWidget {
       designSize: const Size(375, 812),
       minTextAdapt: true,
       builder: (context, child) => BlocProvider(
-          create: (context) => CartCubit()..getCachedCartItems(),
+        create: (context) => CartCubit()..getCachedCartItems(),
         child: MaterialApp(
           localizationsDelegates: const [
             S.delegate,
@@ -49,10 +48,12 @@ class MyApp extends StatelessWidget {
           ],
           supportedLocales: S.delegate.supportedLocales,
           useInheritedMediaQuery: true,
-          locale: DevicePreview.locale(context) ?? const Locale('en'),
+          locale: context.watch<LanguageCubit>().state,
           builder: DevicePreview.appBuilder,
           debugShowCheckedModeBanner: false,
           theme: lightTheme,
+          darkTheme: darkTheme,
+          themeMode: context.watch<ThemeCubit>().state,
           onGenerateRoute: AppRouter().onGenerateRoute,
           initialRoute: Routes.splash,
         ),
