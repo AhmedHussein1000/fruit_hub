@@ -9,6 +9,7 @@ import 'package:fruit_hub/core/themes/app_colors.dart';
 import 'package:fruit_hub/core/themes/styles.dart';
 import 'package:fruit_hub/core/utils/app_constants.dart';
 import 'package:fruit_hub/features/cart/presentation/controllers/cart_cubit/cart_cubit.dart';
+import 'package:fruit_hub/features/favorites/presentation/controllers/favorites_cubit/favorites_cubit.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 
 class FruitProductItem extends StatelessWidget {
@@ -28,14 +29,24 @@ class FruitProductItem extends StatelessWidget {
           Positioned(
             right: 0,
             top: 0,
-            child: IconButton(
-                onPressed: () {
-                  //TODO later
-                },
-                icon: const Icon(
-                  Icons.favorite_outline,
-                  size: 16,
-                )),
+            child: BlocBuilder<FavoritesCubit, FavoritesState>(
+              builder: (context, state) {
+                final isFavorite =
+                    context.read<FavoritesCubit>().isFavorite(productEntity);
+                return IconButton(
+                  onPressed: () {
+                    context
+                        .read<FavoritesCubit>()
+                        .toggleFavorite(productEntity);
+                  },
+                  icon: Icon(
+                    isFavorite ? Icons.favorite : Icons.favorite_outline,
+                    size: 16,
+                    color: isFavorite ? Colors.red : null,
+                  ),
+                );
+              },
+            ),
           ),
           Positioned.fill(
               child: Padding(

@@ -450,6 +450,16 @@ class S {
     );
   }
 
+  /// `No favorites yet!`
+  String get no_favorites_yet {
+    return Intl.message(
+      'No favorites yet!',
+      name: 'no_favorites_yet',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Home`
   String get home {
     return Intl.message(

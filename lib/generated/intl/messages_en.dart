@@ -101,6 +101,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "User has cancelled login with facebook."),
         "noGoogleAccountSelected": MessageLookupByLibrary.simpleMessage(
             "User has cancelled login with google."),
+        "no_favorites_yet":
+            MessageLookupByLibrary.simpleMessage("No favorites yet!"),
         "numberOfPounds": m1,
         "onboardingDescription1": MessageLookupByLibrary.simpleMessage(
             "Discover a unique shopping experience with FruitHUB. Explore our wide range of premium fresh fruits and get the best deals and high quality."),

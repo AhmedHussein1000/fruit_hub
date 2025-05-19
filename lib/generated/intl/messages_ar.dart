@@ -99,6 +99,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "تم إلغاء تسجيل الدخول بواسطة فيسبوك من قبل المستخدم."),
         "noGoogleAccountSelected": MessageLookupByLibrary.simpleMessage(
             " تم إلغاء تسجيل الدخول بواسطة جوجل من قبل المستخدم."),
+        "no_favorites_yet":
+            MessageLookupByLibrary.simpleMessage("لا توجد مفضلات حتى الآن!"),
         "numberOfPounds": m1,
         "onboardingDescription1": MessageLookupByLibrary.simpleMessage(
             "اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية."),

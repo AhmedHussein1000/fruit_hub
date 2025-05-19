@@ -11,6 +11,7 @@ import 'package:fruit_hub/core/routes/routes.dart';
 import 'package:fruit_hub/core/themes/dark_theme.dart';
 import 'package:fruit_hub/core/themes/light_theme.dart';
 import 'package:fruit_hub/features/cart/presentation/controllers/cart_cubit/cart_cubit.dart';
+import 'package:fruit_hub/features/favorites/presentation/controllers/favorites_cubit/favorites_cubit.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 
 void main() async {
@@ -22,11 +23,14 @@ void main() async {
             providers: [
               BlocProvider(create: (context) => ThemeCubit()),
               BlocProvider(create: (context) => LanguageCubit()),
+              BlocProvider(create: (context) => FavoritesCubit()),
+              BlocProvider(
+                create: (context) => CartCubit()..getCachedCartItems(),
+              ),
             ],
             child: const MyApp(),
           )));
 }
-
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -36,26 +40,23 @@ class MyApp extends StatelessWidget {
     return ScreenUtilInit(
       designSize: const Size(375, 812),
       minTextAdapt: true,
-      builder: (context, child) => BlocProvider(
-        create: (context) => CartCubit()..getCachedCartItems(),
-        child: MaterialApp(
-          localizationsDelegates: const [
-            S.delegate,
-            GlobalMaterialLocalizations.delegate,
-            GlobalWidgetsLocalizations.delegate,
-            GlobalCupertinoLocalizations.delegate,
-          ],
-          supportedLocales: S.delegate.supportedLocales,
-          useInheritedMediaQuery: true,
-          locale: context.watch<LanguageCubit>().state,
-          builder: DevicePreview.appBuilder,
-          debugShowCheckedModeBanner: false,
-          theme: lightTheme,
-          darkTheme: darkTheme,
-          themeMode: context.watch<ThemeCubit>().state,
-          onGenerateRoute: AppRouter().onGenerateRoute,
-          initialRoute: Routes.splash,
-        ),
+      builder: (context, child) => MaterialApp(
+        localizationsDelegates: const [
+          S.delegate,
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+        ],
+        supportedLocales: S.delegate.supportedLocales,
+        useInheritedMediaQuery: true,
+        locale: context.watch<LanguageCubit>().state,
+        builder: DevicePreview.appBuilder,
+        debugShowCheckedModeBanner: false,
+        theme: lightTheme,
+        darkTheme: darkTheme,
+        themeMode: context.watch<ThemeCubit>().state,
+        onGenerateRoute: AppRouter().onGenerateRoute,
+        initialRoute: Routes.splash,
       ),
     );
   }

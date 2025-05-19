@@ -10,7 +10,6 @@ import 'package:fruit_hub/features/cart/presentation/screens/widgets/cart_header
 import 'package:fruit_hub/features/cart/presentation/screens/widgets/cart_items_list.dart';
 import 'package:fruit_hub/features/checkout/presentation/screens/checkout_screen.dart';
 import 'package:fruit_hub/generated/l10n.dart';
-import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
 
 class CartScreenBody extends StatelessWidget {
   const CartScreenBody({

@@ -62,6 +62,10 @@ class Assets {
   /// assets/images/magicpen.svg
   static const String imagesMagicpen = "assets/images/magicpen.svg";
 
+  /// Assets for imagesNoFavoritesYet
+  /// assets/images/no_favorites_yet.png
+  static const String imagesNoFavoritesYet = "assets/images/no_favorites_yet.png";
+
   /// Assets for imagesNotification
   /// assets/images/notification.svg
   static const String imagesNotification = "assets/images/notification.svg";

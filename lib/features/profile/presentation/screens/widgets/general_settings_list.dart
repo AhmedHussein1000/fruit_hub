@@ -7,6 +7,7 @@ import 'package:fruit_hub/core/helpers/extensions.dart';
 import 'package:fruit_hub/core/themes/app_colors.dart';
 import 'package:fruit_hub/core/themes/styles.dart';
 import 'package:fruit_hub/core/widgets/custom_divider.dart';
+import 'package:fruit_hub/features/favorites/presentation/screens/favorites_screen.dart';
 import 'package:fruit_hub/features/profile/data/models/settings_item_model.dart';
 import 'package:fruit_hub/features/profile/presentation/screens/widgets/settings_item.dart';
 import 'package:fruit_hub/generated/l10n.dart';
@@ -37,7 +38,11 @@ class GeneralSettingsList extends StatelessWidget {
         SettingsItemModel(
           svgPath: Assets.imagesHeart,
           title: S.of(context).favorites,
-          onTap: () {},
+          onTap: () {
+            context.pushPersistentScreen(
+              const FavoritesScreen(),
+            );
+          },
         ),
         SettingsItemModel(
           svgPath: Assets.imagesGlobal,
@@ -50,7 +55,7 @@ class GeneralSettingsList extends StatelessWidget {
                   Text(
                     state.languageCode == 'ar'
                         ? S.of(context).arabic
-                        : 'English',
+                        : S.of(context).english,
                     style: Styles.font13Regular,
                   ),
                   const SizedBox(
