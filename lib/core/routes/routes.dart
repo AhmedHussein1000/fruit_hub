@@ -9,4 +9,5 @@ abstract class Routes {
   static const String bestSelling = '/best-selling';
   static const String products = '/products';
   static const String checkout = '/checkout';
+  static const String search = '/search';
 }

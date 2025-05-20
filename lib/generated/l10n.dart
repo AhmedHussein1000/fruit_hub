@@ -1169,6 +1169,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Failed to search products`
+  String get search_products_failure {
+    return Intl.message(
+      'Failed to search products',
+      name: 'search_products_failure',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search`
+  String get search {
+    return Intl.message(
+      'Search',
+      name: 'search',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No results found`
+  String get no_results_found {
+    return Intl.message(
+      'No results found',
+      name: 'no_results_found',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

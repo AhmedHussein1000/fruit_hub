@@ -1,18 +1,14 @@
-import 'dart:convert';
 import 'dart:developer';
 
 import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fruit_hub/core/errors/exceptions.dart';
 import 'package:fruit_hub/core/errors/failures.dart';
-import 'package:fruit_hub/core/functions/user_functions/add_user_data.dart';
 import 'package:fruit_hub/core/functions/user_functions/cache_user_data.dart';
 import 'package:fruit_hub/core/functions/user_functions/get_user_from_server.dart';
 import 'package:fruit_hub/core/functions/user_functions/is_user_data_exist.dart';
-import 'package:fruit_hub/core/helpers/cache_helper.dart';
 import 'package:fruit_hub/core/services/firebase_auth_service.dart';
 import 'package:fruit_hub/core/services/firebase_firestore_service.dart';
-import 'package:fruit_hub/core/utils/backend_endpoints.dart';
 import 'package:fruit_hub/features/login/domain/repository/base_login_repo.dart';
 import 'package:fruit_hub/features/signup/data/models/user_model.dart';
 import 'package:fruit_hub/features/signup/domain/entities/user_entity.dart';

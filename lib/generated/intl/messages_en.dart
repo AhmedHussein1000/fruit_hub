@@ -114,6 +114,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "User has cancelled login with google."),
         "no_favorites_yet":
             MessageLookupByLibrary.simpleMessage("No favorites yet!"),
+        "no_results_found":
+            MessageLookupByLibrary.simpleMessage("No results found"),
         "numberOfPounds": m1,
         "onboardingDescription1": MessageLookupByLibrary.simpleMessage(
             "Discover a unique shopping experience with FruitHUB. Explore our wide range of premium fresh fruits and get the best deals and high quality."),
@@ -158,7 +160,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "results": MessageLookupByLibrary.simpleMessage("Results"),
         "resultsCount": m2,
         "save_changes": MessageLookupByLibrary.simpleMessage("Save Changes"),
+        "search": MessageLookupByLibrary.simpleMessage("Search"),
         "searchFor": MessageLookupByLibrary.simpleMessage("Search for......."),
+        "search_products_failure":
+            MessageLookupByLibrary.simpleMessage("Failed to search products"),
         "select_payment_method": MessageLookupByLibrary.simpleMessage(
             "Please select a payment method"),
         "shipping": MessageLookupByLibrary.simpleMessage("Shipping"),

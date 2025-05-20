@@ -144,7 +144,10 @@
    "new_password" : "New Password",
    "confirm_password" : "Confirm Password",
    "save_changes" : "Save Changes",
-   "incorrect_password" : "Incorrect password"
+   "incorrect_password" : "Incorrect password",
+   "search_products_failure" : "Failed to search products",
+   "search" : "Search",
+   "no_results_found" : "No results found"
 
     
 

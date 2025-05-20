@@ -10,6 +10,8 @@ import 'package:fruit_hub/features/login/domain/repository/base_login_repo.dart'
 import 'package:fruit_hub/features/login/presentation/controller/login_cubit/login_cubit.dart';
 import 'package:fruit_hub/features/profile/data/repository/profile_repo_impl.dart';
 import 'package:fruit_hub/features/profile/domain/repository/base_profile_repo.dart';
+import 'package:fruit_hub/features/search/domain/repository/base_search_repo.dart';
+import 'package:fruit_hub/features/search/data/repository/search_repo_impl.dart';
 import 'package:fruit_hub/features/signup/data/repository/signup_repo_impl.dart';
 import 'package:fruit_hub/features/signup/domain/repository/base_signup_repo.dart';
 import 'package:fruit_hub/features/signup/presentation/controller/signup_cubit/signup_cubit.dart';
@@ -41,14 +43,15 @@ void setupServiceLocator() {
   getIt.registerLazySingleton<BaseProfileRepo>(
     () => ProfileRepoImpl(getIt()),
   );
+  getIt.registerLazySingleton<BaseSearchRepo>(
+    () => SearchRepoImpl(getIt()),
+  );
   //services
   getIt.registerLazySingleton(
     () => FirebaseAuthService(),
   );
-  getIt.registerLazySingleton(
-    () => FirestoreService(),
-  );
   getIt.registerLazySingleton<DatabaseService>(
     () => FirestoreService(),
   );
+
 }
