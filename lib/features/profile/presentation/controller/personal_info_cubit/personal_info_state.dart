@@ -11,7 +11,11 @@ class PersonalInfoInitial extends PersonalInfoState {}
 
 class PersonalInfoLoading extends PersonalInfoState {}
 
-class PersonalInfoSuccess extends PersonalInfoState {}
+class PersonalInfoSuccess extends PersonalInfoState {
+  final UserEntity userEntity;
+
+ const PersonalInfoSuccess({required this.userEntity});
+}
 
 class PersonalInfoError extends PersonalInfoState {
   final String message;

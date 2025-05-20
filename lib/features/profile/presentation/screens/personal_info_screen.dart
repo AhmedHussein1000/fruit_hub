@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:fruit_hub/core/di/service_locator.dart';
 import 'package:fruit_hub/core/functions/show_toast.dart';
 import 'package:fruit_hub/core/functions/user_functions/get_cached_user.dart';
 import 'package:fruit_hub/core/helpers/extensions.dart';
@@ -54,64 +53,61 @@ class _PersonalInfoScreenState extends State<PersonalInfoScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => PersonalInfoCubit(getIt()),
-      child: Scaffold(
-        appBar: AppBar(
-          leading: const CustomLeadingBackButton(),
-          title: Text(S.of(context).personal_file),
-        ),
-        body: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Form(
-              key: _formKey,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    S.of(context).personal_information,
-                    style: Styles.font16SemiBold,
-                  ),
-                  const SizedBox(height: 8),
-                  CustomTextFormField(
-                    controller: _nameController,
-                    hintText: S.of(context).fullName,
-                    keyboardType: TextInputType.name,
-                  ),
-                  const SizedBox(height: 16),
-                  Text(
-                    S.of(context).change_password,
-                    style: Styles.font16SemiBold,
-                  ),
-                  const SizedBox(height: 8),
-                  CustomPasswordTextField(
-                    valueNotifierIsObscure: _currentPasswordObscure,
-                    controller: _currentPasswordController,
-                    hintText: S.of(context).current_password,
-                  ),
-                  const SizedBox(height: 8),
-                  CustomPasswordTextField(
-                    valueNotifierIsObscure: _newPasswordObscure,
-                    controller: _newPasswordController,
-                    hintText: S.of(context).new_password,
-                  ),
-                  const SizedBox(height: 8),
-                  CustomPasswordTextField(
-                    valueNotifierIsObscure: _confirmPasswordObscure,
-                    controller: _confirmPasswordController,
-                    hintText: S.of(context).confirm_password,
-                  ),
-                  const SizedBox(height: 32),
-                  UpdateProfileButtonBlocConsumer(
-                      formKey: _formKey,
-                      nameController: _nameController,
-                      currentPasswordController: _currentPasswordController,
-                      newPasswordController: _newPasswordController,
-                      confirmPasswordController: _confirmPasswordController),
-                  const SizedBox(height: 16),
-                ],
-              ),
+    return Scaffold(
+      appBar: AppBar(
+        leading: const CustomLeadingBackButton(),
+        title: Text(S.of(context).personal_file),
+      ),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Form(
+            key: _formKey,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  S.of(context).personal_information,
+                  style: Styles.font16SemiBold,
+                ),
+                const SizedBox(height: 8),
+                CustomTextFormField(
+                  controller: _nameController,
+                  hintText: S.of(context).fullName,
+                  keyboardType: TextInputType.name,
+                ),
+                const SizedBox(height: 16),
+                Text(
+                  S.of(context).change_password,
+                  style: Styles.font16SemiBold,
+                ),
+                const SizedBox(height: 8),
+                CustomPasswordTextField(
+                  valueNotifierIsObscure: _currentPasswordObscure,
+                  controller: _currentPasswordController,
+                  hintText: S.of(context).current_password,
+                ),
+                const SizedBox(height: 8),
+                CustomPasswordTextField(
+                  valueNotifierIsObscure: _newPasswordObscure,
+                  controller: _newPasswordController,
+                  hintText: S.of(context).new_password,
+                ),
+                const SizedBox(height: 8),
+                CustomPasswordTextField(
+                  valueNotifierIsObscure: _confirmPasswordObscure,
+                  controller: _confirmPasswordController,
+                  hintText: S.of(context).confirm_password,
+                ),
+                const SizedBox(height: 32),
+                UpdateProfileButtonBlocConsumer(
+                    formKey: _formKey,
+                    nameController: _nameController,
+                    currentPasswordController: _currentPasswordController,
+                    newPasswordController: _newPasswordController,
+                    confirmPasswordController: _confirmPasswordController),
+                const SizedBox(height: 16),
+              ],
             ),
           ),
         ),

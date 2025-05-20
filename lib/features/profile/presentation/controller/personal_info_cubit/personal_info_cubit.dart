@@ -1,6 +1,8 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:equatable/equatable.dart';
+import 'package:fruit_hub/core/functions/user_functions/get_cached_user.dart';
 import 'package:fruit_hub/features/profile/domain/repository/base_profile_repo.dart';
+import 'package:fruit_hub/features/signup/domain/entities/user_entity.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 
 part 'personal_info_state.dart';
@@ -41,7 +43,10 @@ class PersonalInfoCubit extends Cubit<PersonalInfoState> {
         (failure) => emit(PersonalInfoError(message: failure.message)), (_) {});
 
     if (state is PersonalInfoLoading) {
-      emit(PersonalInfoSuccess());
+        final user = getCachedUser();
+            if (user != null) {
+              emit(PersonalInfoSuccess(userEntity: user));
+            }
     }
   }
 }
