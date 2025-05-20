@@ -260,6 +260,26 @@ class S {
     );
   }
 
+  /// `Changes saved successfully.`
+  String get changes_saved_successfully {
+    return Intl.message(
+      'Changes saved successfully.',
+      name: 'changes_saved_successfully',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Passwords do not match.`
+  String get passwordsDoNotMatch {
+    return Intl.message(
+      'Passwords do not match.',
+      name: 'passwordsDoNotMatch',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `New Account`
   String get newAccount {
     return Intl.message(
@@ -950,10 +970,10 @@ class S {
     );
   }
 
-  /// `User Information`
+  /// `Your Profile`
   String get personal_file {
     return Intl.message(
-      'User Information',
+      'Your Profile',
       name: 'personal_file',
       desc: '',
       args: [],
@@ -1075,6 +1095,76 @@ class S {
     return Intl.message(
       'FruitHub is a premium fruit delivery service dedicated to bringing the freshest, highest quality fruits directly to your doorstep. We work with local farmers to ensure you receive the best produce while supporting sustainable agriculture.',
       name: 'who_are_we_content',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Personal Information`
+  String get personal_information {
+    return Intl.message(
+      'Personal Information',
+      name: 'personal_information',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Change Password`
+  String get change_password {
+    return Intl.message(
+      'Change Password',
+      name: 'change_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Current Password`
+  String get current_password {
+    return Intl.message(
+      'Current Password',
+      name: 'current_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `New Password`
+  String get new_password {
+    return Intl.message(
+      'New Password',
+      name: 'new_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm Password`
+  String get confirm_password {
+    return Intl.message(
+      'Confirm Password',
+      name: 'confirm_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save Changes`
+  String get save_changes {
+    return Intl.message(
+      'Save Changes',
+      name: 'save_changes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Incorrect password`
+  String get incorrect_password {
+    return Intl.message(
+      'Incorrect password',
+      name: 'incorrect_password',
       desc: '',
       args: [],
     );

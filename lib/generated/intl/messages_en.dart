@@ -47,10 +47,18 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Your Cart is Empty"),
         "cash_on_delivery":
             MessageLookupByLibrary.simpleMessage("Cash on Delivery"),
+        "change_password":
+            MessageLookupByLibrary.simpleMessage("Change Password"),
+        "changes_saved_successfully":
+            MessageLookupByLibrary.simpleMessage("Changes saved successfully."),
         "city": MessageLookupByLibrary.simpleMessage("City"),
         "confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
+        "confirm_password":
+            MessageLookupByLibrary.simpleMessage("Confirm Password"),
         "createAccount":
             MessageLookupByLibrary.simpleMessage("Create New Account"),
+        "current_password":
+            MessageLookupByLibrary.simpleMessage("Current Password"),
         "delivery": MessageLookupByLibrary.simpleMessage("Delivery"),
         "delivery_address":
             MessageLookupByLibrary.simpleMessage("Delivery Address"),
@@ -78,6 +86,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "goodMorning": MessageLookupByLibrary.simpleMessage("Good Morning..!"),
         "help": MessageLookupByLibrary.simpleMessage("Help"),
         "home": MessageLookupByLibrary.simpleMessage("Home"),
+        "incorrect_password":
+            MessageLookupByLibrary.simpleMessage("Incorrect password"),
         "invalidCredential": MessageLookupByLibrary.simpleMessage(
             "The email address or password is incorrect."),
         "invalidEmail": MessageLookupByLibrary.simpleMessage(
@@ -96,6 +106,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "networkRequestFailed": MessageLookupByLibrary.simpleMessage(
             "Check your internet connection."),
         "newAccount": MessageLookupByLibrary.simpleMessage("New Account"),
+        "new_password": MessageLookupByLibrary.simpleMessage("New Password"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
         "noFacebookAccountSelected": MessageLookupByLibrary.simpleMessage(
             "User has cancelled login with facebook."),
@@ -121,6 +132,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "passwordRequired":
             MessageLookupByLibrary.simpleMessage("Password is required."),
+        "passwordsDoNotMatch":
+            MessageLookupByLibrary.simpleMessage("Passwords do not match."),
         "payment": MessageLookupByLibrary.simpleMessage("Payment"),
         "payment_cancelled":
             MessageLookupByLibrary.simpleMessage("Payment cancelled"),
@@ -132,8 +145,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Payment successful"),
         "paypalPayment":
             MessageLookupByLibrary.simpleMessage("Pay with Paypal"),
-        "personal_file":
-            MessageLookupByLibrary.simpleMessage("User Information"),
+        "personal_file": MessageLookupByLibrary.simpleMessage("Your Profile"),
+        "personal_information":
+            MessageLookupByLibrary.simpleMessage("Personal Information"),
         "phone": MessageLookupByLibrary.simpleMessage("Phone"),
         "pickup_delivery_option":
             MessageLookupByLibrary.simpleMessage("Pickup from Location"),
@@ -143,6 +157,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
         "results": MessageLookupByLibrary.simpleMessage("Results"),
         "resultsCount": m2,
+        "save_changes": MessageLookupByLibrary.simpleMessage("Save Changes"),
         "searchFor": MessageLookupByLibrary.simpleMessage("Search for......."),
         "select_payment_method": MessageLookupByLibrary.simpleMessage(
             "Please select a payment method"),

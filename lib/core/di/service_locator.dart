@@ -8,6 +8,8 @@ import 'package:fruit_hub/core/services/firebase_firestore_service.dart';
 import 'package:fruit_hub/features/login/data/repository/login_repos_impl.dart';
 import 'package:fruit_hub/features/login/domain/repository/base_login_repo.dart';
 import 'package:fruit_hub/features/login/presentation/controller/login_cubit/login_cubit.dart';
+import 'package:fruit_hub/features/profile/data/repository/profile_repo_impl.dart';
+import 'package:fruit_hub/features/profile/domain/repository/base_profile_repo.dart';
 import 'package:fruit_hub/features/signup/data/repository/signup_repo_impl.dart';
 import 'package:fruit_hub/features/signup/domain/repository/base_signup_repo.dart';
 import 'package:fruit_hub/features/signup/presentation/controller/signup_cubit/signup_cubit.dart';
@@ -35,6 +37,9 @@ void setupServiceLocator() {
   );
   getIt.registerLazySingleton<BaseOrdersRepo>(
     () => OrdersRepoImpl(getIt()),
+  );
+  getIt.registerLazySingleton<BaseProfileRepo>(
+    () => ProfileRepoImpl(getIt()),
   );
   //services
   getIt.registerLazySingleton(

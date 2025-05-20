@@ -130,4 +130,46 @@ class FirebaseAuthService implements AuthService {
   Future<void> signOut() async {
     await _firebaseAuth.signOut();
   }
+
+  @override
+  Future<void> updateUserProfile({required String displayName}) async {
+  
+      User? user = _firebaseAuth.currentUser;
+      if (user != null) {
+        await user.updateDisplayName(displayName);
+      }
+    } 
+  
+
+  @override
+  Future<void> changePassword({
+    required String currentPassword,
+    required String newPassword,
+    required S localization,
+  }) async {
+    try {
+      User? user = _firebaseAuth.currentUser;
+      if (user != null && user.email != null) {
+        AuthCredential credential = EmailAuthProvider.credential(
+          email: user.email!,
+          password: currentPassword,
+        );
+
+        try {
+          await user.reauthenticateWithCredential(credential);
+          await user.updatePassword(newPassword);
+        } on FirebaseAuthException catch (e) {
+          if (e.code == 'wrong-password') {
+            throw CustomException(message: localization.incorrect_password);
+          } else {
+            log("Exception in FirebaseAuthService.changePassword: ${e.toString()}");
+            throw CustomException(message: localization.unexpectedError);
+          }
+        }
+      }
+    } catch (e) {
+      log("Exception in FirebaseAuthService.changePassword: ${e.toString()}");
+      throw CustomException(message: localization.unexpectedError);
+    }
+  }
 }

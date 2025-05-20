@@ -77,7 +77,7 @@ class CartPaymentButton extends StatelessWidget {
                     state: ToastStates.warning);
               }
             },
-            btnText:
+            buttonText:
                 '${S.of(context).payment} ${S.of(context).numberOfPounds(context.watch<CartCubit>().calculateTotalPrice())}');
       },
     );

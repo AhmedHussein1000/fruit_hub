@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/core/functions/get_user.dart';
+import 'package:fruit_hub/core/functions/user_functions/get_cached_user.dart';
 import 'package:fruit_hub/core/helpers/assets.dart';
 import 'package:fruit_hub/core/themes/styles.dart';
 import 'package:fruit_hub/generated/l10n.dart';
@@ -9,7 +9,7 @@ class ProfileHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final user = getUser();
+    final user = getCachedUser();
     return ListTile(
       contentPadding: EdgeInsets.zero,
       leading: Image.asset(Assets.imagesProfileImage, height: 73, width: 73),

@@ -65,7 +65,7 @@ class _SignupBodyState extends State<SignupBody> {
                       }
                     }
                   },
-                  btnText: S.of(context).createAccount),
+                  buttonText: S.of(context).createAccount),
               SizedBox(
                 height: 26.h,
               ),

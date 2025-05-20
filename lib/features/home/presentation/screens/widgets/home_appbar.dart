@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/core/functions/get_user.dart';
+import 'package:fruit_hub/core/functions/user_functions/get_cached_user.dart';
 import 'package:fruit_hub/core/helpers/assets.dart';
 import 'package:fruit_hub/core/themes/app_colors.dart';
 import 'package:fruit_hub/core/themes/styles.dart';
@@ -20,7 +20,7 @@ class HomeAppbar extends StatelessWidget {
             Styles.font16Regular.copyWith(color: AppColors.mediumNeutralGray),
       ),
       subtitle: Text(
-        getUser()?.name ?? S.of(context).unknown,
+        getCachedUser()?.name ?? S.of(context).unknown,
         style: Styles.font16Bold,
       ),
       trailing: const NotificationWidget(),

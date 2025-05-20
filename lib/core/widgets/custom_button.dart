@@ -7,7 +7,7 @@ class CustomButton extends StatelessWidget {
   const CustomButton(
       {super.key,
       required this.onPressed,
-      required this.btnText,
+      required this.buttonText,
       this.textStyle,
       this.backgroundColor,
       this.padding,
@@ -15,7 +15,7 @@ class CustomButton extends StatelessWidget {
       this.width,
       this.height});
   final void Function() onPressed;
-  final String btnText;
+  final String buttonText;
   final TextStyle? textStyle;
   final Color? backgroundColor;
   final EdgeInsetsGeometry? padding;
@@ -34,7 +34,7 @@ class CustomButton extends StatelessWidget {
       color: backgroundColor ?? AppColors.darkGreenPrimaryColor,
       onPressed: onPressed,
       child: Text(
-        btnText,
+        buttonText,
         style: textStyle ?? Styles.font16Bold.copyWith(color: Colors.white),
       ),
     );

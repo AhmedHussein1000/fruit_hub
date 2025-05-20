@@ -1,6 +1,5 @@
-
-
 import 'package:flutter/material.dart';
+import 'package:fruit_hub/core/helpers/extensions.dart';
 import 'package:fruit_hub/core/themes/app_colors.dart';
 import 'package:fruit_hub/core/widgets/custom_text_form_field.dart';
 import 'package:fruit_hub/generated/l10n.dart';
@@ -10,10 +9,12 @@ class CustomPasswordTextField extends StatelessWidget {
     super.key,
     required this.valueNotifierIsObscure,
     required this.controller,
+    this.hintText,
   });
 
   final ValueNotifier<bool> valueNotifierIsObscure;
   final TextEditingController controller;
+  final String? hintText;
 
   @override
   Widget build(BuildContext context) {
@@ -22,16 +23,17 @@ class CustomPasswordTextField extends StatelessWidget {
         builder: (context, value, child) => CustomTextFormField(
               controller: controller,
               validator: (value) {
-                if (value == null || value.isEmpty) {
+                if (value.isNullOrEmpty()) {
                   return S.of(context).passwordRequired;
                 }
                 return null;
               },
-              hintText: S.of(context).password,
+              hintText: hintText ?? S.of(context).password,
               isObscureText: valueNotifierIsObscure.value,
               suffixIcon: IconButton(
                   onPressed: () {
-                    valueNotifierIsObscure.value = !valueNotifierIsObscure.value;
+                    valueNotifierIsObscure.value =
+                        !valueNotifierIsObscure.value;
                   },
                   icon: value
                       ? const Icon(

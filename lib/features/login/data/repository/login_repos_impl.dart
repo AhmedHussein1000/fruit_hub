@@ -5,7 +5,10 @@ import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fruit_hub/core/errors/exceptions.dart';
 import 'package:fruit_hub/core/errors/failures.dart';
-import 'package:fruit_hub/core/functions/add_user_data.dart';
+import 'package:fruit_hub/core/functions/user_functions/add_user_data.dart';
+import 'package:fruit_hub/core/functions/user_functions/cache_user_data.dart';
+import 'package:fruit_hub/core/functions/user_functions/get_user_from_server.dart';
+import 'package:fruit_hub/core/functions/user_functions/is_user_data_exist.dart';
 import 'package:fruit_hub/core/helpers/cache_helper.dart';
 import 'package:fruit_hub/core/services/firebase_auth_service.dart';
 import 'package:fruit_hub/core/services/firebase_firestore_service.dart';
@@ -27,8 +30,8 @@ class LoginReposImpl extends BaseLoginRepo {
     try {
       User user = await firebaseAuthService.loginWithEmailAndPassword(
           email: email, password: password, localization: localization);
-      UserEntity userEntity = await getUserData(uid: user.uid);
-     await saveUserData(userEntity);
+      UserEntity userEntity = await getUserDataFromServer(uid: user.uid);
+      await cacheUserData(userEntity);
       return Right(userEntity);
     } on CustomException catch (e) {
       return Left(ServerFailure(message: e.message));
@@ -78,29 +81,7 @@ class LoginReposImpl extends BaseLoginRepo {
     }
   }
 
-  Future<UserEntity> getUserData({required String uid}) async {
-    var userData = await firestoreService.getData(
-        path: BackendEndpoints.getUserData, docId: uid);
-    UserEntity userEntity = UserModel.fromJson(userData);
+ 
 
-    return userEntity;
-  }
 
-  Future<void> isUserDataExist(UserEntity userEntity) async {
-    bool isDataExist = await firestoreService.checkIfDataExist(
-        path: BackendEndpoints.isUserExist, docId: userEntity.userId);
-    if (isDataExist) {
-      await getUserData(uid: userEntity.userId);
-          await  saveUserData(userEntity);
-
-    } else {
-      await addUserData(userEntity: userEntity);
-    }
-  }
-
-  Future saveUserData(UserEntity userEntity) async {
-    var jsonData = jsonEncode(UserModel.fromUserEntity(userEntity).toJson());
-
-    await CacheHelper.saveData(key: CacheHelper.userDataKey, value: jsonData);
-  }
 }

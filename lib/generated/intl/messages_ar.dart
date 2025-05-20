@@ -46,10 +46,18 @@ class MessageLookup extends MessageLookupByLibrary {
         "cartIsEmpty": MessageLookupByLibrary.simpleMessage("سلة التسوق فارغة"),
         "cash_on_delivery":
             MessageLookupByLibrary.simpleMessage("الدفع عند الاستلام"),
+        "change_password":
+            MessageLookupByLibrary.simpleMessage("تغيير كلمة المرور"),
+        "changes_saved_successfully":
+            MessageLookupByLibrary.simpleMessage("تم حفظ التغييرات بنجاح."),
         "city": MessageLookupByLibrary.simpleMessage("المدينة"),
         "confirm": MessageLookupByLibrary.simpleMessage("تأكيد"),
+        "confirm_password":
+            MessageLookupByLibrary.simpleMessage("تأكيد كلمة المرور"),
         "createAccount":
             MessageLookupByLibrary.simpleMessage("إنشاء حساب جديد"),
+        "current_password":
+            MessageLookupByLibrary.simpleMessage("كلمة المرور الحالية"),
         "delivery": MessageLookupByLibrary.simpleMessage("التوصيل"),
         "delivery_address":
             MessageLookupByLibrary.simpleMessage("عنوان التوصيل"),
@@ -77,6 +85,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "goodMorning": MessageLookupByLibrary.simpleMessage("صباح الخير !.."),
         "help": MessageLookupByLibrary.simpleMessage("المساعدة"),
         "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
+        "incorrect_password":
+            MessageLookupByLibrary.simpleMessage("كلمة المرور غير صحيحة"),
         "invalidCredential": MessageLookupByLibrary.simpleMessage(
             "البريد الإلكتروني أو كلمة المرور غير صحيحة."),
         "invalidEmail": MessageLookupByLibrary.simpleMessage(
@@ -94,11 +104,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "networkRequestFailed":
             MessageLookupByLibrary.simpleMessage("تحقق من اتصالك بالإنترنت."),
         "newAccount": MessageLookupByLibrary.simpleMessage("حساب جديد"),
+        "new_password":
+            MessageLookupByLibrary.simpleMessage("كلمة المرور الجديدة"),
         "next": MessageLookupByLibrary.simpleMessage("التالي"),
         "noFacebookAccountSelected": MessageLookupByLibrary.simpleMessage(
-            "تم إلغاء تسجيل الدخول بواسطة فيسبوك من قبل المستخدم."),
+            "تم إلغاء تسجيل الدخول بواسطة فيسبوك من قبل المستخدم."),
         "noGoogleAccountSelected": MessageLookupByLibrary.simpleMessage(
-            " تم إلغاء تسجيل الدخول بواسطة جوجل من قبل المستخدم."),
+            " تم إلغاء تسجيل الدخول بواسطة جوجل من قبل المستخدم."),
         "no_favorites_yet":
             MessageLookupByLibrary.simpleMessage("لا توجد مفضلات حتى الآن!"),
         "numberOfPounds": m1,
@@ -117,6 +129,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "passwordRequired":
             MessageLookupByLibrary.simpleMessage("كلمة المرور مطلوبة."),
+        "passwordsDoNotMatch":
+            MessageLookupByLibrary.simpleMessage("كلمات المرور غير متطابقة."),
         "payment": MessageLookupByLibrary.simpleMessage("الدفع"),
         "payment_cancelled":
             MessageLookupByLibrary.simpleMessage("تم الغاء الدفع"),
@@ -129,6 +143,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "paypalPayment":
             MessageLookupByLibrary.simpleMessage("دفع بواسطة Paypal"),
         "personal_file": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
+        "personal_information":
+            MessageLookupByLibrary.simpleMessage("المعلومات الشخصيه"),
         "phone": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
         "pickup_delivery_option":
             MessageLookupByLibrary.simpleMessage("التسليم من المكان"),
@@ -138,6 +154,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "profile": MessageLookupByLibrary.simpleMessage("حسابي"),
         "results": MessageLookupByLibrary.simpleMessage("نتائج"),
         "resultsCount": m2,
+        "save_changes": MessageLookupByLibrary.simpleMessage("حفظ التغييرات"),
         "searchFor": MessageLookupByLibrary.simpleMessage("ابحث عن......."),
         "select_payment_method":
             MessageLookupByLibrary.simpleMessage("يرجي تحديد طريقه الدفع"),

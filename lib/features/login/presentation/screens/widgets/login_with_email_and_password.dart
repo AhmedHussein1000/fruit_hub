@@ -74,7 +74,7 @@ class _LoginWithEmailAndPasswordState extends State<LoginWithEmailAndPassword> {
                       .loginWithEmailAndPassword(localization: S.of(context));
                 }
               },
-              btnText: S.of(context).login),
+              buttonText: S.of(context).login),
         ],
       ),
     );

@@ -8,17 +8,17 @@ class CustomTextFormField extends StatelessWidget {
   const CustomTextFormField({
     super.key,
     this.controller,
-     this.validator,
+    this.validator,
     required this.hintText,
     this.hintTextStyle,
     this.contentPadding,
     this.suffixIcon,
     this.isObscureText,
-    this.fillColor,
     this.textInputStyle,
     this.enabledBorder,
     this.focusedBorder,
-    this.keyboardType, this.onSaved,
+    this.keyboardType,
+    this.onSaved,
   });
   final TextEditingController? controller;
   final String? Function(String?)? validator;
@@ -27,7 +27,6 @@ class CustomTextFormField extends StatelessWidget {
   final EdgeInsetsGeometry? contentPadding;
   final Widget? suffixIcon;
   final bool? isObscureText;
-  final Color? fillColor;
   final TextStyle? textInputStyle;
   final InputBorder? enabledBorder;
   final InputBorder? focusedBorder;
@@ -37,14 +36,14 @@ class CustomTextFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      cursorColor: AppColors.darkGreenPrimaryColor,
       controller: controller,
       onSaved: onSaved,
       validator: validator ??
           (value) {
             if (value.isNullOrEmpty()) {
               return S.of(context).field_required;
-            }
-            else{
+            } else {
               return null;
             }
           },
@@ -57,10 +56,15 @@ class CustomTextFormField extends StatelessWidget {
         errorBorder: customOutlineInputBorder(color: Colors.red),
         focusedErrorBorder: customOutlineInputBorder(color: Colors.red),
         filled: true,
-        fillColor: fillColor ?? AppColors.neutralWhite,
+        fillColor: Theme.of(context).brightness == Brightness.dark
+            ? const Color(0xFF6C7272)
+            : AppColors.neutralWhite,
         hintText: hintText,
         hintStyle: hintTextStyle ??
-            Styles.font13Bold.copyWith(color: AppColors.mediumNeutralGray),
+            Styles.font13Bold.copyWith(
+                color: Theme.of(context).brightness == Brightness.light
+                    ? AppColors.mediumNeutralGray
+                    : null),
         contentPadding: contentPadding,
         suffixIcon: suffixIcon,
       ),

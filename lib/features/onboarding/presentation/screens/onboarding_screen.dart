@@ -30,6 +30,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     });
     super.initState();
   }
+
   @override
   void dispose() {
     pageController.dispose();
@@ -56,14 +57,15 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 maintainAnimation: true,
                 maintainState: true,
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: AppConstants.defaultPadding),
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: AppConstants.defaultPadding),
                   child: CustomButton(
                       onPressed: () {
                         CacheHelper.saveData(
                             key: CacheHelper.onBoardingKey, value: true);
-                        context.pushReplacementNamed(Routes.login);   
+                        context.pushReplacementNamed(Routes.login);
                       },
-                      btnText: S.of(context).startNow),
+                      buttonText: S.of(context).startNow),
                 )),
             SizeConfig.screenHeight > 730 && SizeConfig.screenWidth > 390
                 ? SizedBox(

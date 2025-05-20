@@ -17,4 +17,10 @@ abstract class AuthService {
   bool isLoggedIn();
   Future<void> signOut();
 
+  Future<void> updateUserProfile({required String displayName});
+  Future<void> changePassword({
+    required String currentPassword,
+    required String newPassword,
+    required S localization,
+  });
 }
