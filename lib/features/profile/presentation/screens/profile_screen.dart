@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_hub/features/profile/presentation/screens/widgets/profile_body.dart';
+import 'package:fruit_hub/generated/l10n.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -6,7 +8,10 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(child: Text('profile')),
+      appBar: AppBar(
+        title: Text(S.of(context).profile),
+      ),
+      body: const ProfileBody(),
     );
   }
 }

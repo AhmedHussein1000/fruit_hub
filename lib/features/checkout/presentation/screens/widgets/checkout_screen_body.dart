@@ -93,7 +93,7 @@ class _CheckoutScreenBodyState extends State<CheckoutScreenBody> {
                   _processPaypalPayment(context);
                 }
               },
-              btnText: _getBtnText(currentIndex: currentIndex)),
+              buttonText: _getBtnText(currentIndex: currentIndex)),
           SizedBox(
             height: 32.h,
           ),

@@ -22,6 +22,8 @@
     "field_required" :"This field is required.",
     "noGoogleAccountSelected" : "User has cancelled login with google.",
     "noFacebookAccountSelected" : "User has cancelled login with facebook.",
+    "changes_saved_successfully" : "Changes saved successfully.",
+    "passwordsDoNotMatch" : "Passwords do not match.",
 
 
     
@@ -48,7 +50,7 @@
 
     "weakPassword": "The password provided is too weak.",
     "emailAlreadyInUse": "The account already exists for that email.",
-    
+    "no_favorites_yet": "No favorites yet!",    
 
     "home": "Home",
     "products": "Products",
@@ -120,7 +122,30 @@
     "payment_error" : "Payment error, please try again",
     "payment_success" : "Payment successful",
     "payment_cancelled" : "Payment cancelled",
-    "add_order_failure" : "Failed to add order"
+    "add_order_failure" : "Failed to add order",
+    "unknown" : "Unknown",
+    "general" : "General",
+    "personal_file": "Your Profile",
+   "favorites" : "Favorites",
+   "theme" : "Theme",
+   "language" : "Language",
+   "help" : "Help",
+   "who_are_we" : "Who are we?",
+   "logout" : "Logout",
+   "cancel" : "Cancel",
+   "confirm" : "Confirm",
+   "signout_message" : "Are you want to logout?",
+   "arabic" : "Arabic",
+   "english" : "English",
+   "who_are_we_content": "FruitHub is a premium fruit delivery service dedicated to bringing the freshest, highest quality fruits directly to your doorstep. We work with local farmers to ensure you receive the best produce while supporting sustainable agriculture.",
+   "personal_information" : "Personal Information",
+   "change_password" : "Change Password",
+   "current_password" : "Current Password",
+   "new_password" : "New Password",
+   "confirm_password" : "Confirm Password",
+   "save_changes" : "Save Changes",
+   "incorrect_password" : "Incorrect password"
+
     
 
 }

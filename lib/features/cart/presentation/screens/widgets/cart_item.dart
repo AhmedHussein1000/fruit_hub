@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -13,6 +11,7 @@ import 'package:fruit_hub/features/cart/domain/entities/cart_item_entity.dart';
 import 'package:fruit_hub/features/cart/presentation/controllers/cart_cubit/cart_cubit.dart';
 import 'package:fruit_hub/features/cart/presentation/controllers/cart_item_cubit/cart_item_cubit.dart';
 import 'package:fruit_hub/features/cart/presentation/screens/widgets/cart_item_action_buttons.dart';
+import 'package:fruit_hub/generated/l10n.dart';
 
 class CartItem extends StatelessWidget {
   const CartItem({super.key, required this.cartItemEntity});
@@ -22,15 +21,13 @@ class CartItem extends StatelessWidget {
     return BlocBuilder<CartItemCubit, CartItemState>(
       buildWhen: (previous, current) {
         if (current is CartItemUpdated) {
-          if (current.cartItemEntity ==
-              cartItemEntity) {
+          if (current.cartItemEntity == cartItemEntity) {
             return true;
           }
         }
         return false;
       },
       builder: (context, state) {
-        log('build CartItem');
         return IntrinsicHeight(
           child: Row(
             children: [
@@ -68,7 +65,7 @@ class CartItem extends StatelessWidget {
                     height: 2.h,
                   ),
                   Text(
-                    '${cartItemEntity.calculateTotalWeightforItem()} كيلو',
+                    '${cartItemEntity.calculateTotalWeightforItem()} ${S.of(context).killo}',
                     style: Styles.font13Regular
                         .copyWith(color: AppColors.deepGoldenYellow),
                   ),
@@ -82,7 +79,8 @@ class CartItem extends StatelessWidget {
                         cartItemEntity: cartItemEntity,
                       ),
                       Text(
-                        '${cartItemEntity.calculateTotalPriceforItem()} جنية',
+                        S.of(context).numberOfPounds(
+                            cartItemEntity.calculateTotalPriceforItem()),
                         style: Styles.font16Bold
                             .copyWith(color: AppColors.deepGoldenYellow),
                       )

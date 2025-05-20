@@ -55,7 +55,7 @@ class ProductModel {
       imageUrl: json['imageUrl'],
     );
   }
-
+  
   ProductEntity toEntity() {
     return ProductEntity(
         name: name,

@@ -2,6 +2,10 @@
 class Assets {
   Assets._();
   
+  /// Assets for imagesCamera
+  /// assets/images/camera.svg
+  static const String imagesCamera = "assets/images/camera.svg";
+
   /// Assets for imagesCheck
   /// assets/images/Check.svg
   static const String imagesCheck = "assets/images/Check.svg";
@@ -34,13 +38,33 @@ class Assets {
   /// assets/images/fruit_logo.svg
   static const String imagesFruitLogo = "assets/images/fruit_logo.svg";
 
+  /// Assets for imagesGlobal
+  /// assets/images/global.svg
+  static const String imagesGlobal = "assets/images/global.svg";
+
   /// Assets for imagesGoogleIcon
   /// assets/images/google_icon.svg
   static const String imagesGoogleIcon = "assets/images/google_icon.svg";
 
+  /// Assets for imagesHeart
+  /// assets/images/heart.svg
+  static const String imagesHeart = "assets/images/heart.svg";
+
+  /// Assets for imagesInfoCircle
+  /// assets/images/info-circle.svg
+  static const String imagesInfoCircle = "assets/images/info-circle.svg";
+
   /// Assets for imagesLocation
   /// assets/images/location.svg
   static const String imagesLocation = "assets/images/location.svg";
+
+  /// Assets for imagesMagicpen
+  /// assets/images/magicpen.svg
+  static const String imagesMagicpen = "assets/images/magicpen.svg";
+
+  /// Assets for imagesNoFavoritesYet
+  /// assets/images/no_favorites_yet.png
+  static const String imagesNoFavoritesYet = "assets/images/no_favorites_yet.png";
 
   /// Assets for imagesNotification
   /// assets/images/notification.svg
@@ -117,5 +141,9 @@ class Assets {
   /// Assets for imagesTrash
   /// assets/images/trash.svg
   static const String imagesTrash = "assets/images/trash.svg";
+
+  /// Assets for imagesUser
+  /// assets/images/user.svg
+  static const String imagesUser = "assets/images/user.svg";
 }
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruit_hub/core/di/service_locator.dart';
-import 'package:fruit_hub/core/functions/get_user.dart';
+import 'package:fruit_hub/core/functions/user_functions/get_cached_user.dart';
 import 'package:fruit_hub/core/widgets/custom_leading_button.dart';
 import 'package:fruit_hub/features/cart/domain/entities/cart_entity.dart';
 import 'package:fruit_hub/features/checkout/domain/entities/order_entity.dart';
@@ -23,7 +23,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
   @override
   void initState() {
     orderEntity = OrderEntity(
-        uId: getUser()!.userId,
+        uId: getCachedUser()!.userId,
         cartEntity: widget.cartEntity,
         shippingAddressEntity: ShippingAddressEntity());
     super.initState();

@@ -34,13 +34,15 @@ class ProductsRepoImpl implements BaseProductsRepo {
 
   @override
   Future<Either<Failure, List<ProductEntity>>> getProducts() async {
-  try {
-  var data = await databaseService.getData(path: BackendEndpoints.getProducts) as List<Map<String, dynamic>>;
-       List<ProductEntity> products = data.map((e) => ProductModel.fromJson(e).toEntity()).toList(); 
-       return Right(products);
-}  catch (e) {
-  log('Exception in ProductsRepoImpl.getProducts: ${e.toString()}');
-  return const Left(ServerFailure(message: 'Failed to get products'));
-}
+    try {
+      var data = await databaseService.getData(
+          path: BackendEndpoints.getProducts) as List<Map<String, dynamic>>;
+      List<ProductEntity> products =
+          data.map((e) => ProductModel.fromJson(e).toEntity()).toList();
+      return Right(products);
+    } catch (e) {
+      log('Exception in ProductsRepoImpl.getProducts: ${e.toString()}');
+      return const Left(ServerFailure(message: 'Failed to get products'));
+    }
   }
 }
