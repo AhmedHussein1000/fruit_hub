@@ -12,21 +12,24 @@ class ProductsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    S localization = S.of(context);
+    return BlocProvider(
+      create: (context) =>
+          ProductsCubit(getIt())..getProducts(localization:localization),
+      child: Scaffold(
         appBar: AppBar(
           title: Text(
             S.of(context).products,
           ),
-          actions:  [
+          actions: [
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 16.w),
               child: const NotificationWidget(),
             ),
           ],
         ),
-        body: BlocProvider(
-          create: (context) => ProductsCubit(getIt())..getProducts(),
-          child: const ProductsScreenBody(),
-        ));
+        body: const ProductsScreenBody(),
+      ),
+    );
   }
 }

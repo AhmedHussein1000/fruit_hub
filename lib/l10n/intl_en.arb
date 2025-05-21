@@ -47,7 +47,6 @@
     "invalidCredential": "The email address or password is incorrect.",
     "networkRequestFailed": "Check your internet connection.",
     "unexpectedError": "An unexpected error occurred, please try again.",
-
     "weakPassword": "The password provided is too weak.",
     "emailAlreadyInUse": "The account already exists for that email.",
     "no_favorites_yet": "No favorites yet!",    
@@ -144,7 +143,16 @@
    "new_password" : "New Password",
    "confirm_password" : "Confirm Password",
    "save_changes" : "Save Changes",
-   "incorrect_password" : "Incorrect password"
+   "incorrect_password" : "Incorrect password",
+   "search_products_failure" : "Failed to search products",
+   "search" : "Search",
+   "no_results_found" : "No results found",
+   "sortBy": "Sort By:",
+   "priceLowToHigh": "Price (Low to High)",
+   "priceHighToLow": "Price (High to Low)",
+   "alphabetical": "Alphabetical",
+   "apply": "Apply",
+   "get_products_failure" : "Failed to get products"
 
     
 

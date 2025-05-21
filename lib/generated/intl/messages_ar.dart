@@ -37,8 +37,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "address": MessageLookupByLibrary.simpleMessage("العنوان"),
         "ahmed": MessageLookupByLibrary.simpleMessage("احمد"),
         "ahmedHussein": MessageLookupByLibrary.simpleMessage("احمد حسين"),
+        "alphabetical": MessageLookupByLibrary.simpleMessage("الابجدية"),
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("تمتلك حساب بالفعل؟ "),
+        "apply": MessageLookupByLibrary.simpleMessage("تصفية"),
         "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
         "bestSelling": MessageLookupByLibrary.simpleMessage("الأكثر مبيعًا"),
         "cancel": MessageLookupByLibrary.simpleMessage("إلغاء"),
@@ -82,6 +84,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "free": MessageLookupByLibrary.simpleMessage("مجاني"),
         "fullName": MessageLookupByLibrary.simpleMessage("الاسم كامل"),
         "general": MessageLookupByLibrary.simpleMessage("عام"),
+        "get_products_failure":
+            MessageLookupByLibrary.simpleMessage("فشل في عرض المنتجات"),
         "goodMorning": MessageLookupByLibrary.simpleMessage("صباح الخير !.."),
         "help": MessageLookupByLibrary.simpleMessage("المساعدة"),
         "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
@@ -113,6 +117,8 @@ class MessageLookup extends MessageLookupByLibrary {
             " تم إلغاء تسجيل الدخول بواسطة جوجل من قبل المستخدم."),
         "no_favorites_yet":
             MessageLookupByLibrary.simpleMessage("لا توجد مفضلات حتى الآن!"),
+        "no_results_found":
+            MessageLookupByLibrary.simpleMessage("لم يتم العثور على نتائج"),
         "numberOfPounds": m1,
         "onboardingDescription1": MessageLookupByLibrary.simpleMessage(
             "اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية."),
@@ -150,12 +156,19 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("التسليم من المكان"),
         "pleaseAcceptTerms": MessageLookupByLibrary.simpleMessage(
             "يرجى قبول الشروط والأحكام لاستكمال التسجيل."),
+        "priceHighToLow":
+            MessageLookupByLibrary.simpleMessage("السعر (الأعلى إلى الأقل)"),
+        "priceLowToHigh":
+            MessageLookupByLibrary.simpleMessage("السعر (الأقل إلى الأعلى)"),
         "products": MessageLookupByLibrary.simpleMessage("المنتجات"),
         "profile": MessageLookupByLibrary.simpleMessage("حسابي"),
         "results": MessageLookupByLibrary.simpleMessage("نتائج"),
         "resultsCount": m2,
         "save_changes": MessageLookupByLibrary.simpleMessage("حفظ التغييرات"),
+        "search": MessageLookupByLibrary.simpleMessage("البحث"),
         "searchFor": MessageLookupByLibrary.simpleMessage("ابحث عن......."),
+        "search_products_failure":
+            MessageLookupByLibrary.simpleMessage("فشل في البحث عن المنتجات"),
         "select_payment_method":
             MessageLookupByLibrary.simpleMessage("يرجي تحديد طريقه الدفع"),
         "shipping": MessageLookupByLibrary.simpleMessage("الشحن"),
@@ -168,6 +181,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تم انشاء الحساب بنجاح."),
         "skip": MessageLookupByLibrary.simpleMessage("تخط"),
         "slash": MessageLookupByLibrary.simpleMessage("/"),
+        "sortBy": MessageLookupByLibrary.simpleMessage("ترتيب حسب:"),
         "startNow": MessageLookupByLibrary.simpleMessage("ابدأ الآن"),
         "strawberry": MessageLookupByLibrary.simpleMessage("فراولة"),
         "sub_total": MessageLookupByLibrary.simpleMessage("المجموع الفرعي"),

@@ -53,8 +53,10 @@ class OnboardingPageViewItem extends StatelessWidget {
                     onTap: () {
                       CacheHelper.saveData(
                           key: CacheHelper.onBoardingKey, value: true);
-                     context.pushReplacementNamed(Routes.login);   
-
+                      context.pushNamedAndRemoveUntil(
+                        Routes.login,
+                        predicate: (route) => false,
+                      );
                     },
                     child: Text(
                       S.of(context).skip,

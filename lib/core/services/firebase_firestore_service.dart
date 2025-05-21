@@ -39,6 +39,7 @@ class FirestoreService extends DatabaseService {
     return result.docs.map((e) => e.data()).toList();
   }
 
+  @override
   Future<bool> checkIfDataExist(
       {required String path, required String docId}) async {
     var data = await firestore.collection(path).doc(docId).get();

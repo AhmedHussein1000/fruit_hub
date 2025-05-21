@@ -1169,6 +1169,96 @@ class S {
       args: [],
     );
   }
+
+  /// `Failed to search products`
+  String get search_products_failure {
+    return Intl.message(
+      'Failed to search products',
+      name: 'search_products_failure',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search`
+  String get search {
+    return Intl.message(
+      'Search',
+      name: 'search',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No results found`
+  String get no_results_found {
+    return Intl.message(
+      'No results found',
+      name: 'no_results_found',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sort By:`
+  String get sortBy {
+    return Intl.message(
+      'Sort By:',
+      name: 'sortBy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Price (Low to High)`
+  String get priceLowToHigh {
+    return Intl.message(
+      'Price (Low to High)',
+      name: 'priceLowToHigh',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Price (High to Low)`
+  String get priceHighToLow {
+    return Intl.message(
+      'Price (High to Low)',
+      name: 'priceHighToLow',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Alphabetical`
+  String get alphabetical {
+    return Intl.message(
+      'Alphabetical',
+      name: 'alphabetical',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Apply`
+  String get apply {
+    return Intl.message(
+      'Apply',
+      name: 'apply',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Failed to get products`
+  String get get_products_failure {
+    return Intl.message(
+      'Failed to get products',
+      name: 'get_products_failure',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

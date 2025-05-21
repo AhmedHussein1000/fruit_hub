@@ -37,8 +37,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "address": MessageLookupByLibrary.simpleMessage("Address"),
         "ahmed": MessageLookupByLibrary.simpleMessage("Ahmed"),
         "ahmedHussein": MessageLookupByLibrary.simpleMessage("Ahmed Hussein"),
+        "alphabetical": MessageLookupByLibrary.simpleMessage("Alphabetical"),
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Already have an account?"),
+        "apply": MessageLookupByLibrary.simpleMessage("Apply"),
         "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
         "bestSelling": MessageLookupByLibrary.simpleMessage("Best Selling"),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
@@ -83,6 +85,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "free": MessageLookupByLibrary.simpleMessage("Free"),
         "fullName": MessageLookupByLibrary.simpleMessage("Full Name"),
         "general": MessageLookupByLibrary.simpleMessage("General"),
+        "get_products_failure":
+            MessageLookupByLibrary.simpleMessage("Failed to get products"),
         "goodMorning": MessageLookupByLibrary.simpleMessage("Good Morning..!"),
         "help": MessageLookupByLibrary.simpleMessage("Help"),
         "home": MessageLookupByLibrary.simpleMessage("Home"),
@@ -114,6 +118,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "User has cancelled login with google."),
         "no_favorites_yet":
             MessageLookupByLibrary.simpleMessage("No favorites yet!"),
+        "no_results_found":
+            MessageLookupByLibrary.simpleMessage("No results found"),
         "numberOfPounds": m1,
         "onboardingDescription1": MessageLookupByLibrary.simpleMessage(
             "Discover a unique shopping experience with FruitHUB. Explore our wide range of premium fresh fruits and get the best deals and high quality."),
@@ -153,12 +159,19 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Pickup from Location"),
         "pleaseAcceptTerms": MessageLookupByLibrary.simpleMessage(
             "Please accept our terms and conditions."),
+        "priceHighToLow":
+            MessageLookupByLibrary.simpleMessage("Price (High to Low)"),
+        "priceLowToHigh":
+            MessageLookupByLibrary.simpleMessage("Price (Low to High)"),
         "products": MessageLookupByLibrary.simpleMessage("Products"),
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
         "results": MessageLookupByLibrary.simpleMessage("Results"),
         "resultsCount": m2,
         "save_changes": MessageLookupByLibrary.simpleMessage("Save Changes"),
+        "search": MessageLookupByLibrary.simpleMessage("Search"),
         "searchFor": MessageLookupByLibrary.simpleMessage("Search for......."),
+        "search_products_failure":
+            MessageLookupByLibrary.simpleMessage("Failed to search products"),
         "select_payment_method": MessageLookupByLibrary.simpleMessage(
             "Please select a payment method"),
         "shipping": MessageLookupByLibrary.simpleMessage("Shipping"),
@@ -171,6 +184,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Account created successfully."),
         "skip": MessageLookupByLibrary.simpleMessage("Skip"),
         "slash": MessageLookupByLibrary.simpleMessage("/"),
+        "sortBy": MessageLookupByLibrary.simpleMessage("Sort By:"),
         "startNow": MessageLookupByLibrary.simpleMessage("Start Now"),
         "strawberry": MessageLookupByLibrary.simpleMessage("Strawberry"),
         "sub_total": MessageLookupByLibrary.simpleMessage("Sub Total"),

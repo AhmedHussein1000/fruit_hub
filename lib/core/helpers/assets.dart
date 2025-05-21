@@ -66,6 +66,10 @@ class Assets {
   /// assets/images/no_favorites_yet.png
   static const String imagesNoFavoritesYet = "assets/images/no_favorites_yet.png";
 
+  /// Assets for imagesNoResultsSearch
+  /// assets/images/no_results_search.svg
+  static const String imagesNoResultsSearch = "assets/images/no_results_search.svg";
+
   /// Assets for imagesNotification
   /// assets/images/notification.svg
   static const String imagesNotification = "assets/images/notification.svg";

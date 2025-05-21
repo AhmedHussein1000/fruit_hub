@@ -23,8 +23,13 @@ class FavoritesScreen extends StatelessWidget {
             return Padding(
               padding: const EdgeInsets.all(8.0),
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Image.asset(Assets.imagesNoFavoritesYet),
+                  Image.asset(
+                    Assets.imagesNoFavoritesYet,
+                    height: 200,
+                    width: 200,
+                  ),
                   Center(
                     child: Text(
                       S.of(context).no_favorites_yet,
