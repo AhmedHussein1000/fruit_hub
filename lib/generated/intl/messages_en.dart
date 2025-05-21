@@ -23,15 +23,22 @@ class MessageLookup extends MessageLookupByLibrary {
   static String m0(numberOfCartProducts) =>
       "You have ${numberOfCartProducts} products in your cart";
 
-  static String m1(numberOfPounds) => "${numberOfPounds} Pounds";
+  static String m1(count) => "${count} months";
 
-  static String m2(resultsCount) => "${resultsCount} results";
+  static String m2(numberOfPounds) => "${numberOfPounds} Pounds";
+
+  static String m3(numberOfCalories) => "${numberOfCalories} calories";
+
+  static String m4(numberOfGrams) => "${numberOfGrams} grams";
+
+  static String m5(resultsCount) => "${resultsCount} results";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "CartProductsCount": m0,
         "add_order_failure":
             MessageLookupByLibrary.simpleMessage("Failed to add order"),
+        "add_to_cart": MessageLookupByLibrary.simpleMessage("Add to Cart"),
         "addedToCart":
             MessageLookupByLibrary.simpleMessage("Added to Cart Successfully"),
         "address": MessageLookupByLibrary.simpleMessage("Address"),
@@ -75,6 +82,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "emailRequired":
             MessageLookupByLibrary.simpleMessage("Email is required."),
         "english": MessageLookupByLibrary.simpleMessage("English"),
+        "expiration": MessageLookupByLibrary.simpleMessage("Expiration"),
         "favorites": MessageLookupByLibrary.simpleMessage("Favorites"),
         "field_required":
             MessageLookupByLibrary.simpleMessage("This field is required."),
@@ -98,12 +106,15 @@ class MessageLookup extends MessageLookupByLibrary {
             "The email address is badly formatted."),
         "killo": MessageLookupByLibrary.simpleMessage("Kg"),
         "language": MessageLookupByLibrary.simpleMessage("Language"),
+        "less_than_a_month":
+            MessageLookupByLibrary.simpleMessage("Less than a month"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "loginWithFacebook":
             MessageLookupByLibrary.simpleMessage("Login with Facebook"),
         "loginWithGoogle":
             MessageLookupByLibrary.simpleMessage("Login with Google"),
         "logout": MessageLookupByLibrary.simpleMessage("Logout"),
+        "months_count": m1,
         "more": MessageLookupByLibrary.simpleMessage("More"),
         "nameRequired":
             MessageLookupByLibrary.simpleMessage("Name is required."),
@@ -120,7 +131,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("No favorites yet!"),
         "no_results_found":
             MessageLookupByLibrary.simpleMessage("No results found"),
-        "numberOfPounds": m1,
+        "numberOfPounds": m2,
+        "number_of_calories": m3,
+        "number_of_grams": m4,
         "onboardingDescription1": MessageLookupByLibrary.simpleMessage(
             "Discover a unique shopping experience with FruitHUB. Explore our wide range of premium fresh fruits and get the best deals and high quality."),
         "onboardingDescription2": MessageLookupByLibrary.simpleMessage(
@@ -133,6 +146,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Signing in with email and password is not enabled."),
         "or": MessageLookupByLibrary.simpleMessage("Or"),
         "order_summary": MessageLookupByLibrary.simpleMessage("Order Summary"),
+        "organic": MessageLookupByLibrary.simpleMessage("Organic"),
         "ourTermsAndConditions":
             MessageLookupByLibrary.simpleMessage("our Terms and Conditions"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
@@ -166,7 +180,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "products": MessageLookupByLibrary.simpleMessage("Products"),
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
         "results": MessageLookupByLibrary.simpleMessage("Results"),
-        "resultsCount": m2,
+        "resultsCount": m5,
+        "reviews": MessageLookupByLibrary.simpleMessage("Reviews"),
         "save_changes": MessageLookupByLibrary.simpleMessage("Save Changes"),
         "search": MessageLookupByLibrary.simpleMessage("Search"),
         "searchFor": MessageLookupByLibrary.simpleMessage("Search for......."),

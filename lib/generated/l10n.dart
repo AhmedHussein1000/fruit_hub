@@ -1259,6 +1259,86 @@ class S {
       args: [],
     );
   }
+
+  /// `Expiration`
+  String get expiration {
+    return Intl.message(
+      'Expiration',
+      name: 'expiration',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Organic`
+  String get organic {
+    return Intl.message(
+      'Organic',
+      name: 'organic',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `{numberOfCalories} calories`
+  String number_of_calories(num numberOfCalories) {
+    return Intl.message(
+      '$numberOfCalories calories',
+      name: 'number_of_calories',
+      desc: '',
+      args: [numberOfCalories],
+    );
+  }
+
+  /// `{numberOfGrams} grams`
+  String number_of_grams(int numberOfGrams) {
+    return Intl.message(
+      '$numberOfGrams grams',
+      name: 'number_of_grams',
+      desc: '',
+      args: [numberOfGrams],
+    );
+  }
+
+  /// `Reviews`
+  String get reviews {
+    return Intl.message(
+      'Reviews',
+      name: 'reviews',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add to Cart`
+  String get add_to_cart {
+    return Intl.message(
+      'Add to Cart',
+      name: 'add_to_cart',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Less than a month`
+  String get less_than_a_month {
+    return Intl.message(
+      'Less than a month',
+      name: 'less_than_a_month',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `{count} months`
+  String months_count(int count) {
+    return Intl.message(
+      '$count months',
+      name: 'months_count',
+      desc: '',
+      args: [count],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -24,7 +24,7 @@ abstract class AppColors {
   static const Color lightGrayishBlue = Color(0xFFD1D5DB);
   static const Color neutralColors400 = Color(0xFFD6DCE5);
   static const Color neutralLightGray = Color(0xFFD9D9D9);
-    static const Color veryLightGray = Color(0x33D9D9D9);
+  static const Color veryLightGray = Color(0x33D9D9D9);
 
   static const Color ashGray = Color(0xFFDCDEDE);
   static const Color softGray = Color(0xFFC9CECF);
@@ -53,6 +53,7 @@ abstract class AppColors {
   static const Color softYellow = Color(0xFFF7F9E8);
   static const Color deepGoldenYellow = Color(0xFFF3A91F);
   static const Color lightGold = Color(0xFFF8C76D);
+  static const Color gold = Color(0xFFFFC529);
   static const Color softRed = Color(0xFFE4815E);
   static const Color brightRed = Color(0xFFF24135);
   static const Color vibrantRed = Color(0xFFEB5757);

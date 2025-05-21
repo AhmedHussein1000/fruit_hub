@@ -151,6 +151,37 @@
     "priceHighToLow": "السعر (الأعلى إلى الأقل)",
     "alphabetical": "الابجدية",
     "apply": "تصفية",
-    "get_products_failure": "فشل في عرض المنتجات" 
-    
+    "get_products_failure": "فشل في عرض المنتجات", 
+    "expiration" : "الصلاحية",
+    "organic" : "اورجانيك",
+    "number_of_calories" : "{numberOfCalories} كالوري",
+    "@number_of_calories": {
+        "placeholders": {
+            "numberOfCalories": {
+                "type": "num"
+                }
+            }
+    },
+    "number_of_grams" : "{numberOfGrams} جرام",
+    "@number_of_grams": {
+        "placeholders": {
+            "numberOfGrams": {
+                "type": "int"
+                }
+            }
+    },
+    "reviews" : "المراجعات",
+    "add_to_cart" : "اضف الي السله",
+    "less_than_a_month" : "اقل من شهر",
+    "months_count": "{count} شهر",
+        "@months_count": {
+          "placeholders": {
+            "count": {
+              "type": "int"
+            }
+          }
+        }
+      
+
+
 }

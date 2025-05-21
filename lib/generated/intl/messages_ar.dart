@@ -23,15 +23,22 @@ class MessageLookup extends MessageLookupByLibrary {
   static String m0(numberOfCartProducts) =>
       "لديك ${numberOfCartProducts} منتجات في سله التسوق";
 
-  static String m1(numberOfPounds) => "${numberOfPounds} جنيه ";
+  static String m1(count) => "${count} شهر";
 
-  static String m2(resultsCount) => "${resultsCount} نتائج";
+  static String m2(numberOfPounds) => "${numberOfPounds} جنيه ";
+
+  static String m3(numberOfCalories) => "${numberOfCalories} كالوري";
+
+  static String m4(numberOfGrams) => "${numberOfGrams} جرام";
+
+  static String m5(resultsCount) => "${resultsCount} نتائج";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "CartProductsCount": m0,
         "add_order_failure":
             MessageLookupByLibrary.simpleMessage("فشل في اضافه الطلب"),
+        "add_to_cart": MessageLookupByLibrary.simpleMessage("اضف الي السله"),
         "addedToCart": MessageLookupByLibrary.simpleMessage(
             "تمت الإضافة الي سله التسوق بنجاح"),
         "address": MessageLookupByLibrary.simpleMessage("العنوان"),
@@ -74,6 +81,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "emailRequired":
             MessageLookupByLibrary.simpleMessage("البريد الإلكتروني مطلوب."),
         "english": MessageLookupByLibrary.simpleMessage("الانجليزية"),
+        "expiration": MessageLookupByLibrary.simpleMessage("الصلاحية"),
         "favorites": MessageLookupByLibrary.simpleMessage("المفضلة"),
         "field_required":
             MessageLookupByLibrary.simpleMessage("هذا الحقل مطلوب."),
@@ -97,12 +105,14 @@ class MessageLookup extends MessageLookupByLibrary {
             "تنسيق البريد الإلكتروني غير صحيح."),
         "killo": MessageLookupByLibrary.simpleMessage("كيلو"),
         "language": MessageLookupByLibrary.simpleMessage("اللغة"),
+        "less_than_a_month": MessageLookupByLibrary.simpleMessage("اقل من شهر"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
         "loginWithFacebook":
             MessageLookupByLibrary.simpleMessage("تسجيل بواسطة فيسبوك"),
         "loginWithGoogle":
             MessageLookupByLibrary.simpleMessage("تسجيل بواسطة جوجل"),
         "logout": MessageLookupByLibrary.simpleMessage("تسجيل خروج"),
+        "months_count": m1,
         "more": MessageLookupByLibrary.simpleMessage("المزيد"),
         "nameRequired": MessageLookupByLibrary.simpleMessage("الاسم مطلوب."),
         "networkRequestFailed":
@@ -119,7 +129,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("لا توجد مفضلات حتى الآن!"),
         "no_results_found":
             MessageLookupByLibrary.simpleMessage("لم يتم العثور على نتائج"),
-        "numberOfPounds": m1,
+        "numberOfPounds": m2,
+        "number_of_calories": m3,
+        "number_of_grams": m4,
         "onboardingDescription1": MessageLookupByLibrary.simpleMessage(
             "اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية."),
         "onboardingDescription2": MessageLookupByLibrary.simpleMessage(
@@ -130,6 +142,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "تسجيل الدخول بالبريد وكلمة المرور غير مفعل."),
         "or": MessageLookupByLibrary.simpleMessage("أو"),
         "order_summary": MessageLookupByLibrary.simpleMessage("ملخص الطلب"),
+        "organic": MessageLookupByLibrary.simpleMessage("اورجانيك"),
         "ourTermsAndConditions":
             MessageLookupByLibrary.simpleMessage("الشروط والأحكام الخاصة بنا"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
@@ -163,7 +176,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "products": MessageLookupByLibrary.simpleMessage("المنتجات"),
         "profile": MessageLookupByLibrary.simpleMessage("حسابي"),
         "results": MessageLookupByLibrary.simpleMessage("نتائج"),
-        "resultsCount": m2,
+        "resultsCount": m5,
+        "reviews": MessageLookupByLibrary.simpleMessage("المراجعات"),
         "save_changes": MessageLookupByLibrary.simpleMessage("حفظ التغييرات"),
         "search": MessageLookupByLibrary.simpleMessage("البحث"),
         "searchFor": MessageLookupByLibrary.simpleMessage("ابحث عن......."),

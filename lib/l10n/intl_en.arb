@@ -152,8 +152,36 @@
    "priceHighToLow": "Price (High to Low)",
    "alphabetical": "Alphabetical",
    "apply": "Apply",
-   "get_products_failure" : "Failed to get products"
-
-    
+   "get_products_failure" : "Failed to get products",
+   "expiration" : "Expiration",
+   "organic" : "Organic",
+   "number_of_calories" : "{numberOfCalories} calories",
+   "@number_of_calories": {
+       "placeholders": {
+           "numberOfCalories": {
+               "type": "num"
+               }
+           }
+   },
+   "number_of_grams" : "{numberOfGrams} grams",
+   "@number_of_grams": {
+       "placeholders": {
+           "numberOfGrams": {
+               "type": "int"
+               }
+           }
+   },
+   "reviews" : "Reviews",
+   "add_to_cart" : "Add to Cart",
+   "less_than_a_month" : "Less than a month",
+    "months_count": "{count} months",
+    "@months_count": {
+      "placeholders": {
+        "count": {
+          "type": "int"
+        }
+      }
+    }
+  
 
 }

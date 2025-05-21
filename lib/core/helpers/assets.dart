@@ -2,6 +2,14 @@
 class Assets {
   Assets._();
   
+  /// Assets for imagesAppIcon
+  /// assets/images/app_icon.png
+  static const String imagesAppIcon = "assets/images/app_icon.png";
+
+  /// Assets for imagesCalories
+  /// assets/images/calories.svg
+  static const String imagesCalories = "assets/images/calories.svg";
+
   /// Assets for imagesCamera
   /// assets/images/camera.svg
   static const String imagesCamera = "assets/images/camera.svg";
@@ -13,6 +21,10 @@ class Assets {
   /// Assets for imagesEdit
   /// assets/images/edit.svg
   static const String imagesEdit = "assets/images/edit.svg";
+
+  /// Assets for imagesExpiration
+  /// assets/images/expiration.svg
+  static const String imagesExpiration = "assets/images/expiration.svg";
 
   /// Assets for imagesFacebookIcon
   /// assets/images/facebook_icon.svg
@@ -34,6 +46,10 @@ class Assets {
   /// assets/images/filter2.svg
   static const String imagesFilter2 = "assets/images/filter2.svg";
 
+  /// Assets for imagesFruitIconForeground
+  /// assets/images/fruit_icon_foreground.png
+  static const String imagesFruitIconForeground = "assets/images/fruit_icon_foreground.png";
+
   /// Assets for imagesFruitLogo
   /// assets/images/fruit_logo.svg
   static const String imagesFruitLogo = "assets/images/fruit_logo.svg";
@@ -41,6 +57,10 @@ class Assets {
   /// Assets for imagesGlobal
   /// assets/images/global.svg
   static const String imagesGlobal = "assets/images/global.svg";
+
+  /// Assets for imagesGoldStar
+  /// assets/images/gold_star.svg
+  static const String imagesGoldStar = "assets/images/gold_star.svg";
 
   /// Assets for imagesGoogleIcon
   /// assets/images/google_icon.svg
@@ -89,6 +109,10 @@ class Assets {
   /// Assets for imagesOnboardingItem2Image
   /// assets/images/onboarding_item2_image.svg
   static const String imagesOnboardingItem2Image = "assets/images/onboarding_item2_image.svg";
+
+  /// Assets for imagesOrganic
+  /// assets/images/organic.svg
+  static const String imagesOrganic = "assets/images/organic.svg";
 
   /// Assets for imagesPlant
   /// assets/images/plant.svg
