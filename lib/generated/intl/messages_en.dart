@@ -37,8 +37,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "address": MessageLookupByLibrary.simpleMessage("Address"),
         "ahmed": MessageLookupByLibrary.simpleMessage("Ahmed"),
         "ahmedHussein": MessageLookupByLibrary.simpleMessage("Ahmed Hussein"),
+        "alphabetical": MessageLookupByLibrary.simpleMessage("Alphabetical"),
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Already have an account?"),
+        "apply": MessageLookupByLibrary.simpleMessage("Apply"),
         "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
         "bestSelling": MessageLookupByLibrary.simpleMessage("Best Selling"),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
@@ -83,6 +85,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "free": MessageLookupByLibrary.simpleMessage("Free"),
         "fullName": MessageLookupByLibrary.simpleMessage("Full Name"),
         "general": MessageLookupByLibrary.simpleMessage("General"),
+        "get_products_failure":
+            MessageLookupByLibrary.simpleMessage("Failed to get products"),
         "goodMorning": MessageLookupByLibrary.simpleMessage("Good Morning..!"),
         "help": MessageLookupByLibrary.simpleMessage("Help"),
         "home": MessageLookupByLibrary.simpleMessage("Home"),
@@ -155,6 +159,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Pickup from Location"),
         "pleaseAcceptTerms": MessageLookupByLibrary.simpleMessage(
             "Please accept our terms and conditions."),
+        "priceHighToLow":
+            MessageLookupByLibrary.simpleMessage("Price (High to Low)"),
+        "priceLowToHigh":
+            MessageLookupByLibrary.simpleMessage("Price (Low to High)"),
         "products": MessageLookupByLibrary.simpleMessage("Products"),
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
         "results": MessageLookupByLibrary.simpleMessage("Results"),
@@ -176,6 +184,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Account created successfully."),
         "skip": MessageLookupByLibrary.simpleMessage("Skip"),
         "slash": MessageLookupByLibrary.simpleMessage("/"),
+        "sortBy": MessageLookupByLibrary.simpleMessage("Sort By:"),
         "startNow": MessageLookupByLibrary.simpleMessage("Start Now"),
         "strawberry": MessageLookupByLibrary.simpleMessage("Strawberry"),
         "sub_total": MessageLookupByLibrary.simpleMessage("Sub Total"),

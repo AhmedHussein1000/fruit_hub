@@ -3,7 +3,7 @@ import 'package:fruit_hub/core/di/service_locator.dart';
 import 'package:fruit_hub/core/functions/custom_dialog.dart';
 import 'package:fruit_hub/core/helpers/extensions.dart';
 import 'package:fruit_hub/core/routes/routes.dart';
-import 'package:fruit_hub/core/services/firebase_auth_service.dart';
+import 'package:fruit_hub/core/services/auth_service.dart';
 import 'package:fruit_hub/core/themes/app_colors.dart';
 import 'package:fruit_hub/core/themes/styles.dart';
 import 'package:fruit_hub/generated/l10n.dart';
@@ -21,11 +21,12 @@ class LogoutButton extends StatelessWidget {
             context: context,
             onConfirm: () {
               context.pop();
-              getIt<FirebaseAuthService>().signOut();
-              Navigator.of(context, rootNavigator: true).pushNamedAndRemoveUntil(
-          Routes.login,
-          (route) => false,
-        );
+              getIt<AuthService>().signOut();
+              Navigator.of(context, rootNavigator: true)
+                  .pushNamedAndRemoveUntil(
+                Routes.login,
+                (route) => false,
+              );
             },
             title: S.of(context).signout_message);
       },

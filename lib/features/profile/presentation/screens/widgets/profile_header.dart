@@ -11,7 +11,6 @@ class ProfileHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
     return BlocBuilder<PersonalInfoCubit, PersonalInfoState>(
       builder: (context, state) {
         final user = getCachedUser();
@@ -22,9 +21,11 @@ class ProfileHeader extends StatelessWidget {
           title: Text(
             user?.name ?? S.of(context).unknown,
             style: Styles.font16SemiBold,
+            overflow: TextOverflow.ellipsis,
           ),
           subtitle: Text(
             user?.email ?? '',
+            overflow: TextOverflow.ellipsis,
             style:
                 Styles.font13Regular.copyWith(color: const Color(0xFF888FA0)),
           ),

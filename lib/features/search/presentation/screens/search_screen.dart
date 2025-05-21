@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:fruit_hub/core/di/service_locator.dart';
+import 'package:fruit_hub/core/helpers/assets.dart';
 import 'package:fruit_hub/core/themes/app_colors.dart';
 import 'package:fruit_hub/core/themes/styles.dart';
 import 'package:fruit_hub/core/widgets/custom_circle_progress_indicator.dart';
@@ -53,7 +55,15 @@ class _SearchScreenState extends State<SearchScreen> {
                     autofocus: true,
                     decoration: InputDecoration(
                       hintText: S.of(context).searchFor,
-                      prefixIcon: const Icon(Icons.search),
+                      prefixIcon: SizedBox(
+                        height: 20,
+                        width: 20,
+                        child: Center(
+                          child: SvgPicture.asset(
+                            Assets.imagesSearch,
+                          ),
+                        ),
+                      ),
                       border: _customOutlineInputBorder(),
                       enabledBorder: _customOutlineInputBorder(),
                       focusedBorder: _customOutlineInputBorder(),
@@ -97,9 +107,20 @@ class _SearchScreenState extends State<SearchScreen> {
   Widget _buildSearchResults(SearchState state, BuildContext context) {
     if (state is SearchSuccess) {
       if (state.products.isEmpty) {
-        return Center(
-          child: Text(S.of(context).no_results_found,
-              style: Styles.font16SemiBold),
+        return Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SvgPicture.asset(
+              Assets.imagesNoResultsSearch,
+              height: 200,
+              width: 200,
+            ),
+            const SizedBox(height: 16),
+            Center(
+              child: Text(S.of(context).no_results_found,
+                  style: Styles.font16SemiBold),
+            ),
+          ],
         );
       }
       return CustomScrollView(

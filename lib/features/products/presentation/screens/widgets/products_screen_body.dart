@@ -25,7 +25,7 @@ class ProductsScreenBody extends StatelessWidget {
                 SizedBox(
                   height: 16.h,
                 ),
-                ProductsScreenHeader(
+             const   ProductsScreenHeader(
                   ),
                 SizedBox(
                   height: 16.h,

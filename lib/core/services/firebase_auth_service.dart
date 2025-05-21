@@ -7,7 +7,7 @@ import 'package:fruit_hub/generated/l10n.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 
-class FirebaseAuthService implements AuthService {
+class FirebaseAuthService extends AuthService {
   final _firebaseAuth = FirebaseAuth.instance;
   @override
   Future<User> loginWithEmailAndPassword({
@@ -133,13 +133,11 @@ class FirebaseAuthService implements AuthService {
 
   @override
   Future<void> updateUserProfile({required String displayName}) async {
-  
-      User? user = _firebaseAuth.currentUser;
-      if (user != null) {
-        await user.updateDisplayName(displayName);
-      }
-    } 
-  
+    User? user = _firebaseAuth.currentUser;
+    if (user != null) {
+      await user.updateDisplayName(displayName);
+    }
+  }
 
   @override
   Future<void> changePassword({

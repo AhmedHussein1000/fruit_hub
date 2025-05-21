@@ -29,6 +29,7 @@ class HomeAppbar extends StatelessWidget {
           subtitle: Text(
             user?.name ?? S.of(context).unknown,
             style: Styles.font16Bold,
+            overflow: TextOverflow.ellipsis,
           ),
           trailing: const NotificationWidget(),
         );

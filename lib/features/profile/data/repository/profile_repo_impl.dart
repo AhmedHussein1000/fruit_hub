@@ -5,15 +5,15 @@ import 'package:fruit_hub/core/functions/user_functions/add_user_data.dart';
 import 'package:fruit_hub/core/functions/user_functions/cache_user_data.dart';
 import 'package:fruit_hub/core/functions/user_functions/get_cached_user.dart';
 import 'package:fruit_hub/core/functions/user_functions/get_user_from_server.dart';
-import 'package:fruit_hub/core/services/firebase_auth_service.dart';
+import 'package:fruit_hub/core/services/auth_service.dart';
 import 'package:fruit_hub/features/profile/domain/repository/base_profile_repo.dart';
 import 'package:fruit_hub/features/signup/domain/entities/user_entity.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 
 class ProfileRepoImpl implements BaseProfileRepo {
-  final FirebaseAuthService firebaseAuthService;
+  final AuthService authService;
 
-  ProfileRepoImpl(this.firebaseAuthService);
+  ProfileRepoImpl(this.authService);
 
   @override
   Future<Either<Failure, UserEntity>> updateUserProfile({
@@ -21,7 +21,7 @@ class ProfileRepoImpl implements BaseProfileRepo {
     required S localization,
   }) async {
     try {
-      await firebaseAuthService.updateUserProfile(displayName: displayName);
+      await authService.updateUserProfile(displayName: displayName);
 
       UserEntity updatedUser = UserEntity(
         userId: getCachedUser()!.userId,
@@ -46,7 +46,7 @@ class ProfileRepoImpl implements BaseProfileRepo {
     required S localization,
   }) async {
     try {
-      await firebaseAuthService.changePassword(
+      await authService.changePassword(
         currentPassword: currentPassword,
         newPassword: newPassword,
         localization: localization,

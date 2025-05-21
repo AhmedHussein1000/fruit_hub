@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fruit_hub/core/helpers/assets.dart';
 import 'package:fruit_hub/core/helpers/extensions.dart';
-import 'package:fruit_hub/core/routes/routes.dart';
 import 'package:fruit_hub/core/themes/app_colors.dart';
 import 'package:fruit_hub/features/search/presentation/screens/search_screen.dart';
 import 'package:fruit_hub/generated/l10n.dart';
@@ -52,15 +51,6 @@ class SearchTextField extends StatelessWidget {
                 fontSize: 13,
                 fontWeight: FontWeight.w400,
                 color: AppColors.mediumNeutralGray),
-            suffixIcon: SizedBox(
-              height: 20,
-              width: 20,
-              child: Center(
-              child: SvgPicture.asset(
-                Assets.imagesFilter,
-              ),
-            ),
-          ),
         ),
       ),
     ));
