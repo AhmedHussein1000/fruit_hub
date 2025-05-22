@@ -150,6 +150,46 @@ class S {
     );
   }
 
+  /// `Password reset email sent. Please check your inbox.`
+  String get passwordResetEmailSent {
+    return Intl.message(
+      'Password reset email sent. Please check your inbox.',
+      name: 'passwordResetEmailSent',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Reset Password`
+  String get resetPassword {
+    return Intl.message(
+      'Reset Password',
+      name: 'resetPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your email address and we'll send you instructions to reset your password.`
+  String get resetPasswordInstructions {
+    return Intl.message(
+      'Enter your email address and we\'ll send you instructions to reset your password.',
+      name: 'resetPasswordInstructions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send Reset Link`
+  String get sendResetLink {
+    return Intl.message(
+      'Send Reset Link',
+      name: 'sendResetLink',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Don't have an account?`
   String get dontHaveAnAccount {
     return Intl.message(

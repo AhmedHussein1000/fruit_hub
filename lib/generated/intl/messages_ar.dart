@@ -148,6 +148,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "passwordRequired":
             MessageLookupByLibrary.simpleMessage("كلمة المرور مطلوبة."),
+        "passwordResetEmailSent": MessageLookupByLibrary.simpleMessage(
+            "تم إرسال رابط إعادة تعيين كلمة المرور. يرجى التحقق من بريدك الإلكتروني."),
         "passwordsDoNotMatch":
             MessageLookupByLibrary.simpleMessage("كلمات المرور غير متطابقة."),
         "payment": MessageLookupByLibrary.simpleMessage("الدفع"),
@@ -175,6 +177,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("السعر (الأقل إلى الأعلى)"),
         "products": MessageLookupByLibrary.simpleMessage("المنتجات"),
         "profile": MessageLookupByLibrary.simpleMessage("حسابي"),
+        "resetPassword":
+            MessageLookupByLibrary.simpleMessage("إعادة تعيين كلمة المرور"),
+        "resetPasswordInstructions": MessageLookupByLibrary.simpleMessage(
+            "أدخل عنوان بريدك الإلكتروني وسنرسل لك تعليمات لإعادة تعيين كلمة المرور الخاصة بك."),
         "results": MessageLookupByLibrary.simpleMessage("نتائج"),
         "resultsCount": m5,
         "reviews": MessageLookupByLibrary.simpleMessage("المراجعات"),
@@ -185,6 +191,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("فشل في البحث عن المنتجات"),
         "select_payment_method":
             MessageLookupByLibrary.simpleMessage("يرجي تحديد طريقه الدفع"),
+        "sendResetLink":
+            MessageLookupByLibrary.simpleMessage("إرسال رابط إعادة التعيين"),
         "shipping": MessageLookupByLibrary.simpleMessage("الشحن"),
         "shopNow": MessageLookupByLibrary.simpleMessage("تسوق الان"),
         "shoppingCart": MessageLookupByLibrary.simpleMessage("سلة التسوق"),

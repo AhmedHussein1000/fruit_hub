@@ -170,4 +170,26 @@ class FirebaseAuthService extends AuthService {
       throw CustomException(message: localization.unexpectedError);
     }
   }
+
+  @override
+  Future<void> sendPasswordResetEmail({
+    required String email,
+    required S localization,
+  }) async {
+    try {
+      await _firebaseAuth.sendPasswordResetEmail(email: email);
+    } on FirebaseAuthException catch (e) {
+      log("Exception in FirebaseAuthService.sendPasswordResetEmail: ${e.toString()} and code is ${e.code}");
+      if (e.code == 'user-not-found') {
+        throw CustomException(message: localization.userNotFound);
+      } else if (e.code == 'invalid-email') {
+        throw CustomException(message: localization.invalidEmail);
+      } else {
+        throw CustomException(message: localization.unexpectedError);
+      }
+    } catch (e) {
+      log("Exception in FirebaseAuthService.sendPasswordResetEmail: ${e.toString()}");
+      throw CustomException(message: localization.unexpectedError);
+    }
+  }
 }

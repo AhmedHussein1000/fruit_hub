@@ -152,6 +152,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "passwordRequired":
             MessageLookupByLibrary.simpleMessage("Password is required."),
+        "passwordResetEmailSent": MessageLookupByLibrary.simpleMessage(
+            "Password reset email sent. Please check your inbox."),
         "passwordsDoNotMatch":
             MessageLookupByLibrary.simpleMessage("Passwords do not match."),
         "payment": MessageLookupByLibrary.simpleMessage("Payment"),
@@ -179,6 +181,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Price (Low to High)"),
         "products": MessageLookupByLibrary.simpleMessage("Products"),
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
+        "resetPassword": MessageLookupByLibrary.simpleMessage("Reset Password"),
+        "resetPasswordInstructions": MessageLookupByLibrary.simpleMessage(
+            "Enter your email address and we\'ll send you instructions to reset your password."),
         "results": MessageLookupByLibrary.simpleMessage("Results"),
         "resultsCount": m5,
         "reviews": MessageLookupByLibrary.simpleMessage("Reviews"),
@@ -189,6 +194,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Failed to search products"),
         "select_payment_method": MessageLookupByLibrary.simpleMessage(
             "Please select a payment method"),
+        "sendResetLink":
+            MessageLookupByLibrary.simpleMessage("Send Reset Link"),
         "shipping": MessageLookupByLibrary.simpleMessage("Shipping"),
         "shopNow": MessageLookupByLibrary.simpleMessage("Shop Now"),
         "shoppingCart": MessageLookupByLibrary.simpleMessage("Cart"),

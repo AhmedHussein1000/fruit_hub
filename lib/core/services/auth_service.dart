@@ -23,4 +23,9 @@ abstract class AuthService {
     required String newPassword,
     required S localization,
   });
+
+  Future<void> sendPasswordResetEmail({
+    required String email,
+    required S localization,
+  });
 }

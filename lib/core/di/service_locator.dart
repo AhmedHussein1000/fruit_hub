@@ -5,6 +5,8 @@ import 'package:fruit_hub/core/repos/products_repo/products_repo_impl.dart';
 import 'package:fruit_hub/core/services/auth_service.dart';
 import 'package:fruit_hub/core/services/database_service.dart';
 import 'package:fruit_hub/core/services/firebase_auth_service.dart';
+import 'package:fruit_hub/features/forgot_password/data/repository/forgot_password_repo_impl.dart';
+import 'package:fruit_hub/features/forgot_password/domain/repository/base_forgot_password_repo.dart';
 import 'package:fruit_hub/core/services/firebase_firestore_service.dart';
 import 'package:fruit_hub/features/login/data/repository/login_repos_impl.dart';
 import 'package:fruit_hub/features/login/domain/repository/base_login_repo.dart';
@@ -42,6 +44,11 @@ void setupServiceLocator() {
   getIt.registerLazySingleton<AuthService>(
     () => FirebaseAuthService(),
   );
+
+  getIt.registerLazySingleton<BaseForgotPasswordRepo>(
+      () => ForgotPasswordRepoImpl(
+            getIt(),
+          ));
   getIt.registerLazySingleton<DatabaseService>(
     () => FirestoreService(),
   );
