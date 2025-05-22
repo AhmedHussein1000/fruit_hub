@@ -61,9 +61,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       horizontal: AppConstants.defaultPadding),
                   child: CustomButton(
                       onPressed: () {
-                         CacheHelper.saveData(
+                        CacheHelper.saveData(
                             key: CacheHelper.onBoardingKey, value: true);
-                        context.pushNamedAndRemoveUntil(Routes.login,predicate: (route) => false,);
+                        context.pushNamedAndRemoveUntil(
+                          Routes.login,
+                          predicate: (route) => false,
+                        );
                       },
                       buttonText: S.of(context).startNow),
                 )),
