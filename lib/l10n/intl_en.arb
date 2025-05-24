@@ -1,0 +1,191 @@
+{
+    "@@locale": "en",
+    "skip": "Skip",
+    "welcome": "Welcome to",
+    "onboardingDescription1": "Discover a unique shopping experience with FruitHUB. Explore our wide range of premium fresh fruits and get the best deals and high quality.",
+    "onboardingTitle2": "Search and Shop",
+    "onboardingDescription2": "We bring you the best carefully selected fruits. View details, images, and reviews to make sure you choose the perfect fruit.",
+    "startNow": "Start Now",
+
+    "login": "Login",
+    "email": "Email Address",
+    "password": "Password",
+    "forrgotPassword": "Forgot Password?",
+    "passwordResetEmailSent": "Password reset email sent. Please check your inbox.",
+    "resetPassword": "Reset Password",
+    "resetPasswordInstructions": "Enter your email address and we'll send you instructions to reset your password.",
+    "sendResetLink": "Send Reset Link",
+    "dontHaveAnAccount": "Don't have an account?",
+    "signup": " Sign Up",
+    "or": "Or",
+    "loginWithGoogle": "Login with Google",
+    "loginWithFacebook": "Login with Facebook",
+    "nameRequired": "Name is required.",
+    "emailRequired": "Email is required.",
+    "passwordRequired": "Password is required.",
+    "field_required" :"This field is required.",
+    "noGoogleAccountSelected" : "User has cancelled login with google.",
+    "noFacebookAccountSelected" : "User has cancelled login with facebook.",
+    "changes_saved_successfully" : "Changes saved successfully.",
+    "passwordsDoNotMatch" : "Passwords do not match.",
+
+
+    
+    "newAccount": "New Account",
+    "fullName": "Full Name",
+    "termsAgreement": "By creating an account, you agree to",
+    "ourTermsAndConditions": "our Terms and Conditions",
+    "createAccount": "Create New Account",
+    "alreadyHaveAnAccount": "Already have an account?",
+    "pleaseAcceptTerms": "Please accept our terms and conditions.",
+    "signupSuccessful": "Account created successfully.",
+      
+
+
+    "userNotFound": "No user found for that email.",
+    "wrongPassword": "Wrong password provided for that user.",
+    "invalidEmail": "The email address is badly formatted.",
+    "userDisabled": "This user account has been disabled.",
+    "operationNotAllowed": "Signing in with email and password is not enabled.",
+    "tooManyRequests": "Too many requests. Try again later.",
+    "invalidCredential": "The email address or password is incorrect.",
+    "networkRequestFailed": "Check your internet connection.",
+    "unexpectedError": "An unexpected error occurred, please try again.",
+    "weakPassword": "The password provided is too weak.",
+    "emailAlreadyInUse": "The account already exists for that email.",
+    "no_favorites_yet": "No favorites yet!",    
+
+    "home": "Home",
+    "products": "Products",
+    "shoppingCart": "Cart",
+    "profile": "Profile",
+
+    
+    "goodMorning": "Good Morning..!",
+    "ahmedHussein" : "Ahmed Hussein",
+    "searchFor" : "Search for.......",
+
+    "eidOffers" : "Eid Offers",
+    "discount25" : "Discount 25%",
+    "shopNow" : "Shop Now",
+    "bestSelling" : "Best Selling",
+    "more" : "More",
+    "strawberry" : "Strawberry",
+    "numberOfPounds" : "{numberOfPounds} Pounds",
+    "@numberOfPounds": {
+        "placeholders": {
+            "numberOfPounds": {
+                "type": "num"
+                }
+            }
+    },
+    "slash" : "/",
+    "killo" : "Kg",
+    "results" : "Results",
+    "ahmed" : "Ahmed",
+    "resultsCount" : "{resultsCount} results",
+    "@resultsCount": {
+        "placeholders": {
+            "resultsCount": {
+                "type": "int"
+                }
+            }
+    },
+    "cart" : "Cart",
+    "CartProductsCount" :"You have {numberOfCartProducts} products in your cart",
+    "@CartProductsCount": {
+        "placeholders": {
+            "numberOfCartProducts": {
+                "type": "int"
+                }
+            }
+    },
+    "payment" : "Payment",
+    "addedToCart" : "Added to Cart Successfully",
+    "shipping" : "Shipping",
+    "address" : "Address",
+    "cartIsEmpty" : "Your Cart is Empty",
+    "next" : "Next",
+    "paypalPayment" : "Pay with Paypal",
+    "cash_on_delivery": "Cash on Delivery",
+    "pickup_delivery_option": "Pickup from Location",
+    "online_payment": "Online Payment",
+    "payment_method": "Please select a payment method",
+    "free" : "Free",
+    "city" : "City",
+    "floor_and_apartment" : "Floor and Apartment",
+    "phone" : "Phone",
+     "order_summary": "Order Summary",
+    "sub_total" : "Sub Total",
+    "delivery" : "Delivery",
+    "total" : "Total",
+    "delivery_address" : "Delivery Address",
+    "edit" : "Edit",
+    "select_payment_method" : "Please select a payment method",
+    "payment_error" : "Payment error, please try again",
+    "payment_success" : "Payment successful",
+    "payment_cancelled" : "Payment cancelled",
+    "add_order_failure" : "Failed to add order",
+    "unknown" : "Unknown",
+    "general" : "General",
+    "personal_file": "Your Profile",
+   "favorites" : "Favorites",
+   "theme" : "Theme",
+   "language" : "Language",
+   "help" : "Help",
+   "who_are_we" : "Who are we?",
+   "logout" : "Logout",
+   "cancel" : "Cancel",
+   "confirm" : "Confirm",
+   "signout_message" : "Are you want to logout?",
+   "arabic" : "Arabic",
+   "english" : "English",
+   "who_are_we_content": "FruitHub is a premium fruit delivery service dedicated to bringing the freshest, highest quality fruits directly to your doorstep. We work with local farmers to ensure you receive the best produce while supporting sustainable agriculture.",
+   "personal_information" : "Personal Information",
+   "change_password" : "Change Password",
+   "current_password" : "Current Password",
+   "new_password" : "New Password",
+   "confirm_password" : "Confirm Password",
+   "save_changes" : "Save Changes",
+   "incorrect_password" : "Incorrect password",
+   "search_products_failure" : "Failed to search products",
+   "search" : "Search",
+   "no_results_found" : "No results found",
+   "sortBy": "Sort By:",
+   "priceLowToHigh": "Price (Low to High)",
+   "priceHighToLow": "Price (High to Low)",
+   "alphabetical": "Alphabetical",
+   "apply": "Apply",
+   "get_products_failure" : "Failed to get products",
+   "expiration" : "Expiration",
+   "organic" : "Organic",
+   "number_of_calories" : "{numberOfCalories} calories",
+   "@number_of_calories": {
+       "placeholders": {
+           "numberOfCalories": {
+               "type": "num"
+               }
+           }
+   },
+   "number_of_grams" : "{numberOfGrams} grams",
+   "@number_of_grams": {
+       "placeholders": {
+           "numberOfGrams": {
+               "type": "int"
+               }
+           }
+   },
+   "reviews" : "Reviews",
+   "add_to_cart" : "Add to Cart",
+   "less_than_a_month" : "Less than a month",
+    "months_count": "{count} months",
+    "@months_count": {
+      "placeholders": {
+        "count": {
+          "type": "int"
+        }
+      }
+    }
+  
+
+}

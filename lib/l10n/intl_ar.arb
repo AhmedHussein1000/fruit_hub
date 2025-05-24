@@ -1,0 +1,191 @@
+{
+    "@@locale": "ar", 
+    "skip": "تخط",
+    "welcome" :"مرحباً بك في",
+    "onboardingDescription1": "اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية.",
+    "onboardingTitle2" : "ابحث وتسوق",
+    "onboardingDescription2":"نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية",
+    "startNow": "ابدأ الآن",
+
+    "login": "تسجيل دخول",
+    "email":"البريد الإلكتروني",
+    "password":"كلمة المرور",
+    "forrgotPassword":"نسيت كلمة المرور؟",
+    "passwordResetEmailSent": "تم إرسال رابط إعادة تعيين كلمة المرور. يرجى التحقق من بريدك الإلكتروني.",
+    "resetPassword": "إعادة تعيين كلمة المرور",
+    "resetPasswordInstructions": "أدخل عنوان بريدك الإلكتروني وسنرسل لك تعليمات لإعادة تعيين كلمة المرور الخاصة بك.",
+    "sendResetLink": "إرسال رابط إعادة التعيين",
+    "dontHaveAnAccount":" لا تمتلك حساب؟",
+    "signup":"قم بإنشاء حساب",
+    "or":"أو",
+    "loginWithGoogle":"تسجيل بواسطة جوجل",
+    "loginWithFacebook":"تسجيل بواسطة فيسبوك",
+    "emailRequired": "البريد الإلكتروني مطلوب.",
+    "passwordRequired": "كلمة المرور مطلوبة.",
+    "nameRequired": "الاسم مطلوب.",
+    "field_required" :"هذا الحقل مطلوب.",
+    "noGoogleAccountSelected" : " تم إلغاء تسجيل الدخول بواسطة جوجل من قبل المستخدم." ,
+    "noFacebookAccountSelected" : "تم إلغاء تسجيل الدخول بواسطة فيسبوك من قبل المستخدم.",
+    "changes_saved_successfully" : "تم حفظ التغييرات بنجاح.",
+    "passwordsDoNotMatch" : "كلمات المرور غير متطابقة.",
+
+    "newAccount" : "حساب جديد",
+    "fullName" :"الاسم كامل",
+    "termsAgreement" : "من خلال إنشاء حساب ، فإنك توافق على",
+    "ourTermsAndConditions" : "الشروط والأحكام الخاصة بنا", 
+    "createAccount" : "إنشاء حساب جديد",
+    "alreadyHaveAnAccount" : "تمتلك حساب بالفعل؟ ",
+    "pleaseAcceptTerms" : "يرجى قبول الشروط والأحكام لاستكمال التسجيل.",
+    "signupSuccessful" : "تم انشاء الحساب بنجاح.",
+
+
+    "userNotFound": "لا يوجد مستخدم مرتبط بهذا البريد الإلكتروني.",
+    "wrongPassword": "كلمة المرور التي تم إدخالها غير صحيحة.",
+    "invalidEmail": "تنسيق البريد الإلكتروني غير صحيح.",
+    "userDisabled": "تم تعطيل حساب المستخدم هذا.",
+    "operationNotAllowed": "تسجيل الدخول بالبريد وكلمة المرور غير مفعل.",
+    "tooManyRequests": "لقد تجاوزت عدد المحاولات المسموح به. حاول لاحقًا.",
+    "invalidCredential": "البريد الإلكتروني أو كلمة المرور غير صحيحة.",
+    "networkRequestFailed": "تحقق من اتصالك بالإنترنت.",
+    "unexpectedError": "حدث خطأ غير متوقع، يرجى المحاولة مرة أخرى.",
+    "weakPassword": "كلمة المرور ضعيفة جدًا.",
+    "emailAlreadyInUse": "هذا البريد الإلكتروني مسجل بالفعل.",
+    "no_favorites_yet": "لا توجد مفضلات حتى الآن!",
+
+    "home": "الرئيسية",
+    "products": "المنتجات",
+    "shoppingCart":"سلة التسوق",
+    "profile": "حسابي",
+
+    "goodMorning": "صباح الخير !..",
+    "ahmedHussein" : "احمد حسين",
+    "searchFor" : "ابحث عن.......",
+
+    "eidOffers" : "عروض العيد",
+    "discount25" : "خصم 25%",
+    "shopNow" : "تسوق الان",
+    "bestSelling" : "الأكثر مبيعًا",
+    "more" : "المزيد",
+    "strawberry" : "فراولة",
+    "numberOfPounds" : "{numberOfPounds} جنيه ",
+    "@numberOfPounds": {
+        "placeholders": {
+            "numberOfPounds": {
+                "type": "num"
+                }
+            }
+    },
+    "slash" : "/",
+    "killo" : "كيلو",
+    "results" : "نتائج",
+    "ahmed" : "احمد",
+    "resultsCount" : "{resultsCount} نتائج",
+    "@resultsCount": {
+
+        "placeholders": {
+            "resultsCount": {
+                "type": "int"
+                }
+            }
+
+    },
+    "cart" : "السلة",
+    "CartProductsCount" :"لديك {numberOfCartProducts} منتجات في سله التسوق",
+    "@CartProductsCount": {
+        "placeholders": {
+            "numberOfCartProducts": {
+                "type": "int"
+                }
+            }
+    },
+    "payment" : "الدفع",
+    "addedToCart" : "تمت الإضافة الي سله التسوق بنجاح",
+    "shipping" : "الشحن",
+    "address" : "العنوان",
+    "cartIsEmpty" : "سلة التسوق فارغة",
+    "next" : "التالي",
+    "paypalPayment" : "دفع بواسطة Paypal",
+    "cash_on_delivery" : "الدفع عند الاستلام",
+    "pickup_delivery_option" : "التسليم من المكان",
+    "online_payment" : "الدفع اونلاين",
+   "payment_method" :"يرجي تحديد طريقه الدفع",
+   "free" : "مجاني",
+   "city" : "المدينة",
+   "floor_and_apartment" : "رقم الطابق والشقة",
+   "phone" : "رقم الهاتف",
+   "order_summary": "ملخص الطلب",
+   "sub_total" : "المجموع الفرعي",
+   "delivery" : "التوصيل",
+   "total" : "الكلي",
+   "delivery_address" : "عنوان التوصيل",
+   "edit" : "تعديل",
+   "select_payment_method" : "يرجي تحديد طريقه الدفع",
+   "payment_error" : "حدث خطاء في الدفع، يرجى المحاولة مرة اخرى",
+   "payment_success" : "تم الدفع بنجاح",
+   "payment_cancelled" : "تم الغاء الدفع",
+   "add_order_failure" : "فشل في اضافه الطلب",
+   "unknown" : "غير معروف",
+   "general" : "عام",
+   "personal_file": "الملف الشخصي",
+   "favorites" : "المفضلة",
+   "theme" : "الوضع",
+   "language" : "اللغة",
+   "help" : "المساعدة",
+   "who_are_we" : "من نحن",
+   "logout" : "تسجيل خروج",
+   "cancel" :"إلغاء",
+   "confirm" : "تأكيد",
+    "signout_message" : "هل ترغب في تسجيل الخروج؟",
+    "arabic" : "العربية",
+    "english" : "الانجليزية",
+    "who_are_we_content" : "فروت هب هي خدمة توصيل فواكه متميزة مخصصة لتوصيل أطيب وأجود الفواكه الطازجة مباشرة إلى باب منزلك. نحن نعمل مع المزارعين المحليين لضمان حصولك على أفضل المنتجات مع دعم الزراعة المستدامة.",
+    "personal_information" : "المعلومات الشخصيه",
+    "change_password" : "تغيير كلمة المرور",
+    "current_password" : "كلمة المرور الحالية",
+    "new_password" : "كلمة المرور الجديدة",
+    "confirm_password" : "تأكيد كلمة المرور",
+    "save_changes" : "حفظ التغييرات",
+    "incorrect_password":"كلمة المرور غير صحيحة",
+    "search_products_failure" : "فشل في البحث عن المنتجات",
+    "search" : "البحث",
+    "no_results_found" : "لم يتم العثور على نتائج",
+    
+    "sortBy": "ترتيب حسب:",
+    "priceLowToHigh": "السعر (الأقل إلى الأعلى)",
+    "priceHighToLow": "السعر (الأعلى إلى الأقل)",
+    "alphabetical": "الابجدية",
+    "apply": "تصفية",
+    "get_products_failure": "فشل في عرض المنتجات", 
+    "expiration" : "الصلاحية",
+    "organic" : "اورجانيك",
+    "number_of_calories" : "{numberOfCalories} كالوري",
+    "@number_of_calories": {
+        "placeholders": {
+            "numberOfCalories": {
+                "type": "num"
+                }
+            }
+    },
+    "number_of_grams" : "{numberOfGrams} جرام",
+    "@number_of_grams": {
+        "placeholders": {
+            "numberOfGrams": {
+                "type": "int"
+                }
+            }
+    },
+    "reviews" : "المراجعات",
+    "add_to_cart" : "اضف الي السله",
+    "less_than_a_month" : "اقل من شهر",
+    "months_count": "{count} شهر",
+        "@months_count": {
+          "placeholders": {
+            "count": {
+              "type": "int"
+            }
+          }
+        }
+      
+
+
+}

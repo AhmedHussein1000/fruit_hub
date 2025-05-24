@@ -24,10 +24,26 @@ android {
         applicationId = "com.example.fruit_hub"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
-        minSdk = flutter.minSdkVersion
+        minSdk = 23
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
+        multiDexEnabled true
+    }
+     flavorDimensions += "default"
+
+    productFlavors {
+        development {
+            dimension = "default"
+            resValue( "string",  "app_name",  "Fruit Hub development")
+            applicationIdSuffix = ".dev"
+        }
+        
+        production {
+            dimension = "default"
+            resValue( "string", "app_name",  "Fruit Hub")
+            
+        }
     }
 
     buildTypes {
@@ -42,3 +58,8 @@ android {
 flutter {
     source = "../.."
 }
+dependencies{
+     implementation 'com.facebook.android:facebook-login:latest.release'
+
+}
+apply plugin: 'com.google.gms.google-services'
