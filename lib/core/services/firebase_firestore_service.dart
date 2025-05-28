@@ -45,4 +45,20 @@ class FirestoreService extends DatabaseService {
     var data = await firestore.collection(path).doc(docId).get();
     return data.exists;
   }
+  
+  @override
+  Stream streamData({required String path,required String userId, Map<String, dynamic>? query}) async*{
+    Query<Map<String, dynamic>> data = firestore.collection(path).where('uId', isEqualTo:userId );
+    if (query != null) {
+      if (query['orderBy'] != null) {
+        data = data.orderBy(query['orderBy'], descending: query['descending']);
+      }
+      if (query['limit'] != null) {
+        data = data.limit(query['limit']);
+      }
+    }
+    await for (var result in data.snapshots()) {
+      yield result.docs.map((e) => e.data()).toList();
+    }
+  }
 }

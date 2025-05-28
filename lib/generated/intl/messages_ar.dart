@@ -21,7 +21,7 @@ class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ar';
 
   static String m0(numberOfCartProducts) =>
-      "لديك ${numberOfCartProducts} منتجات في سله التسوق";
+      "لديك ${numberOfCartProducts} منتجات في سلتك";
 
   static String m1(count) => "${count} شهر";
 
@@ -31,19 +31,22 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m4(numberOfGrams) => "${numberOfGrams} جرام";
 
-  static String m5(resultsCount) => "${resultsCount} نتائج";
+  static String m5(orderId) => " رقم الطلب ${orderId}";
+
+  static String m6(count, itemText) => "${count} ${itemText}";
+
+  static String m7(resultsCount) => "${resultsCount} نتائج";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "CartProductsCount": m0,
         "add_order_failure":
-            MessageLookupByLibrary.simpleMessage("فشل في اضافه الطلب"),
+            MessageLookupByLibrary.simpleMessage("فشل في إضافة الطلب"),
         "add_to_cart": MessageLookupByLibrary.simpleMessage("اضف الي السله"),
-        "addedToCart": MessageLookupByLibrary.simpleMessage(
-            "تمت الإضافة الي سله التسوق بنجاح"),
+        "addedToCart":
+            MessageLookupByLibrary.simpleMessage("تمت الإضافة إلى السلة بنجاح"),
         "address": MessageLookupByLibrary.simpleMessage("العنوان"),
         "ahmed": MessageLookupByLibrary.simpleMessage("احمد"),
-        "ahmedHussein": MessageLookupByLibrary.simpleMessage("احمد حسين"),
         "alphabetical": MessageLookupByLibrary.simpleMessage("الابجدية"),
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("تمتلك حساب بالفعل؟ "),
@@ -52,7 +55,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "bestSelling": MessageLookupByLibrary.simpleMessage("الأكثر مبيعًا"),
         "cancel": MessageLookupByLibrary.simpleMessage("إلغاء"),
         "cart": MessageLookupByLibrary.simpleMessage("السلة"),
-        "cartIsEmpty": MessageLookupByLibrary.simpleMessage("سلة التسوق فارغة"),
+        "cartIsEmpty": MessageLookupByLibrary.simpleMessage("سلتك فارغة"),
         "cash_on_delivery":
             MessageLookupByLibrary.simpleMessage("الدفع عند الاستلام"),
         "change_password":
@@ -77,16 +80,18 @@ class MessageLookup extends MessageLookupByLibrary {
         "eidOffers": MessageLookupByLibrary.simpleMessage("عروض العيد"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
         "emailAlreadyInUse": MessageLookupByLibrary.simpleMessage(
-            "هذا البريد الإلكتروني مسجل بالفعل."),
+            "هناك حساب موجود بالفعل لهذا البريد الإلكتروني."),
         "emailRequired":
             MessageLookupByLibrary.simpleMessage("البريد الإلكتروني مطلوب."),
         "english": MessageLookupByLibrary.simpleMessage("الانجليزية"),
         "expiration": MessageLookupByLibrary.simpleMessage("الصلاحية"),
+        "failed_to_get_orders":
+            MessageLookupByLibrary.simpleMessage("فشل في عرض الطلبات"),
         "favorites": MessageLookupByLibrary.simpleMessage("المفضلة"),
         "field_required":
             MessageLookupByLibrary.simpleMessage("هذا الحقل مطلوب."),
         "floor_and_apartment":
-            MessageLookupByLibrary.simpleMessage("رقم الطابق والشقة"),
+            MessageLookupByLibrary.simpleMessage("الطابق والشقة"),
         "forrgotPassword":
             MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
         "free": MessageLookupByLibrary.simpleMessage("مجاني"),
@@ -94,15 +99,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "general": MessageLookupByLibrary.simpleMessage("عام"),
         "get_products_failure":
             MessageLookupByLibrary.simpleMessage("فشل في عرض المنتجات"),
-        "goodMorning": MessageLookupByLibrary.simpleMessage("صباح الخير !.."),
+        "goodMorning": MessageLookupByLibrary.simpleMessage("صباح الخير..!"),
         "help": MessageLookupByLibrary.simpleMessage("المساعدة"),
-        "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
+        "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
         "incorrect_password":
             MessageLookupByLibrary.simpleMessage("كلمة المرور غير صحيحة"),
         "invalidCredential": MessageLookupByLibrary.simpleMessage(
             "البريد الإلكتروني أو كلمة المرور غير صحيحة."),
         "invalidEmail": MessageLookupByLibrary.simpleMessage(
             "تنسيق البريد الإلكتروني غير صحيح."),
+        "item": MessageLookupByLibrary.simpleMessage("عنصر"),
+        "items": MessageLookupByLibrary.simpleMessage("عناصر"),
         "killo": MessageLookupByLibrary.simpleMessage("كيلو"),
         "language": MessageLookupByLibrary.simpleMessage("اللغة"),
         "less_than_a_month": MessageLookupByLibrary.simpleMessage("اقل من شهر"),
@@ -111,9 +118,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تسجيل بواسطة فيسبوك"),
         "loginWithGoogle":
             MessageLookupByLibrary.simpleMessage("تسجيل بواسطة جوجل"),
-        "logout": MessageLookupByLibrary.simpleMessage("تسجيل خروج"),
+        "logout": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
         "months_count": m1,
         "more": MessageLookupByLibrary.simpleMessage("المزيد"),
+        "my_orders": MessageLookupByLibrary.simpleMessage("طلباتي"),
         "nameRequired": MessageLookupByLibrary.simpleMessage("الاسم مطلوب."),
         "networkRequestFailed":
             MessageLookupByLibrary.simpleMessage("تحقق من اتصالك بالإنترنت."),
@@ -127,6 +135,8 @@ class MessageLookup extends MessageLookupByLibrary {
             " تم إلغاء تسجيل الدخول بواسطة جوجل من قبل المستخدم."),
         "no_favorites_yet":
             MessageLookupByLibrary.simpleMessage("لا توجد مفضلات حتى الآن!"),
+        "no_orders_yet":
+            MessageLookupByLibrary.simpleMessage("لا توجد طلبات حتى الآن"),
         "no_results_found":
             MessageLookupByLibrary.simpleMessage("لم يتم العثور على نتائج"),
         "numberOfPounds": m2,
@@ -137,10 +147,21 @@ class MessageLookup extends MessageLookupByLibrary {
         "onboardingDescription2": MessageLookupByLibrary.simpleMessage(
             "نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية"),
         "onboardingTitle2": MessageLookupByLibrary.simpleMessage("ابحث وتسوق"),
-        "online_payment": MessageLookupByLibrary.simpleMessage("الدفع اونلاين"),
+        "online_payment":
+            MessageLookupByLibrary.simpleMessage("الدفع عبر الإنترنت"),
         "operationNotAllowed": MessageLookupByLibrary.simpleMessage(
             "تسجيل الدخول بالبريد وكلمة المرور غير مفعل."),
         "or": MessageLookupByLibrary.simpleMessage("أو"),
+        "order_id": m5,
+        "order_items_count": m6,
+        "order_status_accepted":
+            MessageLookupByLibrary.simpleMessage("تم القبول"),
+        "order_status_cancelled":
+            MessageLookupByLibrary.simpleMessage("تم الإلغاء"),
+        "order_status_delivered":
+            MessageLookupByLibrary.simpleMessage("تم التوصيل"),
+        "order_status_pending":
+            MessageLookupByLibrary.simpleMessage("قيد الانتظار"),
         "order_summary": MessageLookupByLibrary.simpleMessage("ملخص الطلب"),
         "organic": MessageLookupByLibrary.simpleMessage("اورجانيك"),
         "ourTermsAndConditions":
@@ -156,21 +177,21 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("كلمات المرور غير متطابقة."),
         "payment": MessageLookupByLibrary.simpleMessage("الدفع"),
         "payment_cancelled":
-            MessageLookupByLibrary.simpleMessage("تم الغاء الدفع"),
+            MessageLookupByLibrary.simpleMessage("تم إلغاء الدفع"),
         "payment_error": MessageLookupByLibrary.simpleMessage(
-            "حدث خطاء في الدفع، يرجى المحاولة مرة اخرى"),
+            "خطأ في الدفع، يرجى المحاولة مرة أخرى"),
         "payment_method":
-            MessageLookupByLibrary.simpleMessage("يرجي تحديد طريقه الدفع"),
+            MessageLookupByLibrary.simpleMessage("الرجاء اختيار طريقة الدفع"),
         "payment_success":
             MessageLookupByLibrary.simpleMessage("تم الدفع بنجاح"),
         "paypalPayment":
-            MessageLookupByLibrary.simpleMessage("دفع بواسطة Paypal"),
-        "personal_file": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
+            MessageLookupByLibrary.simpleMessage("الدفع بواسطة باي بال"),
+        "personal_file": MessageLookupByLibrary.simpleMessage("ملفك الشخصي"),
         "personal_information":
             MessageLookupByLibrary.simpleMessage("المعلومات الشخصيه"),
-        "phone": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
+        "phone": MessageLookupByLibrary.simpleMessage("الهاتف"),
         "pickup_delivery_option":
-            MessageLookupByLibrary.simpleMessage("التسليم من المكان"),
+            MessageLookupByLibrary.simpleMessage("استلام من الموقع"),
         "pleaseAcceptTerms": MessageLookupByLibrary.simpleMessage(
             "يرجى قبول الشروط والأحكام لاستكمال التسجيل."),
         "priceHighToLow":
@@ -178,13 +199,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "priceLowToHigh":
             MessageLookupByLibrary.simpleMessage("السعر (الأقل إلى الأعلى)"),
         "products": MessageLookupByLibrary.simpleMessage("المنتجات"),
-        "profile": MessageLookupByLibrary.simpleMessage("حسابي"),
+        "profile": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
         "resetPassword":
             MessageLookupByLibrary.simpleMessage("إعادة تعيين كلمة المرور"),
         "resetPasswordInstructions": MessageLookupByLibrary.simpleMessage(
             "أدخل عنوان بريدك الإلكتروني وسنرسل لك تعليمات لإعادة تعيين كلمة المرور الخاصة بك."),
-        "results": MessageLookupByLibrary.simpleMessage("نتائج"),
-        "resultsCount": m5,
+        "results": MessageLookupByLibrary.simpleMessage("نتائج"),
+        "resultsCount": m7,
         "reviews": MessageLookupByLibrary.simpleMessage("المراجعات"),
         "save_changes": MessageLookupByLibrary.simpleMessage("حفظ التغييرات"),
         "search": MessageLookupByLibrary.simpleMessage("البحث"),
@@ -192,29 +213,29 @@ class MessageLookup extends MessageLookupByLibrary {
         "search_products_failure":
             MessageLookupByLibrary.simpleMessage("فشل في البحث عن المنتجات"),
         "select_payment_method":
-            MessageLookupByLibrary.simpleMessage("يرجي تحديد طريقه الدفع"),
+            MessageLookupByLibrary.simpleMessage("الرجاء اختيار طريقة الدفع"),
         "sendResetLink":
             MessageLookupByLibrary.simpleMessage("إرسال رابط إعادة التعيين"),
         "shipping": MessageLookupByLibrary.simpleMessage("الشحن"),
         "shopNow": MessageLookupByLibrary.simpleMessage("تسوق الان"),
-        "shoppingCart": MessageLookupByLibrary.simpleMessage("سلة التسوق"),
+        "shoppingCart": MessageLookupByLibrary.simpleMessage("السلة"),
         "signout_message":
-            MessageLookupByLibrary.simpleMessage("هل ترغب في تسجيل الخروج؟"),
+            MessageLookupByLibrary.simpleMessage("هل تريد تسجيل الخروج؟"),
         "signup": MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب"),
         "signupSuccessful":
             MessageLookupByLibrary.simpleMessage("تم انشاء الحساب بنجاح."),
         "skip": MessageLookupByLibrary.simpleMessage("تخط"),
         "slash": MessageLookupByLibrary.simpleMessage("/"),
         "sortBy": MessageLookupByLibrary.simpleMessage("ترتيب حسب:"),
-        "startNow": MessageLookupByLibrary.simpleMessage("ابدأ الآن"),
+        "startNow": MessageLookupByLibrary.simpleMessage("ابدأ الآن"),
         "strawberry": MessageLookupByLibrary.simpleMessage("فراولة"),
         "sub_total": MessageLookupByLibrary.simpleMessage("المجموع الفرعي"),
         "termsAgreement": MessageLookupByLibrary.simpleMessage(
             "من خلال إنشاء حساب ، فإنك توافق على"),
-        "theme": MessageLookupByLibrary.simpleMessage("الوضع"),
+        "theme": MessageLookupByLibrary.simpleMessage("المظهر"),
         "tooManyRequests": MessageLookupByLibrary.simpleMessage(
             "لقد تجاوزت عدد المحاولات المسموح به. حاول لاحقًا."),
-        "total": MessageLookupByLibrary.simpleMessage("الكلي"),
+        "total": MessageLookupByLibrary.simpleMessage("الإجمالي"),
         "unexpectedError": MessageLookupByLibrary.simpleMessage(
             "حدث خطأ غير متوقع، يرجى المحاولة مرة أخرى."),
         "unknown": MessageLookupByLibrary.simpleMessage("غير معروف"),
@@ -222,10 +243,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تم تعطيل حساب المستخدم هذا."),
         "userNotFound": MessageLookupByLibrary.simpleMessage(
             "لا يوجد مستخدم مرتبط بهذا البريد الإلكتروني."),
-        "weakPassword":
-            MessageLookupByLibrary.simpleMessage("كلمة المرور ضعيفة جدًا."),
+        "weakPassword": MessageLookupByLibrary.simpleMessage(
+            "كلمة المرور التي تم إدخالها ضعيفة جدًا."),
         "welcome": MessageLookupByLibrary.simpleMessage("مرحباً بك في"),
-        "who_are_we": MessageLookupByLibrary.simpleMessage("من نحن"),
+        "who_are_we": MessageLookupByLibrary.simpleMessage("من نحن؟"),
         "who_are_we_content": MessageLookupByLibrary.simpleMessage(
             "فروت هب هي خدمة توصيل فواكه متميزة مخصصة لتوصيل أطيب وأجود الفواكه الطازجة مباشرة إلى باب منزلك. نحن نعمل مع المزارعين المحليين لضمان حصولك على أفضل المنتجات مع دعم الزراعة المستدامة."),
         "wrongPassword": MessageLookupByLibrary.simpleMessage(

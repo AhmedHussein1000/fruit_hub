@@ -5,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:fruit_hub/core/entities/product_entity.dart';
 import 'package:fruit_hub/core/functions/show_toast.dart';
+import 'package:fruit_hub/core/helpers/assets.dart';
 import 'package:fruit_hub/core/helpers/extensions.dart';
 import 'package:fruit_hub/core/themes/app_colors.dart';
 import 'package:fruit_hub/core/themes/styles.dart';
@@ -66,6 +67,8 @@ class FruitProductItem extends StatelessWidget {
                     child: CachedNetworkImage(
                       imageUrl: productEntity.imageUrl ??
                           AppConstants.defultFruitImage,
+                      placeholder: (context, url) => Image.asset(Assets.imagesGreenLoadingAnimation),
+                      errorWidget: (context, url, error) => const Icon(Icons.error,color: Colors.red,),    
                     ),
                   ),
                   SizedBox(

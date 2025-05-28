@@ -31,7 +31,11 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m4(numberOfGrams) => "${numberOfGrams} grams";
 
-  static String m5(resultsCount) => "${resultsCount} results";
+  static String m5(orderId) => "Order #${orderId}";
+
+  static String m6(count, itemText) => "${count} ${itemText}";
+
+  static String m7(resultsCount) => "${resultsCount} results";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -43,7 +47,6 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Added to Cart Successfully"),
         "address": MessageLookupByLibrary.simpleMessage("Address"),
         "ahmed": MessageLookupByLibrary.simpleMessage("Ahmed"),
-        "ahmedHussein": MessageLookupByLibrary.simpleMessage("Ahmed Hussein"),
         "alphabetical": MessageLookupByLibrary.simpleMessage("Alphabetical"),
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Already have an account?"),
@@ -83,6 +86,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Email is required."),
         "english": MessageLookupByLibrary.simpleMessage("English"),
         "expiration": MessageLookupByLibrary.simpleMessage("Expiration"),
+        "failed_to_get_orders":
+            MessageLookupByLibrary.simpleMessage("Failed to get orders"),
         "favorites": MessageLookupByLibrary.simpleMessage("Favorites"),
         "field_required":
             MessageLookupByLibrary.simpleMessage("This field is required."),
@@ -104,6 +109,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "The email address or password is incorrect."),
         "invalidEmail": MessageLookupByLibrary.simpleMessage(
             "The email address is badly formatted."),
+        "item": MessageLookupByLibrary.simpleMessage("item"),
+        "items": MessageLookupByLibrary.simpleMessage("items"),
         "killo": MessageLookupByLibrary.simpleMessage("Kg"),
         "language": MessageLookupByLibrary.simpleMessage("Language"),
         "less_than_a_month":
@@ -116,6 +123,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "logout": MessageLookupByLibrary.simpleMessage("Logout"),
         "months_count": m1,
         "more": MessageLookupByLibrary.simpleMessage("More"),
+        "my_orders": MessageLookupByLibrary.simpleMessage("My Orders"),
         "nameRequired":
             MessageLookupByLibrary.simpleMessage("Name is required."),
         "networkRequestFailed": MessageLookupByLibrary.simpleMessage(
@@ -129,22 +137,32 @@ class MessageLookup extends MessageLookupByLibrary {
             "User has cancelled login with google."),
         "no_favorites_yet":
             MessageLookupByLibrary.simpleMessage("No favorites yet!"),
+        "no_orders_yet": MessageLookupByLibrary.simpleMessage("No orders yet"),
         "no_results_found":
             MessageLookupByLibrary.simpleMessage("No results found"),
         "numberOfPounds": m2,
         "number_of_calories": m3,
         "number_of_grams": m4,
         "onboardingDescription1": MessageLookupByLibrary.simpleMessage(
-            "Discover a unique shopping experience with FruitHUB. Explore our wide range of premium fresh fruits and get the best deals and high quality."),
+            "Discover a unique shopping experience with FruitHUB. Explore our wide range of premium fresh fruits and get the best deals and quality."),
         "onboardingDescription2": MessageLookupByLibrary.simpleMessage(
-            "We bring you the best carefully selected fruits. View details, images, and reviews to make sure you choose the perfect fruit."),
+            "We offer you the best hand-picked fruits. Check out details, images, and reviews to make sure you\'re choosing the perfect fruit."),
         "onboardingTitle2":
-            MessageLookupByLibrary.simpleMessage("Search and Shop"),
+            MessageLookupByLibrary.simpleMessage("Search & Shop"),
         "online_payment":
             MessageLookupByLibrary.simpleMessage("Online Payment"),
         "operationNotAllowed": MessageLookupByLibrary.simpleMessage(
             "Signing in with email and password is not enabled."),
         "or": MessageLookupByLibrary.simpleMessage("Or"),
+        "order_id": m5,
+        "order_items_count": m6,
+        "order_status_accepted":
+            MessageLookupByLibrary.simpleMessage("Accepted"),
+        "order_status_cancelled":
+            MessageLookupByLibrary.simpleMessage("Cancelled"),
+        "order_status_delivered":
+            MessageLookupByLibrary.simpleMessage("Delivered"),
+        "order_status_pending": MessageLookupByLibrary.simpleMessage("Pending"),
         "order_summary": MessageLookupByLibrary.simpleMessage("Order Summary"),
         "organic": MessageLookupByLibrary.simpleMessage("Organic"),
         "ourTermsAndConditions":
@@ -155,7 +173,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "passwordRequired":
             MessageLookupByLibrary.simpleMessage("Password is required."),
         "passwordResetEmailSent": MessageLookupByLibrary.simpleMessage(
-            "Password reset email sent. Please check your inbox."),
+            "Password reset link sent. Please check your email."),
         "passwordsDoNotMatch":
             MessageLookupByLibrary.simpleMessage("Passwords do not match."),
         "payment": MessageLookupByLibrary.simpleMessage("Payment"),
@@ -187,7 +205,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetPasswordInstructions": MessageLookupByLibrary.simpleMessage(
             "Enter your email address and we\'ll send you instructions to reset your password."),
         "results": MessageLookupByLibrary.simpleMessage("Results"),
-        "resultsCount": m5,
+        "resultsCount": m7,
         "reviews": MessageLookupByLibrary.simpleMessage("Reviews"),
         "save_changes": MessageLookupByLibrary.simpleMessage("Save Changes"),
         "search": MessageLookupByLibrary.simpleMessage("Search"),
@@ -203,7 +221,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "shoppingCart": MessageLookupByLibrary.simpleMessage("Cart"),
         "signout_message":
             MessageLookupByLibrary.simpleMessage("Are you want to logout?"),
-        "signup": MessageLookupByLibrary.simpleMessage(" Sign Up"),
+        "signup": MessageLookupByLibrary.simpleMessage("Sign up"),
         "signupSuccessful": MessageLookupByLibrary.simpleMessage(
             "Account created successfully."),
         "skip": MessageLookupByLibrary.simpleMessage("Skip"),

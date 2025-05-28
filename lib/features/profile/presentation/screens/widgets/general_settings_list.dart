@@ -9,6 +9,7 @@ import 'package:fruit_hub/core/themes/styles.dart';
 import 'package:fruit_hub/core/widgets/custom_divider.dart';
 import 'package:fruit_hub/features/favorites/presentation/screens/favorites_screen.dart';
 import 'package:fruit_hub/features/profile/data/models/settings_item_model.dart';
+import 'package:fruit_hub/features/profile/presentation/screens/my_orders_screen.dart';
 import 'package:fruit_hub/features/profile/presentation/screens/personal_info_screen.dart';
 import 'package:fruit_hub/features/profile/presentation/screens/widgets/settings_item.dart';
 import 'package:fruit_hub/generated/l10n.dart';
@@ -43,6 +44,14 @@ class GeneralSettingsList extends StatelessWidget {
           title: S.of(context).favorites,
           onTap: () => context.pushPersistentScreen(
             const FavoritesScreen(),
+          ),
+        ),
+        SettingsItemModel(
+          svgPath: Assets.imagesBox,
+          title:
+              S.of(context).my_orders,
+          onTap: () => context.pushPersistentScreen(
+            const MyOrdersScreen(),
           ),
         ),
         SettingsItemModel(

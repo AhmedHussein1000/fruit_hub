@@ -1,23 +1,23 @@
 {
-    "@@locale": "en",
+    "@@locale": "en", 
     "skip": "Skip",
-    "welcome": "Welcome to",
-    "onboardingDescription1": "Discover a unique shopping experience with FruitHUB. Explore our wide range of premium fresh fruits and get the best deals and high quality.",
-    "onboardingTitle2": "Search and Shop",
-    "onboardingDescription2": "We bring you the best carefully selected fruits. View details, images, and reviews to make sure you choose the perfect fruit.",
+    "welcome" :"Welcome to",
+    "onboardingDescription1": "Discover a unique shopping experience with FruitHUB. Explore our wide range of premium fresh fruits and get the best deals and quality.",
+    "onboardingTitle2" : "Search & Shop",
+    "onboardingDescription2":"We offer you the best hand-picked fruits. Check out details, images, and reviews to make sure you're choosing the perfect fruit.",
     "startNow": "Start Now",
 
     "login": "Login",
-    "email": "Email Address",
-    "password": "Password",
-    "forrgotPassword": "Forgot Password?",
-    "passwordResetEmailSent": "Password reset email sent. Please check your inbox.",
+    "email":"Email Address",
+    "password":"Password",
+    "forrgotPassword":"Forgot Password?",
+    "passwordResetEmailSent": "Password reset link sent. Please check your email.",
     "resetPassword": "Reset Password",
     "resetPasswordInstructions": "Enter your email address and we'll send you instructions to reset your password.",
     "sendResetLink": "Send Reset Link",
     "passwordChangedSuccessfully": "Password changed successfully.",
-    "dontHaveAnAccount": "Don't have an account?",
-    "signup": " Sign Up",
+    "dontHaveAnAccount":"Don't have an account?",
+    "signup":"Sign up",
     "or": "Or",
     "loginWithGoogle": "Login with Google",
     "loginWithFacebook": "Login with Facebook",
@@ -63,7 +63,6 @@
 
     
     "goodMorning": "Good Morning..!",
-    "ahmedHussein" : "Ahmed Hussein",
     "searchFor" : "Search for.......",
 
     "eidOffers" : "Eid Offers",
@@ -186,7 +185,34 @@
           "type": "int"
         }
       }
+    },
+    "failed_to_get_orders" : "Failed to get orders",
+    "my_orders" : "My Orders",
+    "no_orders_yet" : "No orders yet",
+    "order_status_pending" : "Pending",
+    "order_status_accepted" : "Accepted",
+    "order_status_delivered" : "Delivered",
+    "order_status_cancelled" : "Cancelled",
+    "order_id" :"Order #{orderId}",
+    "@order_id": {
+        "placeholders": {
+            "orderId": {
+                "type": "String"
+                }
+            }
+    },
+    "item" : "item",
+    "items" : "items",
+    "order_items_count" : "{count} {itemText}",
+    "@order_items_count": {
+      "placeholders": {
+        "count": {
+          "type": "int"
+        },
+        "itemText": {
+          "type": "String"
+        }
+      }
     }
-  
 
 }
