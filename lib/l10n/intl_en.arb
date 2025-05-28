@@ -15,6 +15,7 @@
     "resetPassword": "Reset Password",
     "resetPasswordInstructions": "Enter your email address and we'll send you instructions to reset your password.",
     "sendResetLink": "Send Reset Link",
+    "passwordChangedSuccessfully": "Password changed successfully.",
     "dontHaveAnAccount": "Don't have an account?",
     "signup": " Sign Up",
     "or": "Or",

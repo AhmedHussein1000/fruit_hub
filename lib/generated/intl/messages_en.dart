@@ -150,6 +150,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "ourTermsAndConditions":
             MessageLookupByLibrary.simpleMessage("our Terms and Conditions"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
+        "passwordChangedSuccessfully": MessageLookupByLibrary.simpleMessage(
+            "Password changed successfully."),
         "passwordRequired":
             MessageLookupByLibrary.simpleMessage("Password is required."),
         "passwordResetEmailSent": MessageLookupByLibrary.simpleMessage(

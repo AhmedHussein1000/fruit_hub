@@ -15,6 +15,7 @@
     "resetPassword": "إعادة تعيين كلمة المرور",
     "resetPasswordInstructions": "أدخل عنوان بريدك الإلكتروني وسنرسل لك تعليمات لإعادة تعيين كلمة المرور الخاصة بك.",
     "sendResetLink": "إرسال رابط إعادة التعيين",
+    "passwordChangedSuccessfully": "تم تغيير كلمة المرور بنجاح.",
     "dontHaveAnAccount":" لا تمتلك حساب؟",
     "signup":"قم بإنشاء حساب",
     "or":"أو",
