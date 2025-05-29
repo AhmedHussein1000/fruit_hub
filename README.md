@@ -2,6 +2,11 @@
 
 Fruit Hub is a feature-rich Flutter e-commerce application for browsing, selecting, and purchasing fresh fruits. The app provides a seamless shopping experience with a beautiful UI, multilingual support, and secure paypal payment processing.
 
+
+## Video Demo
+
+[📺 Watch Demo Video](https://drive.google.com/file/d/1G5zaSL5q4pYRK6vubBUVlgw4khouEEiv/view?usp=drive_link)
+
 ## Key Features
 
 ### User Authentication
@@ -99,6 +104,7 @@ The app supports English and Arabic languages. Localization files are located in
 - `intl_ar.arb`: Arabic translations
 
 To add a new language, create a new ARB file following the same pattern.
+
 
 ## Acknowledgements
 
