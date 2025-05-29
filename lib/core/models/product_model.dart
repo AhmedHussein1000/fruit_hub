@@ -16,7 +16,7 @@ class ProductModel {
   final num avgRating;
   final num ratingCount = 0;
   final List<ReviewModel> reviews;
-  final num sellingCount;
+  final num? sellingCount;
   ProductModel(
       {required this.name,
       required this.code,
@@ -25,7 +25,7 @@ class ProductModel {
       required this.numberOfCalories,
       required this.avgRating,
       required this.unitAmount,
-      required this.sellingCount,
+      this.sellingCount = 20,
       required this.reviews,
       required this.price,
       required this.isOrganic,
@@ -55,7 +55,7 @@ class ProductModel {
       imageUrl: json['imageUrl'],
     );
   }
-  
+
   ProductEntity toEntity() {
     return ProductEntity(
         name: name,

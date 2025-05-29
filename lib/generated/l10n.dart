@@ -70,30 +70,30 @@ class S {
     );
   }
 
-  /// `Discover a unique shopping experience with FruitHUB. Explore our wide range of premium fresh fruits and get the best deals and high quality.`
+  /// `Discover a unique shopping experience with FruitHUB. Explore our wide range of premium fresh fruits and get the best deals and quality.`
   String get onboardingDescription1 {
     return Intl.message(
-      'Discover a unique shopping experience with FruitHUB. Explore our wide range of premium fresh fruits and get the best deals and high quality.',
+      'Discover a unique shopping experience with FruitHUB. Explore our wide range of premium fresh fruits and get the best deals and quality.',
       name: 'onboardingDescription1',
       desc: '',
       args: [],
     );
   }
 
-  /// `Search and Shop`
+  /// `Search & Shop`
   String get onboardingTitle2 {
     return Intl.message(
-      'Search and Shop',
+      'Search & Shop',
       name: 'onboardingTitle2',
       desc: '',
       args: [],
     );
   }
 
-  /// `We bring you the best carefully selected fruits. View details, images, and reviews to make sure you choose the perfect fruit.`
+  /// `We offer you the best hand-picked fruits. Check out details, images, and reviews to make sure you're choosing the perfect fruit.`
   String get onboardingDescription2 {
     return Intl.message(
-      'We bring you the best carefully selected fruits. View details, images, and reviews to make sure you choose the perfect fruit.',
+      'We offer you the best hand-picked fruits. Check out details, images, and reviews to make sure you\'re choosing the perfect fruit.',
       name: 'onboardingDescription2',
       desc: '',
       args: [],
@@ -150,10 +150,10 @@ class S {
     );
   }
 
-  /// `Password reset email sent. Please check your inbox.`
+  /// `Password reset link sent. Please check your email.`
   String get passwordResetEmailSent {
     return Intl.message(
-      'Password reset email sent. Please check your inbox.',
+      'Password reset link sent. Please check your email.',
       name: 'passwordResetEmailSent',
       desc: '',
       args: [],
@@ -190,6 +190,16 @@ class S {
     );
   }
 
+  /// `Password changed successfully.`
+  String get passwordChangedSuccessfully {
+    return Intl.message(
+      'Password changed successfully.',
+      name: 'passwordChangedSuccessfully',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Don't have an account?`
   String get dontHaveAnAccount {
     return Intl.message(
@@ -200,10 +210,10 @@ class S {
     );
   }
 
-  /// ` Sign Up`
+  /// `Sign up`
   String get signup {
     return Intl.message(
-      ' Sign Up',
+      'Sign up',
       name: 'signup',
       desc: '',
       args: [],
@@ -565,16 +575,6 @@ class S {
     return Intl.message(
       'Good Morning..!',
       name: 'goodMorning',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Ahmed Hussein`
-  String get ahmedHussein {
-    return Intl.message(
-      'Ahmed Hussein',
-      name: 'ahmedHussein',
       desc: '',
       args: [],
     );
@@ -1377,6 +1377,116 @@ class S {
       name: 'months_count',
       desc: '',
       args: [count],
+    );
+  }
+
+  /// `Failed to get orders`
+  String get failed_to_get_orders {
+    return Intl.message(
+      'Failed to get orders',
+      name: 'failed_to_get_orders',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `My Orders`
+  String get my_orders {
+    return Intl.message(
+      'My Orders',
+      name: 'my_orders',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No orders yet`
+  String get no_orders_yet {
+    return Intl.message(
+      'No orders yet',
+      name: 'no_orders_yet',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pending`
+  String get order_status_pending {
+    return Intl.message(
+      'Pending',
+      name: 'order_status_pending',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Accepted`
+  String get order_status_accepted {
+    return Intl.message(
+      'Accepted',
+      name: 'order_status_accepted',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delivered`
+  String get order_status_delivered {
+    return Intl.message(
+      'Delivered',
+      name: 'order_status_delivered',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cancelled`
+  String get order_status_cancelled {
+    return Intl.message(
+      'Cancelled',
+      name: 'order_status_cancelled',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Order #{orderId}`
+  String order_id(String orderId) {
+    return Intl.message(
+      'Order #$orderId',
+      name: 'order_id',
+      desc: '',
+      args: [orderId],
+    );
+  }
+
+  /// `item`
+  String get item {
+    return Intl.message(
+      'item',
+      name: 'item',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `items`
+  String get items {
+    return Intl.message(
+      'items',
+      name: 'items',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `{count} {itemText}`
+  String order_items_count(int count, String itemText) {
+    return Intl.message(
+      '$count $itemText',
+      name: 'order_items_count',
+      desc: '',
+      args: [count, itemText],
     );
   }
 }

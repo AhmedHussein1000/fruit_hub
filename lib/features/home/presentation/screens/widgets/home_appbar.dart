@@ -5,7 +5,7 @@ import 'package:fruit_hub/core/helpers/assets.dart';
 import 'package:fruit_hub/core/themes/app_colors.dart';
 import 'package:fruit_hub/core/themes/styles.dart';
 import 'package:fruit_hub/core/widgets/notification_widget.dart';
-import 'package:fruit_hub/features/profile/presentation/controller/personal_info_cubit/personal_info_cubit.dart';
+import 'package:fruit_hub/features/profile/presentation/controllers/personal_info_cubit/personal_info_cubit.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 
 class HomeAppbar extends StatelessWidget {

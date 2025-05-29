@@ -11,7 +11,7 @@ import 'package:fruit_hub/features/login/presentation/controller/login_cubit/log
 import 'package:fruit_hub/features/login/presentation/screens/login_screen.dart';
 import 'package:fruit_hub/features/onboarding/presentation/screens/onboarding_screen.dart';
 import 'package:fruit_hub/features/products/presentation/screens/products_screen.dart';
-import 'package:fruit_hub/features/profile/presentation/controller/personal_info_cubit/personal_info_cubit.dart';
+import 'package:fruit_hub/features/profile/presentation/controllers/personal_info_cubit/personal_info_cubit.dart';
 import 'package:fruit_hub/features/search/presentation/screens/search_screen.dart';
 import 'package:fruit_hub/features/signup/presentation/controller/signup_cubit/signup_cubit.dart';
 import 'package:fruit_hub/features/signup/presentation/screens/signup_screen.dart';

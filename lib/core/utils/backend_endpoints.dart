@@ -5,4 +5,5 @@ abstract class BackendEndpoints {
   static const String getBestSellingProducts = 'products';
   static const String getProducts = 'products';
   static const String addOrder = 'orders';
+  static const String getOrders = 'orders';
 }

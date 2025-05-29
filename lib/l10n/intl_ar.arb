@@ -5,7 +5,7 @@
     "onboardingDescription1": "اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية.",
     "onboardingTitle2" : "ابحث وتسوق",
     "onboardingDescription2":"نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية",
-    "startNow": "ابدأ الآن",
+    "startNow": "ابدأ الآن",
 
     "login": "تسجيل دخول",
     "email":"البريد الإلكتروني",
@@ -15,6 +15,7 @@
     "resetPassword": "إعادة تعيين كلمة المرور",
     "resetPasswordInstructions": "أدخل عنوان بريدك الإلكتروني وسنرسل لك تعليمات لإعادة تعيين كلمة المرور الخاصة بك.",
     "sendResetLink": "إرسال رابط إعادة التعيين",
+    "passwordChangedSuccessfully": "تم تغيير كلمة المرور بنجاح.",
     "dontHaveAnAccount":" لا تمتلك حساب؟",
     "signup":"قم بإنشاء حساب",
     "or":"أو",
@@ -48,17 +49,16 @@
     "invalidCredential": "البريد الإلكتروني أو كلمة المرور غير صحيحة.",
     "networkRequestFailed": "تحقق من اتصالك بالإنترنت.",
     "unexpectedError": "حدث خطأ غير متوقع، يرجى المحاولة مرة أخرى.",
-    "weakPassword": "كلمة المرور ضعيفة جدًا.",
-    "emailAlreadyInUse": "هذا البريد الإلكتروني مسجل بالفعل.",
+    "weakPassword": "كلمة المرور التي تم إدخالها ضعيفة جدًا.",
+    "emailAlreadyInUse": "هناك حساب موجود بالفعل لهذا البريد الإلكتروني.",
     "no_favorites_yet": "لا توجد مفضلات حتى الآن!",
 
-    "home": "الرئيسية",
+    "home": "الرئيسية",
     "products": "المنتجات",
-    "shoppingCart":"سلة التسوق",
-    "profile": "حسابي",
+    "shoppingCart": "السلة",
+    "profile": "الملف الشخصي",
 
-    "goodMorning": "صباح الخير !..",
-    "ahmedHussein" : "احمد حسين",
+    "goodMorning": "صباح الخير..!",
     "searchFor" : "ابحث عن.......",
 
     "eidOffers" : "عروض العيد",
@@ -77,9 +77,9 @@
     },
     "slash" : "/",
     "killo" : "كيلو",
-    "results" : "نتائج",
+    "results" : "نتائج",
     "ahmed" : "احمد",
-    "resultsCount" : "{resultsCount} نتائج",
+    "resultsCount" : "{resultsCount} نتائج",
     "@resultsCount": {
 
         "placeholders": {
@@ -87,10 +87,9 @@
                 "type": "int"
                 }
             }
-
     },
     "cart" : "السلة",
-    "CartProductsCount" :"لديك {numberOfCartProducts} منتجات في سله التسوق",
+    "CartProductsCount" :"لديك {numberOfCartProducts} منتجات في سلتك",
     "@CartProductsCount": {
         "placeholders": {
             "numberOfCartProducts": {
@@ -99,43 +98,43 @@
             }
     },
     "payment" : "الدفع",
-    "addedToCart" : "تمت الإضافة الي سله التسوق بنجاح",
+    "addedToCart" : "تمت الإضافة إلى السلة بنجاح",
     "shipping" : "الشحن",
     "address" : "العنوان",
-    "cartIsEmpty" : "سلة التسوق فارغة",
+    "cartIsEmpty" : "سلتك فارغة",
     "next" : "التالي",
-    "paypalPayment" : "دفع بواسطة Paypal",
-    "cash_on_delivery" : "الدفع عند الاستلام",
-    "pickup_delivery_option" : "التسليم من المكان",
-    "online_payment" : "الدفع اونلاين",
-   "payment_method" :"يرجي تحديد طريقه الدفع",
-   "free" : "مجاني",
-   "city" : "المدينة",
-   "floor_and_apartment" : "رقم الطابق والشقة",
-   "phone" : "رقم الهاتف",
-   "order_summary": "ملخص الطلب",
-   "sub_total" : "المجموع الفرعي",
-   "delivery" : "التوصيل",
-   "total" : "الكلي",
-   "delivery_address" : "عنوان التوصيل",
-   "edit" : "تعديل",
-   "select_payment_method" : "يرجي تحديد طريقه الدفع",
-   "payment_error" : "حدث خطاء في الدفع، يرجى المحاولة مرة اخرى",
-   "payment_success" : "تم الدفع بنجاح",
-   "payment_cancelled" : "تم الغاء الدفع",
-   "add_order_failure" : "فشل في اضافه الطلب",
-   "unknown" : "غير معروف",
-   "general" : "عام",
-   "personal_file": "الملف الشخصي",
-   "favorites" : "المفضلة",
-   "theme" : "الوضع",
-   "language" : "اللغة",
-   "help" : "المساعدة",
-   "who_are_we" : "من نحن",
-   "logout" : "تسجيل خروج",
-   "cancel" :"إلغاء",
-   "confirm" : "تأكيد",
-    "signout_message" : "هل ترغب في تسجيل الخروج؟",
+    "paypalPayment" : "الدفع بواسطة باي بال",
+    "cash_on_delivery": "الدفع عند الاستلام",
+    "pickup_delivery_option": "استلام من الموقع",
+    "online_payment": "الدفع عبر الإنترنت",
+    "payment_method": "الرجاء اختيار طريقة الدفع",
+    "free" : "مجاني",
+    "city" : "المدينة",
+    "floor_and_apartment" : "الطابق والشقة",
+    "phone" : "الهاتف",
+    "order_summary": "ملخص الطلب",
+    "sub_total" : "المجموع الفرعي",
+    "delivery" : "التوصيل",
+    "total" : "الإجمالي",
+    "delivery_address" : "عنوان التوصيل",
+    "edit" : "تعديل",
+    "select_payment_method" : "الرجاء اختيار طريقة الدفع",
+    "payment_error" : "خطأ في الدفع، يرجى المحاولة مرة أخرى",
+    "payment_success" : "تم الدفع بنجاح",
+    "payment_cancelled" : "تم إلغاء الدفع",
+    "add_order_failure" : "فشل في إضافة الطلب",
+    "unknown" : "غير معروف",
+    "general" : "عام",
+    "personal_file": "ملفك الشخصي",
+    "favorites" : "المفضلة",
+    "theme" : "المظهر",
+    "language" : "اللغة",
+    "help" : "المساعدة",
+    "who_are_we" : "من نحن؟",
+    "logout" : "تسجيل الخروج",
+    "cancel" : "إلغاء",
+    "confirm" : "تأكيد",
+    "signout_message" : "هل تريد تسجيل الخروج؟",
     "arabic" : "العربية",
     "english" : "الانجليزية",
     "who_are_we_content" : "فروت هب هي خدمة توصيل فواكه متميزة مخصصة لتوصيل أطيب وأجود الفواكه الطازجة مباشرة إلى باب منزلك. نحن نعمل مع المزارعين المحليين لضمان حصولك على أفضل المنتجات مع دعم الزراعة المستدامة.",
@@ -184,7 +183,35 @@
               "type": "int"
             }
           }
+        },
+    "failed_to_get_orders" : "فشل في عرض الطلبات",
+    "my_orders" : "طلباتي",
+    "no_orders_yet" : "لا توجد طلبات حتى الآن",
+    "order_status_pending" : "قيد الانتظار",
+    "order_status_accepted" : "تم القبول",
+    "order_status_delivered" : "تم التوصيل",
+    "order_status_cancelled" : "تم الإلغاء",
+    "order_id" : " رقم الطلب {orderId}",
+    "@order_id": {
+        "placeholders": {
+            "orderId": {
+                "type": "String"
+                }
+            }
+    },
+    "item" : "عنصر",
+    "items" : "عناصر",
+    "order_items_count" : "{count} {itemText}",
+    "@order_items_count": {
+      "placeholders": {
+        "count": {
+          "type": "int"
+        },
+        "itemText": {
+          "type": "String"
         }
+      }
+    }
       
 
 

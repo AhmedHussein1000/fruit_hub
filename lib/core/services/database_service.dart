@@ -6,4 +6,9 @@ abstract class DatabaseService {
   Future<dynamic> getData(
       {required String path, String? docId, Map<String, dynamic>? query});
   Future<bool> checkIfDataExist({required String path, required String docId});
+  Stream<dynamic> streamData({
+    required String path,
+    required String userId,
+    Map<String, dynamic>? query,
+  });
 }

@@ -104,6 +104,7 @@ class _CheckoutScreenBodyState extends State<CheckoutScreenBody> {
 
   void _handleShippingSectionValidation(BuildContext context) {
     if (context.read<OrderEntity>().payWithCash != null) {
+       FocusScope.of(context).unfocus();
       pageController.nextPage(
           duration: const Duration(milliseconds: 300), curve: Curves.easeIn);
     } else {
@@ -116,6 +117,7 @@ class _CheckoutScreenBodyState extends State<CheckoutScreenBody> {
   void _handleAddressInputsValidation() {
     if (_formKey.currentState!.validate()) {
       _formKey.currentState!.save();
+       FocusScope.of(context).unfocus();
       pageController.nextPage(
           duration: const Duration(milliseconds: 300), curve: Curves.easeIn);
     } else {
@@ -123,14 +125,14 @@ class _CheckoutScreenBodyState extends State<CheckoutScreenBody> {
     }
   }
 
-  void _processPaypalPayment(BuildContext context) {
-    void backToHomeScreen() {
-      context.pushNamedAndRemoveUntil(
-        Routes.mainLayout,
-        predicate: (route) => false,
-      );
-    }
+  void backToHomeScreen() {
+    context.pushNamedAndRemoveUntil(
+      Routes.mainLayout,
+      predicate: (route) => false,
+    );
+  }
 
+  void _processPaypalPayment(BuildContext context) {
     S localization = S.of(context);
     OrderEntity orderEntity = context.read<OrderEntity>();
     PaypalPaymentModel paypalPaymentModel =
@@ -147,9 +149,10 @@ class _CheckoutScreenBodyState extends State<CheckoutScreenBody> {
         note: "Contact us for any questions on your order.",
         onSuccess: (Map params) async {
           log("onSuccess: $params");
-          addOrderCubit.addOrder(
+         await addOrderCubit.addOrder(
               order: orderEntity, localization: localization);
           cartCubit.deleteCartItems();
+          if(!context.mounted) return;
           customToast(
               message: S.of(context).payment_success,
               state: ToastStates.success);

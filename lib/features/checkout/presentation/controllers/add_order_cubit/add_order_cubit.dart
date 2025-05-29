@@ -10,7 +10,7 @@ class AddOrderCubit extends Cubit<AddOrderState> {
   final BaseOrdersRepo baseOrdersRepo;
   AddOrderCubit(this.baseOrdersRepo) : super(AddOrderInitial());
   static const int maxRetries = 3;
-  void addOrder({required OrderEntity order, required S localization}) async {
+  Future<void> addOrder({required OrderEntity order, required S localization}) async {
     emit(AddOrderLoading());
     int attempts = 1;
     while (attempts <= maxRetries) {

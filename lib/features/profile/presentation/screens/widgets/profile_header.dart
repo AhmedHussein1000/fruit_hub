@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruit_hub/core/functions/user_functions/get_cached_user.dart';
 import 'package:fruit_hub/core/helpers/assets.dart';
 import 'package:fruit_hub/core/themes/styles.dart';
-import 'package:fruit_hub/features/profile/presentation/controller/personal_info_cubit/personal_info_cubit.dart';
+import 'package:fruit_hub/features/profile/presentation/controllers/personal_info_cubit/personal_info_cubit.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 
 class ProfileHeader extends StatelessWidget {
